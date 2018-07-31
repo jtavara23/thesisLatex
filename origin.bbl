@@ -1,0 +1,170 @@
+\begin{thebibliography}{}
+
+\bibitem[Ayuque~Arenas, 2016]{Ayuque2016}
+Ayuque~Arenas, K. J.~M. (2016).
+\newblock Diseño de un sistema de clasificación de señales de tránsito
+  vehicular utilizando redes neuronales convolucionales.
+\newblock {\em Universidad San Ignacio de Loyola}.
+
+\bibitem[Cireşan et~al., 2012]{Ciresan}
+Cireşan, D., Meier, U., Masci, J., and Schmidhuber, J. (2012).
+\newblock Multi-column deep neural network for traffic sign classification.
+\newblock {\em Neural Networks from IJCNN 2011}, 32(C):333 -- 338.
+
+\bibitem[Consejo Nacional~de Seguridad~Vial, 2014]{CNSV}
+Consejo Nacional~de Seguridad~Vial, . (2014).
+\newblock La seguridad vial a nivel mundial.
+\newblock page~48.
+
+\bibitem[Cordova~Rampant, 2017]{OPS}
+Cordova~Rampant, A. (2017).
+\newblock Los peruanos mueren más por los accidentes de tránsito que por la
+  inseguridad ciudadana.
+\newblock
+  \url{http://rpp.pe/data/los-peruanos-mueren-mas-por-los-accidentes-de-transito-1071653}.
+
+\bibitem[Gestión.pe, 2016a]{Gestion2}
+Gestión.pe, D. (2016a).
+\newblock Accidentes de tránsito: Dos propuestas para aumentar la seguridad
+  vial y reducir muertes.
+\newblock
+  \url{https://gestion.pe/economia/accidentes-transito-dos-propuestas-2175696}.
+
+\bibitem[Gestión.pe, 2016b]{Gestion1}
+Gestión.pe, D. (2016b).
+\newblock Seguridad vial en perú: Nueve indicadores a mejorar para evitar
+  accidentes.
+\newblock \url{https://gestion.pe/economia/seguridad-vial-peru-21756832}.
+
+\bibitem[Goodfellow et~al., 2016]{Goodfellow-et-al-2016}
+Goodfellow, I., Bengio, Y., and Courville, A. (2016).
+\newblock {\em Deep Learning}.
+\newblock MIT Press.
+\newblock \url{http://www.deeplearningbook.org}.
+
+\bibitem[Hai~Nguyen, 2014]{Hai2014}
+Hai~Nguyen, T. (2014).
+\newblock Morphological classification for traffic sign recognition.
+\newblock {\em Faculty of Electrical and Electronic Engineering}, 4(2):36--44.
+
+\bibitem[Hannan et~al., 2014]{Hannan2014}
+Hannan, M.~A., Wali, S.~B., Pin, T.~J., Hussain, A., and Samad, S.~A. (2014).
+\newblock Traffic sign classification based on neural network for advance
+  driver assistance system.
+\newblock {\em Przegląd Elektrotechniczny}, R. 90, nr 11:169--172.
+
+\bibitem[Jia et~al., 2014]{caffe}
+Jia, Y., Shelhamer, E., Donahue, J., Karayev, S., Long, J., Girshick, R.,
+  Guadarrama, S., and Darrell, T. (2014).
+\newblock Caffe: Convolutional architecture for fast feature embedding.
+\newblock In {\em Proceedings of the 22Nd ACM International Conference on
+  Multimedia}, MM '14, pages 675--678, New York, NY, USA. ACM.
+
+\bibitem[Karpathy, 2016]{cs231n}
+Karpathy, A. (2016).
+\newblock Convolutional neural networks (cnns / convnets).
+\newblock {\em Cs231- Stanford Course}.
+
+\bibitem[Krizhevsky et~al., 2012]{Krizhevsky2012}
+Krizhevsky, A., Sutskever, I., and Hinton, G. (2012).
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock pages 1097--1105.
+
+\bibitem[Nair and Hinton, 2010]{RELU}
+Nair, V. and Hinton, G.~E. (2010).
+\newblock Rectified linear units improve restricted boltzmann machines.
+\newblock In {\em Proceedings of the 27th International Conference on
+  International Conference on Machine Learning}, ICML'10, pages 807--814, USA.
+  Omnipress.
+
+\bibitem[OMS, 2017]{OMS}
+OMS (2017).
+\newblock 10 datos sobre la seguridad vial en el mundo.
+\newblock \url{http://www.who.int/features/factfiles/roadsafety/es/}.
+
+\bibitem[Poynton, 2003]{POYNTON2003257}
+Poynton, C. (2003).
+\newblock 23 - gamma.
+\newblock In Poynton, C., editor, {\em Digital Video and HDTV}, The Morgan
+  Kaufmann Series in Computer Graphics, pages 257 -- 280. Morgan Kaufmann, San
+  Francisco.
+
+\bibitem[Rocha and Escorcia, 2010]{Rocha2010}
+Rocha, C. and Escorcia, G. (2010).
+\newblock Sistema de visión artificial para la detección y el reconocimiento
+  de señales de tráfico basado en redes neuronales.
+\newblock {\em Eighth LACCEI Latin American and Caribbean Conference for
+  Engineering and Technology (LACCEI)}.
+
+\bibitem[Rohrer, 2016]{Rohrer}
+Rohrer, B. (2016).
+\newblock How convolutional neural networks work.
+\newblock {\em Data Science and Robots Blog}.
+
+\bibitem[Romero~Benites, 2017]{RPPData}
+Romero~Benites, R. (2017).
+\newblock Ocho peruanos mueren cada día en accidentes de tránsito.
+\newblock
+  \url{http://rpp.pe/data/ocho-peruanos-mueren-cada-dia-en-accidentes-de-transito-1068532}.
+
+\bibitem[Stallkamp et~al., 2011]{Stallkamp-IJCNN-2011}
+Stallkamp, J., Schlipsing, M., Salmen, J., and Igel, C. (2011).
+\newblock The {G}erman {T}raffic {S}ign {R}ecognition {B}enchmark: A
+  multi-class classification competition.
+\newblock In {\em IEEE International Joint Conference on Neural Networks},
+  pages 1453--1460.
+
+\bibitem[Stallkamp et~al., 2012]{Stallkamp2012}
+Stallkamp, J., Schlipsing, M., Salmen, J., and Igel, C. (2012).
+\newblock Man vs. computer: Benchmarking machine learning algorithms for
+  traffic sign recognition.
+\newblock {\em Neural Networks}, (0).
+
+\bibitem[SUTRAN, 2014]{SUTRAN}
+SUTRAN (2014).
+\newblock Texto unico ordenado del reglamento nacional de transito - codigo de
+  transito.
+\newblock page 188.
+
+\bibitem[Szegedy et~al., 2014]{Inception}
+Szegedy, C., Liu, W., Jia, Y., Sermanet, P., Reed, S.~E., Anguelov, D., Erhan,
+  D., Vanhoucke, V., and Rabinovich, A. (2014).
+\newblock Going deeper with convolutions.
+\newblock {\em CoRR}, abs/1409.4842.
+
+\bibitem[Taylor and Nitschke, 2017]{DL_augmentData}
+Taylor, L. and Nitschke, G. (2017).
+\newblock Improving deep learning using generic data augmentation.
+\newblock {\em CoRR}, abs/1708.06020.
+
+\bibitem[Timofte et~al., 2011]{Timofte-MVA-2011}
+Timofte, R., Zimmermann, K., and {Van Gool}, L. (2011).
+\newblock Multi-view traffic sign detection, recognition, and 3d localisation.
+\newblock {\em Machine Vision and Applications}.
+
+\bibitem[Vargas~Romero, 2015]{Vargas2015}
+Vargas~Romero, F. (2015).
+\newblock Implementación de un sistema inteligente para el reconocimiento de
+  señales preventivas de seguridad vial.
+\newblock {\em Universidad Nacional de Trujillo}.
+
+\bibitem[Vicen-Bueno et~al., 2007]{VicenBueno2007}
+Vicen-Bueno, R., Garc{\'i}a-Gonz{\'a}lez, A., Torijano-Gordo, E., Gil-Pita, R.,
+  and Rosa-Zurera, M. (2007).
+\newblock {\em Traffic Sign Classification by Image Preprocessing and Neural
+  Networks}, pages 741--748.
+\newblock Springer Berlin Heidelberg, Berlin, Heidelberg.
+
+\bibitem[Waze, 2016]{CNN}
+Waze (2016).
+\newblock Las mejores y peores ciudades para conducir en américa latina,
+  según waze.
+\newblock
+  \url{http://cnnespanol.cnn.com/2016/09/15/las-mejores-y-peores-ciudades/}.
+
+\bibitem[Y.~LeCun, 1998]{LeCun}
+Y.~LeCun, L.Botou, Y.~P. (1998).
+\newblock Gradient-based learning applied to document recognition.
+\newblock {\em Proceedings of the IEEE 86}.
+
+\end{thebibliography}

@@ -1,0 +1,76 @@
+\documentclass[a4paper, 12pt]{report}
+
+\usepackage[left = 3cm, top = 2.5cm, bottom = 1.5cm, right = 2cm]{geometry}
+\usepackage{graphicx}
+\usepackage[spanish,es-tabla]{babel} % Idioma español con tablas
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage[utf8]{inputenc}         % Para escribir en castellano
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\usepackage{alltt}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{anyfontsize}
+\setcounter{secnumdepth}{3} %para que ponga 1.1.1.1 en subsubsecciones
+\setcounter{tocdepth}{3}    % para que ponga subsubsecciones en el indice
+\usepackage{setspace}       % Usado para %\onehalfspace  \doublespacing  \singlespace
+\usepackage{booktabs}       % Para formar tablas
+%\usepackage{longtable}     % Usado para diseñar grandes tablas.
+
+%\usepackage{algorithmic}
+%\usepackage{algorithm}
+
+%%%%==nuevos==========%%%%
+\usepackage[normalem]{ulem} %%agregado por ul
+\useunder{\uline}{\ul}{} %%agregado por ul
+\usepackage{float} %% agregado para reconocer H
+\usepackage{url}
+\usepackage[font=small,skip=0pt]{caption}
+\captionsetup{justification=centering,margin=1cm}
+
+\usepackage{parskip}
+\setlength{\parindent}{15pt}
+
+%%%%==nuevos==========%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Tables-related packages %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{multirow}
+\usepackage{multicol}
+\usepackage{array,colortbl}
+
+\usepackage[round]{natbib} 
+\bibliographystyle{apalike}
+\newcommand{\yy}{{\'{\i} }}
+\newcommand{\y}{\'{\i}}
+
+
+\begin{document}
+
+\baselineskip 1cm
+\pagestyle{plain}
+	\input{cap1.tex}    % caratula del trabajo
+\listoffigures      % indice de figuras
+\addcontentsline{toc}{chapter}{Índice de Figuras}
+\listoftables       % indice de tablas
+\addcontentsline{toc}{chapter}{Índice de Tablas}
+\textheight 24cm 	% footer height
+\tableofcontents    % indice de materias
+	\input{cap2.tex}    % capitulo de introduccion
+	\input{cap3.tex}    % capitulo de marco teorico
+	\input{cap4.tex}    % capitulo de cuerpo del trabajo
+	\input{cap5.tex}    % capitulo de Desarrollo de Investigacion
+	\input{cap6.tex}    % capitulo de Resultados
+	\input{cap7.tex}    % capitulo de consideraciones finales
+ \bibliography{Bibliografia} % Bibliografia formato APA
+	\input{cap8.tex}    % Apendice
+\end{document}
+
+
+
+
+
+
