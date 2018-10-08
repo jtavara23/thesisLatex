@@ -6,6 +6,12 @@ Ayuque~Arenas, K. J.~M. (2016).
   vehicular utilizando redes neuronales convolucionales.
 \newblock {\em Universidad San Ignacio de Loyola}.
 
+\bibitem[Bishop, 2006]{Bishop}
+Bishop, C.~M. (2006).
+\newblock {\em Pattern Recognition and Machine Learning (Information Science
+  and Statistics)}.
+\newblock Springer-Verlag, Berlin, Heidelberg.
+
 \bibitem[Cireşan et~al., 2012]{Ciresan}
 Cireşan, D., Meier, U., Masci, J., and Schmidhuber, J. (2012).
 \newblock Multi-column deep neural network for traffic sign classification.
@@ -23,6 +29,17 @@ Cordova~Rampant, A. (2017).
 \newblock
   \url{http://rpp.pe/data/los-peruanos-mueren-mas-por-los-accidentes-de-transito-1071653}.
 
+\bibitem[Dong and Zhou, 2008]{gradient}
+Dong, X. and Zhou, D.-X. (2008).
+\newblock Learning gradients by a gradient descent algorithm.
+\newblock {\em Journal of Mathematical Analysis and Applications}, 341(2):1018
+  -- 1027.
+
+\bibitem[{Donges N.}, 2018]{gradientimg}
+{Donges N.} (2018).
+\newblock Gradient descent in a nutshell.
+\newblock [Online; accessed Agosto 08, 2018].
+
 \bibitem[Gestión.pe, 2016a]{Gestion2}
 Gestión.pe, D. (2016a).
 \newblock Accidentes de tránsito: Dos propuestas para aumentar la seguridad
@@ -35,6 +52,11 @@ Gestión.pe, D. (2016b).
 \newblock Seguridad vial en perú: Nueve indicadores a mejorar para evitar
   accidentes.
 \newblock \url{https://gestion.pe/economia/seguridad-vial-peru-21756832}.
+
+\bibitem[Golik et~al., 2013]{crossMSE}
+Golik, P., Doetsch, P., and Ney, H. (2013).
+\newblock Cross-entropy vs. squared error training: a theoretical and
+  experimental comparison.
 
 \bibitem[Goodfellow et~al., 2016]{Goodfellow-et-al-2016}
 Goodfellow, I., Bengio, Y., and Courville, A. (2016).
@@ -53,6 +75,11 @@ Hannan, M.~A., Wali, S.~B., Pin, T.~J., Hussain, A., and Samad, S.~A. (2014).
   driver assistance system.
 \newblock {\em Przegląd Elektrotechniczny}, R. 90, nr 11:169--172.
 
+\bibitem[{Jeremy J.}, 2018]{AdamImg}
+{Jeremy J.} (2018).
+\newblock Setting the learning rate of your neural network.
+\newblock [Online; accessed Agosto 08, 2018].
+
 \bibitem[Jia et~al., 2014]{caffe}
 Jia, Y., Shelhamer, E., Donahue, J., Karayev, S., Long, J., Girshick, R.,
   Guadarrama, S., and Darrell, T. (2014).
@@ -64,6 +91,11 @@ Jia, Y., Shelhamer, E., Donahue, J., Karayev, S., Long, J., Girshick, R.,
 Karpathy, A. (2016).
 \newblock Convolutional neural networks (cnns / convnets).
 \newblock {\em Cs231- Stanford Course}.
+
+\bibitem[Kingma and Ba, 2014]{Adam}
+Kingma, D.~P. and Ba, J. (2014).
+\newblock Adam: {A} method for stochastic optimization.
+\newblock {\em CoRR}, abs/1412.6980.
 
 \bibitem[Krizhevsky et~al., 2012]{Krizhevsky2012}
 Krizhevsky, A., Sutskever, I., and Hinton, G. (2012).
@@ -101,11 +133,24 @@ Rohrer, B. (2016).
 \newblock How convolutional neural networks work.
 \newblock {\em Data Science and Robots Blog}.
 
+\bibitem[Romero, 2015a]{AulaDNN}
+Romero, R.~F. (2015a).
+\newblock Scc0270/scc5809 - redes neurais - deep learning.
+
+\bibitem[Romero, 2015b]{AulaMLP}
+Romero, R.~F. (2015b).
+\newblock Scc0270/scc5809 - redes neurais - multilayer perceptron.
+
 \bibitem[Romero~Benites, 2017]{RPPData}
 Romero~Benites, R. (2017).
 \newblock Ocho peruanos mueren cada día en accidentes de tránsito.
 \newblock
   \url{http://rpp.pe/data/ocho-peruanos-mueren-cada-dia-en-accidentes-de-transito-1068532}.
+
+\bibitem[Sermanet and LeCun, 2011]{Multi_scale_feat}
+Sermanet, P. and LeCun, Y. (2011).
+\newblock Traffic sign recognition with multi-scale convolutional networks.
+\newblock pages 2809--2813.
 
 \bibitem[Stallkamp et~al., 2011]{Stallkamp-IJCNN-2011}
 Stallkamp, J., Schlipsing, M., Salmen, J., and Igel, C. (2011).
@@ -137,11 +182,6 @@ Taylor, L. and Nitschke, G. (2017).
 \newblock Improving deep learning using generic data augmentation.
 \newblock {\em CoRR}, abs/1708.06020.
 
-\bibitem[Timofte et~al., 2011]{Timofte-MVA-2011}
-Timofte, R., Zimmermann, K., and {Van Gool}, L. (2011).
-\newblock Multi-view traffic sign detection, recognition, and 3d localisation.
-\newblock {\em Machine Vision and Applications}.
-
 \bibitem[Vargas~Romero, 2015]{Vargas2015}
 Vargas~Romero, F. (2015).
 \newblock Implementación de un sistema inteligente para el reconocimiento de
@@ -166,5 +206,12 @@ Waze (2016).
 Y.~LeCun, L.Botou, Y.~P. (1998).
 \newblock Gradient-based learning applied to document recognition.
 \newblock {\em Proceedings of the IEEE 86}.
+
+\bibitem[Yadav et~al., 2014]{CLAHE}
+Yadav, G., Maheshwari, S., and Agarwal, A. (2014).
+\newblock Contrast limited adaptive histogram equalization based enhancement
+  for real time video system.
+\newblock In {\em 2014 International Conference on Advances in Computing,
+  Communications and Informatics (ICACCI)}, pages 2392--2397.
 
 \end{thebibliography}

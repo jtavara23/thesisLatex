@@ -1,7 +1,7 @@
 %!TEX root = origin.TEX
 \chapter{Materiales y Técnicas}
 \pagenumbering{arabic}
-\setcounter{page}{16}
+\setcounter{page}{42}
 \renewcommand{\baselinestretch}{2} %doble espacio paratodo el texto
 
 \section{ Tipo de investigación}
@@ -48,18 +48,16 @@
 	
 		\subsection{Muestra}
 		\begin{enumerate}		
-		\item[] Para el proceso de diseño e implementación de arquitecturas a elaborar se tomarán en cuenta tres modelos mundialmente conocidos e importantes:
+		\item[] Para el proceso de diseño e implementación de arquitecturas a elaborar se tomarán en cuenta dos modelos mundialmente conocidos e importantes:
 		\end{enumerate}
 				
 		\vskip 0.1cm	
 		\begin{enumerate}
-		\item[A)] {\bf  Arquitectura LeNet-5}  \vskip 0.2cm
-			Es el nombre de la primera red neuronal convolucional. Fue utilizado en los experimentos de \citep{LeCun}. LeNet-5 consta de 7 capas donde la entrada, que es considerada por algunos como parte de la arquitectura, debe ser una imagen de 32x32 píxeles y 1 canal de profundidad. Utiliza funciones de activación sigmoidal o tangencial y la función principal de la capa de salida es calcular la función de base radial euclidiana (RBF). El RBF se calcula para cada clase, donde se utilizan 84 entradas para calcular cada clase. La unidad RBF calcula la distancia euclidiana entre el vector de entrada y el vector de parámetro. 
 		
-		\item[B)] {\bf Arquitectura AlexNet}  \vskip 0.2cm
-			Esta arquitectura hizo que las Redes Convolucionales fueran populares en el campo de Visión por Computadora. AlexNet fue desarrollado por \citep{Krizhevsky2012}. La entrada consiste en una imagen de 224x224 pixeles en formato RGB (3 canales). La arquitectura consta de 8 capas, las primeras cinco capas son convolucionales y el resto son capas totalmente conectadas. La primera y segunda capa convolucional son seguidas por capas de normalización de respuesta local, luego estas capas de normalización de respuesta son seguidas por capas de agrupación máxima. La salida de cada capa convolucional y cada capa completamente conectada se activa a través de  una función no linear conocida como RELU. Similar a LenNet-5 pero más grande, teniendo aproximadamente 60 millones de parámetros.
+		\item[A)] {\bf Arquitectura AlexNet}  \vskip 0.2cm
+			Esta arquitectura hizo que las Redes Convolucionales fueran populares en el campo de Visión por Computadora. AlexNet fue desarrollado por \citep{Krizhevsky2012}. La entrada consiste en una imagen de 224x224 pixeles en formato RGB (3 canales). La arquitectura consta de 8 capas, las primeras cinco capas son convolucionales y el resto son capas totalmente conectadas. La primera y segunda capa convolucional son seguidas por capas de normalización de respuesta local, luego estas capas de normalización de respuesta son seguidas por capas de agrupación máxima. La salida de cada capa convolucional y cada capa completamente conectada se activa a través de  una función no linear conocida como RELU. Similar a LenNet-5\citep{LeCun} pero más grande, teniendo aproximadamente 60 millones de parámetros.
 
-		\item[C)] {\bf Arquitectura Inception}  \vskip 0.2cm
+		\item[B)] {\bf Arquitectura Inception}  \vskip 0.2cm
 			Es una arquitectura de red neuronal convolucional profunda, creada por un grupo de investigación de Google que fue responsable de establecer el nuevo estado del arte de la técnica para la clasificación y detección en la competencia de reconocimiento visual a gran escala ImageNet 2014(ILSVRC14). 
 			\vskip 0.1cm
 			El principal sello distintivo de esta arquitectura es la utilización mejorada de los recursos informáticos dentro de la red. Esto fue logrado por un cuidadoso que permite aumentar la profundidad y el ancho de la red mientras se manteniene el costo computacional constante. Para optimizar la calidad, las decisiones para elaborar la arquitectura se basaron en el principio Hebbiano y la intuición de procesamiento a escala múltiple. Una encarnación particular utilizada en la competencia ILSVRC14 es llamada GoogLeNet, una red de 22 capas de profundidad, cuya calidad se evalúa en el contexto de reconocimiento y detección, \citep{Inception}.
@@ -85,18 +83,18 @@
 
 		\subsection{Muestra} 
 		\begin{enumerate}		
-			\item[]	Existen 2 colecciones(datasets) que se ajustan a las características de nuestra población y serán usadas para conseguir el objetivo de la investigación, principalmente porque cuenta con abundantes imágenes lo que conforma una muestra representativa y necesaria para hacer generalizaciones. 
+			\item[]	Existe una colección(dataset) que se ajusta a las características de nuestra población y será usada para conseguir el objetivo de la investigación, principalmente porque cuenta con abundantes imágenes lo que conforma una muestra representativa y necesaria para hacer generalizaciones. 
 		\end{enumerate}
 		
 		\begin{enumerate}
 		\item[A)] {\bf Señales de Tránsito de Alemania} \citep{Stallkamp-IJCNN-2011} \newline
 			Conjunto de datos creados a partir de aproximadamente 10 horas de video grabados durante el día mientras se conducía en diferentes tipos de carreteras en Alemania. De las secuencias del video fueron extraídas imágenes de señales de tránsito en formato RGB cuyas dimensiones varían entre 15x15 y 250x250 pixeles. En esta colección se obtuvieron un total de 39209 imágenes distribuidas en 43 clases.
 		
-		\item[B)] {\bf Señales de Tránsito de Bélgica} \citep{Timofte-MVA-2011} \newline
-			Conjunto de datos creados con a la captura simultánea de imágenes durante el día realizada por 8 cámaras mientras se conducía aproximadamente a 35Km/h, con el objetivo de obtener una localización 3D y un refinamiento simultáneo. Las señales de tránsito fueron capturados a una distancia de menos de 50 metros y almacenadas en formato PPM cuyas dimensiones varían entre 25x30 y 260x250 pixeles. En esta colección se obtuvieron un total de 7125 imágenes distribuidas en 62 clases.
+		%\item[B)] {\bf Señales de Tránsito de Bélgica} \citep{Timofte-MVA-2011} \newline
+		%	Conjunto de datos creados con a la captura simultánea de imágenes durante el día realizada por 8 cámaras mientras se conducía aproximadamente a 35Km/h, con el objetivo de obtener una localización 3D y un refinamiento simultáneo. Las señales de tránsito fueron capturados a una distancia de menos de 50 metros y almacenadas en formato PPM cuyas dimensiones varían entre 25x30 y 260x250 pixeles. En esta colección se obtuvieron un total de 7125 imágenes distribuidas en 62 clases.
 		
 		
-		\item[C)] {\bf Señales de Tránsito de Perú} \newline
+		\item[B)] {\bf Señales de Tránsito de Perú} \newline
 			Conjunto de 600 imágenes originalmente tomadas de la aplicación Google Maps agrupadas en 7 categorías. Dado que la población de imágenes es infinita, se optó por usar un muestreo aleatorio simple para poblaciones desconocidas con un nivel de confianza del 95\% y un error de muestreo del 4\%.
 		
 			\vskip 0.4cm

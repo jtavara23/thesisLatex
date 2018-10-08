@@ -1,100 +1,491 @@
 %!TEX root = origin.TEX
 \chapter{Desarrollo de la Investigación}
 \pagenumbering{arabic}
-\setcounter{page}{20}
+\setcounter{page}{47}
 \renewcommand{\baselinestretch}{2} %doble espacio paratodo el texto
 
 \section{Análisis del conjunto de imágenes}
 
 \subsection{Colección de Señales de Tránsito de Alemania}
 
-\subsubsection{Datos para el entrenamiento}
+	\subsubsection{Datos para el entrenamiento}
 
-En esta colección consta de un total de 51839 imágenes distribuidas en 43 clases no necesariamente balanceadas con un tamaño de 32 x 32 pixeles.
+		En esta colección consta de un total de 51839 imágenes distribuidas en 43 clases no necesariamente balanceadas con un tamaño de 32 x 32 pixeles.
 
-\begin{figure}[H]
-	\begin{center}
-	\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1_(1).png}
-	\end{center}
-	\begin{center}
-	\caption{\small{Señal 20 km}}
-	\end{center}
-	\vspace{-1.5em}
-\end{figure}
+		\begin{figure}[H]
+			\begin{center}
+			\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1__(1).png}
+			\end{center}
+			\begin{center}
+			\caption{\small{Speed limit (20km/h)}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-	\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1_(2).png}
-	\end{center}
-	\begin{center}
-	\caption{\small{Señal 20 km}}
-	\end{center}
-	\vspace{-1.5em}
-\end{figure}
+		\begin{figure}[H]
+			\begin{center}
+			\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1__(2).png}
+			\end{center}
+			\begin{center}
+			\caption{\small{Speed limit (30km/h)}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-	\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1_(3).png}
-	\end{center}
-	\begin{center}
-	\caption{\small{Señal 20 km}}
-	\end{center}
-	\vspace{-1.5em}
-\end{figure}
+		\begin{figure}[H]
+			\begin{center}
+			\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1__(3).png}
+			\end{center}
+			\begin{center}
+			\caption{\small{Speed limit (50km/h)}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
 
-\begin{figure}[H]
-	\begin{center}
-	\includegraphics[width=1\textwidth]{images/desarrollo/histograms/initial39209}
-	\end{center}
-	\begin{center}
-	\caption{\small{Distribución de ejemplos por señal para el entrenamiento}}
-	{\small{Fuente propia}}
-	\end{center}
-	\vspace{-1.5em}
-\end{figure}
+		\begin{figure}[H]
+			\begin{center}
+			\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1__(13).png}
+			\end{center}
+			\begin{center}
+			\caption{\small{Priority road}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\begin{center}
+			\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1__(23).png}
+			\end{center}
+			\begin{center}
+			\caption{\small{Bumpy road}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
+
+		\begin{figure}[H]
+			\begin{center}
+			\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1__(29).png}
+			\end{center}
+			\begin{center}
+			\caption{\small{Children crossing}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
+		
+		\begin{figure}[H]
+			\begin{center}
+			\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1__(32).png}
+			\end{center}
+			\begin{center}
+			\caption{\small{Wild animals crossing}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
+
+		\begin{figure}[H]
+			\begin{center}
+			\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1__(35).png}
+			\end{center}
+			\begin{center}
+			\caption{\small{Turn left ahead}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
 
 
-
-\subsubsection{Datos para la evaluación}
-Para la etapa de evaluación se cuenta con un conjunto de 12630 imágenes, de igual manera no necesariamente balanceadas y que no son utilizadas durante el proceso de entrenamiento para obtener resultados confiables a la hora de evaluar el resultado del entrenamiento. 
-
-\begin{figure}[H]
-	%\begin{center}
-	\includegraphics[width=1.1\textwidth]{images/desarrollo/histograms/initialTest12630}
-	%\end{center}
-	\begin{center}
-	\caption{\small{Distribución de ejemplos por señal para la evaluación}}
-	{\small{Fuente propia}}
-	\end{center}
-	\vspace{-1.5em}
-\end{figure}
-
-\subsection{Pre-procesamiento de Imágenes(Normalization)}
-El pre-procesamiento habitual en este caso consta en escalar los valores de cada píxel entre 0 y 1(ya que actualmente se presentan en el rango de tonalidad entre 0 y 255). Al mirar las imágenes, la ecualización del histograma también puede ser útil. Aplicaremos ecualización de histograma localizado, ya que parece mejorar aún más la extracción de características en nuestro caso.
-
-Como Pierre Sermanet y Yann LeCun mencionaron en su artículo\citep{LeCun}, el uso de canales de color no pareció mejorar mucho las cosas, en esta investigación se usará un solo canal en el modelo, es decir las imágenes estarán en escala de grises en lugar de tener 3 canales de colores.
-
-Para convertir un color de un espacio de color basado en un modelo de color RGB típico de gamma comprimido (no lineal) a una representación en escala de grises de su luminancia, primero se debe eliminar la función de compresión gamma mediante la expansión gamma (linealización) para transformar la imagen en un RGB lineal espacio de color, de modo que la suma ponderada apropiada se puede aplicar a los componentes de color lineales ($R_{linear} , G_{linear} , B_{linear}$) para calcular la luminancia lineal $Y_{linear}$.
-
-Para imágenes en espacios de color como Y'UV y sus derivados, que se usan en sistemas de TV y video a color estándar como PAL, SECAM y NTSC, un componente de luma no lineal ($Y'$) se calcula directamente a partir de intensidades primarias comprimidas con gamma como una suma ponderada, que aunque no es una representación perfecta de la luminancia colorimétrica, puede calcularse más rápidamente sin la expansión gamma y sin la compresión utilizadas en los cálculos fotométricos o colorimétricos,\citep{POYNTON2003257}. En los modelos Y'UV y Y'IQ utilizados por PAL y NTSC, el componente rec601 luma ($Y'$) se calcula como:
-$Y' = 0.299R' + 0.587G' + 0.114B'$
+		\begin{figure}[H]
+			\begin{center}
+			\includegraphics[width=1\textwidth]{images/desarrollo/histograms/initial39209}
+			\end{center}
+			\begin{center}
+			\caption{\small{Distribución de ejemplos por señal para el entrenamiento(Total 39209)}}
+			\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
 
 
-..... IMAGENES.....
+	\subsubsection{Datos para la evaluación}
+		Para la etapa de evaluación se cuenta con un conjunto de 12630 imágenes, de igual manera no necesariamente balanceadas y que no son utilizadas durante el proceso de entrenamiento para obtener resultados confiables a la hora de evaluar el resultado del entrenamiento. 
 
-%\subsection{Proceso de Anotacion de la data}
+		\begin{figure}[H]
+			%\begin{center}
+			\includegraphics[width=1\textwidth]{images/desarrollo/histograms/initialTest12630}
+			%\end{center}
+			\begin{center}
+			\caption{\small{Distribución de ejemplos por señal para la evaluación}}
+			\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
+
+	%\subsection{Proceso de Anotacion de la data}
+
 \subsection{Proceso de Aumento de Datos(Data Augmentation)}
 
-Las redes convolucionales durante el aprendizaje profundo requieren una gran cantidad de datos para conseguir realizar un mejor entrenamiento y obtener un modelo que generalice eficazmente,\citep{DL_augmentData}. Muchas veces esta recopilación de datos suele ser costosa y laboriosa es por eso que el proceso de Data Augmentation ayuda a superar este problema a través del uso de métodos o técnicas de procesamiento de imágenes. En esta investigación son utilizadas las siguientes técnicas:
+	Las redes convolucionales durante el aprendizaje profundo requieren una gran cantidad de datos para conseguir realizar un mejor entrenamiento(aprendizaje) y obtener un modelo que generalice eficazmente. Muchas veces esta recopilación de datos suele ser costosa y laboriosa es por eso que el proceso de Data Augmentation ayuda a superar este problema a través del uso de métodos o técnicas de procesamiento de imágenes. Recientemente se ha utilizado ampliamente el aumento de datos genéricos para mejorar el rendimiento de las Redes Neuronales Convolucionales,\citep{DL_augmentData}. 
 
-
-\begin{figure}[H]
-	%\begin{center}
-	\includegraphics[width=1.1\textwidth]{images/desarrollo/histograms/flippedImg_59698}
-	%\end{center}
+	\begin{figure}[H]
 	\begin{center}
-	\caption{\small{Ilustración de un modelo de aprendizaje profundo}}
-	{\small{Fuente propia}}
+	\includegraphics[width=0.5\textwidth ]{images/desarrollo/Augment/exampleaug}
+	\end{center}
+	\begin{center}
+	\caption{\small{El aumento de datos infla artificialmente los conjuntos de datos usando transformaciones que preservan las categorias de los objetos}}
+	{\small{\citep{DL_augmentData}}}
 	\end{center}
 	\vspace{-1.5em}
-\end{figure}
+	\end{figure}
+
+
+	Son utilizadas las siguientes técnicas:
+	
+	
+	\subsubsection{Flipping}
+	
+	Primero, vamos a aplicar un par de trucos para extender nuestros datos volteando. Algunas señales de tráfico son invariantes para voltear horizontal y / o verticalmente, lo que básicamente significa que podemos voltear una imagen y todavía debe clasificarse como perteneciente a la misma clase.
+	
+	\begin{multicols}{2}
+		
+		\underline{Flipping horizontal:}
+		\begin{figure}[H]
+			\begin{center}
+			\includegraphics[height=14.5cm ]{images/desarrollo/Augment/flippedHorizontally}
+			\end{center}
+			\begin{center}
+			\caption{\small{Imágenes volteadas horizontalmente}}
+			\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
+
+	%second column
+	
+		\underline{Flipping Vertical:}
+		\begin{figure}[H]
+			\begin{center}
+			\includegraphics[height=13cm]{images/desarrollo/Augment/flippableVertically}
+			\end{center}
+			\begin{center}
+			\caption{\small{Imágenes volteadas verticalmente}}
+			\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
+
+	\end{multicols}
+
+	\newpage
+	\underline{Flipping Horizontal y Vertical:}
+	\begin{figure}[H]
+		%\begin{center}
+		\includegraphics[width=0.9\textwidth]{images/desarrollo/Augment/flippable_both}
+		%\end{center}
+		\begin{center}
+		\caption{\small{Imágenes volteadas primero horizontal y luego verticalmente}}
+		\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+		\end{center}
+		\vspace{-1.5em}
+	\end{figure}
+
+	Incluso, hay signos que luego de voltearse, deben clasificarse como un signo de alguna otra clase. Esto sigue siendo útil, ya que podemos utilizar los datos de estas clases para ampliar sus contrapartes.
+	\begin{figure}[H]
+		\begin{center}
+		\includegraphics[height=10.5cm ]{images/desarrollo/Augment/cross_flippable}
+		\end{center}
+		\begin{center}
+		\caption{\small{Imágenes que volteadas horizontal o verticalmente, cambian su categoría}}
+		\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+		\end{center}
+		\vspace{1.5em}
+	\end{figure}
+
+
+	Finalmente obtenemos una nueva distribución de datos luego de haber aplicado flipping a ciertas imagenes. Esta distribución consta de 63538 imágenes.
+	\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=1\textwidth]{images/desarrollo/histograms/train_flipped63538}
+		\end{center}
+		\begin{center}
+		\vspace{1em}
+		\caption{\small{Distribución de categoría, luego de aplicar el Flip(en sus distintos tipos)}}
+		\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+		\end{center}
+		\vspace{-1.5em}
+	\end{figure}
+
+
+	\subsubsection{Projection(Proyección)}
+		Implica mover la imagen a lo largo de la dirección X o Y (o ambas). Este método de aumento es muy útil ya que la mayoría de los objetos se pueden ubicar en casi cualquier lugar de la imagen. Esto obliga a la red neuronal convolucional a buscar en todas partes.
+		Los márgenes de proyección se asignan al azar en un rango que depende del tamaño de la imagen. La transformación de proyección parece también ocuparse de escalar al azar a medida que colocamos al azar las esquinas de la imagen en un rango [-delta, +delta].
+
+		\begin{figure}[H]
+			\begin{center}
+			\includegraphics[width=1\textwidth,height=10cm]{images/desarrollo/Augment/projection_transform2}
+			\includegraphics[width=1\textwidth,height=10cm]{images/desarrollo/Augment/projection_transform}
+			\end{center}
+			\begin{center}
+			\vspace{1em}
+			\caption{\small{Ejemplo de cinco proyecciones por cada imagen}}
+			\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
+
+	\subsubsection{Rotation(Rotación)}
+		\vspace{-1.5em}
+		Aplica la rotación aleatoria en un rango de grados definido(hasta 30º) a un subconjunto aleatorio de imágenes.
+         El rango en sí está sujeto a escala dependiendo de la intensidad de aumento.
+        \begin{figure}[H]
+			\begin{center}
+			\includegraphics[width=1\textwidth,height=9cm]{images/desarrollo/Augment/fixedrotation}
+			\end{center}
+			\begin{center}
+			\caption{\small{Ejemplo de cinco rotaciones por cada imagen}}
+			\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
+		\vspace{-2.5em}
+    
+
+    \subsubsection{Zoom}
+    	\vspace{-1.5em}
+    	Acerca(zoom in) o aleja(zoom out) la imagen  tratando de preservar el fondo.
+
+    	%\begin{figure}[H]
+		%	\begin{center}
+		%	\includegraphics[width=1\textwidth,height=10cm]{images/desarrollo/Augment/zoom_normal}
+		%	\end{center}
+		%\end{figure}
+
+		\begin{figure}[H]
+			\begin{center}
+			\includegraphics[width=1\textwidth,height=8cm]{images/desarrollo/Augment/zoom_inv}
+			\end{center}
+			\begin{center}
+			\vspace{0.5em}
+			\caption{\small{Ejemplo de cinco aplicaciones de zoom(in/out) por cada imagen}}
+			\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
+
+
+	\subsubsection{Equalizacion del histograma}
+		Aumenta el contraste global de muchas imágenes, especialmente cuando los datos utilizables de la imagen están representados por valores de contraste cercanos. Esto permite que áreas de menor contraste local puedan obtener un mayor contraste. La ecualización del histograma logra esto al distribuir eficazmente los valores de intensidad más frecuentes.
+
+		\begin{figure}[H]
+			\begin{center}
+			\includegraphics[height=9.5cm]{images/desarrollo/Augment/equalize_hist2_wo_Norm_woRepetition}
+			\end{center}
+			\begin{center}
+			\caption{\small{Ilustración de un modelo de aprendizaje profundo}}
+			\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
+	
+	
+	%	\begin{figure}[H]
+			%\begin{center}
+	%		\includegraphics[width=0.9\textwidth,height=11cm]{images/desarrollo/Augment/AllTogether_ramdoly_mixed2}
+			%\end{center}
+	%		\begin{center}
+	%		\caption{\small{Ilustración de un modelo de aprendizaje profundo}}
+	%		\vspace{-1em}
+	%	{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+	%		\end{center}
+	%		\vspace{-1.5em}
+	%	\end{figure}
+	Finalmente, luego de haber aplicado de manera secuencial y/o aleatoriamente estas tecnicas a cada una de las imágenes, obtenemos dos nuevas distribuciones de datos. 
+	\newline
+	En una se tiene un conjunto balanceado de datos con {\bf 270900 imágenes}.
+	\begin{figure}[H]
+		%\begin{center}
+		\includegraphics[width=1\textwidth]{images/desarrollo/histograms/train_extended_balanced270900}
+		%\end{center}
+		\begin{center}
+		\caption{\small{Dataset balanceado(cada categoría posee igual cantidad de imágenes)}}
+		\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+		\end{center}
+		\vspace{-1.5em}
+	\end{figure}
+
+	En la segunda nueva distribución se tiene que por cada imágen fueron creadas 10 nuevas imágenes, obteniéndose {\bf 698918 imágenes}.
+	\begin{figure}[H]
+		%\begin{center}
+		\includegraphics[width=1\textwidth]{images/desarrollo/histograms/train_extended_per_10_698918}
+		%\end{center}
+		\begin{center}
+		\caption{\small{Dataset no balanceado}}
+		\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+		\end{center}
+		\vspace{-1.5em}
+	\end{figure}
+
+
+\subsection{Pre-procesamiento de Imágenes(Normalization)}
+	Existe una técnica de procesamiento de imágenes por computadora que se utiliza para mejorar el contraste en las imágenes denominada Ecualización Adaptativa del Histograma(AHE por sus siglas en inglés). Difiere de la ecualización de histograma ordinaria en el sentido de que el método adaptativo computa varios histogramas, cada uno correspondiente a una sección distinta de la imagen, y los utiliza para redistribuir los valores de luminosidad de la imagen. Por lo tanto, es adecuado para mejorar el contraste local y mejorar las definiciones de los bordes en cada región de una imagen.
+
+	Sin embargo, AHE tiene una tendencia a amplificar el ruido en regiones relativamente homogéneas de una imagen. Una variante de la ecualización de histograma adaptativo llamada ecualización de histograma adaptativo limitado por contraste (CLAHE por sus siglas en inglés)evita que se genere esto al limitar la amplificación.
+
+
+	En esta investigación, aplicaremos la técnica CLAHE, un algoritmo para la mejora del contraste local, que utiliza histogramas calculados sobre diferentes regiones en una imagen. Utilizado frecuentemente para mejorar el nivel de visibilidad de una imagen o video con niebla ya que permite mejorar los detalles locales incluso en regiones que son más oscuras o más claras que la mayoría de regiones de la imagen. Este algoritmo mejorará aún más la extracción de características de cada imágen.\citep{CLAHE}
+
+		\begin{figure}[H]
+		%\begin{center}
+		\includegraphics[width=1\textwidth]{images/desarrollo/Normalization_Processing/norm_test1}
+		\includegraphics[width=1\textwidth]{images/desarrollo/Normalization_Processing/norm_test2}
+		%\end{center}
+		\begin{center}
+		\caption{\small{Imágenes a las cuales se le aplicaron la técnica CLAHE }}
+		\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+		\end{center}
+		\vspace{-1.5em}
+		\end{figure}
+
+	Por otra parte, para convertir un color de un espacio de color basado en un modelo de color RGB típico de gamma comprimido (no lineal) a una representación en escala de grises de su luminancia, primero se debe eliminar la función de compresión gamma mediante la expansión gamma (linealización) para transformar la imagen en un RGB lineal espacio de color, de modo que la suma ponderada apropiada se puede aplicar a los componentes de color lineales ($R_{linear} , G_{linear} , B_{linear}$) para calcular la luminancia lineal $Y_{linear}$.
+
+	Para imágenes en espacios de color como Y'UV y sus derivados, que se usan en sistemas de TV y video a color estándar como PAL, SECAM y NTSC, un componente de luma no lineal ($Y'$) se calcula directamente a partir de intensidades primarias comprimidas con gamma como una suma ponderada, que aunque no es una representación perfecta de la luminancia colorimétrica, puede calcularse más rápidamente sin la expansión gamma y sin la compresión utilizadas en los cálculos fotométricos o colorimétricos,\citep{POYNTON2003257}. En los modelos utilizados por PAL y NTSC para conseguir tener las imágenes en escala de grises, el componente rec601 luma ($Y'$) se calcula como: \begingroup\makeatletter\def\f@size{14.8}\check@mathfonts	$Y' = 0.299R' + 0.587G' +0.114B'$ \endgroup
+
+	Pierre Sermanet y Yann LeCun mencionaron en su artículo \citep{LeCun}, que el uso de canales de color no pareció mejorar mucho las cosas. Además, debido a diversas condiciones o problemas de iluminación, no es adecuado procesar directamente las imágenes que se capturan a través de la cámara o sensores de imágenes, es por ello que en esta investigación {\bf se usará un solo canal} en el modelo, es decir las imágenes estarán en escala de grises en lugar de tener 3 canales de colores.
+	
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/desarrollo/Normalization_Processing/proc_test1}
+		\includegraphics[width=0.7\textwidth]{images/desarrollo/Normalization_Processing/proc_test2}
+		\end{center}
+		\begin{center}
+		\caption{\small{Imágenes procesadas en escala de grises}}
+		\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+		\end{center}
+		\vspace{-1.5em}
+		\end{figure}
+
+	
+
+\section{Arquitectura del Modelo}
+	
+
+	Los hiperparámetros engloban funciones, variables y constantes utilizadas durante la construcción de las diferentes arquitecturas; estas varían, sin embargo siguiendo conceptos teóricos y antecedentes(investigaciones previas), los siguientes fueron seleccionados de manera especíºfica:
+		% Please add the following required packages to your document preamble:
+		% \usepackage{multirow}
+		%\usepackage[table,xcdraw]{xcolor}
+		% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+		% \usepackage[normalem]{ulem}
+		% \useunder{\uline}{\ul}{}
+		\begin{table}[H]
+		\begin{center}
+		\begin{tabular}{|>{\small}c|>{\small}c|}
+		\hline
+		{\ul \textbf{HIPERPARÁMETROS}}                                                                           & {\ul \textbf{TIPO}}                \\ \hline
+		{\textbf{Inicialización de Pesos}}                                                       				 & {\textit{Xavier}}  \\ \hline
+		\textbf{Tasa de Aprendizaje}                                                                             & \textit{0.0005}                    \\ \hline
+		\textbf{Alg. de Optimización}                                                                            & \textit{Optimizador Adam}          \\ \hline
+		\textbf{Método de Validación}                                                                            & \textit{Entropía Cruzada}          \\ \hline
+		\textbf{\begin{tabular}[c]{@{}c@{}}Fun. Activ. Capas Convolucionales\end{tabular}}        				 & \textit{RELU}                      \\ \hline
+		\textbf{\begin{tabular}[c]{@{}c@{}}Fun. Activ. Capas Totalmente conectadas\end{tabular}} 				 & \textit{Función Softmax}           \\ \hline
+		\textbf{Método de Regularización}                                                                        & \textit{L2 Lasso(lambda = 0.0001)} \\ \hline
+		\textbf{Tamaño del Mini-batch}                                                                           & \textit{525}                       \\ \hline
+		\textbf{Epocas}                                                                                          & \textit{Mas de 30000}                    \\ \hline
+		\end{tabular}
+		\end{center}
+		\end{table}
+
+	En esta investigación se implementó el modelo de redes neuronales convolucionales(CNN) donde las capas convolucionales iniciales de la red extraen características de la imagen(feature extractor), mientras que las capas totalmente conectadas predicen las probabilidades de salida(classifier).
+
+		\begin{figure}[H]
+		%\begin{center}
+		\includegraphics[width=1\textwidth]{images/desarrollo/networkArquitec/tempGeneralCNNmodel}
+		%\end{center}
+		\begin{center}
+		\caption{\small{Arquitectura de la CNN}}
+		\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Extreme Learning Classifier}}}
+		\end{center}
+		\vspace{-1.5em}
+		\end{figure}
+
+	La arquitectura de la red está inspirada en el arquitectura Inception \citep{Inception} y en la arquitectura AlexNet\citep{Krizhevsky2012} para la clasificación de imágenes. En la arquitectura Inception, el modelo creado es denominado GoogLeNet, similar a AlexNet. Varios módulos iniciales son apilados uno sobre el otro para producir el resultado final. En el módulo de inicio, en ese tipo de red, se usaron diversos tamaños de filtros convolucionales para capturar características de diferente abstracción. El alto nivel de abstracción se captura con filtros de mayor tamaño y el de un nivel inferior con filtros de menor tamaño. Procesando información visual a diferentes escalas y al concatenarlas se obtiene un nivel eficiente de abstracción. 
+	%%%	Dado que aplicar directamente más filtros convolucionales con datos de imagen y concatenarlos es computacionalmente costoso, en el modelo Inception finalmente se usaron filtros de reducción de dimensionalidad(pooling/acumulación). Además de ser muy exitoso para la reducción de dimensionalidad, estos filtros también llegan a ser útiles como activación lineal rectificada. La arquitectura de inicio es eficiente en términos de complejidad computacional con respecto al número de unidades en cada etapa. \citep{Mrinal2016}.las características abstractas locales desempeñan un papel importante. Las señales que pertenecen al mismo grupo tienen una ligera diferencia en la estructura local entre sí, lo que dificulta su distinción. Por lo que se optó por agregar un kernel de reducción convolucional de 3 × 3 extra con acumulación máxima en la parte superior para capturar la estructura local discriminativa al comienzo mismo. Los signos pertenecientes a diferentes grupos tienen una abstracción global que se puede capturar utilizando un núcleo de reducción convolucional de 5 × 5.
+
+	Para la clasificación de señales de tráfico en esta investigación se utilizó una versión modificada de las arquitecturas antes mencionadas. Se incorporó {\bf funciones de escala-múltiple} \citep{Multi_scale_feat}, lo que significa que la salida de las capas convolucionales no solo se envía a la capa posterior, sino que también se ramifica y se introduce al clasificador (capa totalmente conectada). La razón detrás de esto es que cuando el clasificador está tomando una decisión basada en convoluciones, podría encontrar que la salida de la primera o segunda capa convolucional también es útil. Básicamente con las características de escala múltiple depende del clasificador qué nivel de abstracción usar, ya que tiene acceso a las salidas de todas las capas convolucionales, es decir,características en todos los niveles de abstracción. Estas capas ramificadas se someten a un pooling máximo adicional, de modo que todas las convoluciones se submuestrean proporcionalmente antes de entrar en el clasificador. Así se garantiza que todas las funciones de escala múltiple experimenten la misma cantidad de máximo aprovechamiento.
+	
+	\subsection{Diseño de la Red}
+	
+	Teniendo en cuenta lo descrito en la seccion 2.2 (Figura 2.5), para describir las capas convolucionales se utilizará la terminología compleja(cada capa tiene múltiples etapas).
+	
+		\begin{figure}[H]
+		%\begin{center}
+		\includegraphics[width=1\textwidth]{images/desarrollo/networkArquitec/designNet}
+		%\end{center}
+		\begin{center}
+		\caption{\small{Modelo del diseño de la Red propuesta}}
+		\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+		\end{center}
+		\vspace{-1.5em}
+		\end{figure}
+
+
+	Para el proceso de entrenamiento fueron tomadas en cuenta diferentes diseños, de las cuales las que presentan 3 capas convolucionales y 2 capas totalmente conectadas otorgan mejores resultados. Estas son descritas a continuación:
+
+		\subsubsection{Arquitectura A} 
+		
+			% Please add the following required packages to your document preamble:
+			% \usepackage{multirow}
+			% \usepackage[table,xcdraw]{xcolor}
+			% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
+			
+			\begin{table}[H]
+			\begin{center}
+			\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
+			\hline
+			{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
+
+			1 & 1 de 32 x 32 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 32 x 32 neuronas & --\\ \hline
+
+			2 &  32 de 32 x 32 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16 neuronas & --\\ \hline
+
+			3 & 32 de 16 x 16 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 32 de 16 x 16 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 4x4}\\ \hline
+			
+			4 &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & -\\ \hline
+			
+			5 & 64 de 8 x 8 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 4x4}\\ \hline
+			
+			6 &  128 de 8 x 8 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 4x4 }\\ \hline
+
+			7 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
+			
+			\end{tabular}
+			\end{center}
+			\end{table}
+
+		\subsubsection{Arquitectura B}
+			
+
+		\subsubsection{Arquitectura C}
+		
+
+\section{Resultados de entrenamiento}
+
+
+
+	
+		
+

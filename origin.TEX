@@ -22,6 +22,24 @@
 %\usepackage{algorithmic}
 %\usepackage{algorithm}
 
+
+\usepackage{changepage}
+\newenvironment{h1}[2][]{\section[#1]{#2}}{}
+\newenvironment{h2}[2][]{%
+  \begin{adjustwidth}{2em}{}
+    \subsection[#1]{#2}%
+}{%
+  \end{adjustwidth}
+}
+\newenvironment{h3}[2][]{%
+  \begin{adjustwidth}{2em}{}
+    \subsubsection[#1]{#2}%
+}{%
+  \end{adjustwidth}
+}
+
+
+
 %%%%==nuevos==========%%%%
 \usepackage[normalem]{ulem} %%agregado por ul
 \useunder{\uline}{\ul}{} %%agregado por ul
@@ -32,7 +50,6 @@
 
 \usepackage{parskip}
 \setlength{\parindent}{15pt}
-
 %%%%==nuevos==========%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -42,31 +59,32 @@
 \usepackage{multicol}
 \usepackage{array,colortbl}
 
-\usepackage[round]{natbib} 
-\bibliographystyle{apalike}
+\usepackage[round]{natbib}
+
 \newcommand{\yy}{{\'{\i} }}
 \newcommand{\y}{\'{\i}}
-
+\usepackage{xcolor} %para color
 
 \begin{document}
 
 \baselineskip 1cm
 \pagestyle{plain}
-	\input{cap1.tex}    % caratula del trabajo
+	\input{CAP1.tex}    % caratula del trabajo
 \listoffigures      % indice de figuras
 \addcontentsline{toc}{chapter}{Índice de Figuras}
 \listoftables       % indice de tablas
 \addcontentsline{toc}{chapter}{Índice de Tablas}
 \textheight 24cm 	% footer height
 \tableofcontents    % indice de materias
-	\input{cap2.tex}    % capitulo de introduccion
-	\input{cap3.tex}    % capitulo de marco teorico
-	\input{cap4.tex}    % capitulo de cuerpo del trabajo
-	\input{cap5.tex}    % capitulo de Desarrollo de Investigacion
-	\input{cap6.tex}    % capitulo de Resultados
-	\input{cap7.tex}    % capitulo de consideraciones finales
+	\input{CAP2.tex}    % capitulo de introduccion
+	\input{CAP3.tex}    % capitulo de marco teorico
+	\input{CAP4.tex}    % capitulo de cuerpo del trabajo
+	\input{CAP5.tex}    % capitulo de Desarrollo de Investigacion
+	\input{CAP6.tex}    % capitulo de Resultados
+	\input{CAP7.tex}    % capitulo de consideraciones finales
+ \bibliographystyle{apalike}
  \bibliography{Bibliografia} % Bibliografia formato APA
-	\input{cap8.tex}    % Apendice
+	\input{CAP8.tex}    % Apendice
 \end{document}
 
 

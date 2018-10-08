@@ -1,7 +1,7 @@
 %!TEX root = origin.TEX
 \chapter{Marco teórico}
 \pagenumbering{arabic}
-\setcounter{page}{10}
+\setcounter{page}{15}
 \renewcommand{\baselinestretch}{2} %doble espacio paratodo el texto
 
 En este capítulo se presenta una reseña del material bibliográfico investigado con relación a los temas considerados en esta investigación. Los conocimientos investigados son muy amplios, principalmente aquel que ayudó a consolidar las bases del conocimiento científico para elaborar esta tesis, como lo son los temas de optimización combinatoria, complejidad computacional, metaheurísticas, ciencia de la información y logística, conocimientos sin los cuales sería difícil de modelar y solucionar matemática y computacionalmente cualquier tipo de problema de optimización.
@@ -117,8 +117,8 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 
 		Los parámetros de la capa convolucional consisten basicamente en dos datos. La entrada y todo lo que respecta a un conjunto de filtros(también denomidados kernels) cuyos valores se aprenden, es decir, empiezan con datos aleatorios y conforme avance el entrenamiento se van alterando. 
 		\vskip 0.3cm 
-		{\bf \underline {Etapa de Convolución}} 
-		\vskip 0.4cm  
+		\subsubsection {Etapa de Convolución} 
+		  
 		Para el proceso convolucional cada filtro es pequeño espacialmente (a lo ancho y alto), incluso se extiende a través de la profundidad total del volumen de entrada(imagen). Por ejemplo, un filtro típico en una primera capa de una ConvNet podría tener un tamaño de 5x5x3 (es decir, 5 píxeles de ancho y alto, y 3 de profundidad debido a que los canales de color - RGB). Durante el proceso hacia adelante, se desliza (más precisamente, convolve) cada filtro a través del ancho y alto(incluso produnfidad) del volumen de entrada para calcular los productos de puntos entre las entradas del filtro y la entrada en cualquier posición.
 
 		\begin{figure}[H]
@@ -128,6 +128,17 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\begin{center}
 		\caption{\small{Convolucion entre el filtro y parte de la imagen}}
 		{\small{Fuente: \citep{Rohrer}}}
+		\end{center}
+		\vspace{-1.9em}
+		\end{figure}
+
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.75\textwidth]{images/marcoteorico/Convolution_calculation1}
+		\end{center}
+		\begin{center}
+		\caption{\small{Posicionamiento del kernel/filtro por pixel}}
+		{\small{Fuente: Fuente Propia}}
 		\end{center}
 		\vspace{-1.9em}
 		\end{figure}
@@ -144,6 +155,18 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{center}
 		\vspace{-1.5em}
 		\end{figure}
+
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.75\textwidth]{images/marcoteorico/Convolution_calculation2}
+		\end{center}
+		\begin{center}
+		\caption{\small{Cálculo Convolucional}}
+		{\small{Fuente: Fuente Propia}}
+		\end{center}
+		\vspace{-1.9em}
+		\end{figure}
+
 		Cada filtro puede ser representado como una neurona de salida, cuyo valor se halla usando la sumatoria de pesos como se muestra en la figura 11. Intuitivamente, la red aprenderá los filtros que se activan cuando ven algún tipo de característica visual, como un borde o contorno en alguna orientación específica. 
 		
 		\vskip 0.4cm  
@@ -277,8 +300,21 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 			\item $j$ es el número del filtro de salida
 			\item $k$ es la cantidad de filtros en la capa $n-1$ o $n$
 		\end{itemize}
+
+
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.9\textwidth]{images/marcoteorico/Convolution_calculation_borders}
+		\end{center}
+		\begin{center}
+		\caption{\small{Ejemplo de filtro crado apartir de los 3 aspectos mencionados}}
+		{\small{Fuente propia}}
+		\end{center}
+		\vspace{-1.9em}
+		\end{figure}
+
 	%\vskip 0.4cm 
-	{\bf \underline {Capa ReLU(Rectified Linear Units)}} 
+	\subsubsection  {Capa ReLU(Rectified Linear Units)}
 		\vskip 0.4cm 
 		Debido al hecho que todas las capas en una red neuronal no son lineales. Después de calcular los valores para cada una de las neuronas en la red neuronal, colocamos estos valores a través de una función de activación. Una red neuronal artificial consiste básicamente en multiplicaciones y suma de matrices. Si solo utilizáramos estos cálculos lineales, podríamos apilarlos uno encima del otro y esa no sería una red muy profunda. Por lo tanto, a menudo se utiliza funciones de activación no lineales en cada capa de la red. Al apilar capas de funciones lineales y no lineales una encima de la otra, teóricamente podemos modelar cualquier problema.
 		\vskip 0.4cm 
@@ -317,9 +353,22 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		Es por ello que entre la capa(etapa) de convolucion y la capa(etapa) de pooling puede encontrarse la capa ReLU que esta compuesta por neuronas que poseen una funcion de activación llamada Función Lineal Rectificada que deriva de la función de activación sigmoidal, pero tiene mayores ventajas que esta última y tambien de la tangencial. Las activaciones de ReLU se sobreponen más fácilmente que los sigmoides, esto los prepara muy bien para ser utilizados en combinación con la técnica DROPOUT.
 		
 		\vskip 0.4cm 
-	{\bf \underline {Técnica Dropout}} 
+	\subsubsection {Técnica Dropout}
 		\vskip 0.4cm 
 		Combinar las predicciones de muchos modelos diferentes es una forma muy exitosa de reducir los errores de prueba, pero parece ser demasiado costoso para las redes neuronales de gran tamaño debido a que pueden tardar varios días en entrenar. Sin embargo, dropout es una técnica de regularización que tiene por objetivo de reducir el sobreajuste que puede darse durante el entrenamiento de una red neuronal. Consiste en establecer a cero la salida de cada neurona oculta con una probabilidad 0.5(comúnmente). Las neuronas que se "abandonan" de esta manera no contribuyen al pase directo y no participan en las siguientes etapas de entrenamiento.
+
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.8\textwidth]{images/marcoteorico/dropout_sample}
+		\end{center}
+		\begin{center}
+		\caption{\small{En la izquierda la red neuronal común y a la derecha la red neuronal diluida producida por la aplicación de dropout}}
+		{\small{\citep{AulaDNN}}}
+		\end{center}
+		\vspace{-1.5em}
+		\end{figure}
+		
+
 		\vskip 0.4cm 
 		Por lo tanto, cada vez que se presenta una entrada, la red neuronal muestrea una arquitectura diferente, pero todas estas arquitecturas comparten ponderaciones. Esta técnica reduce las coadaptaciones complejas de las neuronas, ya que una neurona no puede depender de la presencia de otras neuronas particulares. Por lo tanto, se ve forzado a aprender características más robustas que son útiles en conjunción con muchos subconjuntos aleatorios diferentes de las otras neuronas.
 		\begin{figure}[H]
@@ -334,7 +383,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{figure}
 
 		\vskip 0.4cm 
-	{\bf \underline {Capa de Agrupación(Pooling)}} 
+	\subsubsection {Capa de Agrupación(Pooling)}
 		\vskip 0.4cm 
 
 		Una variedad de cálculos que reducen la dimensionalidad de un mapa de características se conocen como agrupación. La agrupación, que se aplica a cada canal por separado, permite que la red sea robusta e invariante a pequeños cambios y distorsiones. La capa Pooling(también conocida como una capa de reducción de resolución) combina o agrupa, un conjunto de valores en su campo receptivo en un menor número de valores. Puede ser configurado en función del tamaño de su campo receptivo (por ejemplo, 2 x 2) y en función a la operación de agrupamiento (por ejemplo, máximo-max o promedio-average), como se muestra en Fig. 20. Normalmente, la agrupación se produce en bloques que no se solapan (es decir, el paso o stride es igual al tamaño de la agrupación). Usualmente se usa una stride mayor que uno cuando se quiere que haya una reducción en la dimensión de la representación(mapa de características).
@@ -420,20 +469,15 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 
 	\subsection{Capa totalmente conectada (Fully-connected layer)}
 
-	Esta capa por lo general aparece al final de la arquitectura y es similar al Perceptrón multicapa(MultilayerPerceptron -MLP), en el cual la neurona de salida se conecta a todas las neuronas de entrada y el peso de las conexiones son actualizadas usando el método de retropropagación.
-	\vskip 0.4cm  
-	Eventualmente, con un mapa de características lo suficientemente pequeño, el contenido se aplastará en un vector de una sola dimensión y será entrada para en un MLP totalmente conectado para su procesamiento.
-	\vskip 0.4cm  
-	Habiendo detallado que la función ReLU es la más utilizada en las capas anteriores, en esta última capa del modelo generalmente se utiliza una función de activación diferente, porque en esta capa se pretende que tenga una salida determinada. La {\bf función softmax} es muy popular cuando se hace la clasificación.
-	\vskip 0.4cm  
-	Esta función softmax es una generalización de la función logística que aplasta un vector K-dimensional de valores reales arbitrarios a un vector K-dimensional de valores reales en el rango [0, 1] que suman 1. La función viene dada por 
+		Esta capa por lo general aparece al final de la arquitectura y es similar al Perceptrón multicapa(MultilayerPerceptron -MLP), en el cual la neurona de salida se conecta a todas las neuronas de entrada y el peso de las conexiones son actualizadas usando el método de retropropagación.
+		\vskip 0.4cm  
+		Eventualmente, con un mapa de características lo suficientemente pequeño, el contenido se aplastará en un vector de una sola dimensión y será entrada para en un MLP totalmente conectado para su procesamiento.
+		\vskip 0.4cm  
+		Habiendo detallado que la función ReLU es la más utilizada en las capas anteriores, en esta última capa del modelo generalmente se utiliza una función de activación diferente, porque en esta capa se pretende que tenga una salida determinada. La {\bf función softmax} es muy popular cuando se hace la clasificación.
 	
-	\begingroup\makeatletter\def\f@size{14.4}\check@mathfonts
-	\begin{center}
-	$\sigma(\mathbf{z})_{j}={\frac {e^{z_{j}}}{\sum _{k=1}^{K}e^{z_{k}}}}$
-	\end{center}
-	\endgroup
-	%\newpage-
+
+
+	\newpage
 	En resumen, una arquitecuta o modelo de red convolucional estará compuesto de varias capas y ejecutará las siguientas actividades:
 	\begin{figure}[H]
 		\begin{center}
@@ -463,6 +507,226 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 
 		\item El error se retroproyecta para actualizar los valores de filtro (pesos) y sesgo(bias). \vspace{-0.5em}
 		
-		\item Finalmente, un ciclo de entrenamiento se completa en un solo pase hacia adelante y hacia atrás. Por lo que se tiene que repetir todo el proceso para obtener mejores resultados.\vspace{-0.5em}
+		\item Finalmente, un ciclo de entrenamiento se completa en un solo pase hacia adelante y hacia atrás. Por lo que se tiene que repetir todo el proceso durante varios iteraciones para obtener mejores resultados.\vspace{-0.5em}
 
 	\end{itemize}
+
+\section{Entrenamiento y Validación}
+
+	La red procesa los registros en los datos de entrenamiento uno a la vez, usando los pesos y las funciones en las capas ocultas, luego compara las salidas resultantes con las salidas deseadas. Los errores se propagan a través del sistema, lo que hace que el sistema ajuste los pesos y biases que serán procesados en la siguiente iteracion de entrenamiento. Este proceso ocurre una y otra vez para el mismo conjunto de datos, a medida que los pesos se ajustan(refianan)continuamente. Para realizar este proceso, existe una método de optimización muy popular denominado {\bf Descenso de gradiente}(Gradient Descent).
+
+	\subsection{Descenso de Gradiente}
+
+		Un gradiente mide cuánto cambia la salida de una función si se cambia un poco las entradas.
+
+		En el caso del entrenamiento de una red neuronal, el gradiente simplemente mide el cambio en todos los pesos con respecto al cambio en el error. El gradiente se puede representar como la pendiente de una función. Cuanto más alto es el gradiente, más pronunciada es la pendiente y más rápido puede aprender un modelo. Pero si la pendiente es cero, el modelo deja de aprender. Dicho matemáticamente, un gradiente es una derivada parcial con respecto a sus entradas, \citep{gradient}.
+
+		El descenso de gradiente es un algoritmo de optimización iterativa utilizado al entrenar un modelo de aprendizaje automático, basado en una función convexa, que ajusta sus parámetros iterativamente para minimizar la función de pérdida(error) hasta su mínimo local.\citep{gradient}
+
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.8\textwidth]{images/desarrollo/entrenamiento/gradient}
+		\end{center}
+		\begin{center}
+		\caption{\small{Establecimiento de la Tasa de Aprendizaje}}
+		{\small{\citep{gradientimg}}}
+		\end{center}
+		\vspace{-1.5em}
+		\end{figure}
+		
+
+		La idea detrás del descenso de gradiente es disminuir de forma gradual, pero constante, el error de salida ajustando los pesos. Intuitivamente, se conoce que si un cambio en un peso aumentará (disminuirá) el error, entonces queremos disminuir (aumentar) ese peso. Matemáticamente, representa el cambio en el error dado un cambio de unidad en el peso:
+
+		\begingroup\makeatletter\def\f@size{20.8}\check@mathfonts
+		\begin{center}
+		$ \frac{{\partial E}}{\partial w_{ij}}$
+		\end{center}
+		\begin{center}
+		{\small{La derivada del error con respecto al peso}}
+		\end{center}
+		\endgroup
+		
+		Una vez que encontremos esta derivada, actualizamos el peso a través de lo siguiente:
+
+		\begingroup\makeatletter\def\f@size{17.8}\check@mathfonts
+		\begin{center}
+		$  \triangle w_{ij} = -\eta\frac{{\partial E}}{\partial w_{ij}} $
+		\end{center}
+		\begin{center}
+		{\small{Representación de la distancia por la dirección del cambio. $\eta$  es tasa de aprendizaje}}
+		\end{center}
+		\endgroup
+
+		La tasa de Aprendizaje suele disminuir gradualmente durante las épocas de la fase de entrenamiento. Si actualizamos todos los pesos usando esta misma fórmula, esto equivale a moverse en la dirección de descenso más pronunciado a lo largo de la superficie de error, de ahí el nombre, descenso de gradiente.
+
+		Se tienen diversos tipos, estos son:
+		%con el objetivo principal de optimizar la funcion de error o pérdida de la red y por consecuente garantizar que el modelo neuronal pueda generalizar las clasificaciones a realizar. 
+		\subsubsection{Gradiente Descendiente por Lotes(Batch Gradient Descent)}
+		
+			Calcula el error para cada ejemplo dentro del conjunto de datos de entrenamiento, pero el modelo se actualiza solo después de que se hayan evaluado todos los ejemplos de entrenamiento Todo este proceso es como un ciclo y se denomina época de entrenamiento.
+
+		\subsubsection{Gradiente Descendiente Estocástico(Stochastic Gradient Descent-SGD)}
+
+			Por el contrario, hace esto para cada ejemplo de entrenamiento dentro del conjunto de datos. Esto significa que actualiza los parámetros para cada ejemplo de entrenamiento, uno por uno. Esto puede hacer que el SGD sea más rápido que el Descenso de gradiente por lotes, dependiendo del problema. Una ventaja es que las actualizaciones frecuentes nos permiten tener una tasa de mejora bastante detallada. El hecho es que las actualizaciones frecuentes son más costosas desde el punto de vista computacional que el enfoque del BGD y La frecuencia de esas actualizaciones también puede generar gradientes ruidosos, lo que puede hacer que la tasa de error salte, en lugar de disminuir lentamente.
+
+			El MOMENTUM es otro argumento en el optimizador SGD que podríamos ajustar para obtener una convergencia más rápida. Ayuda al vector de parámetros a aumentar la velocidad en cualquier dirección con un descenso constante del gradiente para evitar oscilaciones. Una elección típica de momento es entre 0.5 a 0.9.
+
+		\subsubsection{Mini-batch Gradient Descent}
+
+			Es el método de más usado, ya que es una combinación de los conceptos de SGD y Batch Gradient Descent. Simplemente divide el conjunto de datos de entrenamiento en pequeños lotes y realiza una actualización para cada uno de estos lotes. Por lo tanto, crea un equilibrio entre la robustez del descenso del gradiente estocástico y la eficiencia del descenso del gradiente discontinuo.
+
+
+
+
+
+	\subsection{Tasa de Aprendizaje (Learning Rate)}
+		Uno de los hiperparámetros clave durante el entrenamiento deuna red neuronal es la velocidad/tasa de aprendizaje para el descenso del gradiente.
+		Este parámetro puede entenderse como el tamaño del paso en la optimización para minimizar la función de pérdida de la red, es decir, es un parámetro que determina cuánto influye un paso de actualización en el valor actual de los pesos, por ejemplo, el tamaño del paso en el que el gradiente cae en la dirección máxima de la pendiente, \citep {AdamImg}.
+
+		Cuando la tasa de aprendizaje es demasiado pequeña, es necesario realizar muchas iteraciones de aprendizaje; pero cuando la tasa de aprendizaje es demasiado grande, el resultado se moverá hacia adelante y hacia atrás en ambos sentidos de los valores extremos(oscila), y no se podrá lograr la solución óptima.
+		
+		\begin{figure}[H]
+		%\begin{center}
+		\includegraphics[width=1\textwidth]{images/desarrollo/entrenamiento/LR}
+		%\end{center}
+		\begin{center}
+		\caption{\small{Establecimiento de la Tasa de Aprendizaje}}
+		{\small{\citep {AdamImg}}}
+		\end{center}
+		\vspace{-1.5em}
+		\end{figure}
+
+
+		Debido a esto es que al entrenar redes neuronales profundas, a menudo es útil reducir la tasa de aprendizaje a medida que avanza el entrenamiento y no mantenerlo constante y asi evitar la divergencia(Punto apartir del cual la pérdida ya no se reduce y en lugar de eso comienza a incrementarse).
+
+
+		\begin{figure}[H]
+		%\begin{center}
+		\includegraphics[width=1\textwidth]{images/desarrollo/entrenamiento/lr_finder}
+		%\end{center}
+		\begin{center}
+		\caption{\small{Problemas con la Tasa de Aprendizaje}}
+		{\small{\citep {AdamImg}}}
+		\end{center}
+		\vspace{-1.5em}
+		\end{figure}
+
+		Reduciendo lentamente la tasa de aprendizaje a lo largo del tiempo ayuda a acelerar el aprendizaje. Esto es lo que se conoce como tasa de decaimiento de aprendizaje{\bf(learning rate decay)}.
+
+		Sin embargo, el optimizador Gradient Descent(en cualquiera de sus tipos) con una tasa de decaimiento de aprendizaje, no es usado a menudo para entrenar redes neuronales profundas ya que genera un desafío el determinar los hiperparámetros que deben definirse de antemano y dependen en gran medida del tipo de modelo y problema. Además de que la misma tasa de aprendizaje se aplica a todas las actualizaciones de los parámetros. Por lo que opta en usar optimizadores más avanzados que tienen una tasa de convergencia más rápida y adaptable a diversas situaciones. Proporcionan una alternativa a los clásicos y son conocidos como optimizadores de descenso de gradiente de segundo orden; algunos de ellos son: Adagrad, Adadelta, RMSprop, Adam. 
+
+		%AdaGrad or adaptive gradient allows the learning rate to adapt based on parameters. It performs larger updates for infrequent parameters and smaller updates for frequent one. Because of this it is well suited for sparse data (NLP or image recognition). Another advantage is that it basically illiminates the need to tune the learning rate. Each parameter has its own learning rate and due to the peculiarities of the algorithm the learning rate is monotonically decreasing. This causes the biggest problem: at some point of time the learning rate is so small that the system stops learning.AdaDelta resolves the problem of monotonically decreasing learning rate in AdaGrad. In AdaGrad the learning rate was calculated approximately as one divided by the sum of square roots. At each stage you add another square root to the sum, which causes denominator to constantly decrease. In AdaDelta instead of summing all past square roots it uses sliding window which allows the sum to decrease. RMSprop is very similar to AdaDelta. Adam or adaptive momentum is an algorithm similar to AdaDelta. But in addition to storing learning rates for each of the parameters it also stores momentum changes for each of them separately
+
+		En esta investigación se usaran los métodos de Descenso de Gradiente Mini-batch y optimzador Adam, conjuntamente con una tasa de decaimiento de aprendizaje.
+
+	\subsection{Optimizador ADAM}
+	
+		El método calcula las tasas de aprendizaje individuales de manera adaptativa para diferentes parámetros a partir de las estimaciones de los primeros y segundos momentos de los gradientes; el nombre Adam deriva de Estimación del Momento Adaptativo \citep {Adam},
+
+		Permite que la tasa de aprendizaje se adapte según los parámetros. Realiza actualizaciones más grandes para parámetros infrecuentes y actualizaciones más pequeñas para los frecuentes. Debido a esto, es adecuado para datos dispersos (NLP o reconocimiento de imágenes). Otra ventaja es que básicamente simplifica la necesidad de ajustar la tasa de aprendizaje. Cada parámetro tiene su propia tasa de aprendizaje, sin embargo, la tasa de aprendizaje no disminuye monótonamente. Además de almacenar las tasas de aprendizaje para cada uno de los parámetros, también almacena los cambios de momento para cada uno de ellos por separado 
+
+	\subsection{Validación Cruzada}
+	
+		Para el entrenamiento, el conjunto de datos se divide en un subconjunto de entrenamiento y otro para validación. En este caso se tiene la siguiente estructura:
+
+		\begin{table}[H]
+		\begin{center}
+		\begin{tabular}{|c|c|}
+		\hline
+		{\ul \textbf{CONJUNTO DE DATOS}}                                                                           & {\ul \textbf{CANTIDAD IMÁGENES}}                \\ \hline
+		\textbf{Entrenamiento}                                                                           & \text{203175 (75\%)}                       \\ \hline
+		\textbf{Validación}                                                                                          & \text{67725 (25\%)}                    \\ \hline
+		\end{tabular}
+		\end{center}
+		\end{table}
+
+		Se utiliza el subconjunto de validación para evaluar el desempeño de diferentes arquitecturas del modelo (diferentes topologías), para luego escoger una de ellas. El modelo es entrenado sobre el conjunto de entrenamiento completo y la capacidad de generalización es medida en el conjunto de pruebas. 
+
+		En problemas de clasificación, debido a que los datos se dividen en clases finitas, es natural pensar que la categoría al cual pertenece cierto resultado se dará a través de probabilidades En probabilidad, la entropía cruzada es la distancia entre las dos distribuciones de probabilidad y se usa generalmente como la función de pérdida. Es por ello que el resultado de la validación cruzada representa la pérdida de la entropía del conjunto de datos. La entropía se suele utilizar en la teoría de la información para medir la pureza o impureza de un conjunto determinado. La pregunta a la que responde es: ¿Cuánto diferente esos elementos son entre sí?.  
+
+			\begingroup\makeatletter\def\f@size{17.8}\check@mathfonts
+			\begin{center}
+			$H(p,q) = -\sum_{\forall x} p(x) log(q(x))$
+			\end{center}
+			\begin{center}
+			{\small{Fórmula de entropía cruzada con dos distribuciones sobre la variable discreta $x$, donde $q(x)$ es la estimación para la clasificación verdadera $p(x)$}}
+			\end{center}
+			\endgroup		
+
+		Para una red neuronal, normalmente verá la ecuación escrita en una forma donde $y$ es el vector de verdad y la variable $\hat{y}$ (o algún otro valor tomado directamente de la última salida de la capa) es la estimación, y se vería así para un solo ejemplo:
+			
+			\begingroup\makeatletter\def\f@size{17.8}\check@mathfonts
+			\begin{center}
+			$L = - \mathbf{y} \cdot log(\mathbf{\hat{y}})$
+			\end{center}
+			%\begin{center}
+			%{\small{El valor es independiente de cómo la probabilidad restante se divide entre clases incorrectas}}
+			%\end{center}
+			\endgroup		
+		
+		A menudo esta ecuación es promediada sobre todos los ejemplos como una función de costo. No siempre se cumple estrictamente en las descripciones, pero generalmente una función de pérdida es de nivel inferior y describe cómo una sola instancia o componente determina un valor de error, mientras que una función de costo es de nivel superior y describe cómo se evalúa un sistema completo para la optimización. Una función de costo basada en pérdida de clasificación multiclase para un conjunto de datos de tamaño N podría verse así:
+		
+			\begingroup\makeatletter\def\f@size{17.8}\check@mathfonts
+			\begin{center}
+			$J = - \frac{1}{N}(\sum_{i=1}^{N} \mathbf{y_i} \cdot log(\mathbf{\hat{y}_i}))$
+			\end{center}
+			\begin{center}
+			{\small{Cálculo de la función de costo en la validación de clasificación de datos}}
+			\end{center}
+			\endgroup		
+	
+
+		Es por ello que la la función de coste dada por la validacion cruzada ayuda para decidir cuándo se debe terminar el entrenamiento de una red.\citep{AulaMLP}. Usualmente se utiliza el error cuadrático medio como función de pérdida para medir el rendimiento de un modelo de regresion. Sin embargo, en casos de clasificación, la función de costo de pérdida a través del cálculo de la entropía cruzada es preferible, ya que tiende a no causar saturación de las neuronas de salida, convirtiendo el aprendizaje más rápido,\citep{AulaDNN}.
+
+		La pérdida de entropía cruzada aumenta a medida que la probabilidad prevista diverge de la clasificación real. Por lo tanto, un modelo casi perfecto tendría una pérdida de entropía cercana a 0, \citep{crossMSE}.
+		
+
+
+	\subsection{Función Softmax}
+		Conocida tambien como función exponencial normalizada, es la funcion de activación utilizada en la última capa de una red neuronal. La salida de una red neuronal completamente conectada no es una distribución de probabilidad, sin embargo, el uso de esta función ayuda a obternela. Por lo que esta función permitirá estimar la probabilidad de que la imagen de entrada pertenezca a cada una de las clases al realizar una normalización con el objetivo que el valor de cada neurona esté limitado entre cero y uno y así permitir que el resultado de las neuronas de salida sumen a uno. 
+
+			\begingroup\makeatletter\def\f@size{17.8}\check@mathfonts
+			\begin{center}
+			${\displaystyle P(y=j\mid \mathbf {x} )={\frac {e^{\mathbf {x} ^{\mathsf {T}}\mathbf {w} _{j}}}{\sum _{k=1}^{K}e^{\mathbf {x} ^{\mathsf {T}}\mathbf {w} _{k}}}}}$
+			\end{center}
+			\begin{center}
+			{\small{Función Softmax}}
+			\end{center}
+			\endgroup
+			
+		Esto se puede ver como la composición de K funciones lineales ${x} \mapsto \mathbf {x} ^{\mathsf {T}}\mathbf {w} _{1},\ldots ,\mathbf {x} \mapsto \mathbf {x} ^{\mathsf {T}}\mathbf {w} _{K}$, donde ${\mathbf {x} ^{\mathsf {T}}\mathbf {w}}$ denota el producto interno de $x$(entrada) y $w$(peso).	La operación es equivalente a aplicar un operador lineal definido por $ w $ a vectores $ x $, transformando así la entrada original, probablemente altamente dimensional(reales arbitrarios), en vectores K-dimensional de valores reales en el rango [0, 1] que suman 1. \citep{Bishop}. 
+
+		Esta función permite que al estar normalizadas las salidas de la segunda capa totalmente conectada, pueda ser aplicada la validación cruzada y conocer la pérdida de entropía.
+
+	
+	\subsection{Método de Regularización L2}
+		En la regularización, lo que se hace normalmente es mantener el mismo número de funciones, pero se reduce la magnitud de los coeficientes.
+
+		
+
+		El método de Regularización L2 o también conocido como Regresión Lasso (Lasso Regression - Least Absolute Shrinkage and Selection Operator), trata de agregar un término adicional(lambda) a la función de pérdida, la cual penaliza parametrizaciones con pesos más elevados,\citep{AulaMLP}, es decir, reduce el coeficiente de la función menos importante a cero, eliminando así algunas características. Por lo tanto, esto funciona bien para la selección de funciones en caso de que tengamos una gran cantidad de funciones.
+
+		Si $L(\theta, D)$ es la función de pérdida (en esta investigación - entropía cruzada), $\theta$ es el conjunto de parámetros libres y $D$ es un ejemplo de entrenamiento, entonces a la función de pérdida regularizada será:
+
+			\begingroup\makeatletter\def\f@size{17.8}\check@mathfonts
+			\begin{center}
+			$E(\theta,D) =L(\theta,D) +\lambda R(\theta)$
+			\end{center}
+			\endgroup
+		
+
+		Donde $R(\theta)$ caracteriza la complejidad del modelo y $\lambda$ representa la proporción de la pérdida total del modelo, generalmente $\lambda$ estará cerca de 0 porque si $\lambda$ es demasiado grande, conducirá a un ajuste insuficiente(underfitting). Por otro lado, para evitar el exceso de ajuste(overfitting) cuando se tiene una gran cantidad de características en su conjunto de datos, no optimizamos directamente $L(\theta,D)$ (cross entropy), sino que optimizamos $L(\theta,D) +\lambda R(\theta)$
+
+		Se usará un lambda($\lambda$) = 0.0001, que parecía funcionar mejor. La regularización de pérdida L2 solo debe incluir los pesos de las capas totalmente conectadas, y normalmente no incluye a los bias(sesgos). La intuición detrás de esto es que el bias contribuye al overfitting(sobreajuste), y no estaría agregando ningún nuevo grado de libertad al modelo.
+
+
+
+
+
+
+
+
+
+
+
+	
