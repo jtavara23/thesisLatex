@@ -9,7 +9,7 @@
 	Sin embargo, cuando estos mecanismos no son conocidos o percebidos pueden ocasionar no solo que la congestión del tráfico aumente sino que también se produzcan accidentes que en muchos casos derivan en consecuencias fatales, generando inseguridad vial.
 
 	\vskip 0.15cm
-	La inseguridad vial es un problema de interés mundial, según el último informe de la OMS(Organización Mundial de la salud) anualmente cerca de 1,3 millones de personas mueren alredor del mundo y entre 20 y 50 millones padecen traumatismos no mortales,\citep{OMS}. Esto representa la segunda de las principales causas de muerte a nivel mundial entre los jóvenes de 05 a 29 años de edad, y la tercera entre la población de 30 a 44 años. Son distintas las causas que conllevan a este problema, de las cuales las principales pueden ser la falta de concientización y educación vial. 
+	La inseguridad vial es un problema de interés mundial, según el último informe de la OMS (Organización Mundial de la salud) anualmente cerca de 1,3 millones de personas mueren alredor del mundo y entre 20 y 50 millones padecen traumatismos no mortales,\citep{OMS}. Esto representa la segunda de las principales causas de muerte a nivel mundial entre los jóvenes de 05 a 29 años de edad, y la tercera entre la población de 30 a 44 años. Son distintas las causas que conllevan a este problema, de las cuales las principales pueden ser la falta de concientización y educación vial. 
 	
 	\vskip 0.15cm	
 	Es un problema para la economía mundial de los países, así también para los hogares. A pesar de ello, se invierte muy poco dinero en prevenir los accidentes y las lesiones causadas por el tránsito. El sector salud se beneficiaría mucho de una mejor prevención de las lesiones porque se reducirían las hospitalizaciones y la gravedad de los traumatismos, \citep{CNSV}.
@@ -187,6 +187,7 @@
 	Todos los hechos descritos hacen que el reconocimiento de las señales de tránsito sea un reto desafiante y esencial en muchos aspectos, no solo para contribuir en los esfuerzos de la industria automotriz en el campo de la asistencia al conductor, sino también para organismos internacionales y gubernamentales quienes se dan cuenta de la problemática que representa la inseguridad vial y buscan constantemente introducir nuevos mecanismos y tecnologías que faciliten y mejoren la conducción vehicular para el beneficio propio del conductor y en general para la seguridad vial de la sociedad.
 
 \newpage
+
 \section{Metodología de la investigación}
 		El desarrollo de la investigación comprenderá las siguientes etapas de trabajo a saber:
 
@@ -200,12 +201,27 @@
 
 		\item[d)]	Análisis e implementación de diversas técnicas de procesamiento de imágenes que serán aplicadas al dataset recolectado con la finalidad de contribuir en el diseño inicial del modelo modelo convolucional.
 
-		\item[e)]	Puesto a que las redes neuronales son heurísticas por naturaleza (requieren un constante ajuste de híper-parámetros para obtener un óptimo resultado), se realizarán diferentes diseños de arquitecturas convolucionales y se escogerá el que otorge los mejores resultados.
+		\item[e)]	Puesto a que las redes neuronales son heurísticas por naturaleza (requieren un constante ajuste de híper-parámetros para obtener un óptimo resultado), se realizarán diferentes diseños de arquitecturas de modelos convolucionales y se escogerá el modelo que otorge los mejores resultados.
 		
-		\item[f)]	Para el análisis de resultados se pretende usar una Matriz de confusión, en la cual cada fila de la matriz representa las instancias en una clase predecida, mientras que cada columna representa las instancias en una clase real (o viceversa). Además de los indicadores descritos anteriormente(tasa de sensibilidad y de error). Incluso a través de esta matriz se pueden conocer valores estadísticos como el ROC(Receiver Operating Characteristic), métrica usada para evaluar la calidad del modelo clasificador(reconocedor).
+		\item[f)]	Para el análisis de resultados, además de los indicadores conocidos com tasa de sensibilidad y de error, se pretende usar una Matriz de confusión, en la cual cada fila de la matriz representa las instancias en una clase predecida, mientras que cada columna representa las instancias en una clase real (o viceversa). A través de esta matriz se pueden conocer valores estadísticos del espacio ROC(Receiver Operating Characteristic), métrica usada para evaluar la calidad del modelo clasificador(reconocedor).
 		
 		\end{enumerate}
 
+		\subsection{Metodología para el diseño del Modelo}
+
+			Se utilizará la metodología propuesta por Tammy Noergard (T. Noergaard, 2005) , la cual toma mucha de las claves de las metodologías conocidas como Rational Unified Process (RUP), Attribute Driven Desing (ADD), Object Oriented Process (OOP) y el Model Driven Architecture (MDA), pero las simplifica. La Figura muestra las diferentes fases de la metodología.
+			
+			\begin{figure}[H]
+			\begin{center}
+			\includegraphics[width=0.9\textwidth]{images/intro/disenho}
+			\end{center}
+			\begin{center}
+			\vskip 0.6cm	
+			\caption{\small{Diseño del Modelo del Ciclo de Vida del Desarrollo}}
+			{\small{Fuente propia}}
+			\end{center}
+			\vspace{-1.5em}
+			\end{figure}
 
 
 \section{Estructura de la tesis}

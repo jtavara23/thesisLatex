@@ -40,6 +40,10 @@ Dong, X. and Zhou, D.-X. (2008).
 \newblock Gradient descent in a nutshell.
 \newblock [Online; accessed Agosto 08, 2018].
 
+\bibitem[Elkan, 2012]{Elkan12evaluatingclassifiers}
+Elkan, C. (2012).
+\newblock Evaluating classifiers.
+
 \bibitem[Gestión.pe, 2016a]{Gestion2}
 Gestión.pe, D. (2016a).
 \newblock Accidentes de tránsito: Dos propuestas para aumentar la seguridad
@@ -102,6 +106,11 @@ Krizhevsky, A., Sutskever, I., and Hinton, G. (2012).
 \newblock Imagenet classification with deep convolutional neural networks.
 \newblock pages 1097--1105.
 
+\bibitem[Moore, 2001]{moore2001cross}
+Moore, A.~W. (2001).
+\newblock Cross-validation for detecting and preventing overfitting.
+\newblock {\em School of Computer Science Carneigie Mellon University}.
+
 \bibitem[Nair and Hinton, 2010]{RELU}
 Nair, V. and Hinton, G.~E. (2010).
 \newblock Rectified linear units improve restricted boltzmann machines.
@@ -146,6 +155,10 @@ Romero~Benites, R. (2017).
 \newblock Ocho peruanos mueren cada día en accidentes de tránsito.
 \newblock
   \url{http://rpp.pe/data/ocho-peruanos-mueren-cada-dia-en-accidentes-de-transito-1068532}.
+
+\bibitem[Sandoval, 2009]{SandovalCereza}
+Sandoval, Z., . P.~F. (2009).
+\newblock Procesamiento de imágenes para la clasificación de café cereza.
 
 \bibitem[Sermanet and LeCun, 2011]{Multi_scale_feat}
 Sermanet, P. and LeCun, Y. (2011).

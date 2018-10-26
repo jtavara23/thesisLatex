@@ -1,112 +1,202 @@
 %!TEX root = origin.TEX
 \chapter{Desarrollo de la Investigación}
 \pagenumbering{arabic}
-\setcounter{page}{47}
+\setcounter{page}{59}
 \renewcommand{\baselinestretch}{2} %doble espacio paratodo el texto
 
-\section{Análisis del conjunto de imágenes}
+\section{Análisis del conjunto de Imágenes}
 
-\subsection{Colección de Señales de Tránsito de Alemania}
+	\subsection{Datos Iniciales para el entrenamiento}
 
-	\subsubsection{Datos para el entrenamiento}
+		\subsubsection{Señales de Tránsito de Alemania}
 
-		En esta colección consta de un total de 51839 imágenes distribuidas en 43 clases no necesariamente balanceadas con un tamaño de 32 x 32 pixeles.
+			En esta colección consta de un total de 51839 imágenes distribuidas en 43 clases no necesariamente balanceadas con un tamaño de 32 x 32 pixeles.
 
-		\begin{figure}[H]
-			\begin{center}
-			\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1__(1).png}
-			\end{center}
-			\begin{center}
-			\caption{\small{Speed limit (20km/h)}}
-			\end{center}
-			\vspace{-1.5em}
-		\end{figure}
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/alemania/1__(1).png}
+				\end{center}
+				\begin{center}
+				\caption{\small{Speed limit (20km/h)}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
 
-		\begin{figure}[H]
-			\begin{center}
-			\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1__(2).png}
-			\end{center}
-			\begin{center}
-			\caption{\small{Speed limit (30km/h)}}
-			\end{center}
-			\vspace{-1.5em}
-		\end{figure}
+			%\begin{figure}[H]
+				%\begin{center}
+				%\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/alemania/1__(2).png}
+				%\end{center}
+				%\begin{center}
+				%\caption{\small{Speed limit (30km/h)}}
+				%\end{center}
+				%\vspace{-1.5em}
+			%\end{figure}
 
-		\begin{figure}[H]
-			\begin{center}
-			\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1__(3).png}
-			\end{center}
-			\begin{center}
-			\caption{\small{Speed limit (50km/h)}}
-			\end{center}
-			\vspace{-1.5em}
-		\end{figure}
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/alemania/1__(3).png}
+				\end{center}
+				\begin{center}
+				\caption{\small{Speed limit (50km/h)}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
 
-		\begin{figure}[H]
-			\begin{center}
-			\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1__(13).png}
-			\end{center}
-			\begin{center}
-			\caption{\small{Priority road}}
-			\end{center}
-			\vspace{-1.5em}
-		\end{figure}
-		
-		\begin{figure}[H]
-			\begin{center}
-			\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1__(23).png}
-			\end{center}
-			\begin{center}
-			\caption{\small{Bumpy road}}
-			\end{center}
-			\vspace{-1.5em}
-		\end{figure}
+			%\begin{figure}[H]
+				%\begin{center}
+				%\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/alemania/1__(13).png}
+				%\end{center}
+				%\begin{center}
+				%\caption{\small{Priority road}}
+				%\end{center}
+				%\vspace{-1.5em}
+			%\end{figure}
+			
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/alemania/1__(23).png}
+				\end{center}
+				\begin{center}
+				\caption{\small{Bumpy road}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
 
-		\begin{figure}[H]
-			\begin{center}
-			\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1__(29).png}
-			\end{center}
-			\begin{center}
-			\caption{\small{Children crossing}}
-			\end{center}
-			\vspace{-1.5em}
-		\end{figure}
-		
-		\begin{figure}[H]
-			\begin{center}
-			\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1__(32).png}
-			\end{center}
-			\begin{center}
-			\caption{\small{Wild animals crossing}}
-			\end{center}
-			\vspace{-1.5em}
-		\end{figure}
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/alemania/1__(29).png}
+				\end{center}
+				\begin{center}
+				\caption{\small{Children crossing}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+			
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/alemania/1__(32).png}
+				\end{center}
+				\begin{center}
+				\caption{\small{Wild animals crossing}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
 
-		\begin{figure}[H]
-			\begin{center}
-			\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/1__(35).png}
-			\end{center}
-			\begin{center}
-			\caption{\small{Turn left ahead}}
-			\end{center}
-			\vspace{-1.5em}
-		\end{figure}
-
-
-		\begin{figure}[H]
-			\begin{center}
-			\includegraphics[width=1\textwidth]{images/desarrollo/histograms/initial39209}
-			\end{center}
-			\begin{center}
-			\caption{\small{Distribución de ejemplos por señal para el entrenamiento(Total 39209)}}
-			\vspace{-1em}
-		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-			\end{center}
-			\vspace{-1.5em}
-		\end{figure}
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/alemania/1__(35).png}
+				\end{center}
+				\begin{center}
+				\caption{\small{Turn left ahead}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
 
 
-	\subsubsection{Datos para la evaluación}
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/histograms/initial39209}
+				\end{center}
+				\begin{center}
+				\caption{\small{Distribución de ejemplos por señal para el entrenamiento(Total 39209)}}
+				\vspace{-1em}
+			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+
+		\subsubsection{Señales de Tránsito de Perú}
+
+			En esta colección consta de un total de 614 imágenes distribuidas en 7 clases no necesariamente balanceadas con un tamaño de 60 x 60 pixeles.
+
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/peru/1__(1).png}
+				\end{center}
+				\begin{center}
+				\caption{\small{Pare}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/peru/1__(2).png}
+				\end{center}
+				\begin{center}
+				\caption{\small{Resalto}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/peru/1__(3).png}
+				\end{center}
+				\begin{center}
+				\caption{\small{Zona Escolar}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/peru/1__(4).png}
+				\end{center}
+				\begin{center}
+				\caption{\small{Peatones}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+			
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/peru/1__(5).png}
+				\end{center}
+				\begin{center}
+				\caption{\small{Paradero}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/peru/1__(6).png}
+				\end{center}
+				\begin{center}
+				\caption{\small{No Estacionar}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+			
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/peru/1__(7).png}
+				\end{center}
+				\begin{center}
+				\caption{\small{Disminuir Velocidad}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/histograms/inicioTrain614}
+				\end{center}
+				\begin{center}
+				\caption{\small{Distribución de ejemplos por señal para el entrenamiento(Total 614)}}
+				\vspace{-1em}
+			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			
+
+	\subsection{Datos para el evaluación}
+
+		\subsubsection{Señales de Tránsito de Alemania}
 		Para la etapa de evaluación se cuenta con un conjunto de 12630 imágenes, de igual manera no necesariamente balanceadas y que no son utilizadas durante el proceso de entrenamiento para obtener resultados confiables a la hora de evaluar el resultado del entrenamiento. 
 
 		\begin{figure}[H]
@@ -114,275 +204,327 @@
 			\includegraphics[width=1\textwidth]{images/desarrollo/histograms/initialTest12630}
 			%\end{center}
 			\begin{center}
-			\caption{\small{Distribución de ejemplos por señal para la evaluación}}
+			\caption{\small{Distribución de ejemplos por señal para la evaluación - Alemania}}
 			\vspace{-1em}
 		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 			\end{center}
 			\vspace{-1.5em}
 		\end{figure}
 
-	%\subsection{Proceso de Anotacion de la data}
+		\subsubsection{Señales de Tránsito de Perú}
+		Para la etapa de evaluación se cuenta con un conjunto de 12630 imágenes, de igual manera no necesariamente balanceadas y que no son utilizadas durante el proceso de entrenamiento para obtener resultados confiables a la hora de evaluar el resultado del entrenamiento. 
 
-\subsection{Proceso de Aumento de Datos(Data Augmentation)}
+		\begin{figure}[H]
+			%\begin{center}
+			\includegraphics[width=1\textwidth]{images/desarrollo/histograms/PeruinitialTest4698}
+			%\end{center}
+			\begin{center}
+			\caption{\small{Distribución de ejemplos por señal para la evaluación - Perú}}
+			\vspace{-1em}
+		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+			\end{center}
+			\vspace{-1.5em}
+		\end{figure}
 
-	Las redes convolucionales durante el aprendizaje profundo requieren una gran cantidad de datos para conseguir realizar un mejor entrenamiento(aprendizaje) y obtener un modelo que generalice eficazmente. Muchas veces esta recopilación de datos suele ser costosa y laboriosa es por eso que el proceso de Data Augmentation ayuda a superar este problema a través del uso de métodos o técnicas de procesamiento de imágenes. Recientemente se ha utilizado ampliamente el aumento de datos genéricos para mejorar el rendimiento de las Redes Neuronales Convolucionales,\citep{DL_augmentData}. 
+	\subsection{Proceso de Aumento de Datos(Data Augmentation)}
 
-	\begin{figure}[H]
-	\begin{center}
-	\includegraphics[width=0.5\textwidth ]{images/desarrollo/Augment/exampleaug}
-	\end{center}
-	\begin{center}
-	\caption{\small{El aumento de datos infla artificialmente los conjuntos de datos usando transformaciones que preservan las categorias de los objetos}}
-	{\small{\citep{DL_augmentData}}}
-	\end{center}
-	\vspace{-1.5em}
-	\end{figure}
+		Las redes convolucionales durante el aprendizaje profundo requieren una gran cantidad de datos para conseguir realizar un mejor entrenamiento(aprendizaje) y obtener un modelo que generalice eficazmente. Muchas veces esta recopilación de datos suele ser costosa y laboriosa es por eso que el proceso de Data Augmentation ayuda a superar este problema a través del uso de métodos o técnicas de procesamiento de imágenes. Recientemente se ha utilizado ampliamente el aumento de datos genéricos para mejorar el rendimiento de las Redes Neuronales Convolucionales,\citep{DL_augmentData}. 
+
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.5\textwidth ]{images/desarrollo/Augment/exampleaug}
+		\end{center}
+		\begin{center}
+		\caption{\small{El aumento de datos infla artificialmente los conjuntos de datos usando transformaciones que preservan las categorias de los objetos}}
+		{\small{\citep{DL_augmentData}}}
+		\end{center}
+		\vspace{-1.5em}
+		\end{figure}
 
 
-	Son utilizadas las siguientes técnicas:
-	
-	
-	\subsubsection{Flipping}
-	
-	Primero, vamos a aplicar un par de trucos para extender nuestros datos volteando. Algunas señales de tráfico son invariantes para voltear horizontal y / o verticalmente, lo que básicamente significa que podemos voltear una imagen y todavía debe clasificarse como perteneciente a la misma clase.
-	
-	\begin{multicols}{2}
+		Son utilizadas las siguientes técnicas:
 		
-		\underline{Flipping horizontal:}
-		\begin{figure}[H]
-			\begin{center}
-			\includegraphics[height=14.5cm ]{images/desarrollo/Augment/flippedHorizontally}
-			\end{center}
-			\begin{center}
-			\caption{\small{Imágenes volteadas horizontalmente}}
-			\vspace{-1em}
-		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-			\end{center}
-			\vspace{-1.5em}
-		\end{figure}
+		
+		\subsubsection{Flipping}
+		
+			Primero, vamos a aplicar un par de trucos para extender nuestros datos volteando. Algunas señales de tráfico son invariantes para voltear horizontal y / o verticalmente, lo que básicamente significa que podemos voltear una imagen y todavía debe clasificarse como perteneciente a la misma clase.
 
-	%second column
-	
-		\underline{Flipping Vertical:}
-		\begin{figure}[H]
-			\begin{center}
-			\includegraphics[height=13cm]{images/desarrollo/Augment/flippableVertically}
-			\end{center}
-			\begin{center}
-			\caption{\small{Imágenes volteadas verticalmente}}
-			\vspace{-1em}
-		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-			\end{center}
-			\vspace{-1.5em}
-		\end{figure}
+			Esta técnica solo fue utilizada para el dataset de señales de Tránsito de Alemania.
+			
+			\begin{multicols}{2}
+				
+				\underline{Flipping horizontal:}
+				\begin{figure}[H]
+					\begin{center}
+					\includegraphics[height=14.5cm ]{images/desarrollo/Augment/flippedHorizontally}
+					\end{center}
+					\begin{center}
+					\caption{\small{Imágenes volteadas horizontalmente}}
+					\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+					\end{center}
+					\vspace{-1.5em}
+				\end{figure}
 
-	\end{multicols}
+			%second column
+			
+				\underline{Flipping Vertical:}
+				\begin{figure}[H]
+					\begin{center}
+					\includegraphics[height=13cm]{images/desarrollo/Augment/flippableVertically}
+					\end{center}
+					\begin{center}
+					\caption{\small{Imágenes volteadas verticalmente}}
+					\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+					\end{center}
+					\vspace{-1.5em}
+				\end{figure}
+
+			\end{multicols}
+
+			\newpage
+			\underline{Flipping Horizontal y Vertical:}
+			\begin{figure}[H]
+				%\begin{center}
+				\includegraphics[width=0.9\textwidth]{images/desarrollo/Augment/flippable_both}
+				%\end{center}
+				\begin{center}
+				\caption{\small{Imágenes volteadas primero horizontal y luego verticalmente}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			Incluso, hay signos que luego de voltearse, deben clasificarse como un signo de alguna otra clase. Esto sigue siendo útil, ya que podemos utilizar los datos de estas clases para ampliar sus contrapartes.
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[height=10.5cm ]{images/desarrollo/Augment/cross_flippable}
+				\end{center}
+				\begin{center}
+				\caption{\small{Imágenes que volteadas horizontal o verticalmente, cambian su categoría}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{1.5em}
+			\end{figure}
+
+
+			Finalmente obtenemos una nueva distribución de datos luego de haber aplicado flipping a ciertas imagenes. Esta distribución consta de 63538 imágenes.
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/histograms/train_flipped63538}
+				\end{center}
+				\begin{center}
+				\vspace{1em}
+				\caption{\small{Distribución de categoría, luego de aplicar el Flip(en sus distintos tipos)- Señales de Alemania}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+		Las siguientes técnicas fueron utilizadas para el dataset de señales de Tránsito de Alemania y de Perú.
+		
+		\subsubsection{Projection(Proyección)}
+			Implica mover la imagen a lo largo de la dirección X o Y (o ambas). Este método de aumento es muy útil ya que la mayoría de los objetos se pueden ubicar en casi cualquier lugar de la imagen. Esto obliga a la red neuronal convolucional a buscar en todas partes.
+			Los márgenes de proyección se asignan al azar en un rango que depende del tamaño de la imagen. La transformación de proyección parece también ocuparse de escalar al azar a medida que colocamos al azar las esquinas de la imagen en un rango [-delta, +delta].
+
+
+
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth,height=10cm]{images/desarrollo/Augment/projection_transform2}
+				\includegraphics[width=1\textwidth,height=10cm]{images/desarrollo/Augment/projection_transform}
+				\end{center}
+				\begin{center}
+				\vspace{1em}
+				\caption{\small{Ejemplo de cinco proyecciones por cada imagen - Dataset Alemania}}
+				\vspace{-1em}
+			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+		\subsubsection{Rotation(Rotación)}
+			\vspace{-1.5em}
+			Aplica la rotación aleatoria en un rango de grados definido(hasta 30º) a un subconjunto aleatorio de imágenes.
+	        El rango en sí está sujeto a escala dependiendo de la intensidad de aumento.
+
+	        \begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth,height=9cm]{images/desarrollo/Augment/fixedrotation}
+				\end{center}
+				\begin{center}
+				\caption{\small{Ejemplo de cinco rotaciones por cada imagen - Dataset Alemania}}
+				\vspace{-1em}
+			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+			\vspace{-2.5em}
+	    
+
+	    \subsubsection{Zoom}
+	    	\vspace{-1.5em}
+	    	Acerca(zoom in) o aleja(zoom out) la imagen  tratando de preservar el fondo.
+
+	    	%\begin{figure}[H]
+			%	\begin{center}
+			%	\includegraphics[width=1\textwidth,height=10cm]{images/desarrollo/Augment/zoom_normal}
+			%	\end{center}
+			%\end{figure}
+
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth,height=8cm]{images/desarrollo/Augment/zoom_inv}
+				\end{center}
+				\begin{center}
+				\vspace{0.5em}
+				\caption{\small{Ejemplo de cinco aplicaciones de zoom(in/out) por cada imagen - Dataset Alemania}}
+				\vspace{-1em}
+			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+
+		\subsubsection{Equalizacion del histograma}
+			Aumenta el contraste global de muchas imágenes, especialmente cuando los datos utilizables de la imagen están representados por valores de contraste cercanos. Esto permite que áreas de menor contraste local puedan obtener un mayor contraste. La ecualización del histograma logra esto al distribuir eficazmente los valores de intensidad más frecuentes.
+
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[height=9.5cm]{images/desarrollo/Augment/equalize_hist2_wo_Norm_woRepetition}
+				\end{center}
+				\begin{center}
+				\caption{\small{Ilustración de un modelo de aprendizaje profundo}}
+				\vspace{-1em}
+			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+		
+		
+		%	\begin{figure}[H]
+				%\begin{center}
+		%		\includegraphics[width=0.9\textwidth,height=11cm]{images/desarrollo/Augment/AllTogether_ramdoly_mixed2}
+				%\end{center}
+		%		\begin{center}
+		%		\caption{\small{Ilustración de un modelo de aprendizaje profundo}}
+		%		\vspace{-1em}
+		%	{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+		%		\end{center}
+		%		\vspace{-1.5em}
+		%	\end{figure}
+		Finalmente, luego de haber aplicado de manera secuencial y/o aleatoriamente estas tecnicas a cada una de las imágenes, obtenemos nuevas distribuciones de datos. 
 
 	\newpage
-	\underline{Flipping Horizontal y Vertical:}
-	\begin{figure}[H]
-		%\begin{center}
-		\includegraphics[width=0.9\textwidth]{images/desarrollo/Augment/flippable_both}
-		%\end{center}
-		\begin{center}
-		\caption{\small{Imágenes volteadas primero horizontal y luego verticalmente}}
-		\vspace{-1em}
-		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-		\end{center}
-		\vspace{-1.5em}
-	\end{figure}
+	\subsection{Dataset final para el Entrenamiento}
 
-	Incluso, hay signos que luego de voltearse, deben clasificarse como un signo de alguna otra clase. Esto sigue siendo útil, ya que podemos utilizar los datos de estas clases para ampliar sus contrapartes.
-	\begin{figure}[H]
-		\begin{center}
-		\includegraphics[height=10.5cm ]{images/desarrollo/Augment/cross_flippable}
-		\end{center}
-		\begin{center}
-		\caption{\small{Imágenes que volteadas horizontal o verticalmente, cambian su categoría}}
-		\vspace{-1em}
-		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-		\end{center}
-		\vspace{1.5em}
-	\end{figure}
+		\subsubsection{Señales de Tránsito de Alemania - Dataset Balanceado }
+			En una se tiene un conjunto balanceado de datos con {\bf 270900 imágenes}.
+			\begin{figure}[H]
+				%\begin{center}
+				\includegraphics[width=1\textwidth, height=7cm]{images/desarrollo/histograms/train_extended_balanced270900}
+				%\end{center}
+				\begin{center}
+				\caption{\small{Dataset balanceado(cada categoría posee igual cantidad de imágenes)}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
 
+			\end{figure}
 
-	Finalmente obtenemos una nueva distribución de datos luego de haber aplicado flipping a ciertas imagenes. Esta distribución consta de 63538 imágenes.
-	\begin{figure}[H]
-		\begin{center}
-		\includegraphics[width=1\textwidth]{images/desarrollo/histograms/train_flipped63538}
-		\end{center}
-		\begin{center}
-		\vspace{1em}
-		\caption{\small{Distribución de categoría, luego de aplicar el Flip(en sus distintos tipos)}}
-		\vspace{-1em}
-		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-		\end{center}
-		\vspace{-1.5em}
-	\end{figure}
+			Teniendo en cuenta lo descrito en la \textbf{Seccion 2.3.4 (Validación Cruzada)}, para la etapa del entrenamiento, el conjunto de datos Balanceados compuesto por 270900 imágenes fue dividido en un subconjunto de entrenamiento y otro para validación, con la siguiente distribución:
+			\vspace{1.5em}
+			\begin{table}[H]
+				\caption{\small{Distribución Entrenamiento y Validación para Dataset Balanceado - Señales de Tránsito de Alemania}}
+				\begin{center}
+				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c|}
+				\hline
+				{\ul \textbf{CONJUNTO DE DATOS}}           & {\ul \textbf{CANTIDAD IMÁGENES}}                \\ \hline
+				\textbf{Entrenamiento}                    & \text{203175 (75\%)}                       \\ \hline
+				\textbf{Validación}                       & \text{67725 (25\%)}                    \\ \hline
+				\end{tabular}
+				\end{center}
+			\end{table}
 
-
-	\subsubsection{Projection(Proyección)}
-		Implica mover la imagen a lo largo de la dirección X o Y (o ambas). Este método de aumento es muy útil ya que la mayoría de los objetos se pueden ubicar en casi cualquier lugar de la imagen. Esto obliga a la red neuronal convolucional a buscar en todas partes.
-		Los márgenes de proyección se asignan al azar en un rango que depende del tamaño de la imagen. La transformación de proyección parece también ocuparse de escalar al azar a medida que colocamos al azar las esquinas de la imagen en un rango [-delta, +delta].
-
-		\begin{figure}[H]
-			\begin{center}
-			\includegraphics[width=1\textwidth,height=10cm]{images/desarrollo/Augment/projection_transform2}
-			\includegraphics[width=1\textwidth,height=10cm]{images/desarrollo/Augment/projection_transform}
-			\end{center}
-			\begin{center}
-			\vspace{1em}
-			\caption{\small{Ejemplo de cinco proyecciones por cada imagen}}
-			\vspace{-1em}
-		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-			\end{center}
-			\vspace{-1.5em}
-		\end{figure}
-
-	\subsubsection{Rotation(Rotación)}
-		\vspace{-1.5em}
-		Aplica la rotación aleatoria en un rango de grados definido(hasta 30º) a un subconjunto aleatorio de imágenes.
-         El rango en sí está sujeto a escala dependiendo de la intensidad de aumento.
-        \begin{figure}[H]
-			\begin{center}
-			\includegraphics[width=1\textwidth,height=9cm]{images/desarrollo/Augment/fixedrotation}
-			\end{center}
-			\begin{center}
-			\caption{\small{Ejemplo de cinco rotaciones por cada imagen}}
-			\vspace{-1em}
-		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-			\end{center}
-			\vspace{-1.5em}
-		\end{figure}
-		\vspace{-2.5em}
-    
-
-    \subsubsection{Zoom}
-    	\vspace{-1.5em}
-    	Acerca(zoom in) o aleja(zoom out) la imagen  tratando de preservar el fondo.
-
-    	%\begin{figure}[H]
-		%	\begin{center}
-		%	\includegraphics[width=1\textwidth,height=10cm]{images/desarrollo/Augment/zoom_normal}
-		%	\end{center}
-		%\end{figure}
-
-		\begin{figure}[H]
-			\begin{center}
-			\includegraphics[width=1\textwidth,height=8cm]{images/desarrollo/Augment/zoom_inv}
-			\end{center}
-			\begin{center}
-			\vspace{0.5em}
-			\caption{\small{Ejemplo de cinco aplicaciones de zoom(in/out) por cada imagen}}
-			\vspace{-1em}
-		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-			\end{center}
-			\vspace{-1.5em}
-		\end{figure}
-
-
-	\subsubsection{Equalizacion del histograma}
-		Aumenta el contraste global de muchas imágenes, especialmente cuando los datos utilizables de la imagen están representados por valores de contraste cercanos. Esto permite que áreas de menor contraste local puedan obtener un mayor contraste. La ecualización del histograma logra esto al distribuir eficazmente los valores de intensidad más frecuentes.
-
-		\begin{figure}[H]
-			\begin{center}
-			\includegraphics[height=9.5cm]{images/desarrollo/Augment/equalize_hist2_wo_Norm_woRepetition}
-			\end{center}
-			\begin{center}
-			\caption{\small{Ilustración de un modelo de aprendizaje profundo}}
-			\vspace{-1em}
-		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-			\end{center}
-			\vspace{-1.5em}
-		\end{figure}
+	%---------------------------------------------------------------------------------------------------------------------------------------------------------
 	
-	
-	%	\begin{figure}[H]
+		\subsubsection{Señales de Tránsito de Perú - Dataset No Balanceado}
+			Con el objetivo de obtener una gran cantidad de datos, para el Dataset de señales de Tránsito del Perú, por cada imágen fueron creadas 50 nuevas imágenes, obteniéndose {\bf 31314 imágenes}.
+			\begin{figure}[H]
+				%\begin{center}
+				\includegraphics[width=1\textwidth, height=7cm]{images/desarrollo/histograms/train_extended_per_51_31314}
+				%\end{center}
+				\begin{center}
+				\caption{\small{Dataset no balanceado - Señales de Tránsito de Perú}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+			\end{figure}
+
+			Para este caso, el dataset aumentado se configuró con una distribución de datos para entrenamiento, validación y evaluación: 
+			\vspace{1.5em}
+			\begin{table}[H]
+				\caption{\small{Distribución Entrenamiento y Validación para Dataset no Balanceado - Señales de Tránsito de Perú}}
+				\begin{center}
+				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c|}
+				\hline
+				{\ul \textbf{CONJUNTO DE DATOS}}           & {\ul \textbf{CANTIDAD IMÁGENES}}     \\ \hline
+				\textbf{Entrenamiento}                    & \text{23485 (75\%)}                   \\ \hline
+				\textbf{Validación}                       & \text{3131 (10\%)}                    \\ \hline
+				\textbf{Evaluación}                       & \text{4698 (15\%)}                    \\ \hline
+				\end{tabular}
+				\end{center}
+			\end{table}
+
+	%---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+	\subsection{Pre-procesamiento de Imágenes(Normalization)}
+		Existe una técnica de procesamiento de imágenes por computadora que se utiliza para mejorar el contraste en las imágenes denominada Ecualización Adaptativa del Histograma(AHE por sus siglas en inglés). Difiere de la ecualización de histograma ordinaria en el sentido de que el método adaptativo computa varios histogramas, cada uno correspondiente a una sección distinta de la imagen, y los utiliza para redistribuir los valores de luminosidad de la imagen. Por lo tanto, es adecuado para mejorar el contraste local y mejorar las definiciones de los bordes en cada región de una imagen. Sin embargo, AHE tiene una tendencia a amplificar el ruido en regiones relativamente homogéneas de una imagen. Una variante de la ecualización de histograma adaptativo llamada ecualización de histograma adaptativo limitado por contraste (CLAHE por sus siglas en inglés) evita que se genere esto al limitar la amplificación.
+
+		En esta investigación, aplicaremos la técnica CLAHE, un algoritmo para la mejora del contraste local, que utiliza histogramas calculados sobre diferentes regiones en una imagen. Utilizado frecuentemente para mejorar el nivel de visibilidad de una imagen o video con niebla ya que permite mejorar los detalles locales incluso en regiones que son más oscuras o más claras que la mayoría de regiones de la imagen. Este algoritmo mejorará aún más la extracción de características de cada imágen.\citep{CLAHE}
+
+			\begin{figure}[H]
 			%\begin{center}
-	%		\includegraphics[width=0.9\textwidth,height=11cm]{images/desarrollo/Augment/AllTogether_ramdoly_mixed2}
+			\includegraphics[width=1\textwidth]{images/desarrollo/Normalization_Processing/norm_test1}
+			\includegraphics[width=1\textwidth]{images/desarrollo/Normalization_Processing/norm_test2}
 			%\end{center}
-	%		\begin{center}
-	%		\caption{\small{Ilustración de un modelo de aprendizaje profundo}}
-	%		\vspace{-1em}
-	%	{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-	%		\end{center}
-	%		\vspace{-1.5em}
-	%	\end{figure}
-	Finalmente, luego de haber aplicado de manera secuencial y/o aleatoriamente estas tecnicas a cada una de las imágenes, obtenemos dos nuevas distribuciones de datos. 
-	\newline
-	En una se tiene un conjunto balanceado de datos con {\bf 270900 imágenes}.
-	\begin{figure}[H]
-		%\begin{center}
-		\includegraphics[width=1\textwidth]{images/desarrollo/histograms/train_extended_balanced270900}
-		%\end{center}
-		\begin{center}
-		\caption{\small{Dataset balanceado(cada categoría posee igual cantidad de imágenes)}}
-		\vspace{-1em}
-		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-		\end{center}
-		\vspace{-1.5em}
-	\end{figure}
+			\begin{center}
+			\caption{\small{Imágenes a las cuales se le aplicaron la técnica CLAHE }}
+			\vspace{-1em}
+			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+			\end{center}
+			\vspace{-1.5em}
+			\end{figure}
 
-	En la segunda nueva distribución se tiene que por cada imágen fueron creadas 10 nuevas imágenes, obteniéndose {\bf 698918 imágenes}.
-	\begin{figure}[H]
-		%\begin{center}
-		\includegraphics[width=1\textwidth]{images/desarrollo/histograms/train_extended_per_10_698918}
-		%\end{center}
-		\begin{center}
-		\caption{\small{Dataset no balanceado}}
-		\vspace{-1em}
-		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-		\end{center}
-		\vspace{-1.5em}
-	\end{figure}
+		Por otra parte, para convertir un color de un espacio de color basado en un modelo de color RGB típico de gamma comprimido (no lineal) a una representación en escala de grises de su luminancia, primero se debe eliminar la función de compresión gamma mediante la expansión gamma (linealización) para transformar la imagen en un RGB lineal espacio de color, de modo que la suma ponderada apropiada se puede aplicar a los componentes de color lineales ($R_{linear} , G_{linear} , B_{linear}$) para calcular la luminancia lineal $Y_{linear}$.
 
+		Para imágenes en espacios de color como Y'UV y sus derivados, que se usan en sistemas de TV y video a color estándar como PAL, SECAM y NTSC, un componente de luma no lineal ($Y'$) se calcula directamente a partir de intensidades primarias comprimidas con gamma como una suma ponderada, que aunque no es una representación perfecta de la luminancia colorimétrica, puede calcularse más rápidamente sin la expansión gamma y sin la compresión utilizadas en los cálculos fotométricos o colorimétricos,\citep{POYNTON2003257}. En los modelos utilizados por PAL y NTSC para conseguir tener las imágenes en escala de grises, el componente rec601 luma ($Y'$) se calcula como: \begingroup\makeatletter\def\f@size{14.8}\check@mathfonts	$Y' = 0.299R' + 0.587G' +0.114B'$ \endgroup
 
-\subsection{Pre-procesamiento de Imágenes(Normalization)}
-	Existe una técnica de procesamiento de imágenes por computadora que se utiliza para mejorar el contraste en las imágenes denominada Ecualización Adaptativa del Histograma(AHE por sus siglas en inglés). Difiere de la ecualización de histograma ordinaria en el sentido de que el método adaptativo computa varios histogramas, cada uno correspondiente a una sección distinta de la imagen, y los utiliza para redistribuir los valores de luminosidad de la imagen. Por lo tanto, es adecuado para mejorar el contraste local y mejorar las definiciones de los bordes en cada región de una imagen.
-
-	Sin embargo, AHE tiene una tendencia a amplificar el ruido en regiones relativamente homogéneas de una imagen. Una variante de la ecualización de histograma adaptativo llamada ecualización de histograma adaptativo limitado por contraste (CLAHE por sus siglas en inglés)evita que se genere esto al limitar la amplificación.
-
-
-	En esta investigación, aplicaremos la técnica CLAHE, un algoritmo para la mejora del contraste local, que utiliza histogramas calculados sobre diferentes regiones en una imagen. Utilizado frecuentemente para mejorar el nivel de visibilidad de una imagen o video con niebla ya que permite mejorar los detalles locales incluso en regiones que son más oscuras o más claras que la mayoría de regiones de la imagen. Este algoritmo mejorará aún más la extracción de características de cada imágen.\citep{CLAHE}
-
-		\begin{figure}[H]
-		%\begin{center}
-		\includegraphics[width=1\textwidth]{images/desarrollo/Normalization_Processing/norm_test1}
-		\includegraphics[width=1\textwidth]{images/desarrollo/Normalization_Processing/norm_test2}
-		%\end{center}
-		\begin{center}
-		\caption{\small{Imágenes a las cuales se le aplicaron la técnica CLAHE }}
-		\vspace{-1em}
-		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-		\end{center}
-		\vspace{-1.5em}
-		\end{figure}
-
-	Por otra parte, para convertir un color de un espacio de color basado en un modelo de color RGB típico de gamma comprimido (no lineal) a una representación en escala de grises de su luminancia, primero se debe eliminar la función de compresión gamma mediante la expansión gamma (linealización) para transformar la imagen en un RGB lineal espacio de color, de modo que la suma ponderada apropiada se puede aplicar a los componentes de color lineales ($R_{linear} , G_{linear} , B_{linear}$) para calcular la luminancia lineal $Y_{linear}$.
-
-	Para imágenes en espacios de color como Y'UV y sus derivados, que se usan en sistemas de TV y video a color estándar como PAL, SECAM y NTSC, un componente de luma no lineal ($Y'$) se calcula directamente a partir de intensidades primarias comprimidas con gamma como una suma ponderada, que aunque no es una representación perfecta de la luminancia colorimétrica, puede calcularse más rápidamente sin la expansión gamma y sin la compresión utilizadas en los cálculos fotométricos o colorimétricos,\citep{POYNTON2003257}. En los modelos utilizados por PAL y NTSC para conseguir tener las imágenes en escala de grises, el componente rec601 luma ($Y'$) se calcula como: \begingroup\makeatletter\def\f@size{14.8}\check@mathfonts	$Y' = 0.299R' + 0.587G' +0.114B'$ \endgroup
-
-	Pierre Sermanet y Yann LeCun mencionaron en su artículo \citep{LeCun}, que el uso de canales de color no pareció mejorar mucho las cosas. Además, debido a diversas condiciones o problemas de iluminación, no es adecuado procesar directamente las imágenes que se capturan a través de la cámara o sensores de imágenes, es por ello que en esta investigación {\bf se usará un solo canal} en el modelo, es decir las imágenes estarán en escala de grises en lugar de tener 3 canales de colores.
-	
-		\begin{figure}[H]
-		\begin{center}
-		\includegraphics[width=0.7\textwidth]{images/desarrollo/Normalization_Processing/proc_test1}
-		\includegraphics[width=0.7\textwidth]{images/desarrollo/Normalization_Processing/proc_test2}
-		\end{center}
-		\begin{center}
-		\caption{\small{Imágenes procesadas en escala de grises}}
-		\vspace{-1em}
-		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-		\end{center}
-		\vspace{-1.5em}
-		\end{figure}
+		Pierre Sermanet y Yann LeCun mencionaron en su artículo \citep{LeCun}, que el uso de canales de color no pareció mejorar mucho las cosas. Además, debido a diversas condiciones o problemas de iluminación, no es adecuado procesar directamente las imágenes que se capturan a través de la cámara o sensores de imágenes, es por ello que en esta investigación {\bf se usará un solo canal} en el modelo, es decir las imágenes estarán en escala de grises en lugar de tener 3 canales de colores.
+		
+			\begin{figure}[H]
+			\begin{center}
+			\includegraphics[width=0.7\textwidth]{images/desarrollo/Normalization_Processing/proc_test1}
+			\includegraphics[width=0.7\textwidth]{images/desarrollo/Normalization_Processing/proc_test2}
+			\end{center}
+			\begin{center}
+			\caption{\small{Imágenes procesadas en escala de grises}}
+			\vspace{-1em}
+			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+			\end{center}
+			\vspace{-1.5em}
+			\end{figure}
 
 	
 
 \section{Arquitectura del Modelo}
-	
+	\vspace{-1.5em}
 
-	Los hiperparámetros engloban funciones, variables y constantes utilizadas durante la construcción de las diferentes arquitecturas; estas varían, sin embargo siguiendo conceptos teóricos y antecedentes(investigaciones previas), los siguientes fueron seleccionados de manera especíºfica:
+	Los hiperparámetros engloban funciones, variables y constantes utilizadas durante la construcción de las diferentes arquitecturas; estas varían, sin embargo siguiendo conceptos teóricos, antecedentes(investigaciones previas) y sobretodo despues de algunas pruebas realizadas, los siguientes hiperparámetros fueron seleccionados de manera específica:
 		% Please add the following required packages to your document preamble:
 		% \usepackage{multirow}
 		%\usepackage[table,xcdraw]{xcolor}
@@ -390,21 +532,53 @@
 		% \usepackage[normalem]{ulem}
 		% \useunder{\uline}{\ul}{}
 		\begin{table}[H]
-		\begin{center}
-		\begin{tabular}{|>{\small}c|>{\small}c|}
-		\hline
-		{\ul \textbf{HIPERPARÁMETROS}}                                                                           & {\ul \textbf{TIPO}}                \\ \hline
-		{\textbf{Inicialización de Pesos}}                                                       				 & {\textit{Xavier}}  \\ \hline
-		\textbf{Tasa de Aprendizaje}                                                                             & \textit{0.0005}                    \\ \hline
-		\textbf{Alg. de Optimización}                                                                            & \textit{Optimizador Adam}          \\ \hline
-		\textbf{Método de Validación}                                                                            & \textit{Entropía Cruzada}          \\ \hline
-		\textbf{\begin{tabular}[c]{@{}c@{}}Fun. Activ. Capas Convolucionales\end{tabular}}        				 & \textit{RELU}                      \\ \hline
-		\textbf{\begin{tabular}[c]{@{}c@{}}Fun. Activ. Capas Totalmente conectadas\end{tabular}} 				 & \textit{Función Softmax}           \\ \hline
-		\textbf{Método de Regularización}                                                                        & \textit{L2 Lasso(lambda = 0.0001)} \\ \hline
-		\textbf{Tamaño del Mini-batch}                                                                           & \textit{525}                       \\ \hline
-		\textbf{Epocas}                                                                                          & \textit{Mas de 30000}                    \\ \hline
-		\end{tabular}
-		\end{center}
+			\begin{center}
+			\caption{\small{Hiperparámetros del Modelo}}
+			\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c|>{\scriptsize}c|>{\scriptsize}c|}
+			\hline
+			{\ul \textbf{HIPERPARÁMETROS}}  & {\ul \textbf{TIPO}}       & {\ul \textbf{HIPERPARÁMETROS}}        & {\ul \textbf{TIPO}}        \\ \hline
+			{\textbf{Inicialización de Pesos}}                     		& {\textit{Xavier}}  				  &
+			\textbf{Tasa de Aprendizaje}                                & \textit{0.0005}                    \\ \hline
+			\textbf{Alg. de Optimización}                               & \textit{Optimizador Adam}          &
+			\textbf{Método de Validación}                               & \textit{Entropía Cruzada}          \\ \hline
+			\textbf{Fun. Activ. Capas Convolucionales}        			& \textit{RELU y DropOut}                      &
+			\textbf{Fun. Activ. Capas Totalmente Conectadas} 			& \textit{Func. Softmax}           \\ \hline
+			\textbf{Método de Regularización}                           &\textit{L2 Lasso(lambda = 0.0001)} &
+			\textbf{Épocas}                                             &\textit{100}		 				\\ \hline
+			\end{tabular}
+			\end{center}
+		\end{table}
+		\vspace{-1.5em}
+
+		Recordemos que en cada época se procesa el dataset completo de imágenes, por lo que cada época es igual al mini-batch multiplicado por un número de iteraciones, sin embargo debido a que se tiene 3 distintos datasets para el entrenamiento \textbf{(Seccion 4.1.4 - Dataset final para el Entrenamiento)}, el tamaño del Minibatch cambiará respecto al tamaño del dataset y por ende también será diferente la cantidad de iteraciones ejecutadas durante 100 épocas de entrenamiento.                        
+		
+		\begingroup\makeatletter\def\f@size{14.8}\check@mathfonts	$Epoca = Mini_batch \times iteraciones$ \endgroup
+
+		\begin{table}[H]
+			\begin{center}
+			\caption{\small{Minibatch e iteraciones en el Dataset de Señales de Tránsito de Alemania Balanceado}}
+			\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c|>{\scriptsize}c|>{\scriptsize}c|}
+			\hline
+			\textbf{Imágenes totales }                 &\textit{203175}                       \\ \hline
+			\textbf{Iteraciones por Época}                 &\textit{387}                             \\ \hline
+			\textbf{Tamaño del Mini-batch}                 &\textit{525 imágenes analizadas por iteración}                       \\ \hline
+			\textbf{Épocas entrenadas}                &\textit{100 épocas (38700 iter.)}                       \\ \hline
+			\end{tabular}
+			\end{center}
+		\end{table}
+
+
+		\begin{table}[H]
+			\begin{center}
+			\caption{\small{Minibatch e iteraciones en el Dataset de Señales de Tránsito de Peru No Balanceado}}
+			\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c|>{\scriptsize}c|>{\scriptsize}c|}
+			\hline
+			\textbf{Imágenes totales }                 &\textit{23485}                       \\ \hline
+			\textbf{Iteraciones por Época}                 &\textit{77}                             \\ \hline
+			\textbf{Tamaño del Mini-batch}                 &\textit{305 imágenes analizadas por iteración}                       \\ \hline
+			\textbf{Épocas entrenadas}                &\textit{100 épocas (7700 iter.)}                       \\ \hline
+			\end{tabular}
+			\end{center}
 		\end{table}
 
 	En esta investigación se implementó el modelo de redes neuronales convolucionales(CNN) donde las capas convolucionales iniciales de la red extraen características de la imagen(feature extractor), mientras que las capas totalmente conectadas predicen las probabilidades de salida(classifier).
@@ -424,11 +598,11 @@
 	La arquitectura de la red está inspirada en el arquitectura Inception \citep{Inception} y en la arquitectura AlexNet\citep{Krizhevsky2012} para la clasificación de imágenes. En la arquitectura Inception, el modelo creado es denominado GoogLeNet, similar a AlexNet. Varios módulos iniciales son apilados uno sobre el otro para producir el resultado final. En el módulo de inicio, en ese tipo de red, se usaron diversos tamaños de filtros convolucionales para capturar características de diferente abstracción. El alto nivel de abstracción se captura con filtros de mayor tamaño y el de un nivel inferior con filtros de menor tamaño. Procesando información visual a diferentes escalas y al concatenarlas se obtiene un nivel eficiente de abstracción. 
 	%%%	Dado que aplicar directamente más filtros convolucionales con datos de imagen y concatenarlos es computacionalmente costoso, en el modelo Inception finalmente se usaron filtros de reducción de dimensionalidad(pooling/acumulación). Además de ser muy exitoso para la reducción de dimensionalidad, estos filtros también llegan a ser útiles como activación lineal rectificada. La arquitectura de inicio es eficiente en términos de complejidad computacional con respecto al número de unidades en cada etapa. \citep{Mrinal2016}.las características abstractas locales desempeñan un papel importante. Las señales que pertenecen al mismo grupo tienen una ligera diferencia en la estructura local entre sí, lo que dificulta su distinción. Por lo que se optó por agregar un kernel de reducción convolucional de 3 × 3 extra con acumulación máxima en la parte superior para capturar la estructura local discriminativa al comienzo mismo. Los signos pertenecientes a diferentes grupos tienen una abstracción global que se puede capturar utilizando un núcleo de reducción convolucional de 5 × 5.
 
-	Para la clasificación de señales de tráfico en esta investigación se utilizó una versión modificada de las arquitecturas antes mencionadas. Se incorporó {\bf funciones de escala-múltiple} \citep{Multi_scale_feat}, lo que significa que la salida de las capas convolucionales no solo se envía a la capa posterior, sino que también se ramifica y se introduce al clasificador (capa totalmente conectada). La razón detrás de esto es que cuando el clasificador está tomando una decisión basada en convoluciones, podría encontrar que la salida de la primera o segunda capa convolucional también es útil. Básicamente con las características de escala múltiple depende del clasificador qué nivel de abstracción usar, ya que tiene acceso a las salidas de todas las capas convolucionales, es decir,características en todos los niveles de abstracción. Estas capas ramificadas se someten a un pooling máximo adicional, de modo que todas las convoluciones se submuestrean proporcionalmente antes de entrar en el clasificador. Así se garantiza que todas las funciones de escala múltiple experimenten la misma cantidad de máximo aprovechamiento.
+	Para la clasificación de señales de tránsito en esta investigación se utilizó una versión modificada de las arquitecturas antes mencionadas. Se incorporó {\bf funciones de escala-múltiple} \citep{Multi_scale_feat}, lo que significa que la salida de las capas convolucionales no solo se envía a la capa posterior, sino que también se ramifica y se introduce al clasificador (capa totalmente conectada). La razón detrás de esto es que cuando el clasificador está tomando una decisión basada en convoluciones, podría encontrar que la salida de la primera o segunda capa convolucional también es útil. Básicamente con las características de escala múltiple depende del clasificador qué nivel de abstracción usar, ya que tiene acceso a las salidas de todas las capas convolucionales, es decir,características en todos los niveles de abstracción. Estas capas ramificadas se someten a un pooling máximo adicional, de modo que todas las convoluciones se submuestrean proporcionalmente antes de entrar en el clasificador. Así se garantiza que todas las funciones de escala múltiple experimenten la misma cantidad de máximo aprovechamiento.
 	
 	\subsection{Diseño de la Red}
 	
-	Teniendo en cuenta lo descrito en la seccion 2.2 (Figura 2.5), para describir las capas convolucionales se utilizará la terminología compleja(cada capa tiene múltiples etapas).
+	Teniendo en cuenta lo descrito en la {\bf seccion 2.2 (Figura 2.5)}, para describir las capas convolucionales se utilizará la terminología compleja(cada capa tiene múltiples etapas).
 	
 		\begin{figure}[H]
 		%\begin{center}
@@ -443,49 +617,480 @@
 		\end{figure}
 
 
-	Para el proceso de entrenamiento fueron tomadas en cuenta diferentes diseños, de las cuales las que presentan 3 capas convolucionales y 2 capas totalmente conectadas otorgan mejores resultados. Estas son descritas a continuación:
-
-		\subsubsection{Arquitectura A} 
+	Para el proceso de entrenamiento fueron tomados en cuenta 5 diferentes diseños. Estos fueron ejectudados durante el entrenamiento del dataset que contiene señales de tránsito de Alemania. Posteriormente, el diseño que obtuvo mejor resultado de entrenamiento y validación fue utilizado para entrenar el dataset de señales de tránsito del Perú. Estos 5 modelos son descritos a continuación.
+		\vspace{-1.5em}
+		\subsubsection{Diseño A} 
 		
 			% Please add the following required packages to your document preamble:
 			% \usepackage{multirow}
 			% \usepackage[table,xcdraw]{xcolor}
 			% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
-			
-			\begin{table}[H]
-			\begin{center}
-			\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
-			\hline
-			{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
+				
+				\begin{table}[H]
+				\begin{center}
+				\caption{\small{Diseño compuesto de 2 capas convolucionales y 2 capas totalmente conectadas}}
+				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
+				\hline
+				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
 
-			1 & 1 de 32 x 32 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 32 x 32 neuronas & --\\ \hline
+				 & 1 de 32 x 32 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 32 x 32 neuronas & --\\ 
+				\multirow{-2}{*}{1} &  32 de 32 x 32 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 32 de 8x8}\\ \hline
+				 & 32 de 16 x 16 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 32 de 16 x 16 neuronas & --\\ 
+				\multirow{-2}{*}{2} &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 1) 64 de 8x8}\\ \hline
+				3 &  {\cellcolor[HTML]{DAE8FC}6144 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
 
-			2 &  32 de 32 x 32 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16 neuronas & --\\ \hline
+				\end{tabular}
+				\end{center}
+				\end{table}
+			
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+		\subsubsection{Diseño B}
+				
+				\begin{table}[H]
+				\begin{center}
+				\caption{\small{Diseño compuesto de 3 capas convolucionales y 2 capas totalmente conectadas}}
+				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
+				\hline
+				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
 
-			3 & 32 de 16 x 16 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 32 de 16 x 16 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 4x4}\\ \hline
-			
-			4 &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & -\\ \hline
-			
-			5 & 64 de 8 x 8 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 4x4}\\ \hline
-			
-			6 &  128 de 8 x 8 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 4x4 }\\ \hline
+				 & 1 de 32 x 32 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 32 x 32 neuronas & --\\ 
+				\multirow{-2}{*}{1} &  32 de 32 x 32 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 4x4}\\ \hline
+				 & 32 de 16 x 16 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 16 x 16 neuronas & --\\ 
+				\multirow{-2}{*}{2} &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 4x4}\\ \hline			
+				{\cellcolor[HTML]{ffb3b3}} & 64 de 8 x 8 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 64 de 8 x 8 neuronas & --\\ 			
+				{\cellcolor[HTML]{ffb3b3} \multirow{-2}{*}{3}} &  128 de 8 x 8 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 4x4 }\\ \hline
+				4 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
+				\end{tabular}
+				\end{center}
+				\end{table}
 
-			7 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
-			
-			\end{tabular}
-			\end{center}
-			\end{table}
 
-		\subsubsection{Arquitectura B}
-			
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+		\subsubsection{Diseño C}
 
-		\subsubsection{Arquitectura C}
+				\begin{table}[H]
+				\begin{center}
+				\caption{\small{Diseño compuesto de 3 capas convolucionales y 2 capas totalmente conectadas. Variando el número de kernels en la 2da capa convolucional}}
+				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
+				\hline
+				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
+
+				 & 1 de 32 x 32 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 32 x 32 neuronas & --\\ 
+				\multirow{-2}{*}{1} &  32 de 32 x 32 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 4x4}\\ \hline
+				 & 32 de 16 x 16 neuronas & Conv(DropOut : 0.7) & {\cellcolor[HTML]{ffb3b3} 64 de 3 x 3} & Activo & 64 de 16 x 16 neuronas & --\\ 
+				\multirow{-2}{*}{2} &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 4x4}\\ \hline			
+				 & 64 de 8 x 8 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 64 de 8 x 8 neuronas & --\\ 			
+				\multirow{-2}{*}{3} &  128 de 8 x 8 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 4x4 }\\ \hline
+				4 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
+				\end{tabular}
+				\end{center}
+				\end{table}
+
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		\subsubsection{Diseño D}
+
+				\begin{table}[H]
+				\begin{center}
+				\caption{\small{Diseño compuesto de 3 capas convolucionales y 2 capas totalmente conectadas. Variando el número de kernels en la 3ra capa convolucional}}
+				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
+				\hline
+				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
+
+				 & 1 de 32 x 32 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 32 x 32 neuronas & --\\ 
+				\multirow{-2}{*}{1} &  32 de 32 x 32 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 4x4}\\ \hline
+				 & 32 de 16 x 16 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 16 x 16 neuronas & --\\ 
+				\multirow{-2}{*}{2} &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 4x4}\\ \hline			
+				 & 64 de 8 x 8 neuronas & Conv(DropOut : 0.6) & {\cellcolor[HTML]{ffb3b3} 128 de 7 x 7} & Activo & 64 de 8 x 8 neuronas & --\\ 			
+				\multirow{-2}{*}{3} &  128 de 8 x 8 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 4x4 }\\ \hline
+				4 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
+				\end{tabular}
+				\end{center}
+				\end{table}
+
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+		\subsubsection{Diseño E}
+			
+				\begin{table}[H]
+				\begin{center}
+				\caption{\small{Diseño compuesto de 4 capas convolucionales y 2 capas totalmente conectadas}}
+				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
+				\hline
+				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
+
+				 & 1 de 32 x 32 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 32 x 32 neuronas & --\\ 
+				\multirow{-2}{*}{1} &  32 de 32 x 32 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 2x2}\\ \hline
+				 & 32 de 16 x 16 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 16 x 16 neuronas & --\\ 
+				\multirow{-2}{*}{2} &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 2x2}\\ \hline			
+				 & 64 de 8 x 8 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 128 de 8 x 8 neuronas & --\\ 			
+				\multirow{-2}{*}{3} &  128 de 8 x 8 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 2) 128 de 2x2 }\\ \hline
+				{\cellcolor[HTML]{ffb3b3}}& 128 de 4 x 4 neuronas & Conv(DropOut : 0.6) & 128 de 7 x 7 & Activo & 128 de 4 x 4 neuronas & --\\ 			
+				{\cellcolor[HTML]{ffb3b3}\multirow{-2}{*}{4}} &  128 de 4 x 4 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 2 x 2 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 2x2 }\\ \hline
+				5 &  {\cellcolor[HTML]{DAE8FC}1408 neuronas} &  F.C.(DropOut : 0.5) &  702 neuronas &  -- & 43 neuronas & --\\ \hline
+				\end{tabular}
+				\end{center}
+				\end{table}
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+\section{Entrenamiento y Validación }
+
+	Para estimar el error de clasificación, como fue mencionado en la \textbf{Seccion 2.3.4 (Validación Cruzada)} se utilizó el méto do de validación cruzada. En la estimación del error se usa el conjunto de muestras disponible, el cual se divide en el conjunto de entrenamiento y el de validación. El clasificador se diseña usando las muestras de entrenamiento y luego se evalúa obteniendo el error de clasificación para las muestras de validación. Con base en el error obtenidose puede predecir el desempeño del clasificador ante nuevas muestras. Para obtener una medida confiable del desempeño, el conjunto de muestras es lo suficientemente grande y, los conjuntos de entrenamiento y de validación son independientes.
+
+	\subsection{Señales de Tránsito de Alemania}
+
+		Luego de haber entrenado las diferentes arquitecturas durante 100 épocas(38700 iteraciones), obtenemos los siguiente resultados:
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+	 	\subsubsection{Análisis del Entrenamiento y Validación del Diseño A}  
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model0Acierto} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo A Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model0Loss} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo A Tasa de pérdida por iteración}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			Luego de 50 épocas iteradas(19350 iteraciones), se observa que rápidamente el modelo se sobreajusta al dataset de entrenamiento. Es decir, rápidamente el valor de pérdida es muy cercana a cero, lo que a su vez hace que se separe de manera abrupta de los resultados de validación. Iteraciones posteriores harán que el modelo no permita obtener resultados correctos durante la prueba de evaluación.
+
+
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+		\subsubsection{Análisis del Entrenamiento y Validación del Diseño B}  
 		
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model1Acierto} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo B Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+		
+			
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model1Loss} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo B Tasa de pérdida por iteración}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
 
-\section{Resultados de entrenamiento}
+			Durante 100 epocas iteradas(38700 iteraciones), aproximadamente en  \textbf{34830 iteraciones(80 épocas)} se obtiene la mejor tasa de acierto de validación(99.26\%). Iteraciones posteriores hacen que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
 
+
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		\subsubsection{Análisis del Entrenamiento y Validación del Diseño C} 
+
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model4Acierto} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo C Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+			
+			
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model4Loss} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo C Tasa de pérdida por iteración}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			Durante 100 epocas iteradas(38700 iteraciones),al finalizar estas, se obtiene la mejor tasa de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
+
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------			
+		\subsubsection{Análisis del Entrenamiento y Validación del Diseño D} 
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model6Acierto} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo D Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+			
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model6Loss} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo D Tasa de pérdida por iteración}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			Al finalizar 100 epocas (38700 iteraciones) se obtiene unda de las mejores tasas de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
+			
+
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+		\subsubsection{Análisis del Entrenamiento y Validación del Diseño E} 
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model7Acierto} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo E Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+		
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model7Loss} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo E Tasa de pérdida por iteración}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+		
+			Al finalizar 100 épocas (38700 iteraciones) se obtiene una de las mejores tasas de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+	\subsection{Señales de Tránsito de Perú}
+		Luego de haber entrenado las diferentes arquitecturas durante 100 épocas(7700 iteraciones), obtenemos los siguiente resultados:
+
+		\subsubsection{Análisis del Entrenamiento y Validación del Diseño A}  
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model0Acierto} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo A Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model0Loss} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo A Tasa de pérdida por iteración}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			Luego de 50 épocas iteradas(19350 iteraciones), se observa que rápidamente el modelo se sobreajusta al dataset de entrenamiento. Es decir, rápidamente el valor de pérdida es muy cercana a cero, lo que a su vez hace que se separe de manera abrupta de los resultados de validación. Iteraciones posteriores harán que el modelo no permita obtener resultados correctos durante la prueba de evaluación.
+
+
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+		\subsubsection{Análisis del Entrenamiento y Validación del Diseño B}  
+		
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model1Acierto} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo B Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+		
+			
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model1Loss} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo B Tasa de pérdida por iteración}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			Durante 100 epocas iteradas(38700 iteraciones), aproximadamente en  \textbf{34830 iteraciones(80 épocas)} se obtiene la mejor tasa de acierto de validación(99.26\%). Iteraciones posteriores hacen que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
+
+
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+		\subsubsection{Análisis del Entrenamiento y Validación del Diseño C} 
+
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model4Acierto} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo C Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+			
+			
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model4Loss} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo C Tasa de pérdida por iteración}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			Durante 100 epocas iteradas(38700 iteraciones),al finalizar estas, se obtiene la mejor tasa de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
+
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------			
+		\subsubsection{Análisis del Entrenamiento y Validación del Diseño D} 
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model6Acierto} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo D Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+			
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model6Loss} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo D Tasa de pérdida por iteración}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			Al finalizar 100 epocas (38700 iteraciones) se obtiene unda de las mejores tasas de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
+			
+
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+		\subsubsection{Análisis del Entrenamiento y Validación del Diseño E} 
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model7Acierto} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo E Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+		
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model7Loss} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Modelo E Tasa de pérdida por iteración}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+		
+			Al finalizar 100 épocas (38700 iteraciones) se obtiene una de las mejores tasas de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+\section{Resultados de Evaluación}  
+
+		
+		La información de la prueba de clasificación se dispone en una matriz de confusión. La matriz de confusión es una matriz cuadrada cuyo orden es el número de clases. En las  columnas se presentan las clases reales mientras que en las filas se presentan las clases asignadas por el clasificador; en la Tabla 3, se muestra una matriz de confusión para dos clases. La suma vertical muestra la distribución real de las clases, mientras que la suma horizontal muestra la distribución de las clases producida por el clasificador. El análisis de los clasificadores se hace con base en la matriz de confusión de donde se obtienen los 3 indicadores de desempeño (mencionado en la \textbf{Seccion 3.3 Indicadores}).
+
+		\begin{enumerate}
+	
+		\item Tasa de Sensibilidad(Efectividad): {$S= \frac{Verdaderos\,Positivos}{{Verdaderos\,Positivos}+{Falsos\,Negativos}}x100$}
+		\item Tasa de Error(Especificidad): {$S= \frac{Falsos\,Negativos}{{Verdaderos\,Positivos}+{Falsos\,Negativos}}x100$}
+		\item El espacio ROC (Curvas ROC): Relación entre efectividad y especificidad
+
+		\end{enumerate}
+		
+		
+		El desempeño de la clasificación se puede verificar con los indicadores de Proporción de verdaderos positivos(Tasa de Sensibilidad / Recall), con el cual se puede medir la efectividad del clasificador, y la proporción de verdaderos negativos (Tasa de Error) que nos muestra la especificidad del clasificador. 
+
+		Por otra parte , el espacio ROC (Receiver Operating Characteristic) define un sistema de coordenadas usadas para visualizar el desempeño del clasificador. Las curvas ROC presentan el compromiso entre efectividad y especificidad del clasificador, un aumento enla sensibilidad está acompañado por un decremento en la especificidad. Es decir, las curvas ROC muestran la relación entre las muestras clasificadas adecuadamente (PVP, Proporción de Verdaderos Positivos) y las muestras que no pertenecen a la clase pero se clasificaron como si lo fueran (PFP Proporción deFalsos Positivos). En el espacio ROC la PFP se dibuja como variable independiente y la PVP como variable dependiente. Cada clasificador es representado por el punto (PFP, PVP). Para dibujar la curva ROC se construye la línea convexa formada por los puntos (PFP, PVP) de los clasificadores que se estén evaluando (PFP=1-PVN), junto con los puntos de los clasificadores triviales (0,0) y(1,1). La curva más cercana a los bordes izquierdo y superior en el espacio ROC, es la prueba más acertada porque significa que hay mayor acierto. La curva que más se acerque a la diagonal de 45 grados en el espacio ROC, es la prueba menos acertada. El mejor sistema de entrenamiento es el que produce un conjunto de clasificadores que maximice el área bajo la curva,\citep{SandovalCereza}.
+
+		\newpage
+	\subsection{Señales de Tránsito de Alemania}
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+	 	\subsubsection{Análisis del Diseño A}  
+			\begin{figure}[H]
+				%\begin{center}
+				\includegraphics[width=1\textwidth, height=20cm]{images/desarrollo/testResults/model_A_A} 
+				%\end{center}
+				\begin{center}
+				\caption{\small{Matriz de Confusión del Modelo A - Dataset de imágenes de Alemania}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
 
 
 	
-		
+	\subsection{Señales de Tránsito de Perú}
 
+		Obtenemos los siguiente resultados:
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+	 	\subsubsection{Análisis del Diseño A}  
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=1\textwidth]{images/desarrollo/testResults/model_P_A} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Matriz de Confusión del Modelo A - Dataset de imágenes de Perú}}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}

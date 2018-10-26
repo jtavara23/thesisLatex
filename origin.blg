@@ -5,12 +5,18 @@ Too many commas in name 1 of "Y. LeCun, L.Botou, Y.Bengio, P.Haffner" for entry 
 while executing---line 1023 of file apalike.bst
 Too many commas in name 1 of "Y. LeCun, L.Botou, Y.Bengio, P.Haffner" for entry LeCun
 while executing---line 1023 of file apalike.bst
+Too many commas in name 1 of "Sandoval, Z., & Prieto, F" for entry SandovalCereza
+while executing---line 1023 of file apalike.bst
+Too many commas in name 1 of "Sandoval, Z., & Prieto, F" for entry SandovalCereza
+while executing---line 1023 of file apalike.bst
 Warning--empty journal in CNSV
 Warning--empty journal in Krizhevsky2012
+Too many commas in name 1 of "Sandoval, Z., & Prieto, F" for entry SandovalCereza
+while executing---line 1098 of file apalike.bst
 Warning--empty journal in Multi_scale_feat
 Warning--there's a number but no volume in Stallkamp2012
 Warning--empty journal in SUTRAN
 Warning--can't use both author and editor fields in VicenBueno2007
 Too many commas in name 1 of "Y. LeCun, L.Botou, Y.Bengio, P.Haffner" for entry LeCun
 while executing---line 1098 of file apalike.bst
-(There were 3 error messages)
+(There were 6 error messages)

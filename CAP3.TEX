@@ -50,14 +50,14 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	\vskip 0.4cm 
 	Debido a que no siempre está claro cuál de estos dos puntos de vista (la profundidad del gráfico computacional o la profundidad del gráfico de modelado probabilístico) es más relevante, y debido a que diferentes personas eligen diferentes conjuntos de elementos más pequeños para construir sus gráficos, no hay un solo valor correcto para la profundidad de una arquitectura, así como no hay un solo valor correcto para la longitud de un programa de computadora. Tampoco hay consenso sobre la profundidad que requiere un modelo para calificar como "profundo", \citep{Goodfellow-et-al-2016}. Sin embargo, el aprendizaje profundo puede considerarse con seguridad como el estudio de modelos que implican una mayor cantidad de composición de funciones o conceptos aprendidos en comparación con el aprendizaje automático tradicional.
 	\vskip 0.4cm 
-	En resumen, el aprendizaje profundo, es un enfoque a la IA. Específicamente, es un tipo de aprendizaje automático, una técnica que permite que los sistemas computacionales mejoren con la experiencia y los datos. Se puede sostener que el aprendizaje automático es el único enfoque viable para construir sistemas de inteligencia artificial que puedan operar en entornos complicados del mundo real. El aprendizaje profundo es un tipo particular de aprendizaje automático que logra gran poder y flexibilidad al representar el mundo como una jerarquía de conceptos anidados, con cada concepto definido en relación con conceptos más simples y representaciones más abstractas calculadas en base a representaciones menos abstractas. La Figura X ilustra la relación entre estas diferentes disciplinas de la IA.
+	En resumen, el aprendizaje profundo, es un enfoque a la IA. Específicamente, es un tipo de aprendizaje automático, una técnica que permite que los sistemas computacionales mejoren con la experiencia y los datos. Se puede sostener que el aprendizaje automático es el único enfoque viable para construir sistemas de inteligencia artificial que puedan operar en entornos complicados del mundo real. El aprendizaje profundo es un tipo particular de aprendizaje automático que logra gran poder y flexibilidad al representar el mundo como una jerarquía de conceptos anidados, con cada concepto definido en relación con conceptos más simples y representaciones más abstractas calculadas en base a representaciones menos abstractas. La siguiente es un diagrama de Venn que muestra cómo el aprendizaje profundo es una especie de aprendizaje de representación, que a su vez es una especie de aprendizaje automático, que se utiliza para muchos, pero no todos los enfoques de la IA. 
 
 	\begin{figure}[H]
 		\begin{center}
 		\includegraphics[width=0.8\textwidth]{images/marcoteorico/venn_diag}
 		\end{center}
 		\begin{center}
-		\caption{\small{Un diagrama de Venn que muestra cómo el aprendizaje profundo es una especie de aprendizaje de representación, que a su vez es una especie de aprendizaje automático, que se utiliza para muchos, pero no todos, enfoques de la IA. Cada sección del diagrama de Venn incluye un ejemplo de una tecnología de IA.}}
+		\caption{\small{Diagrama de Venn donde cada sección incluye un ejemplo de una tecnología de IA(ilustra la relación entre estas diferentes disciplinas de la IA)}}
 		{\small{Fuente: \citep{Goodfellow-et-al-2016}}}
 		\end{center}
 		\vspace{-1.5em}
@@ -612,7 +612,17 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{figure}
 
 		Reduciendo lentamente la tasa de aprendizaje a lo largo del tiempo ayuda a acelerar el aprendizaje. Esto es lo que se conoce como tasa de decaimiento de aprendizaje{\bf(learning rate decay)}.
-
+			\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=0.7\textwidth]{images/desarrollo/entrenamiento/LR_decay} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Ejemplo de Tasa de decaimiento de aprendizaje por época  }}
+				\vspace{-1em}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
 		Sin embargo, el optimizador Gradient Descent(en cualquiera de sus tipos) con una tasa de decaimiento de aprendizaje, no es usado a menudo para entrenar redes neuronales profundas ya que genera un desafío el determinar los hiperparámetros que deben definirse de antemano y dependen en gran medida del tipo de modelo y problema. Además de que la misma tasa de aprendizaje se aplica a todas las actualizaciones de los parámetros. Por lo que opta en usar optimizadores más avanzados que tienen una tasa de convergencia más rápida y adaptable a diversas situaciones. Proporcionan una alternativa a los clásicos y son conocidos como optimizadores de descenso de gradiente de segundo orden; algunos de ellos son: Adagrad, Adadelta, RMSprop, Adam. 
 
 		%AdaGrad or adaptive gradient allows the learning rate to adapt based on parameters. It performs larger updates for infrequent parameters and smaller updates for frequent one. Because of this it is well suited for sparse data (NLP or image recognition). Another advantage is that it basically illiminates the need to tune the learning rate. Each parameter has its own learning rate and due to the peculiarities of the algorithm the learning rate is monotonically decreasing. This causes the biggest problem: at some point of time the learning rate is so small that the system stops learning.AdaDelta resolves the problem of monotonically decreasing learning rate in AdaGrad. In AdaGrad the learning rate was calculated approximately as one divided by the sum of square roots. At each stage you add another square root to the sum, which causes denominator to constantly decrease. In AdaDelta instead of summing all past square roots it uses sliding window which allows the sum to decrease. RMSprop is very similar to AdaDelta. Adam or adaptive momentum is an algorithm similar to AdaDelta. But in addition to storing learning rates for each of the parameters it also stores momentum changes for each of them separately
@@ -623,26 +633,15 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	
 		El método calcula las tasas de aprendizaje individuales de manera adaptativa para diferentes parámetros a partir de las estimaciones de los primeros y segundos momentos de los gradientes; el nombre Adam deriva de Estimación del Momento Adaptativo \citep {Adam},
 
-		Permite que la tasa de aprendizaje se adapte según los parámetros. Realiza actualizaciones más grandes para parámetros infrecuentes y actualizaciones más pequeñas para los frecuentes. Debido a esto, es adecuado para datos dispersos (NLP o reconocimiento de imágenes). Otra ventaja es que básicamente simplifica la necesidad de ajustar la tasa de aprendizaje. Cada parámetro tiene su propia tasa de aprendizaje, sin embargo, la tasa de aprendizaje no disminuye monótonamente. Además de almacenar las tasas de aprendizaje para cada uno de los parámetros, también almacena los cambios de momento para cada uno de ellos por separado 
+		Permite que la tasa de aprendizaje se adapte según los parámetros. Realiza actualizaciones más grandes para parámetros infrecuentes y actualizaciones más pequeñas para los frecuentes. Debido a esto, es adecuado para datos dispersos (NLP o reconocimiento de imágenes). Otra ventaja es que básicamente simplifica la necesidad de ajustar la tasa de aprendizaje. Cada parámetro tiene su propia tasa de aprendizaje, sin embargo, la tasa de aprendizaje no disminuye monótonamente. Además de almacenar las tasas de aprendizaje para cada uno de los parámetros, también almacena los cambios de momento para cada uno de ellos por separado .
 
 	\subsection{Validación Cruzada}
 	
-		Para el entrenamiento, el conjunto de datos se divide en un subconjunto de entrenamiento y otro para validación. En este caso se tiene la siguiente estructura:
+		Para el entrenamiento, el conjunto de datos se divide en un subconjunto de entrenamiento y otro para validación. En esta investigación se dividirá el 75\% para entrenamiento y 75\% para validación, {\citep {Elkan12evaluatingclassifiers}}. La división en subgrupos de entrenamiento y validación generalmente se realiza de manera aleatoria, para garantizar que ambos subconjuntos sean muestras aleatorias de la misma distribución. Puede ser razonable realizar un muestreo estratificado, lo que significa asegurar que cada clase esté presente en la misma proporción en los subconjuntos de entrenamiento y prueba. En esta investigación se trabajará con 2 tipos de muestreos (balanceado/estratificado y no balanceado)
 
-		\begin{table}[H]
-		\begin{center}
-		\begin{tabular}{|c|c|}
-		\hline
-		{\ul \textbf{CONJUNTO DE DATOS}}                                                                           & {\ul \textbf{CANTIDAD IMÁGENES}}                \\ \hline
-		\textbf{Entrenamiento}                                                                           & \text{203175 (75\%)}                       \\ \hline
-		\textbf{Validación}                                                                                          & \text{67725 (25\%)}                    \\ \hline
-		\end{tabular}
-		\end{center}
-		\end{table}
+		Se utiliza el subconjunto de validación para evaluar el desempeño de diferentes arquitecturas del modelo (diferentes topologías), para luego escoger una de ellas. Este subconjunto(de validación) se usa para verificar si el error está dentro de algún rango y no se usa directamente para ajustar los pesos, por el contrario \textbf{se usa para indique el número óptimo de neuronas ocultas o determina el punto de parada para el entrenamiento}.  Por lo tanto, el modelo es entrenado sobre el conjunto de entrenamiento completo y la capacidad de generalización es medida en el conjunto de validación. 
 
-		Se utiliza el subconjunto de validación para evaluar el desempeño de diferentes arquitecturas del modelo (diferentes topologías), para luego escoger una de ellas. El modelo es entrenado sobre el conjunto de entrenamiento completo y la capacidad de generalización es medida en el conjunto de pruebas. 
-
-		En problemas de clasificación, debido a que los datos se dividen en clases finitas, es natural pensar que la categoría al cual pertenece cierto resultado se dará a través de probabilidades En probabilidad, la entropía cruzada es la distancia entre las dos distribuciones de probabilidad y se usa generalmente como la función de pérdida. Es por ello que el resultado de la validación cruzada representa la pérdida de la entropía del conjunto de datos. La entropía se suele utilizar en la teoría de la información para medir la pureza o impureza de un conjunto determinado. La pregunta a la que responde es: ¿Cuánto diferente esos elementos son entre sí?.  
+		La validación cruzada o cross-validation es una técnica utilizada para evaluar los esultados de un análisis estadístico y garantizar que son independientes de la partición entre datos de entrenamiento y validación, \citep{moore2001cross}. En problemas de clasificación, debido a que los datos se dividen en clases finitas, es natural pensar que la categoría al cual pertenece cierto resultado se dará a través de probabilidades En probabilidad, la entropía cruzada es la distancia entre las dos distribuciones de probabilidad y se usa generalmente como la función de pérdida. Es por ello que el resultado de la validación cruzada representa la pérdida de la entropía del conjunto de datos. La entropía se suele utilizar en la teoría de la información para medir la pureza o impureza de un conjunto determinado. La pregunta a la que responde es: ¿Cuánto diferente esos elementos son entre sí?.  
 
 			\begingroup\makeatletter\def\f@size{17.8}\check@mathfonts
 			\begin{center}
@@ -676,9 +675,9 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 			\endgroup		
 	
 
-		Es por ello que la la función de coste dada por la validacion cruzada ayuda para decidir cuándo se debe terminar el entrenamiento de una red.\citep{AulaMLP}. Usualmente se utiliza el error cuadrático medio como función de pérdida para medir el rendimiento de un modelo de regresion. Sin embargo, en casos de clasificación, la función de costo de pérdida a través del cálculo de la entropía cruzada es preferible, ya que tiende a no causar saturación de las neuronas de salida, convirtiendo el aprendizaje más rápido,\citep{AulaDNN}.
+		Es por ello que la la función de coste/pérdida dada por la validacion cruzada ayuda para decidir cuándo se debe terminar el entrenamiento de una red.\citep{AulaMLP}. Usualmente se utiliza el error cuadrático medio como función de pérdida para medir el rendimiento de un modelo de regresion. Sin embargo, en casos de clasificación, la función de costo de pérdida a través del cálculo de la entropía cruzada es preferible, ya que tiende a no causar saturación de las neuronas de salida, convirtiendo el aprendizaje más rápido,\citep{AulaDNN}.
 
-		La pérdida de entropía cruzada aumenta a medida que la probabilidad prevista diverge de la clasificación real. Por lo tanto, un modelo casi perfecto tendría una pérdida de entropía cercana a 0, \citep{crossMSE}.
+		La pérdida de entropía cruzada aumenta a medida que la probabilidad prevista diverge de la clasificación real. Por lo tanto, un modelo casi perfecto tendría una pérdida de entropía cercana a cero, \citep{crossMSE}.
 		
 
 
@@ -717,7 +716,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 
 		Donde $R(\theta)$ caracteriza la complejidad del modelo y $\lambda$ representa la proporción de la pérdida total del modelo, generalmente $\lambda$ estará cerca de 0 porque si $\lambda$ es demasiado grande, conducirá a un ajuste insuficiente(underfitting). Por otro lado, para evitar el exceso de ajuste(overfitting) cuando se tiene una gran cantidad de características en su conjunto de datos, no optimizamos directamente $L(\theta,D)$ (cross entropy), sino que optimizamos $L(\theta,D) +\lambda R(\theta)$
 
-		Se usará un lambda($\lambda$) = 0.0001, que parecía funcionar mejor. La regularización de pérdida L2 solo debe incluir los pesos de las capas totalmente conectadas, y normalmente no incluye a los bias(sesgos). La intuición detrás de esto es que el bias contribuye al overfitting(sobreajuste), y no estaría agregando ningún nuevo grado de libertad al modelo.
+		Se usará una constante {\bf lambda($\lambda$) = 0.0001}, por defecto. La regularización de pérdida L2 solo debe incluir los pesos de las capas totalmente conectadas, y normalmente no incluye a los bias(sesgos). La intuición detrás de esto es que el bias contribuye al overfitting(sobreajuste), y no estaría agregando ningún nuevo grado de libertad al modelo.
 
 
 
