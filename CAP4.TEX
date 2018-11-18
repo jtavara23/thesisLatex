@@ -15,20 +15,26 @@
 		\indent Modelo basado en el aprendizaje profundo de redes neuronales convolucionales	
 		
 	\section{Indicadores}
-		Los indicadores nos permiten realizar mediciones y a su vez determinan la validez de la hipótesis planteada en la presente investigación. Se han considerado tres indicadores: 
+		Los indicadores nos permiten realizar mediciones y a su vez determinan la validez de la hipótesis planteada en la presente investigación. El desempeño de la clasificación se puede verificar con los siguinetes cinco indicadores: 
 		\begin{table}[H]
 		\centering
 		\caption{\small{Indicadores para la investigación}}
 		\begin{tabular}{|>{\small}c|>{\small}c|>{\small}c|}
 		\hline
 		{\ul \textbf{Indicador}} & {\ul \textbf{Descripcion}} & {\ul \textbf{Instrumento}} \\ \hline
-		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Sensibilidad\\ (Efectividad)\end{tabular}} & \multirow{2}{*}{$S= \frac{Verdaderos\,Positivos}{{Verdaderos\,Positivos}+{Falsos\,Negativos}}x100$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Verdaderos Positivos\\ (Efectividad - Sensibilidad)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos}{{Verdaderos\,Positivos}+{Falsos\,Negativos}}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
 		 &  &  \\ \hline
-		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Error \\ (Especificidad)\end{tabular}} & \multirow{2}{*}{$S= \frac{Falsos\,Negativos}{{Verdaderos\,Positivos}+{Falsos\,Negativos}}x100$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Verdaderos Negativos \\ (Especificidad)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Negativos}{{Verdaderos\,Negativos}+{Falsos\,Positivos}}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		 &  &  \\ \hline
+		 \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Valor Predictivo Positivo \\ (Precisión)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos}{{Verdaderos\,Positivos}+{Falsos\,Positivos}}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		 &  &  \\ \hline
+		 \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Acuracia \\ (Exactitud)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos+Verdaderos\,Negativos}{Total\,de\,Imagenes}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
 		 &  &  \\ \hline
 		%\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tiempo de\\ Procesamiento\end{tabular}} & \multirow{2}{*}{$S= \frac{\sum_{i=1}^{Total} tiempo_{i}}{Total\,de\,muestras}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Cronometro\\ Computacional\end{tabular}} \\
-		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}El espacio ROC \\ (Curvas ROC)\end{tabular}} & \multirow{2}{*}{Relación entre efectividad y especificidad} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Curvas ROC \\ (Receiver Operating Characteristic)\end{tabular}} & \multirow{2}{*}{Relación entre Efectividad y Especificidad} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
 		 &  &  \\ \hline
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Curvas PR \\ (Precision - Recall)\end{tabular}} & \multirow{2}{*}{Relación entre Efectividad(Recall) y Precision} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		 &  &  \\ \hline		 
 		\end{tabular}
 		\vspace{-1.0em}
 		\end{table}

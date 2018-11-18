@@ -20,25 +20,23 @@ Cireşan, D., Meier, U., Masci, J., and Schmidhuber, J. (2012).
 \bibitem[Consejo Nacional~de Seguridad~Vial, 2014]{CNSV}
 Consejo Nacional~de Seguridad~Vial, . (2014).
 \newblock La seguridad vial a nivel mundial.
-\newblock page~48.
 
 \bibitem[Cordova~Rampant, 2017]{OPS}
 Cordova~Rampant, A. (2017).
 \newblock Los peruanos mueren más por los accidentes de tránsito que por la
   inseguridad ciudadana.
 \newblock
-  \url{http://rpp.pe/data/los-peruanos-mueren-mas-por-los-accidentes-de-transito-1071653}.
+  http://rpp.pe/data/los-peruanos-mueren-mas-por-los-accidentes-de-transito-1071653.
+
+\bibitem[Davis and Goadrich, 2006]{Davis-2006-RPR-1143844-1143874}
+Davis, J. and Goadrich, M. (2006).
+\newblock The relationship between precision-recall and roc curves.
 
 \bibitem[Dong and Zhou, 2008]{gradient}
 Dong, X. and Zhou, D.-X. (2008).
 \newblock Learning gradients by a gradient descent algorithm.
 \newblock {\em Journal of Mathematical Analysis and Applications}, 341(2):1018
   -- 1027.
-
-\bibitem[{Donges N.}, 2018]{gradientimg}
-{Donges N.} (2018).
-\newblock Gradient descent in a nutshell.
-\newblock [Online; accessed Agosto 08, 2018].
 
 \bibitem[Elkan, 2012]{Elkan12evaluatingclassifiers}
 Elkan, C. (2012).
@@ -49,13 +47,13 @@ Gestión.pe, D. (2016a).
 \newblock Accidentes de tránsito: Dos propuestas para aumentar la seguridad
   vial y reducir muertes.
 \newblock
-  \url{https://gestion.pe/economia/accidentes-transito-dos-propuestas-2175696}.
+  https://gestion.pe/economia/accidentes-transito-dos-propuestas-2175696.
 
 \bibitem[Gestión.pe, 2016b]{Gestion1}
 Gestión.pe, D. (2016b).
 \newblock Seguridad vial en perú: Nueve indicadores a mejorar para evitar
   accidentes.
-\newblock \url{https://gestion.pe/economia/seguridad-vial-peru-21756832}.
+\newblock https://gestion.pe/economia/seguridad-vial-peru-21756832.
 
 \bibitem[Golik et~al., 2013]{crossMSE}
 Golik, P., Doetsch, P., and Ney, H. (2013).
@@ -66,7 +64,7 @@ Golik, P., Doetsch, P., and Ney, H. (2013).
 Goodfellow, I., Bengio, Y., and Courville, A. (2016).
 \newblock {\em Deep Learning}.
 \newblock MIT Press.
-\newblock \url{http://www.deeplearningbook.org}.
+\newblock http://www.deeplearningbook.org.
 
 \bibitem[Hai~Nguyen, 2014]{Hai2014}
 Hai~Nguyen, T. (2014).
@@ -77,10 +75,10 @@ Hai~Nguyen, T. (2014).
 Hannan, M.~A., Wali, S.~B., Pin, T.~J., Hussain, A., and Samad, S.~A. (2014).
 \newblock Traffic sign classification based on neural network for advance
   driver assistance system.
-\newblock {\em Przegląd Elektrotechniczny}, R. 90, nr 11:169--172.
+\newblock {\em Przeglad Elektrotechniczny}, R. 90, nr 11:169--172.
 
-\bibitem[{Jeremy J.}, 2018]{AdamImg}
-{Jeremy J.} (2018).
+\bibitem[J., 2018]{AdamImg}
+J., J. (2018).
 \newblock Setting the learning rate of your neural network.
 \newblock [Online; accessed Agosto 08, 2018].
 
@@ -98,18 +96,27 @@ Karpathy, A. (2016).
 
 \bibitem[Kingma and Ba, 2014]{Adam}
 Kingma, D.~P. and Ba, J. (2014).
-\newblock Adam: {A} method for stochastic optimization.
+\newblock Adam: A method for stochastic optimization.
 \newblock {\em CoRR}, abs/1412.6980.
 
 \bibitem[Krizhevsky et~al., 2012]{Krizhevsky2012}
 Krizhevsky, A., Sutskever, I., and Hinton, G. (2012).
 \newblock Imagenet classification with deep convolutional neural networks.
-\newblock pages 1097--1105.
+
+\bibitem[LeCun et~al., 1998]{LeCun}
+LeCun, Y., L.Botou, Y.Bengio, and P.Haffner (1998).
+\newblock Gradient-based learning applied to document recognition.
+\newblock {\em Proceedings of the IEEE 86}.
 
 \bibitem[Moore, 2001]{moore2001cross}
 Moore, A.~W. (2001).
 \newblock Cross-validation for detecting and preventing overfitting.
 \newblock {\em School of Computer Science Carneigie Mellon University}.
+
+\bibitem[N., 2018]{gradientimg}
+N., D. (2018).
+\newblock Gradient descent in a nutshell.
+\newblock [Online; accessed Agosto 08, 2018].
 
 \bibitem[Nair and Hinton, 2010]{RELU}
 Nair, V. and Hinton, G.~E. (2010).
@@ -121,7 +128,7 @@ Nair, V. and Hinton, G.~E. (2010).
 \bibitem[OMS, 2017]{OMS}
 OMS (2017).
 \newblock 10 datos sobre la seguridad vial en el mundo.
-\newblock \url{http://www.who.int/features/factfiles/roadsafety/es/}.
+\newblock http://www.who.int/features/factfiles/roadsafety/es/.
 
 \bibitem[Poynton, 2003]{POYNTON2003257}
 Poynton, C. (2003).
@@ -154,21 +161,20 @@ Romero, R.~F. (2015b).
 Romero~Benites, R. (2017).
 \newblock Ocho peruanos mueren cada día en accidentes de tránsito.
 \newblock
-  \url{http://rpp.pe/data/ocho-peruanos-mueren-cada-dia-en-accidentes-de-transito-1068532}.
+  http://rpp.pe/data/ocho-peruanos-mueren-cada-dia-en-accidentes-de-transito-1068532.
 
-\bibitem[Sandoval, 2009]{SandovalCereza}
-Sandoval, Z., . P.~F. (2009).
+\bibitem[Sandoval and Prieto, 2009]{SandovalCereza}
+Sandoval and Prieto (2009).
 \newblock Procesamiento de imágenes para la clasificación de café cereza.
 
 \bibitem[Sermanet and LeCun, 2011]{Multi_scale_feat}
 Sermanet, P. and LeCun, Y. (2011).
 \newblock Traffic sign recognition with multi-scale convolutional networks.
-\newblock pages 2809--2813.
 
 \bibitem[Stallkamp et~al., 2011]{Stallkamp-IJCNN-2011}
 Stallkamp, J., Schlipsing, M., Salmen, J., and Igel, C. (2011).
-\newblock The {G}erman {T}raffic {S}ign {R}ecognition {B}enchmark: A
-  multi-class classification competition.
+\newblock The german traffic sign recognition benchmark: A multi-class
+  classification competition.
 \newblock In {\em IEEE International Joint Conference on Neural Networks},
   pages 1453--1460.
 
@@ -176,13 +182,11 @@ Stallkamp, J., Schlipsing, M., Salmen, J., and Igel, C. (2011).
 Stallkamp, J., Schlipsing, M., Salmen, J., and Igel, C. (2012).
 \newblock Man vs. computer: Benchmarking machine learning algorithms for
   traffic sign recognition.
-\newblock {\em Neural Networks}, (0).
 
 \bibitem[SUTRAN, 2014]{SUTRAN}
 SUTRAN (2014).
 \newblock Texto unico ordenado del reglamento nacional de transito - codigo de
   transito.
-\newblock page 188.
 
 \bibitem[Szegedy et~al., 2014]{Inception}
 Szegedy, C., Liu, W., Jia, Y., Sermanet, P., Reed, S.~E., Anguelov, D., Erhan,
@@ -202,23 +206,16 @@ Vargas~Romero, F. (2015).
 \newblock {\em Universidad Nacional de Trujillo}.
 
 \bibitem[Vicen-Bueno et~al., 2007]{VicenBueno2007}
-Vicen-Bueno, R., Garc{\'i}a-Gonz{\'a}lez, A., Torijano-Gordo, E., Gil-Pita, R.,
-  and Rosa-Zurera, M. (2007).
+Vicen-Bueno, R., Torijano-Gordo, E., Gil-Pita, R., and Rosa-Zurera, M. (2007).
 \newblock {\em Traffic Sign Classification by Image Preprocessing and Neural
-  Networks}, pages 741--748.
+  Networks}.
 \newblock Springer Berlin Heidelberg, Berlin, Heidelberg.
 
 \bibitem[Waze, 2016]{CNN}
 Waze (2016).
 \newblock Las mejores y peores ciudades para conducir en américa latina,
   según waze.
-\newblock
-  \url{http://cnnespanol.cnn.com/2016/09/15/las-mejores-y-peores-ciudades/}.
-
-\bibitem[Y.~LeCun, 1998]{LeCun}
-Y.~LeCun, L.Botou, Y.~P. (1998).
-\newblock Gradient-based learning applied to document recognition.
-\newblock {\em Proceedings of the IEEE 86}.
+\newblock http://cnnespanol.cnn.com/2016/09/15/las-mejores-y-peores-ciudades.
 
 \bibitem[Yadav et~al., 2014]{CLAHE}
 Yadav, G., Maheshwari, S., and Agarwal, A. (2014).

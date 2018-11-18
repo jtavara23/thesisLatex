@@ -212,7 +212,7 @@
 		\end{figure}
 
 		\subsubsection{Señales de Tránsito de Perú}
-		Para la etapa de evaluación se cuenta con un conjunto de 12630 imágenes, de igual manera no necesariamente balanceadas y que no son utilizadas durante el proceso de entrenamiento para obtener resultados confiables a la hora de evaluar el resultado del entrenamiento. 
+		Para la etapa de evaluación se cuenta con un conjunto de 4698 imágenes, de igual manera no necesariamente balanceadas y que no son utilizadas durante el proceso de entrenamiento para obtener resultados confiables a la hora de evaluar el resultado del entrenamiento. 
 
 		\begin{figure}[H]
 			%\begin{center}
@@ -439,7 +439,7 @@
 			Teniendo en cuenta lo descrito en la \textbf{Seccion 2.3.4 (Validación Cruzada)}, para la etapa del entrenamiento, el conjunto de datos Balanceados compuesto por 270900 imágenes fue dividido en un subconjunto de entrenamiento y otro para validación, con la siguiente distribución:
 			\vspace{1.5em}
 			\begin{table}[H]
-				\caption{\small{Distribución Entrenamiento y Validación para Dataset Balanceado - Señales de Tránsito de Alemania}}
+				\caption{\small{Distribución Entrenamiento y Validación Dataset Balanceado - Señales de Tránsito de Alemania}}
 				\begin{center}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
@@ -468,7 +468,7 @@
 			Para este caso, el dataset aumentado se configuró con una distribución de datos para entrenamiento, validación y evaluación: 
 			\vspace{1.5em}
 			\begin{table}[H]
-				\caption{\small{Distribución Entrenamiento y Validación para Dataset no Balanceado - Señales de Tránsito de Perú}}
+				\caption{\small{Distribución Entrenamiento y Validación Dataset no Balanceado - Señales de Tránsito de Perú}}
 				\begin{center}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
@@ -550,9 +550,11 @@
 		\end{table}
 		\vspace{-1.5em}
 
-		Recordemos que en cada época se procesa el dataset completo de imágenes, por lo que cada época es igual al mini-batch multiplicado por un número de iteraciones, sin embargo debido a que se tiene 3 distintos datasets para el entrenamiento \textbf{(Seccion 4.1.4 - Dataset final para el Entrenamiento)}, el tamaño del Minibatch cambiará respecto al tamaño del dataset y por ende también será diferente la cantidad de iteraciones ejecutadas durante 100 épocas de entrenamiento.                        
+		Recordemos que en cada época se procesa el dataset completo de imágenes, por lo que cada época es igual : \begingroup\makeatletter\def\f@size{11}\check@mathfonts	$Epoca = Mini batch \times iteraciones$ \endgroup
+
+		Sin embargo debido a que se tiene dos distintos datasets para el entrenamiento \textbf{(Seccion 4.1.4 - Dataset final para el Entrenamiento)}, el tamaño del Minibatch cambiará respecto al tamaño del dataset y por ende también será diferente la cantidad de iteraciones ejecutadas durante 100 épocas de entrenamiento.                        
 		
-		\begingroup\makeatletter\def\f@size{14.8}\check@mathfonts	$Epoca = Mini_batch \times iteraciones$ \endgroup
+		%\begin{center}\end{center}
 
 		\begin{table}[H]
 			\begin{center}
@@ -595,7 +597,7 @@
 		\vspace{-1.5em}
 		\end{figure}
 
-	La arquitectura de la red está inspirada en el arquitectura Inception \citep{Inception} y en la arquitectura AlexNet\citep{Krizhevsky2012} para la clasificación de imágenes. En la arquitectura Inception, el modelo creado es denominado GoogLeNet, similar a AlexNet. Varios módulos iniciales son apilados uno sobre el otro para producir el resultado final. En el módulo de inicio, en ese tipo de red, se usaron diversos tamaños de filtros convolucionales para capturar características de diferente abstracción. El alto nivel de abstracción se captura con filtros de mayor tamaño y el de un nivel inferior con filtros de menor tamaño. Procesando información visual a diferentes escalas y al concatenarlas se obtiene un nivel eficiente de abstracción. 
+	La arquitectura de la red está inspirada en el arquitectura Inception \citep{Inception} y en la arquitectura AlexNet\citep{Krizhevsky2012} para la clasificación de imágenes. En la arquitectura Inception, el modelo creado es denominado GoogLeNet, similar a AlexNet donde varios módulos iniciales son apilados uno sobre el otro para producir el resultado final. En el módulo de inicio, en ese tipo de red, se usaron diversos tamaños de filtros convolucionales para capturar características de diferente abstracción. El alto nivel de abstracción se captura con filtros de mayor tamaño y el de un nivel inferior con filtros de menor tamaño. Procesando información visual a diferentes escalas y al concatenarlas se obtiene un nivel eficiente de abstracción. 
 	%%%	Dado que aplicar directamente más filtros convolucionales con datos de imagen y concatenarlos es computacionalmente costoso, en el modelo Inception finalmente se usaron filtros de reducción de dimensionalidad(pooling/acumulación). Además de ser muy exitoso para la reducción de dimensionalidad, estos filtros también llegan a ser útiles como activación lineal rectificada. La arquitectura de inicio es eficiente en términos de complejidad computacional con respecto al número de unidades en cada etapa. \citep{Mrinal2016}.las características abstractas locales desempeñan un papel importante. Las señales que pertenecen al mismo grupo tienen una ligera diferencia en la estructura local entre sí, lo que dificulta su distinción. Por lo que se optó por agregar un kernel de reducción convolucional de 3 × 3 extra con acumulación máxima en la parte superior para capturar la estructura local discriminativa al comienzo mismo. Los signos pertenecientes a diferentes grupos tienen una abstracción global que se puede capturar utilizando un núcleo de reducción convolucional de 5 × 5.
 
 	Para la clasificación de señales de tránsito en esta investigación se utilizó una versión modificada de las arquitecturas antes mencionadas. Se incorporó {\bf funciones de escala-múltiple} \citep{Multi_scale_feat}, lo que significa que la salida de las capas convolucionales no solo se envía a la capa posterior, sino que también se ramifica y se introduce al clasificador (capa totalmente conectada). La razón detrás de esto es que cuando el clasificador está tomando una decisión basada en convoluciones, podría encontrar que la salida de la primera o segunda capa convolucional también es útil. Básicamente con las características de escala múltiple depende del clasificador qué nivel de abstracción usar, ya que tiene acceso a las salidas de todas las capas convolucionales, es decir,características en todos los niveles de abstracción. Estas capas ramificadas se someten a un pooling máximo adicional, de modo que todas las convoluciones se submuestrean proporcionalmente antes de entrar en el clasificador. Así se garantiza que todas las funciones de escala múltiple experimenten la misma cantidad de máximo aprovechamiento.
@@ -617,18 +619,19 @@
 		\end{figure}
 
 
-	Para el proceso de entrenamiento fueron tomados en cuenta 5 diferentes diseños. Estos fueron ejectudados durante el entrenamiento del dataset que contiene señales de tránsito de Alemania. Posteriormente, el diseño que obtuvo mejor resultado de entrenamiento y validación fue utilizado para entrenar el dataset de señales de tránsito del Perú. Estos 5 modelos son descritos a continuación.
+	Para el proceso de entrenamiento fueron tomados en cuenta 5 diferentes diseños. Estos fueron ejectudados durante el entrenamiento del dataset que contiene señales de tránsito de Alemania y Perú. Estos 5 modelos son descritos a continuación.
 		\vspace{-1.5em}
 		\subsubsection{Diseño A} 
-		
+			Diseño compuesto de 2 capas convolucionales y 2 capas totalmente conectadas.
 			% Please add the following required packages to your document preamble:
 			% \usepackage{multirow}
 			% \usepackage[table,xcdraw]{xcolor}
 			% If you use beamer only pass "xcolor=table" option, i.e. \documentclass[xcolor=table]{beamer}
-				
+			\begin{itemize}
+			\item \underline{Dataset de Alemania}			
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño compuesto de 2 capas convolucionales y 2 capas totalmente conectadas}}
+				\caption{\small{Diseño A - Dataset de Imágenes de Alemania}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
@@ -637,18 +640,39 @@
 				\multirow{-2}{*}{1} &  32 de 32 x 32 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 32 de 8x8}\\ \hline
 				 & 32 de 16 x 16 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 32 de 16 x 16 neuronas & --\\ 
 				\multirow{-2}{*}{2} &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 1) 64 de 8x8}\\ \hline
-				3 &  {\cellcolor[HTML]{DAE8FC}6144 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
+				3 &  {\cellcolor[HTML]{DAE8FC}6144 neuronas} &  F.C.(DropOut : 0.5) &  3072 neuronas &  -- & 43 neuronas & --\\ \hline
 
 				\end{tabular}
 				\end{center}
 				\end{table}
-			
-		%------------------------------------------------------------------------------------------------------------------------------------------------------------
-		\subsubsection{Diseño B}
-				
+
+			\item \underline{Dataset del Perú}
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño compuesto de 3 capas convolucionales y 2 capas totalmente conectadas}}
+				\caption{\small{Diseño A - Dataset de Imágenes de Perú}}
+				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
+				\hline
+				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
+
+				 & 1 de 60 x 60 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 60 x 60 neuronas & --\\ 
+				\multirow{-2}{*}{1} &  32 de 60 x 60 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 30 x 30 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 32 de 15x15}\\ \hline
+				 & 32 de 30 x 30 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 30 x 30 neuronas & --\\ 
+				\multirow{-2}{*}{2} &  64 de 30 x 30 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 1) 64 de 15x15}\\ \hline
+				3 &  {\cellcolor[HTML]{DAE8FC}21600 neuronas} &  F.C.(DropOut : 0.5) &  3072 neuronas &  -- & 7 neuronas & --\\ \hline
+
+				\end{tabular}
+				\end{center}
+				\end{table}
+
+			\end{itemize}
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+		\subsubsection{Diseño B}
+		Diseño compuesto de 3 capas convolucionales y 2 capas totalmente conectadas.
+			\begin{itemize}
+			\item \underline{Dataset de Alemania}		
+				\begin{table}[H]
+				\begin{center}
+				\caption{\small{Diseño B - Dataset de Imágenes de Alemania}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
@@ -657,20 +681,42 @@
 				\multirow{-2}{*}{1} &  32 de 32 x 32 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 4x4}\\ \hline
 				 & 32 de 16 x 16 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 16 x 16 neuronas & --\\ 
 				\multirow{-2}{*}{2} &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 4x4}\\ \hline			
-				{\cellcolor[HTML]{ffb3b3}} & 64 de 8 x 8 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 64 de 8 x 8 neuronas & --\\ 			
+				{\cellcolor[HTML]{ffb3b3}} & 64 de 8 x 8 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 128 de 8 x 8 neuronas & --\\ 			
 				{\cellcolor[HTML]{ffb3b3} \multirow{-2}{*}{3}} &  128 de 8 x 8 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 4x4 }\\ \hline
 				4 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
 				\end{tabular}
 				\end{center}
 				\end{table}
 
-
-		%------------------------------------------------------------------------------------------------------------------------------------------------------------
-		\subsubsection{Diseño C}
-
+			\item \underline{Dataset del Perú}
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño compuesto de 3 capas convolucionales y 2 capas totalmente conectadas. Variando el número de kernels en la 2da capa convolucional}}
+				\caption{\small{Diseño B - Dataset de Imágenes de Alemania}}
+				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
+				\hline
+				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
+
+				 & 1 de 60 x 60 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 60 x 60 neuronas & --\\ 
+				\multirow{-2}{*}{1} &  32 de 60 x 60 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 30 x 30 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 7x7}\\ \hline
+				 & 32 de 30 x 30 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 30 x 30 neuronas & --\\ 
+				\multirow{-2}{*}{2} &  64 de 30 x 30 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 7x7}\\ \hline			
+				{\cellcolor[HTML]{ffb3b3}} & 64 de 15 x 15 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 128 de 15 x 15 neuronas & --\\ 			
+				{\cellcolor[HTML]{ffb3b3} \multirow{-2}{*}{3}} &  128 de 15 x 15 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 7x7 }\\ \hline
+				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 7 neuronas & --\\ \hline
+				\end{tabular}
+				\end{center}
+				\end{table}
+
+				\end{itemize}
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+		\subsubsection{Diseño C} %model4
+			Diseño compuesto de 3 capas convolucionales y 2 capas totalmente conectadas. Variando el número de kernels en la 2da capa convolucional.
+
+			\begin{itemize}
+			\item \underline{Dataset de Alemania}		
+				\begin{table}[H]
+				\begin{center}
+				\caption{\small{Diseño C - Dataset de Imágenes de Alemania}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
@@ -681,18 +727,43 @@
 				\multirow{-2}{*}{2} &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 4x4}\\ \hline			
 				 & 64 de 8 x 8 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 64 de 8 x 8 neuronas & --\\ 			
 				\multirow{-2}{*}{3} &  128 de 8 x 8 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 4x4 }\\ \hline
+				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
+				\end{tabular}
+				\end{center}
+				\end{table}
+
+			\item \underline{Dataset del Perú}
+				\begin{table}[H]
+				\begin{center}
+				\caption{\small{Diseño C - Dataset de Imágenes de Alemania}}
+				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
+				\hline
+				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
+
+				 & 1 de 60 x 60 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 60 x 60 neuronas & --\\ 
+				\multirow{-2}{*}{1} &  32 de 60 x 60 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 30 x 30 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 7x7}\\ \hline
+				 & 32 de 30 x 30 neuronas & Conv(DropOut : 0.7) & {\cellcolor[HTML]{ffb3b3} 64 de 3 x 3} & Activo & 64 de 30 x 30 neuronas & --\\ 
+				\multirow{-2}{*}{2} &  64 de 30 x 30 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 7x7}\\ \hline			
+				 & 64 de 15 x 15 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 128 de 15 x 15 neuronas & --\\ 			
+				\multirow{-2}{*}{3} &  128 de 15 x 15 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 7x7 }\\ \hline
 				4 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
 				\end{tabular}
 				\end{center}
 				\end{table}
 
+			\end{itemize}
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-		\subsubsection{Diseño D}
+		\subsubsection{Diseño D} %model6
+			
+			Diseño compuesto de 3 capas convolucionales y 2 capas totalmente conectadas. Variando el número de kernels en la 3ra capa convolucional.
+
+			\begin{itemize}
+			\item \underline{Dataset de Alemania}		
 
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño compuesto de 3 capas convolucionales y 2 capas totalmente conectadas. Variando el número de kernels en la 3ra capa convolucional}}
+				\caption{\small{Diseño D - Dataset de Imágenes de Alemania}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
@@ -708,20 +779,43 @@
 				\end{center}
 				\end{table}
 
-		%------------------------------------------------------------------------------------------------------------------------------------------------------------
-		\subsubsection{Diseño E}
-			
+			\item \underline{Dataset del Perú}
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño compuesto de 4 capas convolucionales y 2 capas totalmente conectadas}}
+				\caption{\small{Diseño D - Dataset de Imágenes de Perú}}
+				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
+				\hline
+				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
+
+				 & 1 de 60 x 60 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 60 x 60 neuronas & --\\ 
+				\multirow{-2}{*}{1} &  32 de 60 x 60 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 30 x 30 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 7x7}\\ \hline
+				 & 32 de 30 x 30 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 30 x 30 neuronas & --\\ 
+				\multirow{-2}{*}{2} &  64 de 30 x 30 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 7x7}\\ \hline			
+				 & 64 de 15 x 15 neuronas & Conv(DropOut : 0.6) & {\cellcolor[HTML]{ffb3b3} 128 de 7 x 7} & Activo & 128 de 15 x 15 neuronas & --\\ 			
+				\multirow{-2}{*}{3} &  128 de 15 x 15 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 7x7 }\\ \hline
+				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 7 neuronas & --\\ \hline
+				\end{tabular}
+				\end{center}
+				\end{table}
+
+			\end{itemize}
+		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+		\subsubsection{Diseño E}
+			Diseño compuesto de 4 capas convolucionales y 2 capas totalmente conectadas.
+			\begin{itemize}
+			\item \underline{Dataset de Alemania}		
+
+				\begin{table}[H]
+				\begin{center}
+				\caption{\small{Diseño E - Dataset de Imágenes de alemania}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
 
 				 & 1 de 32 x 32 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 32 x 32 neuronas & --\\ 
-				\multirow{-2}{*}{1} &  32 de 32 x 32 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 2x2}\\ \hline
+				\multirow{-2}{*}{1} &  32 de 32 x 32 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 8) 32 de 2x2}\\ \hline
 				 & 32 de 16 x 16 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 16 x 16 neuronas & --\\ 
-				\multirow{-2}{*}{2} &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 2x2}\\ \hline			
+				\multirow{-2}{*}{2} &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 64 de 2x2}\\ \hline			
 				 & 64 de 8 x 8 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 128 de 8 x 8 neuronas & --\\ 			
 				\multirow{-2}{*}{3} &  128 de 8 x 8 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 2) 128 de 2x2 }\\ \hline
 				{\cellcolor[HTML]{ffb3b3}}& 128 de 4 x 4 neuronas & Conv(DropOut : 0.6) & 128 de 7 x 7 & Activo & 128 de 4 x 4 neuronas & --\\ 			
@@ -730,6 +824,32 @@
 				\end{tabular}
 				\end{center}
 				\end{table}
+
+			\item \underline{Dataset del Perú}
+
+				\begin{table}[H]
+				\begin{center}
+				\caption{\small{Diseño E - Dataset de Imágenes de alemania}}
+				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
+				\hline
+				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
+
+				 & 1 de 60 x 60 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 60 x 60 neuronas & --\\ 
+				\multirow{-2}{*}{1} &  32 de 60 x 60 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 30 x 30 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 8) 32 de 3x3}\\ \hline
+				 & 32 de 30 x 30 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 30 x 30 neuronas & --\\ 
+				\multirow{-2}{*}{2} &  64 de 30 x 30 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 64 de 3x3}\\ \hline			
+				 & 64 de 15 x 15 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 128 de 15 x 15 neuronas & --\\ 			
+				\multirow{-2}{*}{3} &  128 de 15 x 15 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 2) 128 de 3x3 }\\ \hline
+				{\cellcolor[HTML]{ffb3b3}}& 128 de 7 x 7 neuronas & Conv(DropOut : 0.6) & 128 de 7 x 7 & Activo & 128 de 7 x 7 neuronas & --\\ 			
+				{\cellcolor[HTML]{ffb3b3}\multirow{-2}{*}{4}} &  128 de 7 x 7 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 3 x 3 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 3x3 }\\ \hline
+				5 &  {\cellcolor[HTML]{DAE8FC}3168 neuronas} &  F.C.(DropOut : 0.5) &  702 neuronas &  -- & 43 neuronas & --\\ \hline
+				\end{tabular}
+				\end{center}
+				\end{table}
+
+
+
+			\end{itemize}
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 \section{Entrenamiento y Validación }
@@ -743,7 +863,7 @@
 	 	\subsubsection{Análisis del Entrenamiento y Validación del Diseño A}  
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model0Acierto} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model0Acierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo A Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
@@ -755,7 +875,7 @@
 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model0Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model0Loss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo A Tasa de pérdida por iteración}}
@@ -773,7 +893,7 @@
 		
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model1Acierto} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model1Acierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo B Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
@@ -786,7 +906,7 @@
 			
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model1Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model1Loss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo B Tasa de pérdida por iteración}}
@@ -805,7 +925,7 @@
 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model4Acierto} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model4Acierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo C Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
@@ -818,7 +938,7 @@
 			
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model4Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model4Loss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo C Tasa de pérdida por iteración}}
@@ -834,7 +954,7 @@
 		\subsubsection{Análisis del Entrenamiento y Validación del Diseño D} 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model6Acierto} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model6Acierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo D Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
@@ -846,7 +966,7 @@
 			
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model6Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model6Loss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo D Tasa de pérdida por iteración}}
@@ -863,7 +983,7 @@
 		\subsubsection{Análisis del Entrenamiento y Validación del Diseño E} 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model7Acierto} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model7Acierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo E Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
@@ -875,7 +995,7 @@
 		
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model7Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model7Loss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo E Tasa de pérdida por iteración}}
@@ -887,7 +1007,18 @@
 		
 			Al finalizar 100 épocas (38700 iteraciones) se obtiene una de las mejores tasas de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+		En resumen se tiene que el Model X obtuvo una de las mejores tasas de Acierto durante entrenamiento y validación del dataset.
+					\begin{figure}[H]
+						%\begin{center}
+						\includegraphics[width=1\textwidth, height=20cm]{images/desarrollo/trainResults/germanSummary} 
+						%\end{center}
+						\begin{center}
+						\caption{\small{Área debajo de la Curva PR del Modelo A - Dataset de imágenes de Alemania}}
+						\vspace{-1em}
+						{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+						\end{center}
+						\vspace{-1.5em}
+					\end{figure}	
 
 	\subsection{Señales de Tránsito de Perú}
 		Luego de haber entrenado las diferentes arquitecturas durante 100 épocas(7700 iteraciones), obtenemos los siguiente resultados:
@@ -895,7 +1026,7 @@
 		\subsubsection{Análisis del Entrenamiento y Validación del Diseño A}  
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model0Acierto} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model0Acierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo A Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
@@ -907,7 +1038,7 @@
 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model0Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model0Loss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo A Tasa de pérdida por iteración}}
@@ -925,7 +1056,7 @@
 		
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model1Acierto} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model1Acierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo B Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
@@ -938,7 +1069,7 @@
 			
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model1Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model1Loss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo B Tasa de pérdida por iteración}}
@@ -957,7 +1088,7 @@
 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model4Acierto} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model4Acierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo C Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
@@ -970,7 +1101,7 @@
 			
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model4Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model4Loss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo C Tasa de pérdida por iteración}}
@@ -986,7 +1117,7 @@
 		\subsubsection{Análisis del Entrenamiento y Validación del Diseño D} 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model6Acierto} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model6Acierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo D Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
@@ -998,7 +1129,7 @@
 			
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model6Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model6Loss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo D Tasa de pérdida por iteración}}
@@ -1015,7 +1146,7 @@
 		\subsubsection{Análisis del Entrenamiento y Validación del Diseño E} 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model7Acierto} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model7Acierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo E Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
@@ -1027,7 +1158,7 @@
 		
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/model7Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model7Loss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo E Tasa de pérdida por iteración}}
@@ -1042,55 +1173,15 @@
 
 
 
-\section{Resultados de Evaluación}  
-
-		
-		La información de la prueba de clasificación se dispone en una matriz de confusión. La matriz de confusión es una matriz cuadrada cuyo orden es el número de clases. En las  columnas se presentan las clases reales mientras que en las filas se presentan las clases asignadas por el clasificador; en la Tabla 3, se muestra una matriz de confusión para dos clases. La suma vertical muestra la distribución real de las clases, mientras que la suma horizontal muestra la distribución de las clases producida por el clasificador. El análisis de los clasificadores se hace con base en la matriz de confusión de donde se obtienen los 3 indicadores de desempeño (mencionado en la \textbf{Seccion 3.3 Indicadores}).
-
-		\begin{enumerate}
-	
-		\item Tasa de Sensibilidad(Efectividad): {$S= \frac{Verdaderos\,Positivos}{{Verdaderos\,Positivos}+{Falsos\,Negativos}}x100$}
-		\item Tasa de Error(Especificidad): {$S= \frac{Falsos\,Negativos}{{Verdaderos\,Positivos}+{Falsos\,Negativos}}x100$}
-		\item El espacio ROC (Curvas ROC): Relación entre efectividad y especificidad
-
-		\end{enumerate}
-		
-		
-		El desempeño de la clasificación se puede verificar con los indicadores de Proporción de verdaderos positivos(Tasa de Sensibilidad / Recall), con el cual se puede medir la efectividad del clasificador, y la proporción de verdaderos negativos (Tasa de Error) que nos muestra la especificidad del clasificador. 
-
-		Por otra parte , el espacio ROC (Receiver Operating Characteristic) define un sistema de coordenadas usadas para visualizar el desempeño del clasificador. Las curvas ROC presentan el compromiso entre efectividad y especificidad del clasificador, un aumento enla sensibilidad está acompañado por un decremento en la especificidad. Es decir, las curvas ROC muestran la relación entre las muestras clasificadas adecuadamente (PVP, Proporción de Verdaderos Positivos) y las muestras que no pertenecen a la clase pero se clasificaron como si lo fueran (PFP Proporción deFalsos Positivos). En el espacio ROC la PFP se dibuja como variable independiente y la PVP como variable dependiente. Cada clasificador es representado por el punto (PFP, PVP). Para dibujar la curva ROC se construye la línea convexa formada por los puntos (PFP, PVP) de los clasificadores que se estén evaluando (PFP=1-PVN), junto con los puntos de los clasificadores triviales (0,0) y(1,1). La curva más cercana a los bordes izquierdo y superior en el espacio ROC, es la prueba más acertada porque significa que hay mayor acierto. La curva que más se acerque a la diagonal de 45 grados en el espacio ROC, es la prueba menos acertada. El mejor sistema de entrenamiento es el que produce un conjunto de clasificadores que maximice el área bajo la curva,\citep{SandovalCereza}.
-
-		\newpage
-	\subsection{Señales de Tránsito de Alemania}
-		%------------------------------------------------------------------------------------------------------------------------------------------------------------
-	 	\subsubsection{Análisis del Diseño A}  
-			\begin{figure}[H]
-				%\begin{center}
-				\includegraphics[width=1\textwidth, height=20cm]{images/desarrollo/testResults/model_A_A} 
-				%\end{center}
-				\begin{center}
-				\caption{\small{Matriz de Confusión del Modelo A - Dataset de imágenes de Alemania}}
-				\vspace{-1em}
-				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-				\end{center}
-				\vspace{-1.5em}
-			\end{figure}
-
-
-	
-	\subsection{Señales de Tránsito de Perú}
-
-		Obtenemos los siguiente resultados:
-		%------------------------------------------------------------------------------------------------------------------------------------------------------------
-	 	\subsubsection{Análisis del Diseño A}  
-			\begin{figure}[H]
-				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/testResults/model_P_A} 
-				\end{center}
-				\begin{center}
-				\caption{\small{Matriz de Confusión del Modelo A - Dataset de imágenes de Perú}}
-				\vspace{-1em}
-				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-				\end{center}
-				\vspace{-1.5em}
-			\end{figure}
+		En resumen se tiene que el Model X obtuvo una de las mejores tasas de Acierto durante entrenamiento y validación del dataset.
+					\begin{figure}[H]
+						%\begin{center}
+						\includegraphics[width=1\textwidth, height=20cm]{images/desarrollo/trainResults/germanSummary} 
+						%\end{center}
+						\begin{center}
+						\caption{\small{Área debajo de la Curva PR del Modelo A - Dataset de imágenes de Alemania}}
+						\vspace{-1em}
+						{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+						\end{center}
+						\vspace{-1.5em}
+					\end{figure}	

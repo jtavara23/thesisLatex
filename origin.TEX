@@ -7,6 +7,7 @@
 \usepackage{amssymb}
 \usepackage{amsfonts}
 \usepackage[utf8]{inputenc}         % Para escribir en castellano
+\usepackage{csquotes}  % para comillas
 \usepackage[T1]{fontenc}
 \usepackage{color}
 \usepackage{alltt}
@@ -79,13 +80,13 @@
 \textheight 24cm 	% footer height
 \tableofcontents    % indice de materias
 	\input{CAP2.tex}    % capitulo de introduccion
-	\input{CAP3.tex}    % capitulo de marco teorico
+	\input{CAP3.tex}    % capitulo de marco teoric
 	\input{CAP4.tex}    % capitulo de cuerpo del trabajo
 	\input{CAP5.tex}    % capitulo de Desarrollo de Investigacion
 	\input{CAP6.tex}    % capitulo de Resultados
 	\input{CAP7.tex}    % capitulo de consideraciones finales
- \bibliographystyle{apalike}
- \bibliography{Bibliografia} % Bibliografia formato APA
+\bibliography{bibliografia}{} % Bibliografia formato APA
+\bibliographystyle{apalike}
 	\input{CAP8.tex}    % Apendice
 \end{document}
 
