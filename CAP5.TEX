@@ -2,12 +2,14 @@
 \chapter{Desarrollo de la Investigación}
 \pagenumbering{arabic}
 \setcounter{page}{59}
-\renewcommand{\baselinestretch}{2} %doble espacio paratodo el texto
+\renewcommand{\baselinestretch}{1.2} %doble espacio paratodo el texto
 
 \section{Análisis del conjunto de Imágenes}
-
+	
+	En esta etapa de la investigación se busca encontrar imágenes de señales de tránsito, las cuales conforman la principal fuente de los modelos que se pretenden crear. Estas será usadas durante el entrenamiento, validación y evaluación del modelo pretendido.
+	
 	\subsection{Datos Iniciales para el entrenamiento}
-
+		Se obtienen un conjunto de imágenes iniciales de señales de tránsito Alemán y Peruano, las cuales servirán para entrenar, validar los modelos creados.
 		\subsubsection{Señales de Tránsito de Alemania}
 
 			En esta colección consta de un total de 51839 imágenes distribuidas en 43 clases no necesariamente balanceadas con un tamaño de 32 x 32 pixeles.
@@ -99,7 +101,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Distribución de ejemplos por señal para el entrenamiento(Total 39209)}}
-				\vspace{-1em}
+				
 			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -186,7 +188,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Distribución de ejemplos por señal para el entrenamiento(Total 614)}}
-				\vspace{-1em}
+				
 			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -195,6 +197,7 @@
 			
 
 	\subsection{Datos para el evaluación}
+		Al igual que en el anterior punto, se obtienen un conjunto de menor cantidad de imágenes de señales de tránsito Alemán y Peruano, las cuales servirán para evaluar los modelos creados.
 
 		\subsubsection{Señales de Tránsito de Alemania}
 		Para la etapa de evaluación se cuenta con un conjunto de 12630 imágenes, de igual manera no necesariamente balanceadas y que no son utilizadas durante el proceso de entrenamiento para obtener resultados confiables a la hora de evaluar el resultado del entrenamiento. 
@@ -205,7 +208,7 @@
 			%\end{center}
 			\begin{center}
 			\caption{\small{Distribución de ejemplos por señal para la evaluación - Alemania}}
-			\vspace{-1em}
+			
 		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 			\end{center}
 			\vspace{-1.5em}
@@ -220,7 +223,7 @@
 			%\end{center}
 			\begin{center}
 			\caption{\small{Distribución de ejemplos por señal para la evaluación - Perú}}
-			\vspace{-1em}
+			
 		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 			\end{center}
 			\vspace{-1.5em}
@@ -260,7 +263,7 @@
 					\end{center}
 					\begin{center}
 					\caption{\small{Imágenes volteadas horizontalmente}}
-					\vspace{-1em}
+					
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 					\end{center}
 					\vspace{-1.5em}
@@ -275,7 +278,7 @@
 					\end{center}
 					\begin{center}
 					\caption{\small{Imágenes volteadas verticalmente}}
-					\vspace{-1em}
+					
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 					\end{center}
 					\vspace{-1.5em}
@@ -291,7 +294,7 @@
 				%\end{center}
 				\begin{center}
 				\caption{\small{Imágenes volteadas primero horizontal y luego verticalmente}}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -304,7 +307,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Imágenes que volteadas horizontal o verticalmente, cambian su categoría}}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{1.5em}
@@ -319,7 +322,7 @@
 				\begin{center}
 				\vspace{1em}
 				\caption{\small{Distribución de categoría, luego de aplicar el Flip(en sus distintos tipos)- Señales de Alemania}}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -341,12 +344,12 @@
 				\begin{center}
 				\vspace{1em}
 				\caption{\small{Ejemplo de cinco proyecciones por cada imagen - Dataset Alemania}}
-				\vspace{-1em}
+				
 			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
 			\end{figure}
-
+		\newpage
 		\subsubsection{Rotation(Rotación)}
 			\vspace{-1.5em}
 			Aplica la rotación aleatoria en un rango de grados definido(hasta 30º) a un subconjunto aleatorio de imágenes.
@@ -358,12 +361,12 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Ejemplo de cinco rotaciones por cada imagen - Dataset Alemania}}
-				\vspace{-1em}
+				
 			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
 			\end{figure}
-			\vspace{-2.5em}
+			%\vspace{-2.5em}
 	    
 
 	    \subsubsection{Zoom}
@@ -383,7 +386,7 @@
 				\begin{center}
 				\vspace{0.5em}
 				\caption{\small{Ejemplo de cinco aplicaciones de zoom(in/out) por cada imagen - Dataset Alemania}}
-				\vspace{-1em}
+				
 			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -399,7 +402,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Ilustración de un modelo de aprendizaje profundo}}
-				\vspace{-1em}
+				
 			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -412,25 +415,24 @@
 				%\end{center}
 		%		\begin{center}
 		%		\caption{\small{Ilustración de un modelo de aprendizaje profundo}}
-		%		\vspace{-1em}
+		%		
 		%	{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 		%		\end{center}
 		%		\vspace{-1.5em}
 		%	\end{figure}
-		Finalmente, luego de haber aplicado de manera secuencial y/o aleatoriamente estas tecnicas a cada una de las imágenes, obtenemos nuevas distribuciones de datos. 
 
 	\newpage
 	\subsection{Dataset final para el Entrenamiento}
-
+		Finalmente, luego de haber aplicado de manera secuencial y/o aleatoriamente estas tecnicas a cada una de las imágenes, obtenemos nuevas distribuciones de datos. 
 		\subsubsection{Señales de Tránsito de Alemania - Dataset Balanceado }
 			En una se tiene un conjunto balanceado de datos con {\bf 270900 imágenes}.
 			\begin{figure}[H]
 				%\begin{center}
-				\includegraphics[width=1\textwidth, height=7cm]{images/desarrollo/histograms/train_extended_balanced270900}
+				\includegraphics[width=1\textwidth, height=8.5cm]{images/desarrollo/histograms/train_extended_balanced270900}
 				%\end{center}
 				\begin{center}
 				\caption{\small{Dataset balanceado(cada categoría posee igual cantidad de imágenes)}}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 
@@ -456,11 +458,11 @@
 			Con el objetivo de obtener una gran cantidad de datos, para el Dataset de señales de Tránsito del Perú, por cada imágen fueron creadas 50 nuevas imágenes, obteniéndose {\bf 31314 imágenes}.
 			\begin{figure}[H]
 				%\begin{center}
-				\includegraphics[width=1\textwidth, height=7cm]{images/desarrollo/histograms/train_extended_per_51_31314}
+				\includegraphics[width=1\textwidth, height=8.5cm]{images/desarrollo/histograms/train_extended_per_51_31314}
 				%\end{center}
 				\begin{center}
 				\caption{\small{Dataset no balanceado - Señales de Tránsito de Perú}}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 			\end{figure}
@@ -481,7 +483,7 @@
 			\end{table}
 
 	%---------------------------------------------------------------------------------------------------------------------------------------------------------
-
+	\newpage
 	\subsection{Pre-procesamiento de Imágenes(Normalization)}
 		Existe una técnica de procesamiento de imágenes por computadora que se utiliza para mejorar el contraste en las imágenes denominada Ecualización Adaptativa del Histograma(AHE por sus siglas en inglés). Difiere de la ecualización de histograma ordinaria en el sentido de que el método adaptativo computa varios histogramas, cada uno correspondiente a una sección distinta de la imagen, y los utiliza para redistribuir los valores de luminosidad de la imagen. Por lo tanto, es adecuado para mejorar el contraste local y mejorar las definiciones de los bordes en cada región de una imagen. Sin embargo, AHE tiene una tendencia a amplificar el ruido en regiones relativamente homogéneas de una imagen. Una variante de la ecualización de histograma adaptativo llamada ecualización de histograma adaptativo limitado por contraste (CLAHE por sus siglas en inglés) evita que se genere esto al limitar la amplificación.
 
@@ -494,12 +496,12 @@
 			%\end{center}
 			\begin{center}
 			\caption{\small{Imágenes a las cuales se le aplicaron la técnica CLAHE }}
-			\vspace{-1em}
+			
 			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 			\end{center}
 			\vspace{-1.5em}
 			\end{figure}
-
+		
 		Por otra parte, para convertir un color de un espacio de color basado en un modelo de color RGB típico de gamma comprimido (no lineal) a una representación en escala de grises de su luminancia, primero se debe eliminar la función de compresión gamma mediante la expansión gamma (linealización) para transformar la imagen en un RGB lineal espacio de color, de modo que la suma ponderada apropiada se puede aplicar a los componentes de color lineales ($R_{linear} , G_{linear} , B_{linear}$) para calcular la luminancia lineal $Y_{linear}$.
 
 		Para imágenes en espacios de color como Y'UV y sus derivados, que se usan en sistemas de TV y video a color estándar como PAL, SECAM y NTSC, un componente de luma no lineal ($Y'$) se calcula directamente a partir de intensidades primarias comprimidas con gamma como una suma ponderada, que aunque no es una representación perfecta de la luminancia colorimétrica, puede calcularse más rápidamente sin la expansión gamma y sin la compresión utilizadas en los cálculos fotométricos o colorimétricos,\citep{POYNTON2003257}. En los modelos utilizados por PAL y NTSC para conseguir tener las imágenes en escala de grises, el componente rec601 luma ($Y'$) se calcula como: \begingroup\makeatletter\def\f@size{14.8}\check@mathfonts	$Y' = 0.299R' + 0.587G' +0.114B'$ \endgroup
@@ -513,16 +515,16 @@
 			\end{center}
 			\begin{center}
 			\caption{\small{Imágenes procesadas en escala de grises}}
-			\vspace{-1em}
+			
 			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 			\end{center}
 			\vspace{-1.5em}
 			\end{figure}
-
+			\newpage
 	
 
 \section{Arquitectura del Modelo}
-	\vspace{-1.5em}
+
 
 	Los hiperparámetros engloban funciones, variables y constantes utilizadas durante la construcción de las diferentes arquitecturas; estas varían, sin embargo siguiendo conceptos teóricos, antecedentes(investigaciones previas) y sobretodo despues de algunas pruebas realizadas, los siguientes hiperparámetros fueron seleccionados de manera específica:
 		% Please add the following required packages to your document preamble:
@@ -591,7 +593,7 @@
 		%\end{center}
 		\begin{center}
 		\caption{\small{Arquitectura de la CNN}}
-		\vspace{-1em}
+		
 		{\small{\fontsize{10}{16.8}\selectfont {Extreme Learning Classifier}}}
 		\end{center}
 		\vspace{-1.5em}
@@ -612,14 +614,16 @@
 		%\end{center}
 		\begin{center}
 		\caption{\small{Modelo del diseño de la Red propuesta}}
-		\vspace{-1em}
+		
 		{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 		\end{center}
 		\vspace{-1.5em}
 		\end{figure}
 
 
-	Para el proceso de entrenamiento fueron tomados en cuenta 5 diferentes diseños. Estos fueron ejectudados durante el entrenamiento del dataset que contiene señales de tránsito de Alemania y Perú. Estos 5 modelos son descritos a continuación.
+	Para el proceso de entrenamiento fueron tomados en cuenta 5 diferentes diseños. Estos fueron ejectudados durante el entrenamiento del dataset que contiene señales de tránsito de Alemania y Perú.
+
+	Estos 5 modelos son descritos a continuación.
 		\vspace{-1.5em}
 		\subsubsection{Diseño A} 
 			Diseño compuesto de 2 capas convolucionales y 2 capas totalmente conectadas.
@@ -645,7 +649,7 @@
 				\end{tabular}
 				\end{center}
 				\end{table}
-
+			\vspace{-1.5em}
 			\item \underline{Dataset del Perú}
 				\begin{table}[H]
 				\begin{center}
@@ -687,7 +691,7 @@
 				\end{tabular}
 				\end{center}
 				\end{table}
-
+			\vspace{2em}
 			\item \underline{Dataset del Perú}
 				\begin{table}[H]
 				\begin{center}
@@ -709,9 +713,11 @@
 
 				\end{itemize}
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+		\vspace{-2.2em}
 		\subsubsection{Diseño C} %model4
+			\vspace{-1.2em}
 			Diseño compuesto de 3 capas convolucionales y 2 capas totalmente conectadas. Variando el número de kernels en la 2da capa convolucional.
-
+			
 			\begin{itemize}
 			\item \underline{Dataset de Alemania}		
 				\begin{table}[H]
@@ -731,7 +737,7 @@
 				\end{tabular}
 				\end{center}
 				\end{table}
-
+			\vspace{-1.5em}
 			\item \underline{Dataset del Perú}
 				\begin{table}[H]
 				\begin{center}
@@ -800,6 +806,7 @@
 
 			\end{itemize}
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+		\newpage
 		\subsubsection{Diseño E}
 			Diseño compuesto de 4 capas convolucionales y 2 capas totalmente conectadas.
 			\begin{itemize}
@@ -851,7 +858,7 @@
 
 			\end{itemize}
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+\newpage
 \section{Entrenamiento y Validación }
 
 	Para estimar el error de clasificación, como fue mencionado en la \textbf{Seccion 2.3.4 (Validación Cruzada)} se utilizó el méto do de validación cruzada. En la estimación del error se usa el conjunto de muestras disponible, el cual se divide en el conjunto de entrenamiento y el de validación. El clasificador se diseña usando las muestras de entrenamiento y luego se evalúa obteniendo el error de clasificación para las muestras de validación. Con base en el error obtenidose puede predecir el desempeño del clasificador ante nuevas muestras. Para obtener una medida confiable del desempeño, el conjunto de muestras es lo suficientemente grande y, los conjuntos de entrenamiento y de validación son independientes.
@@ -867,7 +874,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo A Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -879,7 +886,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo A Tasa de pérdida por iteración}}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -897,7 +904,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo B Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -910,7 +917,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo B Tasa de pérdida por iteración}}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -929,7 +936,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo C Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -942,7 +949,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo C Tasa de pérdida por iteración}}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -958,7 +965,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo D Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -970,7 +977,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo D Tasa de pérdida por iteración}}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -987,7 +994,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo E Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -999,7 +1006,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo E Tasa de pérdida por iteración}}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -1007,19 +1014,61 @@
 		
 			Al finalizar 100 épocas (38700 iteraciones) se obtiene una de las mejores tasas de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
-		En resumen se tiene que el Model X obtuvo una de las mejores tasas de Acierto durante entrenamiento y validación del dataset.
-					\begin{figure}[H]
-						%\begin{center}
-						\includegraphics[width=1\textwidth, height=20cm]{images/desarrollo/trainResults/germanSummary} 
-						%\end{center}
-						\begin{center}
-						\caption{\small{Área debajo de la Curva PR del Modelo A - Dataset de imágenes de Alemania}}
-						\vspace{-1em}
-						{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-						\end{center}
-						\vspace{-1.5em}
-					\end{figure}	
+		
+		\vspace{2em}
+		En resumen, los 5 modelos lograron similares resultados de acierto y error durante el entrenamiento.
 
+			\begin{figure}[H]
+				%\begin{center}
+				\includegraphics[width=1\textwidth, height=\textheight,keepaspectratio]{images/desarrollo/trainResults/germanSummary_entreAcierto} 
+				%\end{center}
+				\begin{center}
+				\caption{\small{Análisis del Acierto durante el Entrenamiento de los modelos - Dataset Señales de Tránsito de Alemania}}
+				
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}	
+
+			\begin{figure}[H]
+				%\begin{center}
+				\includegraphics[width=1\textwidth, height=\textheight,keepaspectratio]{images/desarrollo/trainResults/germanSummary_entreError} 
+				%\end{center}
+				\begin{center}
+				\caption{\small{Análisis del Error durante el Entrenamiento de los modelos - Dataset Señales de Tránsito de Alemania}}
+				
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}	
+
+
+			Sin embargo a través de la validación del modelo (usando dataset de imágenes no visto/analizado durante el entrenamiento), se puede apreciar que el Modelo E obtuvo una de las mejores tasas de Acierto y Error. 
+
+			\begin{figure}[H]
+				%\begin{center}
+				\includegraphics[width=1\textwidth, height=\textheight,keepaspectratio]{images/desarrollo/trainResults/germanSummary_validAcierto} 
+				%\end{center}
+				\begin{center}
+				\caption{\small{Análisis del Acierto en la Validación de los modelos - Dataset Señales de Tránsito de Alemania}}
+				
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			\begin{figure}[H]
+				%\begin{center}
+				\includegraphics[width=1\textwidth, height=\textheight,keepaspectratio]{images/desarrollo/trainResults/germanSummary_validError} 
+				%\end{center}
+				\begin{center}
+				\caption{\small{Análisis del Error en la Validación de los modelos - Dataset Señales de Tránsito de Alemania}}
+				
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+	\newpage
 	\subsection{Señales de Tránsito de Perú}
 		Luego de haber entrenado las diferentes arquitecturas durante 100 épocas(7700 iteraciones), obtenemos los siguiente resultados:
 
@@ -1030,7 +1079,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo A Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -1042,7 +1091,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo A Tasa de pérdida por iteración}}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -1060,7 +1109,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo B Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -1073,7 +1122,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo B Tasa de pérdida por iteración}}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -1092,7 +1141,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo C Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -1105,7 +1154,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo C Tasa de pérdida por iteración}}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -1121,7 +1170,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo D Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -1133,7 +1182,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo D Tasa de pérdida por iteración}}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -1150,7 +1199,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo E Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -1162,7 +1211,7 @@
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo E Tasa de pérdida por iteración}}
-				\vspace{-1em}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -1172,16 +1221,56 @@
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
+		\newpage
+		En resumen, los 5 modelos lograron similares resultados de acierto y error durante el entrenamiento. 
 
-		En resumen se tiene que el Model X obtuvo una de las mejores tasas de Acierto durante entrenamiento y validación del dataset.
-					\begin{figure}[H]
-						%\begin{center}
-						\includegraphics[width=1\textwidth, height=20cm]{images/desarrollo/trainResults/germanSummary} 
-						%\end{center}
-						\begin{center}
-						\caption{\small{Área debajo de la Curva PR del Modelo A - Dataset de imágenes de Alemania}}
-						\vspace{-1em}
-						{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
-						\end{center}
-						\vspace{-1.5em}
-					\end{figure}	
+			\begin{figure}[H]
+				%\begin{center}
+				\includegraphics[width=1\textwidth, height=\textheight,keepaspectratio]{images/desarrollo/trainResults/peruSummary_entreAcierto} 
+				%\end{center}
+				\begin{center}
+				\caption{\small{Análisis del Acierto durante el Entrenamiento de los modelos - Dataset Señales de Tránsito de Perú}}
+				
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}	
+
+			\begin{figure}[H]
+				%\begin{center}
+				\includegraphics[width=1\textwidth, height=\textheight,keepaspectratio]{images/desarrollo/trainResults/peruSummary_entreError} 
+				%\end{center}
+				\begin{center}
+				\caption{\small{Análisis del Error durante el Entrenamiento de los modelos - Dataset Señales de Tránsito de Perú}}
+				
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}	
+
+
+			Sin embargo a través de la validación del modelo (usando dataset de imágenes no visto/analizado durante el entrenamiento), se puede apreciar que el Modelo E obtuvo una de las mejores tasas de Acierto y Error. 
+
+			\begin{figure}[H]
+				%\begin{center}
+				\includegraphics[width=1\textwidth, height=\textheight,keepaspectratio]{images/desarrollo/trainResults/peruSummary_validAcierto} 
+				%\end{center}
+				\begin{center}
+				\caption{\small{Análisis del Acierto en la Validación de los modelos - Dataset Señales de Tránsito de Perú}}
+				
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
+
+			\begin{figure}[H]
+				%\begin{center}
+				\includegraphics[width=1\textwidth, height=\textheight,keepaspectratio]{images/desarrollo/trainResults/peruSummary_validError} 
+				%\end{center}
+				\begin{center}
+				\caption{\small{Análisis del Error en la Validación de los modelos - Dataset Señales de Tránsito de Perú}}
+				
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}

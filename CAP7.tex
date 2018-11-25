@@ -1,34 +1,27 @@
 %!TEX root = origin.TEX
 \chapter{Consideraciones finales}
 \pagenumbering{arabic}
-\setcounter{page}{24}
+\setcounter{page}{104}
 \renewcommand{\baselinestretch}{2} %doble espacio paratodo el texto
 
 
 \section{Conclusiones}
 
-	Conclusion
-	Our MCDNN won the German traffic sign recognition benchmark with
-	a  recognition  rate  of  99.46%,  better  than  the  one  of  humans  on  this  task
-	(98.84%), with three times fewer mistakes than the second best competing
-	algorithm  (98.31%).   Forming  a  MCDNN  from  25  nets,  5  per  preprocess-
-	ing  method,  increases  the  recognition  rate  from  an  average  of  98.52%  to
-	99.46%.  None of the preprocessing methods are superior in terms of single
-	DNN  recognition  rates,  but  combining  them  into  a  MCDNN  increases  ro-
-	bustness to various types of noise and leads to more recognized traffic signs.
-	We plan to embed our method in a more general system that first localizes
-	traffic signs in realistic scenes and then classifies them
+	Al finalizar la investigación podemos confirmar que se cumplieron los objetivos específicos planteados en el capítulo 1.5. Por lo cual, el objetivo general que trata sobre implementar un modelo basado en el aprendizaje profundo de redes neuronales convolucionales para reconocer automáticamente señales de tránsito vehicular fue conseguido a través del Modelo E.
 
+	Cabe destacar que la herramienta computacional Tensorflow fue importante en el análisis e implementación de los modelos desarrollados, ya que permitió realizar entrenamientos, validaciones y evaluaciones con mucha facilidad. 
 
-	{\bf Ejemplo}\\
-	La investigación bibliográfica revela que realmente existe una preocupación de los gobiernos federales con el destino final de los residuos sólidos, con el objetivo de preservar la salud de la población y el medio ambiente urbano y rural. Por ejemplo, se observa la creación, en el caso del Brasil, de la Ley 12.305/10. Sin embargo existe una laguna entre las metas propuestas en la ley con las metas reales de los gobiernos locales. Eso se debe a la falta de una buena estructura organizacional, gerencial y operacional de los gobiernos locales capaz de atender las demandas locales y las necesidades de la población.
-	\vskip 0.3cm
-	La falta de cuadros especializados, tanto en los gobiernos centrales como locales, para realizar la planificación y modelamiento de una red logística reversa puede ser compensada con la contribución de los investigadores que actúan en ese campo del conocimiento. Es muy difícil la formación de un equipo que tenga todo el conocimiento en las áreas de ciencia de la computación, de geo procesamiento, de modelamiento matemático y de logística reversa, entre otras. Esa es una de las principales justificativas que los gobiernos, federales y locales, argumentan a la falta de planificación de una red logística reversa que funciones eficaz y eficientemente. 
-	\vskip 0.3cm
-	Por lo tanto, como quedó demostrado a lo largo de este trabajo, es posible realizar el modelamiento matemático para este tipo de problema con baja inversión, así como aplicarlo en varias regiones sin necesidad de grandes cambios en el modelamiento propuesto. El modelo propuesto calcula los flujos en la red logística reversa, permitiendo dimensionar la cantidad y capacidad de las unidades productivas y de los vehículos. 
-	\vskip 0.3cm
-	...
+	Luego de analizar diferentes modelos, se puede concluir que por lo general cuanto más grande sea el tamaño de la data de entrada y más profunda sea la red neuronal, se obtienen mejores resultados. De este modo, el modelo final obtenido compuesto principalmente de 4 capas convolucionales, 2 capas totalmente conectadas, funciones de escala múltiple y cerca de 76393 neuronas(Sección 4.2.1.5 - Diseño E), contribuye en el reconocimiento de señales de Tránsito Alemanas con una tasa de reconocimiento del 98.62\%, mucho mejor que el resultado obtenido por \citep{Ayuque2016} - 95.29\% y mucho más próximo al estado del arte (99.46\% - \citep{Ciresan}).
+
+	Por otra parte, la investigación ofrece para futuras investigaciones, un dataset de señales de Tránsito del Perú compuesto por 31314 imágenes distribuidas en 7 categorías(Sección 4.1.4.2). Para dicho dataset, el modelo con las mismas configuraciones también permite obtener un alto grado de acierto(99.83\%) tras analizar 4698 imágenes. 
+
+	%Conclusion 	Our MCDNN won the German traffic sign recognition benchmark with	a  recognition  rate  of  99.46%,  better  than  the  one  of  humans  on  this  task 	(98.84%), with three times fewer mistakes than the second best competing algorithm  (98.31\%).   Forming  a  MCDNN  from  25  nets,  5  per  preprocess-	ing  method,  increases  the  recognition  rate  from  an  average  of  98.52%  to	99.46%.  None of the preprocessing methods are superior in terms of single 	DNN  recognition  rates,  but  combining  them  into  a  MCDNN  increases  ro-	bustness to various types of noise and leads to more recognized traffic signs.	We plan to embed our method in a more general system that first localizes	traffic signs in realistic scenes and then classifies them
 
 
 \section{Trabajos futuros}
 
+	Ampliar el dataset de señales de tránsito del Perú para que pueda poseer más categorías, ya que se tiene confianza por lo mostrado con el dataset de Alemania que el modelo es robusto para soportar mayor cantidad de categorías.
+
+	El modelo puede ser ampliado a tener muchas más capas convolucionales y totalmente conectadas para poder experimentar si existe una mejora en los resultados. Además se recomienda obtener muchas más imágenes para exceder el rendimiento humano, \citep{Goodfellow-et-al-2016}
+	
+	Se sugiere integrar el modelo obtenido en un sistema más general que primero localize las señales de tránsito en escenas realistas para que posteriormente se proceda a su reconocimiento(clasificación).

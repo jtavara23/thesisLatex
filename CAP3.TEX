@@ -2,7 +2,7 @@
 \chapter{Marco teórico}
 \pagenumbering{arabic}
 \setcounter{page}{15}
-\renewcommand{\baselinestretch}{2} %doble espacio paratodo el texto
+\renewcommand{\baselinestretch}{1.2} %doble espacio paratodo el texto
 
 En este capítulo se presenta una reseña del material bibliográfico investigado con relación a los temas considerados en esta investigación. Los conocimientos investigados son muy amplios, principalmente aquel que ayudó a consolidar las bases del conocimiento científico para elaborar esta tesis, como lo son los temas de optimización combinatoria, complejidad computacional, metaheurísticas, ciencia de la información y logística, conocimientos sin los cuales sería difícil de modelar y solucionar matemática y computacionalmente cualquier tipo de problema de optimización.
 
@@ -39,6 +39,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{center}
 		\begin{center}
 		\caption{\small{Ilustración de un modelo de aprendizaje profundo}}
+		\vskip -0.25cm
 		{\small{Fuente propia}}
 		\end{center}
 		\vspace{-1.5em}
@@ -54,9 +55,10 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 
 	\begin{figure}[H]
 		\begin{center}
-		\includegraphics[width=0.8\textwidth]{images/marcoteorico/venn_diag}
+		\includegraphics[width=0.8\textwidth, height=12.5cm]{images/marcoteorico/venn_diag}
 		\end{center}
 		\begin{center}
+		\vskip -0.1cm
 		\caption{\small{Diagrama de Venn donde cada sección incluye un ejemplo de una tecnología de IA(ilustra la relación entre estas diferentes disciplinas de la IA)}}
 		{\small{Fuente: \citep{Goodfellow-et-al-2016}}}
 		\end{center}
@@ -78,6 +80,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	\end{center}
 	\begin{center}
 	\caption{\small{Entrada y salida de una CNN}}
+	\vskip -0.25cm
 	{\small{Fuente: \citep{Rohrer}}}
 	\end{center}
 	\vspace{-1.5em}
@@ -91,6 +94,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	\end{center}
 	\begin{center}
 	\caption{\small{Analisis de una CNN}}
+	\vskip -0.25cm
 	{\small{Fuente: \citep{Rohrer}}}
 	\end{center}
 	\vspace{-1.5em}
@@ -127,6 +131,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{center}
 		\begin{center}
 		\caption{\small{Convolucion entre el filtro y parte de la imagen}}
+		\vskip -0.25cm
 		{\small{Fuente: \citep{Rohrer}}}
 		\end{center}
 		\vspace{-1.9em}
@@ -171,7 +176,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		
 		\vskip 0.4cm  
 		
-		La convolución aprovecha tres ideas importantes que pueden ayudar a mejorar un sistema de aprendizaje automático: {\bf interacciones dispersas, uso compartido de parámetros} y {\bf representaciones equivalentes}.
+		La convolución aprovecha tres ideas importantes que pueden ayudar a mejorar un sistema de aprendizaje automático: {\bf interacciones dispersas}, {\bf uso compartido de parámetros} y {\bf representaciones equivalentes}.
 		
 		\vskip 0.4cm  
 		Las capas de redes neuronales tradicionales usan la multiplicación de matrices mediante una matriz de parámetros con un parámetro separado que describe la interacción entre cada unidad de entrada y cada unidad de salida. Esto significa que cada unidad de salida interactúa con cada unidad de entrada. Sin embargo, las redes convolucionales suelen tener {\bf interacciones dispersas} (también conocidas como conectividad dispersa o ponderaciones dispersas). Esto se logra haciendo que el kernel sea más pequeño que la entrada. Por ejemplo, al procesar una imagen, la imagen de entrada puede tener miles o millones de píxeles, pero podemos detectar características pequeñas y significativas, como bordes con núcleos que ocupan solo decenas o cientos de píxeles. Esto significa que necesitamos almacenar menos parámetros, lo que reduce los requisitos de memoria del modelo y mejora su eficiencia estadística. También significa que el cálculo de la salida requiere menos operaciones.
@@ -182,6 +187,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{center}
 		\begin{center}
 		\caption{\footnotesize \small{Conectividad dispersa}}
+		\vskip -0.3cm  
 		{\small{Fuente:\citep{Rohrer}}}
 		\end{center}
 		\vspace{-1.5em}
@@ -205,45 +211,48 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\includegraphics[width=0.6\textwidth]{images/marcoteorico/result_conv}
 		\end{center}
 		\begin{center}
+		\vskip 0.1cm  
 		\caption{\small{Resultado de Convolución(conjunto de mapas de activación. generado a partir de 3 filtros para 3 carecteristicas: diagonal derecha, cruzamiento central y diagonal izquierda). Simbolo de convolución: $\otimes$}}
+		\vskip -0.1cm  
 		{\small{Fuente: \citep{Rohrer}}}
 		\end{center}
 		\vspace{-1.9em}
 		\end{figure}
 
-		En resumen, se tiene un conjunto completo de "n" filtros en cada capa convolucional(determinando la profundidad de la capa) y cada uno de estos filtros producirá un mapa de activación bidimensional por separado. Apilaremos estos mapas de activación a lo largo de la dimensión de profundidad y produciremos el volumen de salida, es decir el resultado es un conjunto de imágenes que muestran un versión filtrada de la imagen original resaltando características o patrones importantes de ella, como puede ser visto en la figura 14.
+		En resumen, se tiene un conjunto completo de "n" filtros en cada capa convolucional(determinando la profundidad de la capa) y cada uno de estos filtros producirá un mapa de activación bidimensional por separado. Apilaremos estos mapas de activación a lo largo de la dimensión de profundidad y produciremos el volumen de salida, es decir el resultado es un conjunto de imágenes que muestran un versión filtrada de la imagen original resaltando características o patrones importantes de ella, como puede ser visto en la figura 2.11.
 
 		\vskip 0.4cm  
 		Cabe resaltar que para la construcción de un filtro o kernel, es necesario considerar tres aspectos importantes: la extensión espacial (spatial extent), el paso (stride) y la cantidad de zero a rellenar (zero-padding).
-		\vskip 0.4cm  
+		\newpage
 		
 		\begin{enumerate}
 			\item La extensión espacial es el tamaño del filtro, comúnmente es de tamaño impar tanto en largo y ancho.
 			
 			\item El stride es otra pieza del bloque de construcción básico de los filtros convolucionales. Este representa el {\textit 'paso'} en la operación de convolución indicando cuánto es que se debe desplazar un filtro en una imagen con cada paso. El filtro se desliza sobre la imagen, se detiene en cada longitud de salto y realiza las operaciones necesarias en ese paso.
 
-			\begin{figure}[H]
-			\begin{center}
-			\includegraphics[width=0.65\textwidth]{images/marcoteorico/stride}
-			\end{center}
-			\begin{center}
-			\caption{\small{Imagen con stride igual a 2, para el filtro tanto en largura como anchura}}
-			{\small{Fuente propia}}
-			\end{center}
-			\vspace{-1.9em}
-			\end{figure}
-
+				\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=0.65\textwidth]{images/marcoteorico/stride}
+				\end{center}
+				\begin{center}
+				\caption{\small{Imagen con stride igual a 2, para el filtro tanto en largura como anchura}}
+				\vspace{-0.5em}
+				{\small{Fuente propia}}
+				\end{center}
+				\vspace{-1.9em}
+				\end{figure}
 			\item Zero-padding agrega ceros alrededor del borde de una imagen.
-			\begin{figure}[H]
-			\begin{center}
-			\includegraphics[width=0.4\textwidth]{images/marcoteorico/PAD2}
-			\end{center}
-			\begin{center}
-			\caption{\small{Ejemplo de zero-padding con tamaño 2}}
-			{\small{Fuente propia}}
-			\end{center}
-			\vspace{-1.9em}
-			\end{figure}
+				\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=0.4\textwidth]{images/marcoteorico/PAD2}
+				\end{center}
+				\begin{center}
+				\caption{\small{Ejemplo de zero-padding con tamaño 2}}
+				\vspace{-0.5em}
+				{\small{Fuente propia}}
+				\end{center}
+				\vspace{-1.9em}
+				\end{figure}
 
 			Los principales beneficios del relleno son los siguientes:
 			\begin{itemize}
@@ -258,7 +267,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		${W_{0}}\times{H_{0}}\times{D_{0}}$ \newline
 		Produce un dato de salida con los siguiente parámetros: ${W_{1}}\times{H_{1}}\times{D_{1}}$\newline
 		Estas salidas, son influenciadas por la manera de configuración de los filtros.\newline
-		\vskip 0.1cm 
+		\vspace{-2em} 
 		
 		\begin{minipage}[t]{0.5\textwidth}
 		En el que:
@@ -331,6 +340,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{center}
 		\begin{center}
 		\caption{\small{Funciones de activación}}
+		\vskip -0.2cm  
 		{\small{Fuente propia}}
 		\end{center}
 		\vspace{-1.5em}
@@ -340,10 +350,11 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		
 		\begin{figure}[H]
 		\begin{center}
-		\includegraphics[width=0.8\textwidth]{images/marcoteorico/relu}
+		\includegraphics[width=0.8\textwidth, height=6cm]{images/marcoteorico/relu}
 		\end{center}
 		\begin{center}
 		\caption{\small{Procedimiento de la función ReLU}}
+		\vskip -0.2cm  
 		{\small{Fuente: \citep{Rohrer}}}
 		\end{center}
 		\vspace{-1.5em}
@@ -377,6 +388,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{center}
 		\begin{center}
 		\caption{\small{Procesos que pueden ocurrir durante entrenamiento. Dropout evita el sobreajuste}}
+		\vskip -0.3cm  
 		{\small{Fuente propia}}
 		\end{center}
 		\vspace{-1.5em}
@@ -394,6 +406,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{center}
 		\begin{center}
 		\caption{\small{Formas de agrupamiento(pooling)}}
+		\vskip -0.2cm  
 		{\small{Fuente: \citep{caffe}}}
 		\end{center}
 		\vspace{-1.5em}
@@ -410,6 +423,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{center}
 		\begin{center}
 		\caption{\small{Operación MAX-pooling en capa de Agrupación}}
+		\vskip -0.2cm  
 		{\small{Fuente: \citep{Rohrer}}}
 		\end{center}
 		\vspace{-1.5em}
@@ -423,6 +437,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{center}
 		\begin{center}
 		\caption{\small{Resultado de Agrupación}}
+		\vskip -0.2cm  
 		{\small{Fuente: \citep{Rohrer}}}
 		\end{center}
 		\vspace{-1.5em}
@@ -477,40 +492,39 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	
 
 
-	\newpage
-	En resumen, una arquitecuta o modelo de red convolucional estará compuesto de varias capas y ejecutará las siguientas actividades:
-	\begin{figure}[H]
-		\begin{center}
-		\includegraphics[width=0.8\textwidth]{images/marcoteorico/modelo}
-		\end{center}
-		\begin{center}
-		\caption{\small{Modelo de red neuronal convolucional profunda}}
-		{\small{Fuente propia}}
-		\end{center}
-		\vspace{-1.5em}
-		\end{figure}
+En resumen, una arquitecuta o modelo de red convolucional estará compuesto de varias capas y ejecutará las siguientas actividades:
+\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=0.8\textwidth]{images/marcoteorico/modelo}
+	\end{center}
+	\begin{center}
+	\caption{\small{Modelo de red neuronal convolucional profunda}}
+	{\small{Fuente propia}}
+	\end{center}
+	\vspace{-1.5em}
+	\end{figure}
 
-	\begin{itemize}
-		\item Se pasa una imagen de entrada a la primera capa convolucional. La salida complicada se obtiene como un mapa de activación. Los filtros aplicados en la capa de convolución extraen características relevantes de la imagen de entrada para pasar más lejos.\vspace{-0.5em}
+\begin{itemize}
+	\item Se pasa una imagen de entrada a la primera capa convolucional. La salida complicada se obtiene como un mapa de activación. Los filtros aplicados en la capa de convolución extraen características relevantes de la imagen de entrada para pasar más lejos.\vspace{-0.5em}
 
-		\item Cada filtro dará una característica diferente para ayudar a la predicción de clase correcta. En caso de que necesitemos retener el tamaño de la imagen, usamos el mismo relleno (padding cero), de lo contrario se usa el relleno válido ya que ayuda a reducir el número de características. \vspace{-0.5em}
+	\item Cada filtro dará una característica diferente para ayudar a la predicción de clase correcta. En caso de que necesitemos retener el tamaño de la imagen, usamos el mismo relleno (padding cero), de lo contrario se usa el relleno válido ya que ayuda a reducir el número de características. \vspace{-0.5em}
 
-		\item Las capas de agrupamiento se agregan para reducir aún más el número de parámetros.\vspace{-0.5em}
+	\item Las capas de agrupamiento se agregan para reducir aún más el número de parámetros.\vspace{-0.5em}
 
-		\item Se agregan varias capas de convolución y agrupación antes de realizar la predicción. \vspace{-0.5em}
+	\item Se agregan varias capas de convolución y agrupación antes de realizar la predicción. \vspace{-0.5em}
 
-		\item A medida que profundizamos en la red, se extraen características más específicas en comparación con una red superficial donde las características extraídas son más genéricas. \vspace{-0.5em}
+	\item A medida que profundizamos en la red, se extraen características más específicas en comparación con una red superficial donde las características extraídas son más genéricas. \vspace{-0.5em}
 
-		\item La capa de salida en una CNN, como se mencionó anteriormente, es una capa totalmente conectada, donde la entrada de las otras capas se aplana y se envía para transformar la salida en el número de clases que desea la red. \vspace{-0.5em}
+	\item La capa de salida en una CNN, como se mencionó anteriormente, es una capa totalmente conectada, donde la entrada de las otras capas se aplana y se envía para transformar la salida en el número de clases que desea la red. \vspace{-0.5em}
 
-		\item La salida se genera a través de la capa de salida y se compara con la capa de salida para la generación de errores. Una función de pérdida se define en la capa de salida totalmente conectada para calcular el gradiente de error. \vspace{-0.5em}
+	\item La salida se genera a través de la capa de salida y se compara con la capa de salida para la generación de errores. Una función de pérdida se define en la capa de salida totalmente conectada para calcular el gradiente de error. \vspace{-0.5em}
 
-		\item El error se retroproyecta para actualizar los valores de filtro (pesos) y sesgo(bias). \vspace{-0.5em}
-		
-		\item Finalmente, un ciclo de entrenamiento se completa en un solo pase hacia adelante y hacia atrás. Por lo que se tiene que repetir todo el proceso durante varios iteraciones para obtener mejores resultados.\vspace{-0.5em}
+	\item El error se retroproyecta para actualizar los valores de filtro (pesos) y sesgo(bias). \vspace{-0.5em}
+	
+	\item Finalmente, un ciclo de entrenamiento se completa en un solo pase hacia adelante y hacia atrás. Por lo que se tiene que repetir todo el proceso durante varios iteraciones para obtener mejores resultados.\vspace{-0.5em}
 
-	\end{itemize}
-
+\end{itemize}
+\newpage
 \section{Entrenamiento y Validación}
 
 	La red procesa los registros en los datos de entrenamiento uno a la vez, usando los pesos y las funciones en las capas ocultas, luego compara las salidas resultantes con las salidas deseadas. Los errores se propagan a través del sistema, lo que hace que el sistema ajuste los pesos y biases que serán procesados en la siguiente iteracion de entrenamiento. Este proceso ocurre una y otra vez para el mismo conjunto de datos, a medida que los pesos se ajustan(refianan)continuamente. Para realizar este proceso, existe una método de optimización muy popular denominado {\bf Descenso de gradiente}(Gradient Descent).
@@ -525,10 +539,11 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 
 		\begin{figure}[H]
 		\begin{center}
-		\includegraphics[width=0.8\textwidth]{images/desarrollo/entrenamiento/gradient}
+		\includegraphics[width=0.8\textwidth,height=6.5cm]{images/desarrollo/entrenamiento/gradient}
 		\end{center}
 		\begin{center}
 		\caption{\small{Establecimiento de la Tasa de Aprendizaje}}
+		\vspace{-0.5em}
 		{\small{\citep{gradientimg}}}
 		\end{center}
 		\vspace{-1.5em}
@@ -583,19 +598,19 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		Uno de los hiperparámetros clave durante el entrenamiento deuna red neuronal es la velocidad/tasa de aprendizaje para el descenso del gradiente.
 		Este parámetro puede entenderse como el tamaño del paso en la optimización para minimizar la función de pérdida de la red, es decir, es un parámetro que determina cuánto influye un paso de actualización en el valor actual de los pesos, por ejemplo, el tamaño del paso en el que el gradiente cae en la dirección máxima de la pendiente, \citep {AdamImg}.
 
-		Cuando la tasa de aprendizaje es demasiado pequeña, es necesario realizar muchas iteraciones de aprendizaje; pero cuando la tasa de aprendizaje es demasiado grande, el resultado se moverá hacia adelante y hacia atrás en ambos sentidos de los valores extremos(oscila), y no se podrá lograr la solución óptima.
-		
 		\begin{figure}[H]
 		%\begin{center}
 		\includegraphics[width=1\textwidth]{images/desarrollo/entrenamiento/LR}
 		%\end{center}
 		\begin{center}
 		\caption{\small{Establecimiento de la Tasa de Aprendizaje}}
+		\vspace{-0.5em}
 		{\small{\citep {AdamImg}}}
 		\end{center}
 		\vspace{-1.5em}
 		\end{figure}
 
+		Cuando la tasa de aprendizaje es demasiado pequeña, es necesario realizar muchas iteraciones de aprendizaje; pero cuando la tasa de aprendizaje es demasiado grande, el resultado se moverá hacia adelante y hacia atrás en ambos sentidos de los valores extremos(oscila), y no se podrá lograr la solución óptima como puede ser observado en la figura 2.25.
 
 		Debido a esto es que al entrenar redes neuronales profundas, a menudo es útil reducir la tasa de aprendizaje a medida que avanza el entrenamiento y no mantenerlo constante y asi evitar la divergencia(Punto apartir del cual la pérdida ya no se reduce y en lugar de eso comienza a incrementarse).
 
@@ -614,11 +629,11 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		Reduciendo lentamente la tasa de aprendizaje a lo largo del tiempo ayuda a acelerar el aprendizaje. Esto es lo que se conoce como tasa de decaimiento de aprendizaje{\bf(learning rate decay)}.
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=0.7\textwidth]{images/desarrollo/entrenamiento/LR_decay} 
+				\includegraphics[width=0.6\textwidth,height=5.5cm]{images/desarrollo/entrenamiento/LR_decay} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Ejemplo de Tasa de decaimiento de aprendizaje por época  }}
-				\vspace{-1em}
+				\vspace{-0.5em}
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}

@@ -2,9 +2,9 @@
 \chapter{Resultados de la tesis}
 \pagenumbering{arabic}
 \setcounter{page}{95}
-\renewcommand{\baselinestretch}{2} %doble espacio paratodo el texto
+\renewcommand{\baselinestretch}{1.2} %doble espacio paratodo el texto
 	
-	Al culminar con la investigación, para la prueba de resultados de clasificación se dispone de una matriz de confusión. La matriz de confusión es una matriz cuadrada cuyo orden es el número de clases. En las  columnas se presentan las clases \enquote{reales} mientras que en las filas se presentan las clases \enquote{asignadas} por el clasificador, por ende, la suma vertical muestra la distribución real de las clases, mientras que la suma horizontal muestra la distribución de las clases producida por el clasificador.
+	Al culminar con la investigación, para la prueba de resultados de clasificación se dispone de una matriz de confusión. La matriz de confusión es una matriz cuadrada cuyo orden es el número de clases. En las  columnas se presentan las clases \underline{reales} mientras que en las filas se presentan las clases \underline{asignadas} por el clasificador, por ende, la suma vertical muestra la distribución real de las clases, mientras que la suma horizontal muestra la distribución de las clases producida por el clasificador.
 
 	El análisis de los clasificadores se hace con base en la matriz de confusión de la cual se obtienen los 4 de los 6 indicadores de desempeño (mencionado en la \textbf{Seccion 3.3 Indicadores}).
 
@@ -14,9 +14,9 @@
 	\item Prop. de Verdaderos Negativos(Especificidad): {$PVN= \frac{Verdaderos\,Negativos}{{Verdaderos\,Negativos} + {Falsos\,Positivos}}$}
 	\item Valor Predictivo Positivo (Precisión): {$PPV = \frac{Verdaderos\,Positivos}{{Verdaderos\,Positivos}+{Falsos\,Positivos}}$}
 	\item Acuracia (Exactitud): {$ACC= \frac{Verdaderos\,Positivos+Verdaderos\,Negativos}{Total\,de\,Imagenes}$}
-	
-		Donde:
-	
+	\end{itemize}	
+	Donde:
+	\begin{itemize}
 		\item[--] Verdaderos Positivos: Imágenes correctamente indentificadas.
 		\item[--] Falsos Positivos: Imágenes incorrectamente identificadas.
 		\item[--] Verdaderos Negativo:Imágenes correctamente rechazadas.
@@ -44,7 +44,7 @@
 		
 	%\newpage
 	\section{Señales de Tránsito de Alemania}
-		Luego de evaluar cada uno de los 5 modelos durante 100 épocas, el diseño del {\bf modelo A} es el que presentó el mejor resultado:
+		Luego de evaluar cada uno de los 5 modelos durante 100 épocas, el diseño del \underline{\bf modelo E} es el que presentó los mejores resultados:
 
 		\subsection{Tabla de Resultados}
 
@@ -55,13 +55,13 @@
 			\vspace{1.1em}
 			\begin{tabular}{c|c|c|c|c|c|}
 			\cline{2-6}
-			                                 & Modelo A & Modelo B & Modelo C & Modelo D & Modelo E \\ \hline
-			\multicolumn{1}{|c|}{PVP}        & 96.40z     & 98.35       & 98.08       & 98.37       & 98.61       \\ \hline
-			\multicolumn{1}{|c|}{PVN}        & 99.93z     & 99.96       & 99.96       & 99.96       & 99.97       \\ \hline
-			\multicolumn{1}{|c|}{PPV}        & 96.18z     & 97.52       & 97.57       & 97.78       & 98.01      \\ \hline
-			\multicolumn{1}{|c|}{AUC-PR}     & 92.78z     & 96.88       & 96.60       & 96.93       & 97.30       \\ \hline
-			\multicolumn{1}{|c|}{AUC-ROC}    & 98.17z     & 99.15       & 99.02       & 99.17       & 99.29       \\ \hline
-			\multicolumn{1}{|c|}{ACC}        & 97.14z     & 98.41       & 98.27       & 98.43       & 98.62       \\ \hline
+			                                 & \textbf{Modelo A} & \textbf{Modelo B} & \textbf{Modelo C} &\textbf{ Modelo D} & \textbf{Modelo E} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{PVP}}        & 96.14     & 98.35       & 98.08       & 98.37       & 98.61       \\ \hline
+			\multicolumn{1}{|c|}{\textbf{PVN}}        & 99.93     & 99.96       & 99.96       & 99.96       & 99.97       \\ \hline
+			\multicolumn{1}{|c|}{\textbf{PPV}}        & 95.69     & 97.52       & 97.57       & 97.78       & 98.01      \\ \hline
+			\multicolumn{1}{|c|}{\textbf{AUC-PR}}     & 94.31     & 96.88       & 96.60       & 96.93       & 97.30       \\ \hline
+			\multicolumn{1}{|c|}{\textbf{AUC-ROC}}    & 98.04     & 99.15       & 99.02       & 99.17       & 99.29       \\ \hline
+			\multicolumn{1}{|c|}{\textbf{ACC}}        & 97.08     & 98.41       & 98.27       & 98.43       & 98.62       \\ \hline
 			\end{tabular}
 			\end{center}
 		\end{table}
@@ -73,8 +73,7 @@
 				\includegraphics[width=1\textwidth, height=22cm]{images/desarrollo/testResults/german/model_A_A} 
 				\end{center}
 				\begin{center}
-				\caption{\small{Matriz de Confusión del Modelo A - Dataset de imágenes de Alemania}}
-				\vspace{-1em}
+				\caption{\small{Matriz de Confusión del Modelo E - Dataset de imágenes de Alemania}}
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -86,8 +85,7 @@
 						\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/desarrollo/testResults/german/ROC_curve_modelE} 
 						%\end{center}
 						\begin{center}
-						\caption{\small{Área debajo de la Curva ROC del Modelo A - Dataset de imágenes de Alemania}}
-						\vspace{-1em}
+						\caption{\small{Área debajo de la Curva ROC del Modelo E - Dataset de imágenes de Alemania}}
 						{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 						\end{center}
 						\vspace{-1.5em}
@@ -99,8 +97,7 @@
 						\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/desarrollo/testResults/german/PR_curve_modelE} 
 						%\end{center}
 						\begin{center}
-						\caption{\small{Área debajo de la Curva PR del Modelo A - Dataset de imágenes de Alemania}}
-						\vspace{-1em}
+						\caption{\small{Área debajo de la Curva PR del Modelo E - Dataset de imágenes de Alemania}}
 						{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 						\end{center}
 						\vspace{-1.5em}
@@ -109,7 +106,7 @@
 	
 	\section{Señales de Tránsito de Perú}
 
-		Luego de evaluar cada uno de los 5 modelos, el diseño del modelo A es el que presentó el mejor resultado:
+		Luego de evaluar cada uno de los 5 modelos, el diseño del \underline{\bf modelo E} es el que presentó los mejores resultados:
 
 		\subsection{Tabla de Resultados}
 
@@ -119,13 +116,13 @@
 			\vspace{1.1em}
 			\begin{tabular}{c|c|c|c|c|c|}
 			\cline{2-6}
-			                                 & Modelo A & Modelo B & Modelo C & Modelo D & Modelo E \\ \hline
-			\multicolumn{1}{|c|}{PVP}        & zz         & 99.16       & 99.26       & 98.97       & 99.83       \\ \hline
-			\multicolumn{1}{|c|}{PVN}        & zz         & 99.91       & 99.92       & 99.86       & 99.97       \\ \hline
-			\multicolumn{1}{|c|}{PPV}        & zz         & 99.40       & 99.49       & 99.31       & 99.86       \\ \hline
-			\multicolumn{1}{|c|}{AUC-PR}     & 92.78z     & 98.98       & 99.09       & 98.54       & 99.68       \\ \hline
-			\multicolumn{1}{|c|}{AUC-ROC}    & 98.17z     & 99.51       & 99.60       & 99.42       & 99.90       \\ \hline
-			\multicolumn{1}{|c|}{ACC}        & 97.14z     & 99.45       & 99.51       & 98.21       & 99.83       \\ \hline
+			                                 & \textbf{Modelo A} & \textbf{Modelo B} & \textbf{Modelo C} &\textbf{ Modelo D} & \textbf{Modelo E} \\ \hline
+			\multicolumn{1}{|c|}{\textbf{PVP}}        & 95.78     & 99.16       & 99.26       & 98.97       & 99.83       \\ \hline
+			\multicolumn{1}{|c|}{\textbf{PVN}}        & 99.44     & 99.91       & 99.92       & 99.86       & 99.97       \\ \hline
+			\multicolumn{1}{|c|}{\textbf{PPV}}        & 96.75     & 99.40       & 99.49       & 99.31       & 99.86       \\ \hline
+			\multicolumn{1}{|c|}{\textbf{AUC-PR}}     & 94.06     & 98.98       & 99.09       & 98.54       & 99.68       \\ \hline
+			\multicolumn{1}{|c|}{\textbf{AUC-ROC}}    & 97.62     & 99.51       & 99.60       & 99.42       & 99.90       \\ \hline
+			\multicolumn{1}{|c|}{\textbf{ACC}}        & 96.74     & 99.45       & 99.51       & 98.21       & 99.83       \\ \hline
 			\end{tabular}
 			\end{center}
 		\end{table}
@@ -133,11 +130,11 @@
 	 	\subsection{Matriz de Confusión}  
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/testResults/peru/modelE} 
+				\includegraphics[width=1\textwidth, height=11.2cm,keepaspectratio]{images/desarrollo/testResults/peru/modelE} 
 				\end{center}
 				\begin{center}
-				\caption{\small{Matriz de Confusión del Modelo A - Dataset de imágenes de Perú}}
-				\vspace{-1em}
+				\caption{\small{Matriz de Confusión del Modelo E - Dataset de imágenes de Perú}}
+				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -150,7 +147,7 @@
 						%\end{center}
 						\begin{center}
 						\caption{\small{Área debajo de la Curva ROC del Modelo E - Dataset de imágenes de Perú}}
-						\vspace{-1em}
+						
 						{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 						\end{center}
 						\vspace{-1.5em}
@@ -163,7 +160,6 @@
 						%\end{center}
 						\begin{center}
 						\caption{\small{Área debajo de la Curva PR del Modelo E - Dataset de imágenes de Perú}}
-						\vspace{-1em}
 						{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 						\end{center}
 						\vspace{-1.5em}
@@ -180,7 +176,6 @@
 			%\end{center}
 			\begin{center}
 			\caption{\small{Interfaz reconociendo Señal de Tránsito “Stop” - Alemania}}
-			\vspace{-1em}
 			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 			\end{center}
 			\vspace{-1.5em}
@@ -191,8 +186,9 @@
 			\includegraphics[width=1\textwidth, height=\textheight,keepaspectratio]{images/interfazWithPeruvSign} 
 			%\end{center}
 			\begin{center}
+			\vspace{1.8em}
 			\caption{\small{Interfaz reconociendo Señal de Tránsito “No Estacionar” - Perú}}
-			\vspace{-1em}
+			\vspace{2em}
 			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
 			\end{center}
 			\vspace{-1.5em}

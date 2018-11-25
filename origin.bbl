@@ -38,6 +38,11 @@ Dong, X. and Zhou, D.-X. (2008).
 \newblock {\em Journal of Mathematical Analysis and Applications}, 341(2):1018
   -- 1027.
 
+\bibitem[Donges, 2018]{gradientimg}
+Donges, N. (2018).
+\newblock Gradient descent in a nutshell.
+\newblock [Online; accessed Agosto 08, 2018].
+
 \bibitem[Elkan, 2012]{Elkan12evaluatingclassifiers}
 Elkan, C. (2012).
 \newblock Evaluating classifiers.
@@ -77,17 +82,17 @@ Hannan, M.~A., Wali, S.~B., Pin, T.~J., Hussain, A., and Samad, S.~A. (2014).
   driver assistance system.
 \newblock {\em Przeglad Elektrotechniczny}, R. 90, nr 11:169--172.
 
-\bibitem[J., 2018]{AdamImg}
-J., J. (2018).
-\newblock Setting the learning rate of your neural network.
-\newblock [Online; accessed Agosto 08, 2018].
-
 \bibitem[Jia et~al., 2014]{caffe}
 Jia, Y., Shelhamer, E., Donahue, J., Karayev, S., Long, J., Girshick, R.,
   Guadarrama, S., and Darrell, T. (2014).
 \newblock Caffe: Convolutional architecture for fast feature embedding.
 \newblock In {\em Proceedings of the 22Nd ACM International Conference on
   Multimedia}, MM '14, pages 675--678, New York, NY, USA. ACM.
+
+\bibitem[Jordan, 2018]{AdamImg}
+Jordan, J. (2018).
+\newblock Setting the learning rate of your neural network.
+\newblock [Online; accessed Agosto 08, 2018].
 
 \bibitem[Karpathy, 2016]{cs231n}
 Karpathy, A. (2016).
@@ -112,11 +117,6 @@ LeCun, Y., L.Botou, Y.Bengio, and P.Haffner (1998).
 Moore, A.~W. (2001).
 \newblock Cross-validation for detecting and preventing overfitting.
 \newblock {\em School of Computer Science Carneigie Mellon University}.
-
-\bibitem[N., 2018]{gradientimg}
-N., D. (2018).
-\newblock Gradient descent in a nutshell.
-\newblock [Online; accessed Agosto 08, 2018].
 
 \bibitem[Nair and Hinton, 2010]{RELU}
 Nair, V. and Hinton, G.~E. (2010).

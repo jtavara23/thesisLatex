@@ -2,7 +2,7 @@
 \chapter{Materiales y Técnicas}
 \pagenumbering{arabic}
 \setcounter{page}{53}
-\renewcommand{\baselinestretch}{2} %doble espacio paratodo el texto
+\renewcommand{\baselinestretch}{1.2} %doble espacio paratodo el texto
 
 \section{ Tipo de investigación}
 	De acuerdo al fin que se persigue es una investigación de tipo tecnológica y de acuerdo al diseño es una investigación experimental de tipo cuantitativa donde se analizará el rendimiento del modelo algorítmico.
@@ -15,6 +15,7 @@
 		\indent Modelo basado en el aprendizaje profundo de redes neuronales convolucionales	
 		
 	\section{Indicadores}
+		\renewcommand{\baselinestretch}{2}
 		Los indicadores nos permiten realizar mediciones y a su vez determinan la validez de la hipótesis planteada en la presente investigación. El desempeño de la clasificación se puede verificar con los siguinetes cinco indicadores: 
 		\begin{table}[H]
 		\centering
@@ -28,20 +29,20 @@
 		 &  &  \\ \hline
 		 \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Valor Predictivo Positivo \\ (Precisión)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos}{{Verdaderos\,Positivos}+{Falsos\,Positivos}}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
 		 &  &  \\ \hline
-		 \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Acuracia \\ (Exactitud)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos+Verdaderos\,Negativos}{Total\,de\,Imagenes}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		 \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Curvas PR \\ (Precision - Recall)\end{tabular}} & \multirow{2}{*}{Relación entre Efectividad(Recall) y Precision} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
 		 &  &  \\ \hline
 		%\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tiempo de\\ Procesamiento\end{tabular}} & \multirow{2}{*}{$S= \frac{\sum_{i=1}^{Total} tiempo_{i}}{Total\,de\,muestras}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Cronometro\\ Computacional\end{tabular}} \\
 		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Curvas ROC \\ (Receiver Operating Characteristic)\end{tabular}} & \multirow{2}{*}{Relación entre Efectividad y Especificidad} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
 		 &  &  \\ \hline
-		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Curvas PR \\ (Precision - Recall)\end{tabular}} & \multirow{2}{*}{Relación entre Efectividad(Recall) y Precision} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Acuracia \\ (Exactitud)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos+Verdaderos\,Negativos}{Total\,de\,Imagenes}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
 		 &  &  \\ \hline		 
 		\end{tabular}
 		\vspace{-1.0em}
 		\end{table}
 
-	\vskip 0.4cm
+	\newpage
 	\section{Recolección de Datos para la Construcción del Modelo}
-		
+		\renewcommand{\baselinestretch}{1.2}
 		\subsection{Técnica de Recolección}
 		\begin{enumerate}		
 			\item[]   {Revisión de la literatura(análisis de documentos)}
@@ -68,7 +69,7 @@
 			El principal sello distintivo de esta arquitectura es la utilización mejorada de los recursos informáticos dentro de la red. Esto fue logrado por un cuidadoso que permite aumentar la profundidad y el ancho de la red mientras se manteniene el costo computacional constante. Para optimizar la calidad, las decisiones para elaborar la arquitectura se basaron en el principio Hebbiano y la intuición de procesamiento a escala múltiple. Una encarnación particular utilizada en la competencia ILSVRC14 es llamada GoogLeNet, una red de 22 capas de profundidad, cuya calidad se evalúa en el contexto de reconocimiento y detección, \citep{Inception}.
 
 		
-	%\newpage
+	\newpage
 	\section{Recolección de Datos para el Entrenamiento y Evaluación del Modelo}
 		\subsection{Técnica de Recolección}
 		\begin{enumerate}		

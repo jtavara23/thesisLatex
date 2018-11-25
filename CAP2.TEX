@@ -2,7 +2,7 @@
 \chapter{Introducción}
 	\pagenumbering{arabic}
 	\setcounter{page}{1}
-	%\renewcommand{\baselinestretch}{2} %doble espacio paratodo el texto
+	\renewcommand{\baselinestretch}{1} %doble espacio paratodo el texto
 	Al conducir en carreteras congestionadas, a veces es difícil mantener los ojos en todas partes a la vez, comprobando el camino por delante, el tráfico venidero, lo que está detrás de usted, tratar de mantener su velocidad; es por ello, que existen mecanismos destinados a reglamentar el tránsito, advertir o informar a los usuarios mediante palabras, sonidos o símbolos determinados. Un claro ejemplo de ello, es la policía de tránsito o las señalizaciones vehiculares que según sea el caso, en todos los países regulan el tránsito e informan al usuario sobre direcciones, rutas, destinos, así como dificultades existentes en las carreteras y previenen cualquier peligro que podría presentarse en la circulación vehicular.
 
 	\vskip 0.15cm
@@ -43,7 +43,6 @@
 	\includegraphics[width=0.5\textwidth]{images/intro/responsabilidad_cond}
 	\end{center}
 	\begin{center}
-	\vskip -0.2cm
 	\caption{\small{Análisis de responsabilidad de accidentes}}
 	{\small{Fuente acceso: \citep{Gestion1}}}
 	\end{center}
@@ -94,7 +93,7 @@
 		\citep{Vargas2015} en su tésis ”Implementación de un Sistema Inteligente para el Reconocimiento de Señales Preventivas de Seguridad vial", desarrolló un sistema basado enteramente en procesamiento de imágenes para la detección y el reconocimiento de señales de tránsito del tipo preventivas, usando para la detección la técnica de segmentación por color y luego un análisis por la forma y posteriormente para el reconocimiento se usó el algoritmo Speed Up Robust Features (SURF). Todo el proceso fue implementado utilizando la herramienta OpenCV, obteniendose un acierto del 88\% en un total de 100 señales evaluadas. De este antecedente se analizará la importancia de introducir la segmentación por color al modelo de reconocimiento que se pretende elaborar.
 		\vskip 0.4cm
 
-		\citep{Ayuque2016} en su tésis "Diseño de un sistema de clasificación de señales de tránsito vehicular utilizando redes neuronales convolucionales", diseñó 6 modelos de arquitecturas de redes convolucionales para clasificar diversas señales de tránsito de Alemania, de los cuales el mejor resultado logró un acierto de 95.29\% cerca al estado del arte(99.46\%), en un total de 12630 señales evaluadas. Lo importante del antecendente es que servirá como elemento de comparación para la investigación propuesta. 
+		\citep{Ayuque2016} en su tésis "Diseño de un sistema de clasificación de señales de tránsito vehicular utilizando redes neuronales convolucionales", diseñó 6 modelos de arquitecturas de redes convolucionales para clasificar diversas señales de tránsito de Alemania, de los cuales el mejor resultado logró un acierto de 95.29\% cerca al estado del arte (99.46\% - \citep{Ciresan}), en un total de 12630 señales evaluadas. Lo importante del antecendente es que servirá como elemento de comparación para la investigación propuesta. 
 		
 	\subsection
 	{ESTADO DEL ARTE:}
@@ -203,7 +202,7 @@
 
 		\item[e)]	Puesto a que las redes neuronales son heurísticas por naturaleza (requieren un constante ajuste de híper-parámetros para obtener un óptimo resultado), se realizarán diferentes diseños de arquitecturas de modelos convolucionales y se escogerá el modelo que otorge los mejores resultados.
 		
-		\item[f)]	Para el análisis de resultados, además de los indicadores conocidos com tasa de sensibilidad y de error, se pretende usar una Matriz de confusión, en la cual cada fila de la matriz representa las instancias en una clase predecida, mientras que cada columna representa las instancias en una clase real (o viceversa). A través de esta matriz se pueden conocer valores estadísticos del espacio ROC(Receiver Operating Characteristic), métrica usada para evaluar la calidad del modelo clasificador(reconocedor).
+		\item[f)]	Para el análisis de resultados, además de los indicadores conocidos com tasa de sensibilidad, especificidad, precisión, se pretende usar una Matriz de confusión. A través de esta matriz se pueden conocer valores estadísticos del espacio ROC(Receiver Operating Characteristic), métrica usada para evaluar la calidad del modelo reconocedor.
 		
 		\end{enumerate}
 
