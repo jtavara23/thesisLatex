@@ -32,7 +32,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	\vskip 0.4cm 
 	Una fuente importante de dificultad en muchas aplicaciones de inteligencia artificial del mundo real es que muchos de los factores de variación influyen en cada pieza de datos que podemos observar. Los píxeles individuales en una imagen de un automóvil rojo pueden ser muy cercanos al negro en la noche. La forma de la silueta del automóvil depende del ángulo de visión. La mayoría de las aplicaciones nos exigen separar los factores de variación y descartar las que no nos interesan. Por supuesto, puede ser muy difícil extraer tales características abstractas de alto nivel a partir de datos en bruto. Muchos de estos factores de variación, como el acento de un hablante, solo se identifican mediante una comprensión sofisticada y casi humana de los datos. Cuando es casi tan difícil obtener una representación como para resolver el problema original, el aprendizaje de la representación, a primera vista, no parece ayudarnos.
 	\vskip 0.4cm 
-	El aprendizaje profundo resuelve este problema central en el aprendizaje representativo mediante la introducción de representaciones que se expresan en términos de otras representaciones más simples. El aprendizaje profundo permite a la computadora construir conceptos complejos a partir de conceptos más simples. La Figura X muestra cómo un sistema de aprendizaje profundo puede representar el concepto de una imagen de una persona combinando conceptos más simples, como esquinas y contornos, que a su vez se definen en términos de bordes.
+	El aprendizaje profundo resuelve este problema central en el aprendizaje representativo mediante la introducción de representaciones que se expresan en términos de otras representaciones más simples. El aprendizaje profundo permite a la computadora construir conceptos complejos a partir de conceptos más simples. La Figura 2.1 muestra cómo un sistema de aprendizaje profundo puede representar el concepto de una imagen de una persona combinando conceptos más simples, como esquinas y contornos, que a su vez se definen en términos de bordes.
 		\begin{figure}[H]
 		\begin{center}
 		\includegraphics[width=0.7\textwidth]{images/marcoteorico/deepExam}
@@ -72,7 +72,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	Las arquitecturas de redes convolucionales siempre suponen explícitamente que las entradas deben ser mapeadas en forma de imágenes, lo que nos permite configurar parte inicla de las propiedades o características de la arquitectura a diseñar.  Debido a esta característica la limitación de las ConvNets radica en que solo capturan patrones espaciales locales en datos. Es decir, si no se puede hacer que los datos se vean como una imagen, las ConvNets son practicamente muy poco útiles,\citep{Rohrer}.
 
 	\vskip 0.4cm  
-	Las redes neuronales convolucionales son muy similares a las redes neuronales ordinarias, están formadas por neuronas que tienen pesos y biases(sesgos) que se pueden aprender. Cada neurona recibe algunas entradas, realiza operaciones matemáticas. Toda la red expresa una única función de puntuación diferenciable: desde el contenido de los píxeles de la imagen en un extremo(entrada) hasta los puntajes que definen la clase o resultado correspondiente en el otro extremo(salida).
+	Las redes neuronales convolucionales son muy similares a las redes neuronales ordinarias, están formadas por neuronas que tienen pesos y biases(sesgos) que se pueden aprender durante el entrenamiento de estas. Cada neurona recibe algunas entradas y realiza operaciones matemáticas. Toda la red expresa una única función de puntuación diferenciable: desde el contenido de los píxeles de la imagen en un extremo(entrada) hasta los puntajes que definen la clase o resultado correspondiente en el otro extremo(salida).
 
 	\begin{figure}[H]
 	\begin{center}
@@ -86,7 +86,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	\vspace{-1.5em}
 	\end{figure}
 
-	El resultado de las CNNs es que pueden encontrar si una característica está en una imagen sin preocuparse exactamente de donde está. Esto ayuda a resolver el problema de las computadoras al comparar imagenes de manera hiper-literal, es decir, que coincida pixel a pixel para que se trate de imágenes iguales.
+	El resultado de las CNNs es que pueden encontrar si una característica está en una imagen sin preocuparse exactamente de donde está. Esto ayuda a resolver el problema de las computadoras al comparar imágenes de manera hiper-literal, es decir, que coincida pixel a pixel para que se trate de imágenes iguales.
 
 	\begin{figure}[H]
 	\begin{center}
@@ -100,10 +100,9 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	\vspace{-1.5em}
 	\end{figure}
 
-	Una ConvNet se caracteriza por tener una secuencia de capas donde cada una de estas transforma un volumen de activaciones en otro nuevo a través de una función diferenciable, el aprendizaje profundo se produce cuando se utilizan varias de estas capas variando los parámetros de configuación dentro y entre dichas capas. 
+	Una ConvNet se caracteriza por tener una secuencia de capas donde cada una de estas transforma un volumen de activaciones en otro nuevo a través de funciones y el aprendizaje profundo se produce cuando se utilizan varias de estas capas variando los parámetros de configuación dentro y entre dichas capas. 
 	\vskip 0.4cm  
-	Existen dos conjuntos de terminologías para describir estas capas. Una es cuando la red convolucional es vista como 
-	un número largo de capas simples y cada paso del procesamiento se considera como una capa en sí misma. Otra terminología es cuando la red convolucional es vista como un número pequeño de capas relativamente complejas, donde cada capa tiene multiples etapas. En esta terminología, existe un mapeo directo entre los volumenes de activaciones y las capas de red. En esta investigación se usará esta terminología.
+	Existen dos conjuntos de terminologías para describir estas capas. Una es cuando la red convolucional es vista como un número largo de capas simples y cada paso del procesamiento se considera como una capa en sí misma. Otra terminología es cuando la red convolucional es vista como un número pequeño de capas relativamente complejas, donde cada capa tiene multiples etapas. En esta terminología, existe un mapeo directo entre los volumenes de activaciones y las capas de red. En esta investigación se usará esta terminología.
 
 	
 	\begin{figure}[H]
@@ -186,21 +185,21 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\includegraphics[width=0.5\textwidth]{images/marcoteorico/sparceCon}
 		\end{center}
 		\begin{center}
-		\caption{\footnotesize \small{Conectividad dispersa}}
+		\caption{\footnotesize \small{Conectividad dispersa vs No Dispersa}}
 		\vskip -0.3cm  
-		{\small{Fuente:\citep{Rohrer}}}
+		{\small{Fuente:\citep{Goodfellow-et-al-2016}}}
 		\end{center}
 		\vspace{-1.5em}
 		\end{figure} 	
 
-		Estas mejoras en la eficiencia suelen ser bastante grandes. Si hay entradas y salidas, la multiplicación de la matriz requiere $m \times n$ parámetros, y los algoritmos utilizados en la práctica por ejemplo tienen complejidad de tiempo de ejecución $O(m \times n)$. Si limitamos el número de conexiones que cada salida puede tener a {\textit k}, entonces el enfoque dispersamente conectado requiere solo $k \times n$ parámetros y $O(k \times n)$ en tiempo de ejecución. Para muchas aplicaciones prácticas, es posible obtener un buen rendimiento en la tarea de aprendizaje automático mientras se mantienen {\textit k} distintos órdenes de magnitud menores que {\textit m}. Para demostraciones gráficas de conectividad dispersa, vea la figura X, donde se resalta una unidad de entrada $x_{3}$, y las unidades de salida que son afectadas por esta unidad. (Arriba) Cuando {\textit \bf s} está formado por convolución con un kernel de ancho 3, solo tres salidas se ven afectadas por {\textit \bf x}. (Abajo) Cuando {\textit \bf s} está formado por la multiplicación de la matriz, la conectividad ya no es dispersa, por lo que todos los resultados se ven afectados por $x_{3}$.
+		Estas mejoras en la eficiencia suelen ser bastante grandes. Si hay entradas y salidas, la multiplicación de la matriz requiere $m \times n$ parámetros, y los algoritmos utilizados en la práctica por ejemplo tienen complejidad de tiempo de ejecución $O(m \times n)$. Si limitamos el número de conexiones que cada salida puede tener a {\textit k}, entonces el enfoque dispersamente conectado requiere solo $k \times n$ parámetros y $O(k \times n)$ en tiempo de ejecución. Para muchas aplicaciones prácticas, es posible obtener un buen rendimiento en la tarea de aprendizaje automático mientras se mantienen {\textit k} distintos órdenes de magnitud menores que {\textit m}. Para demostraciones gráficas de conectividad dispersa, vea la figura 2.10, donde se resalta una unidad de entrada $x_{3}$, y las unidades de salida que son afectadas por esta unidad. (Arriba) Cuando {\bf {\textit {s}}} está formado por convolución con un kernel de ancho 3, solo tres salidas se ven afectadas por {\bf \textit  x}. (Abajo) Cuando {\bf \textit s} está formado por la multiplicación de la matriz, la conectividad ya no es dispersa, por lo que todos los resultados se ven afectados por $x_{3}$.
 
 		\vskip 0.4cm  
-		En una red convolucional profunda, las unidades en las capas más profundas pueden interactuar indirectamente con una porción más grande de la entrada. Esto permite que la red describa de manera eficiente las interacciones complicadas entre muchas variables mediante la construcción de tales interacciones a partir de bloques de construcción simples que describen cada una de ellas. Entonces, aunque las conexiones directas en una red convolucional son muy dispersas, las unidades en las capas más profundas pueden conectarse indirectamente a la totalidad o a la mayoría de la imagen de entrada.
+		En una red convolucional profunda, las unidades en las capas más profundas pueden interactuar indirectamente con una porción más grande de la entrada. Esto permite que la red describa de manera eficiente las interacciones complicadas entre muchas variables mediante la construcción de tales interacciones a partir de bloques de construcción simples que describen cada una de ellas. Entonces, aunque las conexiones directas en una red convolucional son muy dispersas, las unidades en las capas más profundas pueden conectarse indirectamente a la totalidad o a la mayoría de la imagen de entrada,\citep{Goodfellow-et-al-2016}.
 		
 		\vskip 0.4cm  
 		
-		El uso {\bf compartido de parámetros} hace referencia al uso del mismo parámetro para más de una función en un modelo. En una red neuronal tradicional, cada elemento de la matriz de pesos se usa exactamente una vez cuando se calcula la salida de una capa. Se multiplica por un elemento de la entrada y luego nunca se vuelve a visitar. Como sinónimo de compartir parámetros, se puede decir que una red hastió pesas, porque el valor del peso aplicado a una entrada está vinculado al valor de una ponderación aplicada en donde. En una red neuronal convolucional, cada miembro del kernel se utiliza en cada posición de la entrada (excepto tal vez algunos de los píxeles del límite, dependiendo de las decisiones de diseño con respecto al límite). El uso compartido de parámetros utilizado por la operación de convolución significa que en lugar de aprender un conjunto separado de parámetros para cada ubicación, aprendemos solo un conjunto.
+		El uso {\bf compartido de parámetros} hace referencia al uso del mismo parámetro para más de una función en un modelo. En una red neuronal tradicional, cada elemento de la matriz de pesos se usa exactamente una vez cuando se calcula la salida de una capa. Se multiplica por un elemento de la entrada y luego nunca se vuelve a visitar. Como sinónimo de compartición de parámetros, se puede decir que una red tiene ponderaciones vinculadas, porque el valor de la ponderación aplicada a una entrada está vinculado al valor de una ponderación aplicada a otra parte. En una red neuronal convolucional, cada miembro del kernel se utiliza en cada posición de la entrada (excepto tal vez algunos de los píxeles de los bordes, dependiendo de las decisiones de diseño con respecto al límite). El uso compartido de parámetros utilizado por la operación de convolución significa que en lugar de aprender conjuntos de parámetros para cada ubicación por separado, aprendemos un solo conjunto, \citep{Goodfellow-et-al-2016}.
 		\vskip 0.4cm  
 
 		En el caso de la convolución, la forma particular de compartir los parámetros hace que la capa tenga una propiedad llamada {\bf representaciones equivalentes}. Decir que una función es equivalente significa que si la entrada cambia, la salida cambia de la misma manera.
@@ -219,7 +218,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\vspace{-1.9em}
 		\end{figure}
 
-		En resumen, se tiene un conjunto completo de "n" filtros en cada capa convolucional(determinando la profundidad de la capa) y cada uno de estos filtros producirá un mapa de activación bidimensional por separado. Apilaremos estos mapas de activación a lo largo de la dimensión de profundidad y produciremos el volumen de salida, es decir el resultado es un conjunto de imágenes que muestran un versión filtrada de la imagen original resaltando características o patrones importantes de ella, como puede ser visto en la figura 2.11.
+		En resumen, se tiene un conjunto completo de "n"  filtros en cada capa convolucional(determinando la profundidad de la capa) y cada uno de estos filtros producirá un mapa de activación bidimensional por separado. Apilaremos estos mapas de activación a lo largo de la dimensión de profundidad y produciremos el volumen de salida, es decir el resultado es un conjunto de imágenes que muestran un versión filtrada de la imagen original resaltando características o patrones importantes de ella, como puede ser visto en la figura 2.11.
 
 		\vskip 0.4cm  
 		Cabe resaltar que para la construcción de un filtro o kernel, es necesario considerar tres aspectos importantes: la extensión espacial (spatial extent), el paso (stride) y la cantidad de zero a rellenar (zero-padding).
@@ -254,11 +253,11 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 				\vspace{-1.9em}
 				\end{figure}
 
-			Los principales beneficios del relleno son los siguientes:
-			\begin{itemize}
-			\item Le permite usar una capa de convolución sin necesariamente reducir la altura y el ancho de los volúmenes. Esto es importante para construir redes más profundas, ya que de lo contrario la altura / ancho se reduciría a medida que se avanza hacia capas más profundas.
-			\item Nos ayuda a mantener más información en el borde de una imagen. Sin relleno, muy pocos valores en la siguiente capa se verían afectados por los píxeles como los bordes de una imagen.
-			\end{itemize}
+				Los principales beneficios del relleno son los siguientes:
+				\begin{itemize}
+				\item Le permite usar una capa de convolución sin necesariamente reducir la altura y el ancho de los volúmenes. Esto es importante para construir redes más profundas, ya que de lo contrario la altura / ancho se reduciría a medida que se avanza hacia capas más profundas.
+				\item Nos ayuda a mantener más información en el borde de una imagen. Sin relleno, muy pocos valores en la siguiente capa se verían afectados por los píxeles como los bordes de una imagen.
+				\end{itemize}
 			
 		\end{enumerate}
 		%\vskip 0.4cm  
@@ -321,8 +320,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{center}
 		\vspace{-1.9em}
 		\end{figure}
-
-	%\vskip 0.4cm 
+ 
 	\subsubsection  {Capa ReLU(Rectified Linear Units)}
 		\vskip 0.4cm 
 		Debido al hecho que todas las capas en una red neuronal no son lineales. Después de calcular los valores para cada una de las neuronas en la red neuronal, colocamos estos valores a través de una función de activación. Una red neuronal artificial consiste básicamente en multiplicaciones y suma de matrices. Si solo utilizáramos estos cálculos lineales, podríamos apilarlos uno encima del otro y esa no sería una red muy profunda. Por lo tanto, a menudo se utiliza funciones de activación no lineales en cada capa de la red. Al apilar capas de funciones lineales y no lineales una encima de la otra, teóricamente podemos modelar cualquier problema.
@@ -366,7 +364,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\vskip 0.4cm 
 	\subsubsection {Técnica Dropout}
 		\vskip 0.4cm 
-		Combinar las predicciones de muchos modelos diferentes es una forma muy exitosa de reducir los errores de prueba, pero parece ser demasiado costoso para las redes neuronales de gran tamaño debido a que pueden tardar varios días en entrenar. Sin embargo, dropout es una técnica de regularización que tiene por objetivo de reducir el sobreajuste que puede darse durante el entrenamiento de una red neuronal. Consiste en establecer a cero la salida de cada neurona oculta con una probabilidad 0.5(comúnmente). Las neuronas que se "abandonan" de esta manera no contribuyen al pase directo y no participan en las siguientes etapas de entrenamiento.
+		Combinar las predicciones de muchos modelos diferentes es una forma muy exitosa de reducir los errores de prueba, pero parece ser demasiado costoso para las redes neuronales de gran tamaño debido a que pueden tardar varios días en entrenar. Sin embargo, dropout es una técnica de regularización que tiene por objetivo de reducir el sobreajuste que puede darse durante el entrenamiento de una red neuronal. Consiste en establecer a cero la salida de cada neurona oculta con una probabilidad 0.5(comúnmente). Las neuronas que se abandonan de esta manera no contribuyen al pase directo y no participan en las siguientes etapas de entrenamiento.
 
 		\begin{figure}[H]
 		\begin{center}
@@ -381,7 +379,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		
 
 		\vskip 0.4cm 
-		Por lo tanto, cada vez que se presenta una entrada, la red neuronal muestrea una arquitectura diferente, pero todas estas arquitecturas comparten ponderaciones. Esta técnica reduce las coadaptaciones complejas de las neuronas, ya que una neurona no puede depender de la presencia de otras neuronas particulares. Por lo tanto, se ve forzado a aprender características más robustas que son útiles en conjunción con muchos subconjuntos aleatorios diferentes de las otras neuronas.
+		Por lo tanto, cada vez que se presenta una entrada, la red neuronal muestra una arquitectura diferente, pero todas estas arquitecturas comparten ponderaciones. Esta técnica reduce las coadaptaciones complejas de las neuronas, ya que una neurona no puede depender de la presencia de otras neuronas particulares. Por lo tanto, se ve forzado a aprender características más robustas que son útiles en conjunción con muchos subconjuntos aleatorios diferentes de las otras neuronas.
 		\begin{figure}[H]
 		\begin{center}
 		\includegraphics[width=0.8\textwidth]{images/marcoteorico/dropout}
@@ -398,7 +396,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	\subsubsection {Capa de Agrupación(Pooling)}
 		\vskip 0.4cm 
 
-		Una variedad de cálculos que reducen la dimensionalidad de un mapa de características se conocen como agrupación. La agrupación, que se aplica a cada canal por separado, permite que la red sea robusta e invariante a pequeños cambios y distorsiones. La capa Pooling(también conocida como una capa de reducción de resolución) combina o agrupa, un conjunto de valores en su campo receptivo en un menor número de valores. Puede ser configurado en función del tamaño de su campo receptivo (por ejemplo, 2 x 2) y en función a la operación de agrupamiento (por ejemplo, máximo-max o promedio-average), como se muestra en Fig. 20. Normalmente, la agrupación se produce en bloques que no se solapan (es decir, el paso o stride es igual al tamaño de la agrupación). Usualmente se usa una stride mayor que uno cuando se quiere que haya una reducción en la dimensión de la representación(mapa de características).
+		Una variedad de cálculos que reducen la dimensionalidad de un mapa de características se conocen como agrupación. La agrupación, que se aplica a cada canal por separado, permitiendo que la red sea robusta e invariante a pequeños cambios y distorsiones. La capa Pooling(también conocida como una capa de reducción de resolución) combina o agrupa, un conjunto de valores en su campo receptivo en un menor número de valores. Puede ser configurado en función del tamaño de su campo receptivo (por ejemplo, 2 x 2) y en función a la operación de agrupamiento (por ejemplo, máximo-max o promedio-average), como se muestra en Fig. 2.19. Normalmente, la agrupación se produce en bloques que no se solapan (es decir, el paso o stride es igual al tamaño de la agrupación). Usualmente se usa una stride mayor que uno cuando se quiere que haya una reducción en la dimensión de la representación(mapa de características).
 
 		\begin{figure}[H]
 		\begin{center}
@@ -656,9 +654,9 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 
 		Para el entrenamiento, el conjunto de datos se divide en un subconjunto de entrenamiento y otro para validación. En esta investigación se dividirá el 75\% para entrenamiento y 75\% para validación, {\citep {Elkan12evaluatingclassifiers}}. La división en subgrupos de entrenamiento y validación generalmente se realiza de manera aleatoria, para garantizar que ambos subconjuntos sean muestras aleatorias de la misma distribución. Puede ser razonable realizar un muestreo estratificado, lo que significa asegurar que cada clase esté presente en la misma proporción en los subconjuntos de entrenamiento y prueba. En esta investigación se trabajará con 2 tipos de muestreos (balanceado/estratificado y no balanceado)
 
-		Se utiliza el subconjunto de validación para evaluar el desempeño de diferentes arquitecturas del modelo (diferentes topologías), para luego escoger una de ellas. Este subconjunto(de validación) se usa para verificar si el error está dentro de algún rango y no se usa directamente para ajustar los pesos, por el contrario \textbf{se usa para indique el número óptimo de neuronas ocultas o determina el punto de parada para el entrenamiento}.  Por lo tanto, el modelo es entrenado sobre el conjunto de entrenamiento completo y la capacidad de generalización es medida en el conjunto de validación. 
+		Se utiliza el subconjunto de validación para evaluar el desempeño de diferentes arquitecturas del modelo (diferentes topologías), para luego escoger una de ellas. Este subconjunto(de validación) se usa para verificar si el error está dentro de algún rango y no se usa directamente para ajustar los pesos, por el contrario \textbf{se usa para indicar el número óptimo de neuronas ocultas o determina el punto de parada para el entrenamiento}.  Por lo tanto, el modelo es entrenado sobre el conjunto de entrenamiento completo y la capacidad de generalización es medida en el conjunto de validación. 
 
-		La validación cruzada o cross-validation es una técnica utilizada para evaluar los esultados de un análisis estadístico y garantizar que son independientes de la partición entre datos de entrenamiento y validación, \citep{moore2001cross}. En problemas de clasificación, debido a que los datos se dividen en clases finitas, es natural pensar que la categoría al cual pertenece cierto resultado se dará a través de probabilidades En probabilidad, la entropía cruzada es la distancia entre las dos distribuciones de probabilidad y se usa generalmente como la función de pérdida. Es por ello que el resultado de la validación cruzada representa la pérdida de la entropía del conjunto de datos. La entropía se suele utilizar en la teoría de la información para medir la pureza o impureza de un conjunto determinado. La pregunta a la que responde es: ¿Cuánto diferente esos elementos son entre sí?.  
+		La validación cruzada o cross-validation es una técnica utilizada para evaluar los esultados de un análisis estadístico y garantizar que son independientes de la partición entre datos de entrenamiento y validación, \citep{moore2001cross}. En problemas de clasificación, debido a que los datos se dividen en clases finitas, es natural pensar que la categoría al cual pertenece cierto resultado se dará a través de probabilidades. En probabilidad, la entropía cruzada es la distancia entre las dos distribuciones de probabilidad y se usa generalmente como la función de pérdida. Es por ello que el resultado de la validación cruzada representa la pérdida de la entropía del conjunto de datos. La entropía se suele utilizar en la teoría de la información para medir la pureza o impureza de un conjunto determinado. La pregunta a la que responde es: ¿Cuánto diferente esos elementos son entre sí?.  
 
 			\begingroup\makeatletter\def\f@size{17.8}\check@mathfonts
 			\begin{center}
@@ -692,7 +690,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 			\endgroup		
 	
 
-		Es por ello que la la función de coste/pérdida dada por la validacion cruzada ayuda para decidir cuándo se debe terminar el entrenamiento de una red.\citep{AulaMLP}. Usualmente se utiliza el error cuadrático medio como función de pérdida para medir el rendimiento de un modelo de regresion. Sin embargo, en casos de clasificación, la función de costo de pérdida a través del cálculo de la entropía cruzada es preferible, ya que tiende a no causar saturación de las neuronas de salida, convirtiendo el aprendizaje más rápido,\citep{AulaDNN}.
+		Es por ello que la la función de costo/pérdida dada por la validacion cruzada ayuda para decidir cuándo se debe terminar el entrenamiento de una red.\citep{AulaMLP}. Usualmente se utiliza el error cuadrático medio como función de pérdida para medir el rendimiento de un modelo de regresion. Sin embargo, en casos de clasificación, la función de costo de pérdida a través del cálculo de la entropía cruzada es preferible, ya que tiende a no causar saturación de las neuronas de salida, convirtiendo el aprendizaje más rápido,\citep{AulaDNN}.
 
 		La pérdida de entropía cruzada aumenta a medida que la probabilidad prevista diverge de la clasificación real. Por lo tanto, un modelo casi perfecto tendría una pérdida de entropía cercana a cero, \citep{crossMSE}.
 		
