@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  9 DEC 2018 00:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  11 DEC 2018 20:52
 entering extended mode
 **"D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
 ("D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
@@ -1638,25 +1638,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 129--132
 o.
  []
 
-[107] [108]) (CAP8.tex [109]
-Ap\'{e}ndice A.
-[110
-
-]
-Ap\'{e}ndice B.
-[111
-
-]
-Ap\'{e}ndice C.
-) [112
-
-] (origin.aux
+[107] [108]) [109] (origin.aux
 LaTeX Info: Redefining \. on input line 6.
 LaTeX Info: Redefining \% on input line 6.
 ) ) 
 Here is how much of TeX's memory you used:
- 8302 strings out of 492970
- 135924 string characters out of 3125706
+ 8299 strings out of 492970
+ 135871 string characters out of 3125706
  219514 words of memory out of 3000000
  11820 multiletter control sequences out of 15000+200000
  113981 words of font info for 236 fonts, out of 3000000 for 9000
@@ -1689,9 +1677,9 @@ type1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKT
 eX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Usuario/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on origin.pdf (135 pages, 13639926 bytes).
+Output written on origin.pdf (132 pages, 13638251 bytes).
 PDF statistics:
- 706 PDF objects out of 1000 (max. 8388607)
+ 696 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  531 words of extra memory for PDF output out of 10000 (max. 10000000)
 

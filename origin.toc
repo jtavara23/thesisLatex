@@ -112,7 +112,3 @@
 \contentsline {chapter}{\numberline {6}Consideraciones finales}{103}
 \contentsline {section}{\numberline {6.1}Conclusiones}{103}
 \contentsline {section}{\numberline {6.2}Trabajos futuros}{104}
-\contentsline {chapter}{\numberline {A}Primer apendice}{110}
-\contentsline {chapter}{\numberline {B}Segundo apendice}{111}
-\contentsline {chapter}{\numberline {C}Tercer apendice}{112}
-\vspace {2em}
