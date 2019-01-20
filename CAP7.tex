@@ -1,26 +1,28 @@
 %!TEX root = origin.TEX
 \chapter{Consideraciones finales}
 \pagenumbering{arabic}
-\setcounter{page}{103}
+\setcounter{page}{132}
 \renewcommand{\baselinestretch}{2} %doble espacio paratodo el texto
-
+\textheight 21cm
 
 \section{Conclusiones}
 
 	Al finalizar la investigación podemos confirmar que se cumplieron los objetivos específicos planteados en el capítulo 1.5. Por lo cual, el objetivo general que trata sobre implementar un modelo basado en el aprendizaje profundo de redes neuronales convolucionales para reconocer automáticamente señales de tránsito vehicular fue conseguido a través del Modelo E.
 
 	\vskip 0.2cm
-	Luego de analizar diferentes modelos, se puede concluir que por lo general cuanto más grande sea el tamaño de la data de entrada y más profunda sea la red neuronal, se obtienen mejores resultados. De este modo, el modelo final obtenido compuesto principalmente de 4 capas convolucionales, 2 capas totalmente conectadas, funciones de escala múltiple y cerca de 76393 neuronas(Sección 4.2.1.5 - Diseño E), contribuye en el reconocimiento de señales de Tránsito Alemanas con una tasa de reconocimiento del {\bf 98.62\%}, mucho mejor que el resultado obtenido por \citep{Ayuque2016} - 95.29\% y mucho más próximo al estado del arte (99.46\% - \citep{Ciresan}).
-	\vskip 0.2cma
-	Por otra parte, la investigación ofrece para futuras investigaciones, un dataset de señales de Tránsito del Perú compuesto por 31314 imágenes distribuidas en 7 categorías(Sección 4.1.4.2). Para dicho dataset, el modelo con las mismas configuraciones también permite obtener un {\bf alto grado de acierto(99.83\%)}tras analizar 4698 imágenes. 
+	Al finalizar el análisis de diferentes modelos, se puede concluir que por lo general cuanto más grande sea el tamaño de la data de entrada y más profunda sea la red neuronal, se obtienen mejores resultados. De este modo, el modelo final obtenido compuesto principalmente de 4 capas convolucionales, 2 capas totalmente conectadas, funciones de escala múltiple y cerca de 76393 neuronas(Sección 4.2.1.5 - Diseño E), contribuye en el reconocimiento de señales de Tránsito Alemanas con una tasa de acierto del {\bf 98.62\%}, mucho mejor que el resultado obtenido por \citep{Ayuque2016} - 95.29\% y mucho más próximo al estado del arte (99.46\% - \citep{Ciresan}).
+	\vskip 0.2cm
+	Por otra parte, la investigación ofrece para futuras investigaciones, un dataset de señales de Tránsito del Perú compuesto por 31314 imágenes distribuidas en 7 categorías(Sección 4.1.4.2). Para dicho dataset, el modelo con las mismas configuraciones también permite obtener un {\bf alto grado de acierto (99.83\%)} tras analizar 4698 imágenes. 
 	\vskip 0.2cm
 	Cabe destacar que la herramienta computacional Tensorflow fue importante en el análisis e implementación de los modelos desarrollados, ya que permitió realizar entrenamientos, validaciones y evaluaciones con mucha facilidad. 
 
 
 \section{Trabajos futuros}
 
-	Ampliar el dataset de señales de tránsito del Perú para que pueda poseer más categorías, ya que se tiene confianza por lo mostrado con el dataset de Alemania que el modelo es robusto para soportar mayor cantidad de categorías.
 
 	El modelo puede ser ampliado a tener muchas más capas convolucionales y totalmente conectadas para poder experimentar si existe una mejora en los resultados. Además se recomienda obtener muchas más imágenes para exceder el rendimiento humano, \citep{Goodfellow-et-al-2016}
+
+	Ampliar el dataset de señales de tránsito del Perú con la finalidad de abarcar más categorías, ya que se tiene confianza por lo mostrado con el dataset de Alemania que el modelo es robusto para soportar mayor cantidad de estas.
 	
-	Se sugiere integrar el modelo obtenido en un sistema más general que primero localize las señales de tránsito en escenas realistas para que posteriormente se proceda a su reconocimiento(clasificación).
+	Se sugiere integrar el modelo obtenido en un sistema más general que primero localize las señales de tránsito en escenas que abarcan más de una señal de tránsito, para luego proceder a su reconocimiento (multi-clasificación) .
+\newpage

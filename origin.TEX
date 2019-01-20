@@ -1,6 +1,23 @@
-\documentclass[a4paper, 12pt]{report}
+\documentclass[12pt]{report}
 
-\usepackage[left = 3cm, top = 2.5cm, bottom = 1.5cm, right = 2cm]{geometry}
+%\usepackage[left = 3cm, top = 2.5cm, bottom = 1.5cm, right = 2cm]{geometry}
+
+\usepackage{vmargin}
+
+\setpapersize{A4}
+\setmargins{2.5cm}       % margen izquierdo
+{2.5cm}                  % margen superior
+{16.5cm}                 % anchura del texto
+{23.42cm}                % altura del texto
+{10pt}                   % altura de los encabezados
+{1cm}                    % espacio entre el texto y los encabezados
+{0pt}                    % altura del pie de página
+{1.9cm}                    % espacio entre el texto y el pie de página
+
+
+
+
+
 \usepackage{graphicx}
 \usepackage[spanish,es-tabla]{babel} % Idioma español con tablas
 \usepackage{amsmath}
@@ -77,7 +94,7 @@
 \addcontentsline{toc}{chapter}{Índice de Figuras}
 \listoftables       % indice de tablas
 \addcontentsline{toc}{chapter}{Índice de Tablas}
-\textheight 24cm 	% footer height
+%\textheight 24cm 	% footer height
 \tableofcontents    % indice de materias
 	\input{CAP2.tex}    % capitulo de introduccion
 	\input{CAP3.tex}    % capitulo de marco teoric
@@ -85,9 +102,10 @@
 	\input{CAP5.tex}    % capitulo de Desarrollo de Investigacion
 	\input{CAP6.tex}    % capitulo de Resultados
 	\input{CAP7.tex}    % capitulo de consideraciones finales
+\addcontentsline{toc}{chapter}{Bibliografia}
 \bibliography{bibliografia}{} % Bibliografia formato APA
 \bibliographystyle{apalike}
-	%\input{CAP8.tex}    % Apendice
+	%\input{CAP8.tex}    % Apendice no usado
 \end{document}
 
 

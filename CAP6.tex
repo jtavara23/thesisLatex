@@ -1,7 +1,7 @@
 %!TEX root = origin.TEX
 \chapter{Resultados de la tesis}
 \pagenumbering{arabic}
-\setcounter{page}{94}
+\setcounter{page}{121}
 \renewcommand{\baselinestretch}{1.2} %doble espacio paratodo el texto
 	
 	Al culminar con la investigación, para la prueba de resultados de clasificación se dispone de una matriz de confusión. La matriz de confusión es una matriz cuadrada cuyo orden es el número de clases. En las  columnas se presentan las clases \underline{reales} mientras que en las filas se presentan las clases \underline{asignadas} por el clasificador, por ende, la suma vertical muestra la distribución real de las clases, mientras que la suma horizontal muestra la distribución de las clases producida por el clasificador.
@@ -70,11 +70,11 @@
 	 	\subsection{Matriz de Confusión}  
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth, height=22cm]{images/desarrollo/testResults/german/model_A_A} 
+				\includegraphics[width=1\textwidth, height=18cm]{images/desarrollo/testResults/german/model_A_A} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Matriz de Confusión del Modelo E - Dataset de imágenes de Alemania}}
-				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
 				\vspace{-1.5em}
 			\end{figure}
@@ -82,11 +82,11 @@
 		\subsection{Curvas ROC - AUC}  
 					\begin{figure}[H]
 						%\begin{center}
-						\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/desarrollo/testResults/german/ROC_curve_modelE} 
+						\includegraphics[width=\textwidth, height=7.5cm]{images/desarrollo/testResults/german/ROC_curve_modelE} 
 						%\end{center}
 						\begin{center}
 						\caption{\small{Área debajo de la Curva ROC del Modelo E - Dataset de imágenes de Alemania}}
-						{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+						{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 						\end{center}
 						\vspace{-1.5em}
 					\end{figure}
@@ -94,11 +94,11 @@
 		\subsection{Curvas PR - AUC}  
 					\begin{figure}[H]
 						%\begin{center}
-						\includegraphics[width=\textwidth,height=\textheight,keepaspectratio]{images/desarrollo/testResults/german/PR_curve_modelE} 
+						\includegraphics[width=\textwidth, height=7.5cm]{images/desarrollo/testResults/german/PR_curve_modelE} 
 						%\end{center}
 						\begin{center}
 						\caption{\small{Área debajo de la Curva PR del Modelo E - Dataset de imágenes de Alemania}}
-						{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+						{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 						\end{center}
 						\vspace{-1.5em}
 					\end{figure}		
@@ -135,7 +135,7 @@
 				\begin{center}
 				\caption{\small{Matriz de Confusión del Modelo E - Dataset de imágenes de Perú}}
 				
-				{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
 				\vspace{-1.5em}
 			\end{figure}
@@ -143,12 +143,12 @@
 		\subsection{Curvas ROC - AUC}  
 					\begin{figure}[H]
 						%\begin{center}
-						\includegraphics[width=1\textwidth, height=\textheight,keepaspectratio]{images/desarrollo/testResults/peru/ROC_curve_modelE} 
+						\includegraphics[width=1\textwidth, height=7.5cm]{images/desarrollo/testResults/peru/ROC_curve_modelE} 
 						%\end{center}
 						\begin{center}
 						\caption{\small{Área debajo de la Curva ROC del Modelo E - Dataset de imágenes de Perú}}
 						
-						{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+						{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 						\end{center}
 						\vspace{-1.5em}
 					\end{figure}
@@ -156,15 +156,15 @@
 		\subsection{Curvas PR - AUC}  
 					\begin{figure}[H]
 						%\begin{center}
-						\includegraphics[width=1\textwidth, height=\textheight,keepaspectratio]{images/desarrollo/testResults/peru/PR_curve_modelE} 
+						\includegraphics[width=1\textwidth, height=7.5cm]{images/desarrollo/testResults/peru/PR_curve_modelE} 
 						%\end{center}
 						\begin{center}
 						\caption{\small{Área debajo de la Curva PR del Modelo E - Dataset de imágenes de Perú}}
-						{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+						{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 						\end{center}
 						\vspace{-1.5em}
 					\end{figure}
-
+	\newpage
 	\section{Interfaz de Aplicación}
 		
 		Para continuar con la evaluando el rendimiento del reconocimiento de señales de tránsito, los modelos para el Dataset de señales de Alemania y Perú con mejores resultados fueron utilizados en un aplicación programada en lenguaje python, la cual se encarga de analizar y reconocer una nueva imagen que contenga señales de tránsito:
@@ -172,11 +172,11 @@
 		
 		\begin{figure}[H]
 			%\begin{center}
-			\includegraphics[width=1\textwidth, height=\textheight,keepaspectratio]{images/interfazWithGermSign} 
+			\includegraphics[width=1\textwidth,  height=13cm]{images/interfazWithGermSign} 
 			%\end{center}
 			\begin{center}
 			\caption{\small{Interfaz reconociendo Señal de Tránsito “Stop” - Alemania}}
-			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+			{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 			\end{center}
 			\vspace{-1.5em}
 		\end{figure}
@@ -189,7 +189,7 @@
 			\vspace{1.8em}
 			\caption{\small{Interfaz reconociendo Señal de Tránsito “No Estacionar” - Perú}}
 			\vspace{2em}
-			{\small{\fontsize{10}{16.8}\selectfont {Fuente propia}}}
+			{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 			\end{center}
 			\vspace{-1.5em}
 		\end{figure}
