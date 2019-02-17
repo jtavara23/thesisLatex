@@ -4,9 +4,9 @@
 \setcounter{page}{121}
 \renewcommand{\baselinestretch}{1.2} %doble espacio paratodo el texto
 	
-	Al culminar con la investigación, para la prueba de resultados de clasificación se dispone de una matriz de confusión. La matriz de confusión es una matriz cuadrada cuyo orden es el número de clases. En las  columnas se presentan las clases \underline{reales} mientras que en las filas se presentan las clases \underline{asignadas} por el clasificador, por ende, la suma vertical muestra la distribución real de las clases, mientras que la suma horizontal muestra la distribución de las clases producida por el clasificador.
+	Al culminar con la investigación, para la prueba de resultados de clasificación se dispone de una matriz de confusión. La matriz de confusión es una matriz cuadrada cuyo orden es el número de clases. En las  columnas se presentan las clases reales mientras que en las filas se presentan las clases asignadas por el clasificador, por ende, la suma vertical muestra la distribución real de las clases, mientras que la suma horizontal muestra la distribución de las clases producida por el clasificador.
 
-	El análisis de los clasificadores se hace con base en la matriz de confusión de la cual se obtienen los 4 de los 6 indicadores de desempeño (mencionado en la \textbf{Seccion 3.3 Indicadores}).
+	El análisis de los clasificadores se hace con base en la matriz de confusión de la cual se obtienen los 4 de los 6 indicadores de desempeño (mencionado en la \textbf{Seccion 2.5.3 Indicadores}).
 
 	\begin{itemize}
 
@@ -30,7 +30,7 @@
 	\end{itemize}
 
 	
-	Las curvas ROC (Receiver Operating Characteristic) define un sistema de coordenadas usadas para visualizar el desempeño del clasificador. Las curvas ROC presentan el compromiso entre efectividad(sensibilidad) y especificidad del clasificador, un aumento en la sensibilidad está acompañado por un decremento en la especificidad. Esto significa que la esquina superior izquierda de la gráfica es el punto """ideal" ya que muestran la relación entre las muestras clasificadas adecuadamente (Proporción de Verdaderos Positivos - PVP) y las muestras que no pertenecen a la clase pero se clasificaron como si lo fueran (Proporción de Falsos Positivos). Esta última calculada a través de la Especificidad(PVN), siendo:
+	Las curvas ROC (Característica Operativa del Receptor, del inglés - Receiver Operating Characteristic) define un sistema de coordenadas usadas para visualizar el desempeño del clasificador. Las curvas ROC presentan el compromiso entre efectividad(sensibilidad) y especificidad del clasificador, un aumento en la sensibilidad está acompañado por un decremento en la especificidad. Esto significa que la esquina superior izquierda de la gráfica es el punto ideal, debido a que muestran la relación entre las muestras clasificadas adecuadamente (Proporción de Verdaderos Positivos - PVP) y las muestras que no pertenecen a la clase pero se clasificaron como si lo fueran (Proporción de Falsos Positivos). Esta última, calculada a través de la Especificidad(PVN), siendo:
 	\begin{center}
 	{$PFP= 1 - PVN$}
 	\end{center}
