@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  20 JAN 2019 14:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  17 FEB 2019 16:44
 entering extended mode
 **"D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
 ("D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
@@ -540,25 +540,25 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17> not available
 {C:/Users/Usuario/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./images/
 unt.jpg>] [1] [2]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 81.
-LaTeX Font Info:    Try loading font information for U+msa on input line 92.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 84.
+LaTeX Font Info:    Try loading font information for U+msa on input line 95.
 
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd
 "
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 92.
+LaTeX Font Info:    Try loading font information for U+msb on input line 95.
 
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd
 "
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Try loading font information for U+lasy on input line 92.
+LaTeX Font Info:    Try loading font information for U+lasy on input line 95.
  ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ulasy.fd"
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ) [3] [4] [5]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 151.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 154.
  [6]) [7]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 93.
@@ -1620,7 +1620,7 @@ type1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/
 fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKT
 eX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Usuario/AppData/Local/Program
 s/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on origin.pdf (163 pages, 13684726 bytes).
+Output written on origin.pdf (163 pages, 13684633 bytes).
 PDF statistics:
  796 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
