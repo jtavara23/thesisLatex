@@ -1,10 +1,72 @@
 %!TEX root = origin.TEX
-\chapter{Marco teórico}
+\chapter{Materiales y Métodos}
 \pagenumbering{arabic}
 \setcounter{page}{20}
 \renewcommand{\baselinestretch}{1.2} %doble espacio paratodo el texto
 
-En este capítulo se presenta una reseña del material bibliográfico investigado con relación a los temas considerados en esta investigación. Los conocimientos investigados son muy amplios, principalmente aquel que ayudó a consolidar las bases del conocimiento científico para elaborar esta tesis, como lo son los temas de optimización combinatoria, complejidad computacional, metaheurísticas, ciencia de la información y logística, conocimientos sin los cuales sería difícil de modelar y solucionar matemática y computacionalmente cualquier tipo de problema de optimización.
+\section{Marco Teórico} 
+
+En este capítulo se presenta una reseña del material bibliográfico investigado con relación a los temas considerados en esta investigación. Los conocimientos investigados son muy amplios, principalmente aquel que ayudó a consolidar las bases del conocimiento científico para elaborar esta tesis, como lo son los temas de aprendizaje artificial profundo, redes neuronales convolucionales, metaheurísticas, procesamiento de imágenes, conocimientos sin los cuales sería difícil de modelar y solucionar computacionalmente cualquier tipo de problema de reconocimiento de imágenes.
+
+\subsection{Antecedentes de la Investigación}
+
+	En este capítulo se presentan 7 trabajos previos con relación a al tema abordado en la investigación y que sirven de base para este.
+	\vskip 0.4cm
+
+	\subsubsection
+	{INTERNACIONALES:}
+		\citep{VicenBueno2007} en su paper "Traffic Sign Classification by Image Preprocessing and Neural Networks", propusieron una investigación que se centra en clasificar 9 tipos de señales de tráfico de circulación(color azul) de España utilizando una combinación de diferentes técnicas de preprocesamiento de imágenes junto con una red perceptron de 2 capas la cual produjo un acierto de 98.72\% sobre un conjunto de 78 imágenes para la evaluación. El orden de aplicación de técnicas de preprocesamiento de imágenes es lo más destacable de este antecedente, recomendando usar el filtro mediano para suavizar la imagen, ecualización de histogramas e histogramas vertical y horizontal con un umbral fijo de 185.
+		\vskip 0.4cm
+
+		\citep{Rocha2010} en su paper "Sistema de Visión Artificial para la Detección y el Reconocimiento de Señales de Tráfico basado en Redes Neuronales", diseñaron un sistema de detección basado en redes neuronales feedfoward y descriptores de forma conocidos como momentos invariantes. Este sistema fue capaz de entrenarse con algunas señales de tránsito con la meta de asistir al conductor de no cometer una infracción o en el peor de los casos un accidente, reconociendo una señal de tránsito a cierta distancia para que así el conductor a priori tenga el conocimiento de esta. El sistema fue implementado en MATLAB y presentó mejorías frente a sistemas basados en lógica difusa o basados únicamente en procesamiento de imágenes, sin embargo la tasa de acierto no es tan buena obteniéndose un 88.6\% y se recomendó buscar otro método de invarianza que conjuntamente a una red neuronal pueda conseguir mejores resultados. Así el antecedente contribuye a descartar algunos métodos que no puedan presentar mejoras en el reconocimiento de señales de tránsito.
+		\vskip 0.4cm
+
+		\citep{Krizhevsky2012} en su investigación """The ImageNet Classification with Deep Convolutional Neural Networks", desarrollaron una red neuronal convolucional grande y profunda para clasificar 1,2 millones de imágenes de alta resolución del concurso ImageNet LSVRC-2010 que categorizaban 1000 clases diferentes de imágenes. Como dato destacable utilizaron un método de regularización muy efectivo para evitar el overfitting de la red denominado dropout, que permitió alcanzar tasas de error mejores que las anteriores técnicas de estado del arte.
+		\vskip 0.4cm	
+
+		\citep{Hannan2014} en la investigación realizada en Malasia "Traffic Sign Classification based on Neural Network for Advance Driver Assistance System", elaboraron un sistema con pasos de preprocesamiento y extracción de características para clasificar señales de tránsito usando una red perceptron multicapa que funcione en diferentes condiciones de luminosidad. Lo destacable de la investigación, a parte de que el sistema fue capaz de superar la mayor parte del efecto de iluminación en las imágenes, es el tiempo computacional requerido para el análisis de una imagen, siendo en promedio 0.134s, sin embargo la tasa de precisión no fue buena obteniendose un 84.4\% de acierto para un conjunto de evaluación compuesta por 300 imágenes. 
+		\vskip 0.4cm	
+
+		\citep{Hai2014} en su artículo "Morphological Classification for Traffic Sign Recognition", propone un nuevo método para el Reconocimiento de Señales de Tránsito usando el Análisis de Componentes Principales (PCA) y una red Perceptron de Multi-Capa (MLP). En este método propuesto, las señales se detectan individualmente a partir de dos componentes, uno es el color y luego se clasifican en tres clases según la forma: círculo, cuadrado y triángulo. Las características basadas en PCA de estas señales se utilizarán como entrada para la MLP durante la fase de entrenamiento o para responder a clases previamente determinadas. Como contribución resaltante, este enfoque no sólo redujo el tiempo sino que también aumentó el rendimiento en el proceso de reconocimiento. En la simulación, el método propuesto fue evaluado con más de 500 imágenes y su tasa de precisión llegó a cerca del 96\%. 
+	\newpage		
+	\subsubsection
+	{NACIONALES:}
+
+		\citep{Vargas2015} en su tésis ”Implementación de un Sistema Inteligente para el Reconocimiento de Señales Preventivas de Seguridad vial", desarrolló un sistema basado enteramente en procesamiento de imágenes para la detección y el reconocimiento de señales de tránsito del tipo preventivas, usando para la detección la técnica de segmentación por color y luego un análisis por la forma y posteriormente para el reconocimiento se usó el algoritmo Speed Up Robust Features (SURF). Todo el proceso fue implementado utilizando la herramienta OpenCV, obteniendose un acierto del 88\% en un total de 100 señales evaluadas. De este antecedente se analizará la importancia de introducir la segmentación por color al modelo de reconocimiento que se pretende elaborar.
+		\vskip 0.4cm
+
+		\citep{Ayuque2016} en su tésis "Diseño de un sistema de clasificación de señales de tránsito vehicular utilizando redes neuronales convolucionales", diseñó 6 modelos de arquitecturas de redes convolucionales para clasificar diversas señales de tránsito de Alemania, de los cuales el mejor resultado logró un acierto de 95.29\% cerca al estado del arte (99.46\% - \citep{Ciresan}), en un total de 12630 señales evaluadas. Lo importante del antecendente es que servirá como elemento de comparación para la investigación propuesta. 
+		
+	\subsubsection
+	{ESTADO DEL ARTE:}
+
+		Para clasificación de señales de tránsito se han realizado diferentes estudios de la base de datos GTSRB (German Traffic Sign Benchmark), que cuenta con más de 50 mil imágenes a color distribuidas en 43 clases.
+
+		\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.7\textwidth]{images/intro/GTSRB}
+		\end{center}
+		\begin{center}
+		\caption{\small{Algunas muestras de la base de datos GTSRB }}
+		{\small{Fuente: \cite{Stallkamp2012}}}
+		\end{center}
+		\vspace{-1.5em}
+		\end{figure}
+		Estos estudios usan diferentes métodos como Clasificación basado en la Representación Dispersa (Sparse Representation-based Classification), el algoritmo de Vecinos Más Cercanos (Nearest Neightbor Classifier), Máquina de Soporte de Vectores (Support Vector Machine), entre otros. El mejor resultado fue usando una red neuronal convolucional \citep{Ciresan}.
+		
+		\vskip 0.4cm
+		Este conjunto de datos refleja las fuertes variaciones en la apariencia visual de las señales debido a la distancia, la iluminación, las condiciones climáticas, las oclusiones parciales y las rotaciones. Las imágenes se complementan con varios conjuntos de características precalculadas para permitir, de ser necesario, la aplicación de algoritmos de aprendizaje automático sin conocimientos básicos en el procesamiento de imágenes.
+		\vskip 0.4cm
+
+		\citep{Ciresan}, utilizó una arquitectura de 9 capas que consistía en una capa de entrada, 3 capas convolucionales usando 100, 150 y 250 filtros cuyos tamaños por cada capa fueron de 42x42, 18x18 y 6x6 neuronas respectivamente, 3 capas pooling con estructuras parecidas a la convolucionales y 1 capa totalmente conectada compuesta por 300 neuronas de entrada para las 43 neuronas de salida que representaban a cada clase.
+		\vskip 0.4cm
+
+		Los resultados sobre la base de datos GTSRB fueron realizados a finales del año 2011 produciendo un acierto del 99.46\% para el conjunto de imágenes evaluadas, \citep{Stallkamp2012}; sin embargo, desde el año 2012 se han propuesto nuevas variantes de redes neuronales convolucionales, ya sea usando una funciones de activación diferentes, usando más capas en la red, mas filtros o introduciendo nuevos métodos de optimización.
+
+
+
+%***********************************************************************************************************
+%***********************************************************************************************************%***********************************************************************************************************
 
 \section{Aprendizaje Profundo} 
 	En los primeros días de la inteligencia artificial, el campo atacó y resolvió rápidamente problemas que son intelectualmente difíciles para los seres humanos pero relativamente sencillos para las computadoras, problemas que pueden describirse mediante una lista de reglas formales y matemáticas. El verdadero desafío para la inteligencia artificial fue y es resolver las tareas que son fáciles de realizar para las personas pero difíciles de describir de manera formal, problemas que resolvemos intuitivamente, que se sienten automáticos, como reconocer palabras, rostros u objetos en las imágenes \citep{Goodfellow-et-al-2016}.
@@ -735,11 +797,172 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 
 
 
+%============================================================================================================%============================================================================================================%============================================================================================================%============================================================================================================
 
 
+\section{Método de la investigación}
+
+\subsection{ Tipo de investigación}
+	De acuerdo al fin que se persigue es una investigación de tipo tecnológica y de acuerdo al diseño es una investigación experimental de tipo cuantitativa donde se analizará el rendimiento del modelo algorítmico.
+
+\subsection{Variables de la Investigación}
+		
+		\subsubsection{Variable Dependiente}
+		\indent Reconocimiento automático de señales de tránsito vehicular
+		\subsubsection {Variable Independiente}
+		\indent Modelo basado en el aprendizaje profundo de redes neuronales convolucionales	
+		
+\subsection{Indicadores}
+		\renewcommand{\baselinestretch}{2}
+		Los indicadores nos permiten realizar mediciones y a su vez determinan la validez de la hipótesis planteada en la presente investigación. El desempeño de la clasificación se puede verificar con los siguinetes cinco indicadores: 
+		\begin{table}[H]
+		\centering
+		\caption{\small{Indicadores para la investigación}}
+		\begin{tabular}{|>{\small}c|>{\small}c|>{\small}c|}
+		\hline
+		{\ul \textbf{Indicador}} & {\ul \textbf{Descripcion}} & {\ul \textbf{Instrumento}} \\ \hline
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Verdaderos Positivos\\ (Efectividad - Sensibilidad)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos}{{Verdaderos\,Positivos}+{Falsos\,Negativos}}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		 &  &  \\ \hline
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Verdaderos Negativos \\ (Especificidad)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Negativos}{{Verdaderos\,Negativos}+{Falsos\,Positivos}}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		 &  &  \\ \hline
+		 \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Valor Predictivo Positivo \\ (Precisión)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos}{{Verdaderos\,Positivos}+{Falsos\,Positivos}}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		 &  &  \\ \hline
+		 \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Curvas PR \\ (Precision - Recall)\end{tabular}} & \multirow{2}{*}{Relación entre Efectividad(Recall) y Precision} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		 &  &  \\ \hline
+		%\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tiempo de\\ Procesamiento\end{tabular}} & \multirow{2}{*}{$S= \frac{\sum_{i=1}^{Total} tiempo_{i}}{Total\,de\,muestras}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Cronometro\\ Computacional\end{tabular}} \\
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Curvas ROC \\ (Receiver Operating Characteristic)\end{tabular}} & \multirow{2}{*}{Relación entre Efectividad y Especificidad} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		 &  &  \\ \hline
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Acuracia \\ (Exactitud)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos+Verdaderos\,Negativos}{Total\,de\,Imagenes}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		 &  &  \\ \hline		 
+		\end{tabular}
+		\vspace{-1.0em}
+		\end{table}
+
+	\newpage
+\subsection{Recolección de Datos para la Construcción del Modelo}
+		%\renewcommand{\baselinestretch}{1.2}
+		\subsubsection{Técnica de Recolección}
+		\begin{enumerate}		
+			\item[]   {Revisión de la literatura(análisis de documentos)}
+		\end{enumerate}
+
+		\subsubsection{Población}
+		\begin{enumerate}		
+			\item[] Existen diversas arquitecturas de redes neuronales convolucionales usadas para propósitos específicos. La idea principal es que al principio la arquitectura de la red neuronal toma como entrada una imagen y su especificación de dimensiones en 3 valores(largo, ancho y profundidad). Capas convolucionales y capas de activación(optimización) se apilan juntas y luego son seguidas por capas de agrupamientos. Esta estructura se usa comúnmente y se repite hasta que la entrada (imagen) se fusiona espacialmente a un tamaño pequeño. Después de eso, se envía a capas completamente conectadas y la salida de la última capa completamente conectada, que está al final de la arquitectura, produce los puntajes de clase de la imagen de entrada.
+		\end{enumerate}
+		
+	
+		\subsubsection{Muestra}
+		\begin{enumerate}		
+		\item[] Para el proceso de diseño e implementación de arquitecturas a elaborar se tomarán en cuenta dos modelos mundialmente conocidos e importantes:
+		\end{enumerate}
+				
+		\begin{enumerate}
+		\item[] {\bf \underline {Arquitectura AlexNet }}\newline
+			Esta arquitectura hizo que las Redes Convolucionales fueran populares en el campo de Visión por Computadora. AlexNet fue desarrollado por \citep{Krizhevsky2012}. La entrada consiste en una imagen de 224x224 pixeles en formato RGB (3 canales). La arquitectura consta de 8 capas, las primeras cinco capas son convolucionales y el resto son capas totalmente conectadas. La primera y segunda capa convolucional son seguidas por capas de normalización de respuesta local, luego estas capas de normalización de respuesta son seguidas por capas de agrupación máxima. La salida de cada capa convolucional y cada capa completamente conectada se activa a través de  una función no linear conocida como RELU. Similar a LenNet-5\citep{LeCun} pero más grande, teniendo aproximadamente 60 millones de parámetros.
+		\end{enumerate}
+
+		\begin{enumerate}
+		\item[] {\bf \underline {Arquitectura Inception}}\newline
+			Es una arquitectura de red neuronal convolucional profunda, creada por un grupo de investigación de Google que fue responsable de establecer el nuevo estado del arte de la técnica para la clasificación y detección en la competencia de reconocimiento visual a gran escala ImageNet 2014(ILSVRC14). 
+			\vskip 0.1cm
+			El principal sello distintivo de esta arquitectura es la utilización mejorada de los recursos informáticos dentro de la red. Esto fue logrado por un cuidadoso que permite aumentar la profundidad y el ancho de la red mientras se manteniene el costo computacional constante. Para optimizar la calidad, las decisiones para elaborar la arquitectura se basaron en el principio Hebbiano y la intuición de procesamiento a escala múltiple. Una encarnación particular utilizada en la competencia ILSVRC14 es llamada GoogLeNet, una red de 22 capas de profundidad, cuya calidad se evalúa en el contexto de reconocimiento y detección, \citep{Inception}.
+		\end{enumerate}
+		%====================================================================================
+		% subsection Recolección de Datos para la Construcción del Modelo (end)
+
+	\subsection{Recolección de Datos para el Entrenamiento y Evaluación del Modelo}
+		
+		\subsubsection{Técnica de Recolección}
+		\begin{enumerate}		
+			\item[]  Revisión de la literatura(análisis de documentos) y captura de imágenes del Perú a través de la aplicación Google Maps
+		\end{enumerate}
+
+		\subsubsection{Población} 
+		\begin{enumerate}
+		\item[]				
+		{\bf *) Área:} Imágenes de Señales de Seguridad Vial.\vskip 0.1cm
+		{\bf *) Categoría:} Tránsito Vehicular Vertical.\vskip 0.1cm
+		{\bf *) Subcategoría:} Señales reguladoras, preventivas e informativas.\vskip 0.1cm
+		\end{enumerate}
+
+		\begin{enumerate}		
+			\item[]  La población es infinita para esta investigación, debido al número infinito de formas distintas en que una señal de tránsito puede ser capturada.Se tomaran en cuenta imágenes donde se muestren señales de tránsito vehicular del tipo vertical en sus 3 subcategorias.
+		\end{enumerate}
+
+		\subsubsection{Muestra} 
+		\begin{enumerate}		
+			\item[]	Existe una colección(dataset) que se ajusta a las características de nuestra población y será usada para conseguir el objetivo de la investigación, principalmente porque cuenta con abundantes imágenes lo que conforma una muestra representativa y necesaria para hacer generalizaciones. 
+		\end{enumerate}
+
+		\begin{enumerate}
+			\item[]  {\bf \underline {Señales de Tránsito de Alemania}}\newline
+			Conjunto de datos creados a partir de aproximadamente 10 horas de video grabados durante el día mientras se conducía en diferentes tipos de carreteras en Alemania. De las secuencias del video fueron extraídas imágenes de señales de tránsito en formato RGB cuyas dimensiones varían entre 15x15 y 250x250 pixeles. En esta colección se obtuvieron un total de 39209 imágenes distribuidas en 43 clases.  \citep{Stallkamp-IJCNN-2011} 
+		\end{enumerate}
+
+		%\item[B)] {\bf Señales de Tránsito de Bélgica} \citep{Timofte-MVA-2011} \newline
+		%	Conjunto de datos creados con a la captura simultánea de imágenes durante el día realizada por 8 cámaras mientras se conducía aproximadamente a 35Km/h, con el objetivo de obtener una localización 3D y un refinamiento simultáneo. Las señales de tránsito fueron capturados a una distancia de menos de 50 metros y almacenadas en formato PPM cuyas dimensiones varían entre 25x30 y 260x250 pixeles. En esta colección se obtuvieron un total de 7125 imágenes distribuidas en 62 clases.
+		
+		
+		\begin{enumerate}
+			\item[]  {\bf \underline {Señales de Tránsito de Perú}}\newline
+			Conjunto de aproximadamente 614 imágenes originalmente tomadas de la aplicación Google Maps agrupadas en 7 categorías. Dado que la población de imágenes es infinita, se optó por usar un muestreo aleatorio simple para poblaciones desconocidas con un nivel de confianza del 95\% y un error de muestreo del 4\%.
+		
+			\vskip 0.4cm
+			\begingroup\makeatletter\def\f@size{17.8}\check@mathfonts
+			\begin{center}
+				${\bf n} ={\bf \frac{z^2pq}{e^2}}$
+			\end{center}
+			\endgroup
+		
+			En el que:\vskip 0.1cm
+			\begin{itemize}
+				\item $n$ = tamaño de muestra
+				\item $z$ = Coeficiente de confiabilidad 95\% al que corresponde (1.96)
+				\item $pq$ = Varianza de la población, ponemos la varianza mayor posible porque a mayor varianza hará falta una muestra mayor(0.25)
+				\item $e$ = Error muestral(0.04)
+			\end{itemize}
+		\end{enumerate}
+		%====================================================================================
+		% subsection Recolección de Datos para el Entrenamiento y Evaluación del Modelo (end)
+
+\subsection{Etapas de la investigación} 
+	El desarrollo de la investigación comprenderá las siguientes etapas de trabajo a saber:
+
+		\begin{enumerate}
+
+		\item[a)]	Investigación bibliográfica de los diferentes temas necesarios para la elaboración de la investigación, tales como dispositivos de control de tránsito, vehículos autónomos, sistemas avanzados de asistencia al conductor, aprendizaje profundo (deep learning), procesamiento de imágenes, entre otros.
+		
+		\item[b)]	Búsqueda de los principales casos de éxito en el reconocimiento de señales de tránsito a tráves de trabajos de investigación en el Perú como tambíen en otros países.
+
+		\item[c)]	Recolección de imágenes de señales de tránsito vehicular que se utilizarán en el desarrollo de la investigación.
+
+		\item[d)]	Análisis e implementación de diversas técnicas de procesamiento de imágenes que serán aplicadas al dataset recolectado con la finalidad de contribuir en el diseño inicial del modelo modelo convolucional.
+
+		\item[e)]	Puesto a que las redes neuronales son heurísticas por naturaleza (requieren un constante ajuste de híper-parámetros para obtener un óptimo resultado), se realizarán diferentes diseños de arquitecturas de modelos convolucionales y se escogerá el modelo que otorge los mejores resultados.
+		
+		\item[f)]	Para el análisis de resultados, además de los indicadores conocidos com tasa de sensibilidad, especificidad, precisión, se pretende usar una Matriz de confusión. A través de esta matriz se pueden conocer valores estadísticos del espacio ROC(Receiver Operating Characteristic), métrica usada para evaluar la calidad del modelo reconocedor.
+		
+		\end{enumerate}
+
+		\subsubsection{Metodología para el diseño del Modelo}
+
+			Se utilizará la metodología propuesta por Tammy Noergard (T. Noergaard, 2005) , la cual toma mucha de las claves de las metodologías conocidas como Rational Unified Process (RUP), Attribute Driven Desing (ADD), Object Oriented Process (OOP) y el Model Driven Architecture (MDA), pero las simplifica. La siguiente figura muestra las diferentes fases de la metodología.
+			
+			\begin{figure}[H]
+			\begin{center}
+			\includegraphics[width=0.9\textwidth]{images/intro/disenho}
+			\end{center}
+			\begin{center}
+			\vskip 0.6cm	
+			\caption{\small{Diseño del Modelo del Ciclo de Vida del Desarrollo}}
+			{\small{Fuente: Elaboración propia}}
+			\end{center}
+			\vspace{-1.5em}
+			\end{figure}
 
 
-
+% subsection Etapas de la investigación (end)
 
 
 
