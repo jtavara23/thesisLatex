@@ -368,7 +368,7 @@
 			\end{figure}
 		\newpage
 		\subsubsection{Rotation(Rotación)}
-			\vspace{-1.5em}
+			%\vspace{-1.5em}
 			Aplica la rotación aleatoria en un rango de grados definido(hasta 30º) a un subconjunto aleatorio de imágenes.
 	        El rango en sí está sujeto a escala dependiendo de la intensidad de aumento.
 
@@ -384,9 +384,9 @@
 			\end{figure}
 			%\vspace{-2.5em}
 	    
-
+		\newpage
 	    \subsubsection{Zoom}
-	    	\vspace{-1.5em}
+	    	%\vspace{-1.5em}
 	    	Acerca(zoom in) o aleja(zoom out) la imagen  tratando de preservar el fondo.
 
 	    	%\begin{figure}[H]
@@ -407,7 +407,7 @@
 				\vspace{-1.5em}
 			\end{figure}
 
-
+		\vspace{1.5em}
 		\subsubsection{Equalizacion del histograma}
 			Aumenta el contraste global de muchas imágenes, especialmente cuando los datos utilizables de la imagen están representados por valores de contraste cercanos. Esto permite que áreas de menor contraste local puedan obtener un mayor contraste. La ecualización del histograma logra esto al distribuir eficazmente los valores de intensidad más frecuentes.
 
@@ -567,7 +567,7 @@
 
 		Recordemos que en cada época se procesa el dataset completo de imágenes, por lo que cada época es igual : \begingroup\makeatletter\def\f@size{11}\check@mathfonts	$Epoca = Mini batch \times iteraciones$ \endgroup
 
-		Sin embargo debido a que se tiene dos distintos datasets para el entrenamiento \textbf{(Seccion 4.1.4 - Dataset final para el Entrenamiento)}, el tamaño del Minibatch cambiará respecto al tamaño del dataset y por ende también será diferente la cantidad de iteraciones ejecutadas durante 100 épocas de entrenamiento.                        
+		Sin embargo debido a que se tiene dos distintos datasets para el entrenamiento \textbf{(Seccion 3.1.4 - Dataset final para el Entrenamiento)}, el tamaño del Minibatch cambiará respecto al tamaño del dataset y por ende también será diferente la cantidad de iteraciones ejecutadas durante 100 épocas de entrenamiento.                        
 		
 		%\begin{center}\end{center}
 
@@ -598,7 +598,6 @@
 			\end{center}
 		\end{table}
 
-	En esta investigación se implementó el modelo de redes neuronales convolucionales(CNN) donde las capas convolucionales iniciales de la red extraen características de la imagen(feature extractor), mientras que las capas totalmente conectadas predicen las probabilidades de salida(classifier).
 
 		\begin{figure}[H]
 		%\begin{center}
@@ -611,6 +610,8 @@
 		\end{center}
 		\vspace{-1.5em}
 		\end{figure}
+
+	En esta investigación se implementó el modelo de redes neuronales convolucionales(CNN) donde las capas convolucionales iniciales de la red extraen características de la imagen(feature extractor), mientras que las capas totalmente conectadas predicen las probabilidades de salida(classifier).
 
 	La arquitectura de la red está inspirada en el arquitectura Inception \citep{Inception} y en la arquitectura AlexNet\citep{Krizhevsky2012} para la clasificación de imágenes. En la arquitectura Inception, el modelo creado es denominado GoogLeNet, similar a AlexNet donde varios módulos iniciales son apilados uno sobre el otro para producir el resultado final. En el módulo de inicio, en ese tipo de red se usaron diversos tamaños de filtros convolucionales para capturar características de diferente abstracción. El alto nivel de abstracción se captura con filtros de mayor tamaño y el de un nivel inferior con filtros de menor tamaño. Procesando información visual a diferentes escalas y al concatenarlas se obtiene un nivel eficiente de abstracción. 
 	%%%	Dado que aplicar directamente más filtros convolucionales con datos de imagen y concatenarlos es computacionalmente costoso, en el modelo Inception finalmente se usaron filtros de reducción de dimensionalidad(pooling/acumulación). Además de ser muy exitoso para la reducción de dimensionalidad, estos filtros también llegan a ser útiles como activación lineal rectificada. La arquitectura de inicio es eficiente en términos de complejidad computacional con respecto al número de unidades en cada etapa. \citep{Mrinal2016}.las características abstractas locales desempeñan un papel importante. Las señales que pertenecen al mismo grupo tienen una ligera diferencia en la estructura local entre sí, lo que dificulta su distinción. Por lo que se optó por agregar un kernel de reducción convolucional de 3 × 3 extra con acumulación máxima en la parte superior para capturar la estructura local discriminativa al comienzo mismo. Los signos pertenecientes a diferentes grupos tienen una abstracción global que se puede capturar utilizando un núcleo de reducción convolucional de 5 × 5.
@@ -637,7 +638,7 @@
 	Para el proceso de entrenamiento fueron tomados en cuenta 5 diferentes diseños. Estos fueron ejectudados durante el entrenamiento del dataset que contiene señales de tránsito de Alemania y Perú.
 
 	Estos 5 modelos son descritos a continuación.
-		\vspace{-1.5em}
+		\newpage
 		\subsubsection{Diseño A} 
 			Diseño compuesto de 2 capas convolucionales y 2 capas totalmente conectadas.
 			% Please add the following required packages to your document preamble:
@@ -684,6 +685,7 @@
 
 			\end{itemize}
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
+		\vskip 2cm
 		\subsubsection{Diseño B}
 		Diseño compuesto de 3 capas convolucionales y 2 capas totalmente conectadas.
 			\begin{itemize}
@@ -706,7 +708,7 @@
 				\end{center}
 				\end{table}
 			\vspace{2em}
-			\vskip 2cm
+			%\vskip 2cm
 			\item \underline{Dataset del Perú}
 				\begin{table}[H]
 				\begin{center}
@@ -848,6 +850,8 @@
 				\end{center}
 				\end{table}
 
+			\vspace{-1.5em}
+			
 			\item \underline{Dataset del Perú}
 
 				\begin{table}[H]
