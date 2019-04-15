@@ -268,20 +268,27 @@
 
 
 		Son utilizadas las siguientes técnicas:
-		
+		\begin{enumerate}
+		\item[1)] Flipping (Horizontal/Vertical)
+		\item[2)] Proyección
+		\item[3)] Rotación
+		\item[4)] Zoom (Out/In)
+		\item[5)] Equialización de Histrogama
+		\vskip 3cm
+		\end{enumerate} 
 		
 		\subsubsection{Flipping}
 		
 			Primero, vamos a aplicar un par de trucos para extender nuestros datos volteando. Algunas señales de tráfico son invariantes para voltear horizontal y / o verticalmente, lo que básicamente significa que podemos voltear una imagen y todavía debe clasificarse como perteneciente a la misma clase.
 
 			Esta técnica solo fue utilizada para el dataset de señales de Tránsito de Alemania.
-			\newpage
+			%\newpage
 			\begin{multicols}{2}
-				
 				\underline{Flipping horizontal:}
+				\vspace{-0.5cm}
 				\begin{figure}[H]
 					\begin{center}
-					\includegraphics[height=14.5cm ]{images/desarrollo/Augment/flippedHorizontally}
+					\includegraphics[height=10cm ]{images/desarrollo/Augment/flippedHorizontally}
 					\end{center}
 					\begin{center}
 					\caption{\small{Imágenes volteadas horizontalmente}}
@@ -295,7 +302,7 @@
 				\underline{Flipping Vertical:}
 				\begin{figure}[H]
 					\begin{center}
-					\includegraphics[height=13cm]{images/desarrollo/Augment/flippableVertically}
+					\includegraphics[height=10cm]{images/desarrollo/Augment/flippableVertically}
 					\end{center}
 					\begin{center}
 					\caption{\small{Imágenes volteadas verticalmente}}
@@ -307,12 +314,14 @@
 
 			\end{multicols}
 
-			\newpage
+			%\newpage
 			\underline{Flipping Horizontal y Vertical:}
 			\begin{figure}[H]
-				%\begin{center}
-				\includegraphics[width=0.9\textwidth]{images/desarrollo/Augment/flippable_both}
-				%\end{center}
+				\begin{center}
+				\includegraphics[width=0.6\textwidth, height=0.3\textheight]{images/desarrollo/Augment/flippable_both}
+				%\includegraphics[height=4cm]{images/desarrollo/Augment/flippable_both}
+				\end{center}
+				\vspace{-1.em}
 				\begin{center}
 				\caption{\small{Imágenes volteadas primero horizontal y luego verticalmente}}
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
@@ -356,12 +365,12 @@
 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth,height=9cm]{images/desarrollo/Augment/projection_transform2}
+				\includegraphics[width=1\textwidth,height=9cm]{images/desarrollo/Augment/projection_transform3}
 				\includegraphics[width=1\textwidth,height=9cm]{images/desarrollo/Augment/projection_transform}
 				\end{center}
 				\begin{center}
 				\vspace{1em}
-				\caption{\small{Ejemplo de cinco proyecciones por cada imagen - Dataset Alemania}}	
+				\caption{\small{Ejemplo de cinco proyecciones por imagen - Dataset Perú y Alemania}}	
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -374,10 +383,11 @@
 
 	        \begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth,height=9cm]{images/desarrollo/Augment/fixedrotation}
+				\includegraphics[width=1\textwidth,height=6cm]{images/desarrollo/Augment/fixedrotation3}
+				\includegraphics[width=1\textwidth,height=9cm]{images/desarrollo/Augment/fixedrotation2}
 				\end{center}
 				\begin{center}
-				\caption{\small{Ejemplo de cinco rotaciones por cada imagen - Dataset Alemania}}
+				\caption{\small{Ejemplo de cinco rotaciones por imagen - Dataset Alemania y Perú}}
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -397,11 +407,12 @@
 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth,height=8cm]{images/desarrollo/Augment/zoom_inv}
+				\includegraphics[width=1\textwidth,height=7.5cm]{images/desarrollo/Augment/zoom_inv}
+				\includegraphics[width=1\textwidth,height=7.5cm]{images/desarrollo/Augment/zoom_inv2}
 				\end{center}
 				\begin{center}
 				\vspace{0.5em}
-				\caption{\small{Ejemplo de cinco aplicaciones de zoom(in/out) por cada imagen - Dataset Alemania}}
+				\caption{\small{Ejemplo de cinco aplicaciones de zoom(in/out) por cada imagen - Dataset Alemania y Perú}}
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -413,7 +424,7 @@
 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[height=9.5cm]{images/desarrollo/Augment/equalize_hist2_wo_Norm_woRepetition}
+				\includegraphics[height=11.5cm]{images/desarrollo/Augment/equalize_hist2_wo_Norm_woRepetition2}
 				\end{center}
 				\begin{center}
 				\caption{\small{Distribución eficaz de los valores de intensidad más frecuentes}}
@@ -505,7 +516,8 @@
 			\begin{figure}[H]
 			%\begin{center}
 			\includegraphics[width=1\textwidth]{images/desarrollo/Normalization_Processing/norm_test1}
-			\includegraphics[width=1\textwidth]{images/desarrollo/Normalization_Processing/norm_test2}
+			\includegraphics[width=1\textwidth]{images/desarrollo/Normalization_Processing/norm_test3}
+			\includegraphics[width=1\textwidth]{images/desarrollo/Normalization_Processing/norm_test4}
 			%\end{center}
 			\begin{center}
 			\caption{\small{Imágenes a las cuales se le aplicaron la técnica CLAHE }}
@@ -524,7 +536,8 @@
 			\begin{figure}[H]
 			\begin{center}
 			\includegraphics[width=0.7\textwidth]{images/desarrollo/Normalization_Processing/proc_test1}
-			\includegraphics[width=0.7\textwidth]{images/desarrollo/Normalization_Processing/proc_test2}
+			\includegraphics[width=0.7\textwidth]{images/desarrollo/Normalization_Processing/proc_test3}
+			\includegraphics[width=0.7\textwidth]{images/desarrollo/Normalization_Processing/proc_test4}
 			\end{center}
 			\begin{center}
 			\caption{\small{Imágenes procesadas en escala de grises}}
@@ -633,6 +646,20 @@
 		\end{center}
 		\vspace{-1.5em}
 		\end{figure}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	Para el proceso de entrenamiento fueron tomados en cuenta 5 diferentes diseños. Estos fueron ejectudados durante el entrenamiento del dataset que contiene señales de tránsito de Alemania y Perú.

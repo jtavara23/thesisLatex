@@ -64,11 +64,11 @@
 \contentsline {subsubsection}{\numberline {3.1.2.1}Se\IeC {\~n}ales de Tr\IeC {\'a}nsito de Alemania}{86}
 \contentsline {subsubsection}{\numberline {3.1.2.2}Se\IeC {\~n}ales de Tr\IeC {\'a}nsito de Per\IeC {\'u}}{87}
 \contentsline {subsection}{\numberline {3.1.3}Proceso de Aumento de Datos(Data Augmentation)}{88}
-\contentsline {subsubsection}{\numberline {3.1.3.1}Flipping}{89}
+\contentsline {subsubsection}{\numberline {3.1.3.1}Flipping}{90}
 \contentsline {subsubsection}{\numberline {3.1.3.2}Projection(Proyecci\IeC {\'o}n)}{93}
 \contentsline {subsubsection}{\numberline {3.1.3.3}Rotation(Rotaci\IeC {\'o}n)}{95}
 \contentsline {subsubsection}{\numberline {3.1.3.4}Zoom}{96}
-\contentsline {subsubsection}{\numberline {3.1.3.5}Equalizacion del histograma}{96}
+\contentsline {subsubsection}{\numberline {3.1.3.5}Equalizacion del histograma}{97}
 \contentsline {subsection}{\numberline {3.1.4}Dataset final para el Entrenamiento}{98}
 \contentsline {subsubsection}{\numberline {3.1.4.1}Se\IeC {\~n}ales de Tr\IeC {\'a}nsito de Alemania - Dataset Balanceado }{98}
 \contentsline {subsubsection}{\numberline {3.1.4.2}Se\IeC {\~n}ales de Tr\IeC {\'a}nsito de Per\IeC {\'u} - Dataset No Balanceado}{99}
