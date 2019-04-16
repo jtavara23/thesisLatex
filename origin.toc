@@ -56,15 +56,15 @@
 \contentsline {subsection}{\numberline {2.5.6}Etapas de la investigaci\IeC {\'o}n}{79}
 \contentsline {subsubsection}{\numberline {2.5.6.1}Metodolog\IeC {\'\i }a para el dise\IeC {\~n}o del Modelo}{80}
 \contentsline {chapter}{\numberline {3}Desarrollo de la Investigaci\IeC {\'o}n}{82}
-\contentsline {section}{\numberline {3.1}An\IeC {\'a}lisis del conjunto de Im\IeC {\'a}genes}{82}
-\contentsline {subsection}{\numberline {3.1.1}Datos Iniciales para el entrenamiento}{82}
-\contentsline {subsubsection}{\numberline {3.1.1.1}Se\IeC {\~n}ales de Tr\IeC {\'a}nsito de Alemania}{83}
-\contentsline {subsubsection}{\numberline {3.1.1.2}Se\IeC {\~n}ales de Tr\IeC {\'a}nsito de Per\IeC {\'u}}{84}
-\contentsline {subsection}{\numberline {3.1.2}Datos para el evaluaci\IeC {\'o}n}{86}
-\contentsline {subsubsection}{\numberline {3.1.2.1}Se\IeC {\~n}ales de Tr\IeC {\'a}nsito de Alemania}{86}
-\contentsline {subsubsection}{\numberline {3.1.2.2}Se\IeC {\~n}ales de Tr\IeC {\'a}nsito de Per\IeC {\'u}}{87}
-\contentsline {subsection}{\numberline {3.1.3}Proceso de Aumento de Datos(Data Augmentation)}{88}
-\contentsline {subsubsection}{\numberline {3.1.3.1}Flipping}{90}
+\contentsline {section}{\numberline {3.1}An\IeC {\'a}lisis del conjunto de Im\IeC {\'a}genes}{84}
+\contentsline {subsection}{\numberline {3.1.1}Datos Iniciales para el entrenamiento}{84}
+\contentsline {subsubsection}{\numberline {3.1.1.1}Se\IeC {\~n}ales de Tr\IeC {\'a}nsito de Alemania}{84}
+\contentsline {subsubsection}{\numberline {3.1.1.2}Se\IeC {\~n}ales de Tr\IeC {\'a}nsito de Per\IeC {\'u}}{86}
+\contentsline {subsection}{\numberline {3.1.2}Datos para el evaluaci\IeC {\'o}n}{88}
+\contentsline {subsubsection}{\numberline {3.1.2.1}Se\IeC {\~n}ales de Tr\IeC {\'a}nsito de Alemania}{88}
+\contentsline {subsubsection}{\numberline {3.1.2.2}Se\IeC {\~n}ales de Tr\IeC {\'a}nsito de Per\IeC {\'u}}{89}
+\contentsline {subsection}{\numberline {3.1.3}Proceso de Aumento de Datos(Data Augmentation)}{89}
+\contentsline {subsubsection}{\numberline {3.1.3.1}Flipping}{91}
 \contentsline {subsubsection}{\numberline {3.1.3.2}Projection(Proyecci\IeC {\'o}n)}{93}
 \contentsline {subsubsection}{\numberline {3.1.3.3}Rotation(Rotaci\IeC {\'o}n)}{95}
 \contentsline {subsubsection}{\numberline {3.1.3.4}Zoom}{96}
@@ -104,7 +104,8 @@
 \contentsline {subsection}{\numberline {4.2.2}Matriz de Confusi\IeC {\'o}n}{134}
 \contentsline {subsection}{\numberline {4.2.3}Curvas ROC - AUC}{135}
 \contentsline {subsection}{\numberline {4.2.4}Curvas PR - AUC}{135}
-\contentsline {section}{\numberline {4.3}Interfaz de Aplicaci\IeC {\'o}n}{136}
+\contentsline {section}{\numberline {4.3}Reconocimiento de Se\IeC {\~n}al}{136}
+\contentsline {subsection}{\numberline {4.3.1}Interfaz de Aplicaci\IeC {\'o}n}{137}
 \contentsline {chapter}{\numberline {5}Consideraciones finales}{138}
 \contentsline {section}{\numberline {5.1}Conclusiones}{138}
 \contentsline {section}{\numberline {5.2}Trabajos futuros}{139}

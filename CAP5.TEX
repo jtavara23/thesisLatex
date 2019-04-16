@@ -4,6 +4,22 @@
 \setcounter{page}{82}
 \renewcommand{\baselinestretch}{1.2} %doble espacio paratodo el texto
 
+En la siguiente imagen se detallan los procesos más importantes que fueron realizados durante el desarrollo de la investigación:
+
+\begin{figure}[H]
+	\begin{center}
+	\includegraphics[width=1\textwidth,height=17cm]{images/summaryflowchart}
+	\end{center}
+	\vspace{1.5em}
+	\begin{center}
+	\caption{\small{Diagrama de flujo para el desarrollo de la Investigación}}
+	\vskip -0.25cm
+	{\small{Fuente: Elaboración propia}}
+	\end{center}
+	
+\end{figure}
+
+
 \section{Análisis del conjunto de Imágenes}
 	
 	En esta etapa de la investigación se busca encontrar imágenes de señales de tránsito, las cuales conforman la principal fuente de los modelos que se pretenden crear. Estas será usadas durante el entrenamiento, validación y evaluación del modelo pretendido.
@@ -82,17 +98,6 @@
 				\vspace{-1.5em}
 			\end{figure}
 			
-			\begin{figure}[H]
-				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/imagenes/alemania/1__(32).png}
-				\end{center}
-				\begin{center}
-				\caption{\small{Wild animals crossing}}
-				\vskip -0.25cm
-				{\small{Fuente: Elaboración propia}}
-				\end{center}
-				\vspace{-1.5em}
-			\end{figure}
 
 			\begin{figure}[H]
 				\begin{center}
@@ -106,7 +111,7 @@
 				\vspace{-1.5em}
 			\end{figure}
 
-
+			\vskip 0.75cm
 			\begin{figure}[H]
 				\begin{center}
 				\includegraphics[width=1\textwidth, height=1.2\textheight,keepaspectratio]{images/desarrollo/histograms/initial39209}
@@ -318,7 +323,7 @@
 			\underline{Flipping Horizontal y Vertical:}
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=0.6\textwidth, height=0.3\textheight]{images/desarrollo/Augment/flippable_both}
+				\includegraphics[width=0.5\textwidth, height=0.25\textheight]{images/desarrollo/Augment/flippable_both}
 				%\includegraphics[height=4cm]{images/desarrollo/Augment/flippable_both}
 				\end{center}
 				\vspace{-1.em}
@@ -332,13 +337,13 @@
 			Incluso, hay signos que luego de voltearse, deben clasificarse como un signo de alguna otra clase. Esto sigue siendo útil, ya que podemos utilizar los datos de estas clases para ampliar sus contrapartes.
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[height=10.5cm ]{images/desarrollo/Augment/cross_flippable}
+				\includegraphics[width=5cm ,height=8.5cm ]{images/desarrollo/Augment/cross_flippable}
 				\end{center}
 				\begin{center}
 				\caption{\small{Imágenes que volteadas horizontal o verticalmente, cambian su categoría}}		
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
-				\vspace{1.5em}
+				\vspace{-1.5em}
 			\end{figure}
 
 
@@ -358,22 +363,19 @@
 		Las siguientes técnicas fueron utilizadas para ambos datasets de imágenes (Alemania y Perú).
 		
 		\subsubsection{Projection(Proyección)}
-			Implica mover la imagen a lo largo de la dirección X o Y (o ambas). Este método de aumento es muy útil ya que la mayoría de los objetos se pueden ubicar en casi cualquier lugar de la imagen. Esto obliga a la red neuronal convolucional a buscar en todas partes.
-			Los márgenes de proyección se asignan al azar en un rango que depende del tamaño de la imagen. La transformación de proyección parece también ocuparse de escalar al azar a medida que colocamos al azar las esquinas de la imagen en un rango [-delta, +delta].
-
-
+			Implica mover la imagen a lo largo de la dirección X o Y (o ambas). Este método de aumento es muy útil ya que la mayoría de los objetos se pueden ubicar en casi cualquier lugar de la imagen, obligando a la red neuronal convolucional a buscar en todas partes. Los márgenes de proyección se asignan al azar en un rango que depende del tamaño de la imagen. La transformación de proyección parece también ocuparse de escalar al azar a medida que colocamos al azar las esquinas de la imagen en un rango [-delta, +delta].
 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth,height=9cm]{images/desarrollo/Augment/projection_transform3}
-				\includegraphics[width=1\textwidth,height=9cm]{images/desarrollo/Augment/projection_transform}
+				\includegraphics[width=1\textwidth,height=7.8cm]{images/desarrollo/Augment/projection_transform3}
+				\includegraphics[width=1\textwidth,height=7.8cm]{images/desarrollo/Augment/projection_transform}
 				\end{center}
 				\begin{center}
 				\vspace{1em}
 				\caption{\small{Ejemplo de cinco proyecciones por imagen - Dataset Perú y Alemania}}	
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
-				\vspace{-1.5em}
+				%\vspace{-1.5em}
 			\end{figure}
 		\newpage
 		\subsubsection{Rotation(Rotación)}
@@ -529,7 +531,7 @@
 		
 		Por otra parte, para convertir un color de un espacio de color basado en un modelo de color RGB típico de gamma comprimido (no lineal) a una representación en escala de grises de su luminancia, primero se debe eliminar la función de compresión gamma mediante la expansión gamma (linealización) para transformar la imagen en un RGB lineal espacio de color, de modo que la suma ponderada apropiada se puede aplicar a los componentes de color lineales ($R_{linear} , G_{linear} , B_{linear}$) para calcular la luminancia lineal $Y_{linear}$.
 
-		Para imágenes en espacios de color como Y'UV y sus derivados, que se usan en sistemas de TV y video a color estándar como PAL, SECAM y NTSC, un componente de luma no lineal ($Y'$) se calcula directamente a partir de intensidades primarias comprimidas con gamma como una suma ponderada, que aunque no es una representación perfecta de la luminancia colorimétrica, puede calcularse más rápidamente sin la expansión gamma y sin la compresión utilizadas en los cálculos fotométricos o colorimétricos,\citep{POYNTON2003257}. En los modelos utilizados por PAL y NTSC para conseguir tener las imágenes en escala de grises, el componente rec601 luma ($Y'$) se calcula como: \begingroup\makeatletter\def\f@size{14.8}\check@mathfonts	$Y' = 0.299R' + 0.587G' +0.114B'$ \endgroup
+		Para imágenes en espacios de color como Y'UV y sus derivados, que se usan en sistemas de TV y video a color estándar como PAL, SECAM y NTSC, un componente de luma no lineal ($Y'$) se calcula directamente a partir de intensidades primarias comprimidas con gamma como una suma ponderada, que aunque no es una representación perfecta de la luminancia colorimétrica, puede calcularse más rápidamente sin la expansión gamma y sin la compresión utilizadas en los cálculos fotométricos o colorimétricos,\citep{POYNTON2003257}. En los modelos utilizados por PAL y NTSC para conseguir tener las imágenes en escala de grises, el componente de luma no lineal ($Y'$) se calcula como: \begingroup\makeatletter\def\f@size{14.8}\check@mathfonts	$Y' = 0.299R' + 0.587G' +0.114B'$ \endgroup \citep{CookJ}
 
 		Pierre Sermanet y Yann LeCun mencionaron en su artículo \citep{LeCun}, que el uso de canales de color no pareció mejorar mucho las cosas. Además, debido a diversas condiciones o problemas de iluminación, no es adecuado procesar directamente las imágenes que se capturan a través de la cámara o sensores de imágenes, es por ello que en esta investigación {\bf se usará un solo canal} en el modelo, es decir las imágenes estarán en escala de grises en lugar de tener 3 canales de colores.
 		
@@ -633,7 +635,7 @@
 	
 	\subsection{Diseño de la Red}
 	
-	Teniendo en cuenta lo descrito en la {\bf seccion 2.2 (Figura 2.5)}, para describir las capas convolucionales se utilizará la terminología compleja(cada capa tiene múltiples etapas).
+	Teniendo en cuenta lo descrito en la {\bf seccion 2.2 (Figura 2.6)}, para describir las capas convolucionales se utilizará la terminología compleja(cada capa tiene múltiples etapas).
 	
 		\begin{figure}[H]
 		%\begin{center}
@@ -641,26 +643,10 @@
 		%\end{center}
 		\begin{center}
 		\caption{\small{Modelo del diseño de la Red propuesta}}
-		
 		{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 		\end{center}
 		\vspace{-1.5em}
 		\end{figure}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	Para el proceso de entrenamiento fueron tomados en cuenta 5 diferentes diseños. Estos fueron ejectudados durante el entrenamiento del dataset que contiene señales de tránsito de Alemania y Perú.
 
@@ -909,6 +895,7 @@
 \section{Entrenamiento y Validación }
 
 	Para estimar el error de clasificación, como fue mencionado en la \textbf{Seccion 2.3.4 (Validación Cruzada)} se utilizó el méto do de validación cruzada. En la estimación del error se usa el conjunto de muestras disponible, el cual se divide en el conjunto de entrenamiento y el de validación. El clasificador se diseña usando las muestras de entrenamiento y luego se evalúa obteniendo el error de clasificación para las muestras de validación. Con base en el error obtenidose puede predecir el desempeño del clasificador ante nuevas muestras. Para obtener una medida confiable del desempeño, el conjunto de muestras es lo suficientemente grande y, los conjuntos de entrenamiento y de validación son independientes.
+
 
 	\subsection{Señales de Tránsito de Alemania}
 
