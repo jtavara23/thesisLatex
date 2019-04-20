@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  15 APR 2019 22:04
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  19 APR 2019 20:34
 entering extended mode
 **"D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
 ("D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
@@ -28,6 +28,20 @@ Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 Package: vmargin 2004/07/15 V2.5 set document margins (VK)
 \PaperWidth=\dimen103
 \PaperHeight=\dimen104
+)
+("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\fancyhdr\fancyhd
+r.sty"
+Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
+s
+\f@nch@headwidth=\skip43
+\f@nch@O@elh=\skip44
+\f@nch@O@erh=\skip45
+\f@nch@O@olh=\skip46
+\f@nch@O@orh=\skip47
+\f@nch@O@elf=\skip48
+\f@nch@O@erf=\skip49
+\f@nch@O@olf=\skip50
+\f@nch@O@orf=\skip51
 )
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\graphics\graphic
 x.sty"
@@ -59,6 +73,141 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen105
 \Gin@req@width=\dimen106
 )
+("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.
+sty"
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip52
+
+For additional information on amsmath, use the `?' option.
+
+("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.
+sty"
+Package: amstext 2000/06/29 v2.01 AMS text
+
+("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.s
+ty"
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks15
+\ex@=\dimen107
+))
+("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.s
+ty"
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen108
+)
+("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.s
+ty"
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count89
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count90
+\leftroot@=\count91
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count92
+\DOTSCASE@=\count93
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box26
+\strutbox@=\box27
+\big@size=\dimen109
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count94
+\c@MaxMatrixCols=\count95
+\dotsspace@=\muskip10
+\c@parentequation=\count96
+\dspbrk@lvl=\count97
+\tag@help=\toks16
+\row@=\count98
+\column@=\count99
+\maxfields@=\count100
+\andhelp@=\toks17
+\eqnshift@=\dimen110
+\alignsep@=\dimen111
+\tagshift@=\dimen112
+\tagwidth@=\dimen113
+\totwidth@=\dimen114
+\lineht@=\dimen115
+\@envbody=\toks18
+\multlinegap=\skip53
+\multlinetaggap=\skip54
+\mathdisplay@stack=\toks19
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb
+.sty"
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfont
+s.sty"
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+))
+("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\algorithm2e\algo
+rithm2e.sty"
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count101
+
+("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\ifthen.sty"
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+)
+\algocf@hangindent=\skip55
+
+("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ifoddpage\ifoddp
+age.sty"
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count102
+)
+("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\xspace.sty
+"
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\relsize\relsize.
+sty"
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip56
+\skiplinenumber=\skip57
+\skiprule=\skip58
+\skiphlne=\skip59
+\skiptext=\skip60
+\skiplength=\skip61
+\algomargin=\skip62
+\skipalgocfslide=\skip63
+\algowidth=\dimen116
+\inoutsize=\dimen117
+\inoutindent=\dimen118
+\interspacetitleruled=\dimen119
+\interspacealgoruled=\dimen120
+\interspacetitleboxruled=\dimen121
+\algocf@ruledwidth=\skip64
+\algocf@inoutbox=\box28
+\algocf@inputbox=\box29
+\AlCapSkip=\skip65
+\AlCapHSkip=\skip66
+\algoskipindent=\skip67
+\algocf@nlbox=\box30
+\algocf@hangingbox=\box31
+\algocf@untilbox=\box32
+\algocf@skipuntil=\skip68
+\algocf@capbox=\box33
+\algocf@lcaptionbox=\skip69
+\algoheightruledefault=\skip70
+\algoheightrule=\skip71
+\algotitleheightruledefault=\skip72
+\algotitleheightrule=\skip73
+\c@algocfline=\count103
+\c@algocfproc=\count104
+\c@algocf=\count105
+\algocf@algoframe=\box34
+\algocf@algobox=\box35
+)
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.st
 y"
 Package: babel 2018/09/26 3.24 The Babel package
@@ -83,95 +232,19 @@ Language: spanish.ldf 2016/03/03 v5.0p Spanish support from the babel system
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\babel.de
 f"
 File: babel.def 2018/09/26 3.24 Babel common definitions
-\babel@savecnt=\count89
-\U@D=\dimen107
+\babel@savecnt=\count106
+\U@D=\dimen122
 
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\generic\babel\txtbabel
 .def")
-\bbl@dirlevel=\count90
+\bbl@dirlevel=\count107
 )
-\es@quottoks=\toks15
-\es@quotdepth=\count91
+\es@quottoks=\toks20
+\es@quotdepth=\count108
 Package babel Info: Making " an active character on input line 561.
 Package babel Info: Making . an active character on input line 662.
 Package babel Info: Making < an active character on input line 707.
 Package babel Info: Making > an active character on input line 707.
-))
-("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsmath.
-sty"
-Package: amsmath 2017/09/02 v2.17a AMS math features
-\@mathmargin=\skip43
-
-For additional information on amsmath, use the `?' option.
-
-("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amstext.
-sty"
-Package: amstext 2000/06/29 v2.01 AMS text
-
-("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsgen.s
-ty"
-File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks16
-\ex@=\dimen108
-))
-("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsbsy.s
-ty"
-Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen109
-)
-("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsmath\amsopn.s
-ty"
-Package: amsopn 2016/03/08 v2.02 operator names
-)
-\inf@bad=\count92
-LaTeX Info: Redefining \frac on input line 213.
-\uproot@=\count93
-\leftroot@=\count94
-LaTeX Info: Redefining \overline on input line 375.
-\classnum@=\count95
-\DOTSCASE@=\count96
-LaTeX Info: Redefining \ldots on input line 472.
-LaTeX Info: Redefining \dots on input line 475.
-LaTeX Info: Redefining \cdots on input line 596.
-\Mathstrutbox@=\box26
-\strutbox@=\box27
-\big@size=\dimen110
-LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
-\macc@depth=\count97
-\c@MaxMatrixCols=\count98
-\dotsspace@=\muskip10
-\c@parentequation=\count99
-\dspbrk@lvl=\count100
-\tag@help=\toks17
-\row@=\count101
-\column@=\count102
-\maxfields@=\count103
-\andhelp@=\toks18
-\eqnshift@=\dimen111
-\alignsep@=\dimen112
-\tagshift@=\dimen113
-\tagwidth@=\dimen114
-\totwidth@=\dimen115
-\lineht@=\dimen116
-\@envbody=\toks19
-\multlinegap=\skip44
-\multlinetaggap=\skip45
-\mathdisplay@stack=\toks20
-LaTeX Info: Redefining \[ on input line 2817.
-LaTeX Info: Redefining \] on input line 2818.
-)
-("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amssymb
-.sty"
-Package: amssymb 2013/01/14 v3.01 AMS font symbols
-
-("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\amsfonts\amsfont
-s.sty"
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\inputenc.st
 y"
@@ -186,14 +259,14 @@ Package: csquotes 2018/04/13 v5.2d context-sensitive quotations (JAW)
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\etoolbox\etoolbo
 x.sty"
 Package: etoolbox 2018/08/19 v2.5f e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count104
+\etb@tempcnta=\count109
 )
-\csq@reset=\count105
-\csq@gtype=\count106
-\csq@glevel=\count107
-\csq@qlevel=\count108
-\csq@maxlvl=\count109
-\csq@tshold=\count110
+\csq@reset=\count110
+\csq@gtype=\count111
+\csq@glevel=\count112
+\csq@qlevel=\count113
+\csq@maxlvl=\count114
+\csq@tshold=\count115
 \csq@ltx@everypar=\toks23
 
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\csquotes\csquote
@@ -246,47 +319,48 @@ Package: setspace 2011/12/19 v6.7a set line spacing
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\booktabs\booktab
 s.sty"
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
-\heavyrulewidth=\dimen117
-\lightrulewidth=\dimen118
-\cmidrulewidth=\dimen119
-\belowrulesep=\dimen120
-\belowbottomsep=\dimen121
-\aboverulesep=\dimen122
-\abovetopsep=\dimen123
-\cmidrulesep=\dimen124
-\cmidrulekern=\dimen125
-\defaultaddspace=\dimen126
-\@cmidla=\count111
-\@cmidlb=\count112
-\@aboverulesep=\dimen127
-\@belowrulesep=\dimen128
-\@thisruleclass=\count113
-\@lastruleclass=\count114
-\@thisrulewidth=\dimen129
+\heavyrulewidth=\dimen123
+\lightrulewidth=\dimen124
+\cmidrulewidth=\dimen125
+\belowrulesep=\dimen126
+\belowbottomsep=\dimen127
+\aboverulesep=\dimen128
+\abovetopsep=\dimen129
+\cmidrulesep=\dimen130
+\cmidrulekern=\dimen131
+\defaultaddspace=\dimen132
+\@cmidla=\count116
+\@cmidlb=\count117
+\@aboverulesep=\dimen133
+\@belowrulesep=\dimen134
+\@thisruleclass=\count118
+\@lastruleclass=\count119
+\@thisrulewidth=\dimen135
 ) (changepage.sty
 Package: changepage 2009/10/20 v1.0c check page and change page layout
-\c@cp@cntr=\count115
-\cp@tempcnt=\count116
+\c@cp@cntr=\count120
+\cp@tempcnt=\count121
+LaTeX Info: Redefining \checkoddpage on input line 59.
 )
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\ulem\ulem.sty"
-\UL@box=\box28
-\UL@hyphenbox=\box29
-\UL@skip=\skip46
+\UL@box=\box36
+\UL@hyphenbox=\box37
+\UL@skip=\skip74
 \UL@hook=\toks24
-\UL@height=\dimen130
-\UL@pe=\count117
-\UL@pixel=\dimen131
-\ULC@box=\box30
+\UL@height=\dimen136
+\UL@pe=\count122
+\UL@pixel=\dimen137
+\ULC@box=\box38
 Package: ulem 2012/05/18
-\ULdepth=\dimen132
+\ULdepth=\dimen138
 )
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count118
+\c@float@type=\count123
 \float@exts=\toks25
-\float@box=\box31
+\float@box=\box39
 \@float@everytoks=\toks26
-\@floatcapt=\box32
+\@floatcapt=\box40
 ) ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\url\url.sty"
 \Urlmuskip=\muskip11
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
@@ -299,16 +373,16 @@ Package: caption 2018/10/06 v3.3-154 Customizing captions (AR)
 .sty"
 Package: caption3 2018/09/12 v1.8c caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 64.
-\captionmargin=\dimen133
-\captionmargin@=\dimen134
-\captionwidth=\dimen135
-\caption@tempdima=\dimen136
-\caption@indent=\dimen137
-\caption@parindent=\dimen138
-\caption@hangindent=\dimen139
+\captionmargin=\dimen139
+\captionmargin@=\dimen140
+\captionwidth=\dimen141
+\caption@tempdima=\dimen142
+\caption@indent=\dimen143
+\caption@parindent=\dimen144
+\caption@hangindent=\dimen145
 )
-\c@caption@flags=\count119
-\c@ContinuedFloat=\count120
+\c@caption@flags=\count124
+\c@ContinuedFloat=\count125
 Package caption Info: float package is loaded.
 )
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\parskip\parskip.
@@ -348,43 +422,35 @@ Package etexcmds Info: Could not find \expanded.
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\multirow\multiro
 w.sty"
 Package: multirow 2018/08/03 v2.3 Span multiple rows of a table
-\multirow@colwidth=\skip47
-\multirow@cntb=\count121
-\multirow@dima=\skip48
-\bigstrutjot=\dimen140
+\multirow@colwidth=\skip75
+\multirow@cntb=\count126
+\multirow@dima=\skip76
+\bigstrutjot=\dimen146
 )
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\multicol.s
 ty"
 Package: multicol 2018/04/20 v1.8s multicolumn formatting (FMi)
-\c@tracingmulticols=\count122
-\mult@box=\box33
-\multicol@leftmargin=\dimen141
-\c@unbalance=\count123
-\c@collectmore=\count124
-\doublecol@number=\count125
-\multicoltolerance=\count126
-\multicolpretolerance=\count127
-\full@width=\dimen142
-\page@free=\dimen143
-\premulticols=\dimen144
-\postmulticols=\dimen145
-\multicolsep=\skip49
-\multicolbaselineskip=\skip50
-\partial@page=\box34
-\last@line=\box35
-\maxbalancingoverflow=\dimen146
-\mult@rightbox=\box36
-\mult@grightbox=\box37
-\mult@gfirstbox=\box38
-\mult@firstbox=\box39
-\@tempa=\box40
-\@tempa=\box41
-\@tempa=\box42
-\@tempa=\box43
-\@tempa=\box44
-\@tempa=\box45
-\@tempa=\box46
-\@tempa=\box47
+\c@tracingmulticols=\count127
+\mult@box=\box41
+\multicol@leftmargin=\dimen147
+\c@unbalance=\count128
+\c@collectmore=\count129
+\doublecol@number=\count130
+\multicoltolerance=\count131
+\multicolpretolerance=\count132
+\full@width=\dimen148
+\page@free=\dimen149
+\premulticols=\dimen150
+\postmulticols=\dimen151
+\multicolsep=\skip77
+\multicolbaselineskip=\skip78
+\partial@page=\box42
+\last@line=\box43
+\maxbalancingoverflow=\dimen152
+\mult@rightbox=\box44
+\mult@grightbox=\box45
+\mult@gfirstbox=\box46
+\mult@firstbox=\box47
 \@tempa=\box48
 \@tempa=\box49
 \@tempa=\box50
@@ -394,36 +460,44 @@ Package: multicol 2018/04/20 v1.8s multicolumn formatting (FMi)
 \@tempa=\box54
 \@tempa=\box55
 \@tempa=\box56
-\c@columnbadness=\count128
-\c@finalcolumnbadness=\count129
-\last@try=\dimen147
-\multicolovershoot=\dimen148
-\multicolundershoot=\dimen149
-\mult@nat@firstbox=\box57
-\colbreak@box=\box58
-\mc@col@check@num=\count130
+\@tempa=\box57
+\@tempa=\box58
+\@tempa=\box59
+\@tempa=\box60
+\@tempa=\box61
+\@tempa=\box62
+\@tempa=\box63
+\@tempa=\box64
+\c@columnbadness=\count133
+\c@finalcolumnbadness=\count134
+\last@try=\dimen153
+\multicolovershoot=\dimen154
+\multicolundershoot=\dimen155
+\mult@nat@firstbox=\box65
+\colbreak@box=\box66
+\mc@col@check@num=\count135
 )
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\array.sty"
 Package: array 2018/04/30 v2.4h Tabular extension package (FMi)
-\col@sep=\dimen150
-\ar@mcellbox=\box59
-\extrarowheight=\dimen151
+\col@sep=\dimen156
+\ar@mcellbox=\box67
+\extrarowheight=\dimen157
 \NC@list=\toks27
-\extratabsurround=\skip51
-\backup@length=\skip52
-\ar@cellbox=\box60
+\extratabsurround=\skip79
+\backup@length=\skip80
+\ar@cellbox=\box68
 ) (colortbl.sty
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 \everycr=\toks28
-\minrowclearance=\skip53
+\minrowclearance=\skip81
 )
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\natbib\natbib.st
 y"
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip54
-\bibsep=\skip55
+\bibhang=\skip82
+\bibsep=\skip83
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count131
+\c@NAT@ctr=\count136
 ) (xcolor.sty
 Package: xcolor 2004/07/04 v2.00 LaTeX color extensions (UK)
 
@@ -448,24 +522,24 @@ Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
 Package csquotes Info: Redefining alias 'default' -> 'spanish'.
  (origin.aux
-LaTeX Info: Redefining \. on input line 6.
-LaTeX Info: Redefining \% on input line 6.
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
 )
 \openout1 = `origin.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 88.
-LaTeX Font Info:    ... okay on input line 88.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 88.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 86.
+LaTeX Font Info:    ... okay on input line 86.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 86.
 
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -473,16 +547,16 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\supp-pdf.
 mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count132
-\scratchdimen=\dimen152
-\scratchbox=\box61
-\nofMPsegments=\count133
-\nofMParguments=\count134
+\scratchcounter=\count137
+\scratchdimen=\dimen158
+\scratchbox=\box69
+\nofMPsegments=\count138
+\nofMParguments=\count139
 \everyMPshowfont=\toks29
-\MPscratchCnt=\count135
-\MPscratchDim=\dimen153
-\MPnumerator=\count136
-\makeMPintoPDFobject=\count137
+\MPscratchCnt=\count140
+\MPscratchDim=\dimen159
+\MPnumerator=\count141
+\makeMPintoPDFobject=\count142
 \everyMPtoPDFconversion=\toks30
 )
 ("C:\Users\Usuario\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopd
@@ -518,11 +592,11 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
-LaTeX Info: Redefining \. on input line 88.
-LaTeX Info: Redefining \% on input line 88.
+LaTeX Info: Redefining \. on input line 86.
+LaTeX Info: Redefining \% on input line 86.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-\rownum=\count138
+\rownum=\count143
  (CAP1.tex
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 6.
@@ -561,7 +635,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 154.
  [6]) [7]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 93.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 91.
  (origin.lof
 LaTeX Info: Redefining \. on input line 1.
 LaTeX Info: Redefining \% on input line 1.
@@ -1255,8 +1329,8 @@ Overfull \hbox (17.6554pt too wide) in paragraph at lines 873--887
  [] 
  []
 
-[111]
-<images/desarrollo/trainResults/german/model0Acierto.png, id=544, 1132.98282pt 
+[111] [112]
+<images/desarrollo/trainResults/german/model0Acierto.png, id=547, 1132.98282pt 
 x 328.22626pt>
 File: images/desarrollo/trainResults/german/model0Acierto.png Graphic file (typ
 e png)
@@ -1264,8 +1338,8 @@ e png)
 Package pdftex.def Info: images/desarrollo/trainResults/german/model0Acierto.pn
 g  used on input line 907.
 (pdftex.def)             Requested size: 469.47046pt x 136.00601pt.
- [112]
-<images/desarrollo/trainResults/german/model0Loss.png, id=548, 1129.21875pt x 3
+ [113]
+<images/desarrollo/trainResults/german/model0Loss.png, id=551, 1129.21875pt x 3
 25.215pt>
 File: images/desarrollo/trainResults/german/model0Loss.png Graphic file (type p
 ng)
@@ -1273,7 +1347,7 @@ ng)
 Package pdftex.def Info: images/desarrollo/trainResults/german/model0Loss.png  
 used on input line 919.
 (pdftex.def)             Requested size: 469.47046pt x 135.20982pt.
-<images/desarrollo/trainResults/german/model1Acierto.png, id=549, 1108.8928pt x
+<images/desarrollo/trainResults/german/model1Acierto.png, id=552, 1108.8928pt x
  319.1925pt>
 File: images/desarrollo/trainResults/german/model1Acierto.png Graphic file (typ
 e png)
@@ -1281,9 +1355,9 @@ e png)
 Package pdftex.def Info: images/desarrollo/trainResults/german/model1Acierto.pn
 g  used on input line 937.
 (pdftex.def)             Requested size: 469.47046pt x 135.1363pt.
- [113 <./images/desarrollo/trainResults/german/model0Acierto.png> <./images/des
+ [114 <./images/desarrollo/trainResults/german/model0Acierto.png> <./images/des
 arrollo/trainResults/german/model0Loss.png>]
-<images/desarrollo/trainResults/german/model1Loss.png, id=555, 1117.17375pt x 3
+<images/desarrollo/trainResults/german/model1Loss.png, id=558, 1117.17375pt x 3
 21.45094pt>
 File: images/desarrollo/trainResults/german/model1Loss.png Graphic file (type p
 ng)
@@ -1291,7 +1365,7 @@ ng)
 Package pdftex.def Info: images/desarrollo/trainResults/german/model1Loss.png  
 used on input line 950.
 (pdftex.def)             Requested size: 469.47046pt x 135.08205pt.
-<images/desarrollo/trainResults/german/model4Acierto.png, id=556, 996.72375pt x
+<images/desarrollo/trainResults/german/model4Acierto.png, id=559, 996.72375pt x
  292.84406pt>
 File: images/desarrollo/trainResults/german/model4Acierto.png Graphic file (typ
 e png)
@@ -1299,9 +1373,9 @@ e png)
 Package pdftex.def Info: images/desarrollo/trainResults/german/model4Acierto.pn
 g  used on input line 969.
 (pdftex.def)             Requested size: 469.47046pt x 137.93164pt.
- [114 <./images/desarrollo/trainResults/german/model1Acierto.png> <./images/des
+ [115 <./images/desarrollo/trainResults/german/model1Acierto.png> <./images/des
 arrollo/trainResults/german/model1Loss.png>]
-<images/desarrollo/trainResults/german/model4Loss.png, id=562, 1001.24063pt x 2
+<images/desarrollo/trainResults/german/model4Loss.png, id=565, 1001.24063pt x 2
 76.28218pt>
 File: images/desarrollo/trainResults/german/model4Loss.png Graphic file (type p
 ng)
@@ -1309,7 +1383,7 @@ ng)
 Package pdftex.def Info: images/desarrollo/trainResults/german/model4Loss.png  
 used on input line 982.
 (pdftex.def)             Requested size: 469.47046pt x 129.54489pt.
-<images/desarrollo/trainResults/german/model6Acierto.png, id=563, 1091.57813pt 
+<images/desarrollo/trainResults/german/model6Acierto.png, id=566, 1091.57813pt 
 x 315.42844pt>
 File: images/desarrollo/trainResults/german/model6Acierto.png Graphic file (typ
 e png)
@@ -1317,9 +1391,9 @@ e png)
 Package pdftex.def Info: images/desarrollo/trainResults/german/model6Acierto.pn
 g  used on input line 998.
 (pdftex.def)             Requested size: 469.47046pt x 135.66045pt.
- [115 <./images/desarrollo/trainResults/german/model4Acierto.png> <./images/des
+ [116 <./images/desarrollo/trainResults/german/model4Acierto.png> <./images/des
 arrollo/trainResults/german/model4Loss.png>]
-<images/desarrollo/trainResults/german/model6Loss.png, id=569, 1100.61188pt x 3
+<images/desarrollo/trainResults/german/model6Loss.png, id=572, 1100.61188pt x 3
 19.94531pt>
 File: images/desarrollo/trainResults/german/model6Loss.png Graphic file (type p
 ng)
@@ -1327,7 +1401,7 @@ ng)
 Package pdftex.def Info: images/desarrollo/trainResults/german/model6Loss.png  
 used on input line 1010.
 (pdftex.def)             Requested size: 469.47046pt x 136.47536pt.
-<images/desarrollo/trainResults/german/model7Acierto.png, id=570, 986.18437pt x
+<images/desarrollo/trainResults/german/model7Acierto.png, id=573, 986.18437pt x
  297.36093pt>
 File: images/desarrollo/trainResults/german/model7Acierto.png Graphic file (typ
 e png)
@@ -1335,9 +1409,9 @@ e png)
 Package pdftex.def Info: images/desarrollo/trainResults/german/model7Acierto.pn
 g  used on input line 1027.
 (pdftex.def)             Requested size: 469.47046pt x 141.56097pt.
- [116 <./images/desarrollo/trainResults/german/model6Acierto.png> <./images/des
+ [117 <./images/desarrollo/trainResults/german/model6Acierto.png> <./images/des
 arrollo/trainResults/german/model6Loss.png>]
-<images/desarrollo/trainResults/german/model7Loss.png, id=576, 998.9822pt x 271
+<images/desarrollo/trainResults/german/model7Loss.png, id=580, 998.9822pt x 271
 .76532pt>
 File: images/desarrollo/trainResults/german/model7Loss.png Graphic file (type p
 ng)
@@ -1345,7 +1419,7 @@ ng)
 Package pdftex.def Info: images/desarrollo/trainResults/german/model7Loss.png  
 used on input line 1039.
 (pdftex.def)             Requested size: 469.47046pt x 127.71312pt.
-<images/desarrollo/trainResults/germanSummary_entreAcierto.png, id=577, 992.959
+<images/desarrollo/trainResults/germanSummary_entreAcierto.png, id=581, 992.959
 69pt x 277.78781pt>
 File: images/desarrollo/trainResults/germanSummary_entreAcierto.png Graphic fil
 e (type png)
@@ -1353,9 +1427,9 @@ e (type png)
 Package pdftex.def Info: images/desarrollo/trainResults/germanSummary_entreAcie
 rto.png  used on input line 1057.
 (pdftex.def)             Requested size: 469.47896pt x 131.3402pt.
- [117 <./images/desarrollo/trainResults/german/model7Acierto.png> <./images/des
+ [118 <./images/desarrollo/trainResults/german/model7Acierto.png> <./images/des
 arrollo/trainResults/german/model7Loss.png>]
-<images/desarrollo/trainResults/germanSummary_entreError.png, id=584, 1088.5668
+<images/desarrollo/trainResults/germanSummary_entreError.png, id=587, 1088.5668
 8pt x 301.125pt>
 File: images/desarrollo/trainResults/germanSummary_entreError.png Graphic file 
 (type png)
@@ -1369,7 +1443,7 @@ Overfull \hbox (1.94514pt too wide) in paragraph at lines 1080--1081
 -do da-ta-set de imá-ge-nes no vis-to/analizado
  []
 
-<images/desarrollo/trainResults/germanSummary_validAcierto.png, id=585, 1118.67
+<images/desarrollo/trainResults/germanSummary_validAcierto.png, id=588, 1118.67
 938pt x 312.41719pt>
 File: images/desarrollo/trainResults/germanSummary_validAcierto.png Graphic fil
 e (type png)
@@ -1377,9 +1451,9 @@ e (type png)
 Package pdftex.def Info: images/desarrollo/trainResults/germanSummary_validAcie
 rto.png  used on input line 1084.
 (pdftex.def)             Requested size: 469.4666pt x 131.10944pt.
-[118 <./images/desarrollo/trainResults/germanSummary_entreAcierto.png> <./image
+[119 <./images/desarrollo/trainResults/germanSummary_entreAcierto.png> <./image
 s/desarrollo/trainResults/germanSummary_entreError.png>]
-<images/desarrollo/trainResults/germanSummary_validError.png, id=591, 1099.8590
+<images/desarrollo/trainResults/germanSummary_validError.png, id=594, 1099.8590
 7pt x 308.65312pt>
 File: images/desarrollo/trainResults/germanSummary_validError.png Graphic file 
 (type png)
@@ -1387,9 +1461,9 @@ File: images/desarrollo/trainResults/germanSummary_validError.png Graphic file
 Package pdftex.def Info: images/desarrollo/trainResults/germanSummary_validErro
 r.png  used on input line 1096.
 (pdftex.def)             Requested size: 469.47299pt x 131.74806pt.
- [119 <./images/desarrollo/trainResults/germanSummary_validAcierto.png> <./imag
+ [120 <./images/desarrollo/trainResults/germanSummary_validAcierto.png> <./imag
 es/desarrollo/trainResults/germanSummary_validError.png>]
-<images/desarrollo/trainResults/peru/model0Acierto.png, id=597, 1132.98282pt x 
+<images/desarrollo/trainResults/peru/model0Acierto.png, id=600, 1132.98282pt x 
 328.22626pt>
 File: images/desarrollo/trainResults/peru/model0Acierto.png Graphic file (type 
 png)
@@ -1397,7 +1471,7 @@ png)
 Package pdftex.def Info: images/desarrollo/trainResults/peru/model0Acierto.png 
  used on input line 1112.
 (pdftex.def)             Requested size: 469.47046pt x 136.00601pt.
-<images/desarrollo/trainResults/peru/model0Loss.png, id=598, 1129.21875pt x 325
+<images/desarrollo/trainResults/peru/model0Loss.png, id=601, 1129.21875pt x 325
 .215pt>
 File: images/desarrollo/trainResults/peru/model0Loss.png Graphic file (type png
 )
@@ -1405,9 +1479,9 @@ File: images/desarrollo/trainResults/peru/model0Loss.png Graphic file (type png
 Package pdftex.def Info: images/desarrollo/trainResults/peru/model0Loss.png  us
 ed on input line 1124.
 (pdftex.def)             Requested size: 469.47046pt x 135.20982pt.
- [120 <./images/desarrollo/trainResults/peru/model0Acierto.png> <./images/desar
+ [121 <./images/desarrollo/trainResults/peru/model0Acierto.png> <./images/desar
 rollo/trainResults/peru/model0Loss.png>]
-<images/desarrollo/trainResults/peru/model1Acierto.png, id=604, 1107.38719pt x 
+<images/desarrollo/trainResults/peru/model1Acierto.png, id=607, 1107.38719pt x 
 322.95656pt>
 File: images/desarrollo/trainResults/peru/model1Acierto.png Graphic file (type 
 png)
@@ -1415,7 +1489,7 @@ png)
 Package pdftex.def Info: images/desarrollo/trainResults/peru/model1Acierto.png 
  used on input line 1142.
 (pdftex.def)             Requested size: 469.47046pt x 136.91223pt.
-<images/desarrollo/trainResults/peru/model1Loss.png, id=605, 1096.84781pt x 319
+<images/desarrollo/trainResults/peru/model1Loss.png, id=608, 1096.84781pt x 319
 .1925pt>
 File: images/desarrollo/trainResults/peru/model1Loss.png Graphic file (type png
 )
@@ -1424,9 +1498,9 @@ Package pdftex.def Info: images/desarrollo/trainResults/peru/model1Loss.png  us
 ed on input line 1155.
 (pdftex.def)             Requested size: 469.47046pt x 136.61693pt.
 
-[121 <./images/desarrollo/trainResults/peru/model1Acierto.png> <./images/desarr
+[122 <./images/desarrollo/trainResults/peru/model1Acierto.png> <./images/desarr
 ollo/trainResults/peru/model1Loss.png>]
-<images/desarrollo/trainResults/peru/model4Acierto.png, id=611, 1155.56718pt x 
+<images/desarrollo/trainResults/peru/model4Acierto.png, id=614, 1155.56718pt x 
 337.26pt>
 File: images/desarrollo/trainResults/peru/model4Acierto.png Graphic file (type 
 png)
@@ -1434,7 +1508,7 @@ png)
 Package pdftex.def Info: images/desarrollo/trainResults/peru/model4Acierto.png 
  used on input line 1174.
 (pdftex.def)             Requested size: 469.47046pt x 137.01668pt.
-<images/desarrollo/trainResults/peru/model4Loss.png, id=612, 1109.64563pt x 319
+<images/desarrollo/trainResults/peru/model4Loss.png, id=615, 1109.64563pt x 319
 .94531pt>
 File: images/desarrollo/trainResults/peru/model4Loss.png Graphic file (type png
 )
@@ -1442,7 +1516,7 @@ File: images/desarrollo/trainResults/peru/model4Loss.png Graphic file (type png
 Package pdftex.def Info: images/desarrollo/trainResults/peru/model4Loss.png  us
 ed on input line 1187.
 (pdftex.def)             Requested size: 469.47046pt x 135.36226pt.
-<images/desarrollo/trainResults/peru/model6Acierto.png, id=613, 1153.30875pt x 
+<images/desarrollo/trainResults/peru/model6Acierto.png, id=616, 1153.30875pt x 
 334.24875pt>
 File: images/desarrollo/trainResults/peru/model6Acierto.png Graphic file (type 
 png)
@@ -1450,9 +1524,9 @@ png)
 Package pdftex.def Info: images/desarrollo/trainResults/peru/model6Acierto.png 
  used on input line 1203.
 (pdftex.def)             Requested size: 469.47046pt x 136.05852pt.
- [122 <./images/desarrollo/trainResults/peru/model4Acierto.png> <./images/desar
+ [123 <./images/desarrollo/trainResults/peru/model4Acierto.png> <./images/desar
 rollo/trainResults/peru/model4Loss.png>]
-<images/desarrollo/trainResults/peru/model6Loss.png, id=619, 1154.81438pt x 335
+<images/desarrollo/trainResults/peru/model6Loss.png, id=623, 1154.81438pt x 335
 .75438pt>
 File: images/desarrollo/trainResults/peru/model6Loss.png Graphic file (type png
 )
@@ -1460,7 +1534,7 @@ File: images/desarrollo/trainResults/peru/model6Loss.png Graphic file (type png
 Package pdftex.def Info: images/desarrollo/trainResults/peru/model6Loss.png  us
 ed on input line 1215.
 (pdftex.def)             Requested size: 469.47046pt x 136.49721pt.
-<images/desarrollo/trainResults/peru/model7Acierto.png, id=620, 1189.44376pt x 
+<images/desarrollo/trainResults/peru/model7Acierto.png, id=624, 1189.44376pt x 
 345.54094pt>
 File: images/desarrollo/trainResults/peru/model7Acierto.png Graphic file (type 
 png)
@@ -1468,9 +1542,9 @@ png)
 Package pdftex.def Info: images/desarrollo/trainResults/peru/model7Acierto.png 
  used on input line 1232.
 (pdftex.def)             Requested size: 469.47046pt x 136.38435pt.
-[123 <./images/desarrollo/trainResults/peru/model6Acierto.png> <./images/desarr
+[124 <./images/desarrollo/trainResults/peru/model6Acierto.png> <./images/desarr
 ollo/trainResults/peru/model6Loss.png>]
-<images/desarrollo/trainResults/peru/model7Loss.png, id=627, 1201.48875pt x 343
+<images/desarrollo/trainResults/peru/model7Loss.png, id=630, 1201.48875pt x 343
 .2825pt>
 File: images/desarrollo/trainResults/peru/model7Loss.png Graphic file (type png
 )
@@ -1478,9 +1552,9 @@ File: images/desarrollo/trainResults/peru/model7Loss.png Graphic file (type png
 Package pdftex.def Info: images/desarrollo/trainResults/peru/model7Loss.png  us
 ed on input line 1244.
 (pdftex.def)             Requested size: 469.47046pt x 134.13629pt.
- [124 <./images/desarrollo/trainResults/peru/model7Acierto.png> <./images/desar
+ [125 <./images/desarrollo/trainResults/peru/model7Acierto.png> <./images/desar
 rollo/trainResults/peru/model7Loss.png>]
-<images/desarrollo/trainResults/peruSummary_entreAcierto.png, id=633, 1209.7696
+<images/desarrollo/trainResults/peruSummary_entreAcierto.png, id=636, 1209.7696
 8pt x 347.04657pt>
 File: images/desarrollo/trainResults/peruSummary_entreAcierto.png Graphic file 
 (type png)
@@ -1488,7 +1562,7 @@ File: images/desarrollo/trainResults/peruSummary_entreAcierto.png Graphic file
 Package pdftex.def Info: images/desarrollo/trainResults/peruSummary_entreAciert
 o.png  used on input line 1263.
 (pdftex.def)             Requested size: 469.46391pt x 134.67508pt.
-<images/desarrollo/trainResults/peruSummary_entreError.png, id=634, 1228.59pt x
+<images/desarrollo/trainResults/peruSummary_entreError.png, id=637, 1228.59pt x
  527.72156pt>
 File: images/desarrollo/trainResults/peruSummary_entreError.png Graphic file (t
 ype png)
@@ -1502,7 +1576,7 @@ Overfull \hbox (1.94514pt too wide) in paragraph at lines 1286--1287
 -do da-ta-set de imá-ge-nes no vis-to/analizado
  []
 
-<images/desarrollo/trainResults/peruSummary_validAcierto.png, id=635, 1246.6575
+<images/desarrollo/trainResults/peruSummary_validAcierto.png, id=638, 1246.6575
 pt x 339.51843pt>
 File: images/desarrollo/trainResults/peruSummary_validAcierto.png Graphic file 
 (type png)
@@ -1510,9 +1584,9 @@ File: images/desarrollo/trainResults/peruSummary_validAcierto.png Graphic file
 Package pdftex.def Info: images/desarrollo/trainResults/peruSummary_validAciert
 o.png  used on input line 1290.
 (pdftex.def)             Requested size: 469.47375pt x 127.85788pt.
-[125 <./images/desarrollo/trainResults/peruSummary_entreAcierto.png> <./images/
+[126 <./images/desarrollo/trainResults/peruSummary_entreAcierto.png> <./images/
 desarrollo/trainResults/peruSummary_entreError.png>]
-<images/desarrollo/trainResults/peruSummary_validError.png, id=641, 1224.07312p
+<images/desarrollo/trainResults/peruSummary_validError.png, id=644, 1224.07312p
 t x 356.83313pt>
 File: images/desarrollo/trainResults/peruSummary_validError.png Graphic file (t
 ype png)
@@ -1520,7 +1594,7 @@ ype png)
 Package pdftex.def Info: images/desarrollo/trainResults/peruSummary_validError.
 png  used on input line 1302.
 (pdftex.def)             Requested size: 469.46721pt x 136.85574pt.
-) (CAP6.tex [126 <./images/desarrollo/trainResults/peruSummary_validAcierto.png
+) (CAP6.tex [127 <./images/desarrollo/trainResults/peruSummary_validAcierto.png
 > <./images/desarrollo/trainResults/peruSummary_validError.png>]
 Cap\'{\i }tulo 4.
 [127
@@ -1530,7 +1604,7 @@ Overfull \hbox (24.6819pt too wide) in paragraph at lines 56--66
  [] 
  []
 
-<images/desarrollo/testResults/german/model_A_A.png, id=657, 710.4141pt x 1387.
+<images/desarrollo/testResults/german/model_A_A.png, id=660, 710.4141pt x 1387.
 584pt>
 File: images/desarrollo/testResults/german/model_A_A.png Graphic file (type png
 )
@@ -1542,7 +1616,7 @@ ed on input line 73.
 Overfull \vbox (7.654pt too high) has occurred while \output is active []
 
  [131 <./images/desarrollo/testResults/german/model_A_A.png>]
-<images/desarrollo/testResults/german/ROC_curve_modelE.png, id=665, 1266.98344p
+<images/desarrollo/testResults/german/ROC_curve_modelE.png, id=668, 1266.98344p
 t x 744.53156pt>
 File: images/desarrollo/testResults/german/ROC_curve_modelE.png Graphic file (t
 ype png)
@@ -1550,7 +1624,7 @@ ype png)
 Package pdftex.def Info: images/desarrollo/testResults/german/ROC_curve_modelE.
 png  used on input line 85.
 (pdftex.def)             Requested size: 469.47252pt x 213.39792pt.
-<images/desarrollo/testResults/german/PR_curve_modelE.png, id=666, 1250.42157pt
+<images/desarrollo/testResults/german/PR_curve_modelE.png, id=669, 1250.42157pt
  x 744.53156pt>
 File: images/desarrollo/testResults/german/PR_curve_modelE.png Graphic file (ty
 pe png)
@@ -1564,14 +1638,14 @@ Overfull \hbox (24.6819pt too wide) in paragraph at lines 117--127
  [] 
  []
 
-<images/desarrollo/testResults/peru/modelE.png, id=672, 722.7pt x 722.7pt>
+<images/desarrollo/testResults/peru/modelE.png, id=675, 722.7pt x 722.7pt>
 File: images/desarrollo/testResults/peru/modelE.png Graphic file (type png)
 <use images/desarrollo/testResults/peru/modelE.png>
 Package pdftex.def Info: images/desarrollo/testResults/peru/modelE.png  used on
  input line 133.
 (pdftex.def)             Requested size: 318.67268pt x 318.67268pt.
 [133]
-<images/desarrollo/testResults/peru/ROC_curve_modelE.png, id=676, 1387.584pt x 
+<images/desarrollo/testResults/peru/ROC_curve_modelE.png, id=679, 1387.584pt x 
 710.4141pt>
 File: images/desarrollo/testResults/peru/ROC_curve_modelE.png Graphic file (typ
 e png)
@@ -1580,7 +1654,7 @@ Package pdftex.def Info: images/desarrollo/testResults/peru/ROC_curve_modelE.pn
 g  used on input line 146.
 (pdftex.def)             Requested size: 469.46448pt x 213.39687pt.
  [134 <./images/desarrollo/testResults/peru/modelE.png>]
-<images/desarrollo/testResults/peru/PR_curve_modelE.png, id=681, 1387.584pt x 7
+<images/desarrollo/testResults/peru/PR_curve_modelE.png, id=685, 1387.584pt x 7
 10.4141pt>
 File: images/desarrollo/testResults/peru/PR_curve_modelE.png Graphic file (type
  png)
@@ -1590,19 +1664,19 @@ Package pdftex.def Info: images/desarrollo/testResults/peru/PR_curve_modelE.png
 (pdftex.def)             Requested size: 469.46448pt x 213.39687pt.
  [135 <./images/desarrollo/testResults/peru/ROC_curve_modelE.png> <./images/des
 arrollo/testResults/peru/PR_curve_modelE.png>]
-<images/reconyzeFLow.png, id=688, 566.86781pt x 570.48131pt>
+<images/reconyzeFLow.png, id=691, 566.86781pt x 570.48131pt>
 File: images/reconyzeFLow.png Graphic file (type png)
 <use images/reconyzeFLow.png>
 Package pdftex.def Info: images/reconyzeFLow.png  used on input line 178.
 (pdftex.def)             Requested size: 375.58705pt x 284.52615pt.
-<images/interfazWithGermSign.png, id=689, 687.16725pt x 589.0005pt>
+<images/interfazWithGermSign.png, id=692, 687.16725pt x 589.0005pt>
 File: images/interfazWithGermSign.png Graphic file (type png)
 <use images/interfazWithGermSign.png>
 Package pdftex.def Info: images/interfazWithGermSign.png  used on input line 19
 3.
 (pdftex.def)             Requested size: 469.46947pt x 341.44977pt.
  [136 <./images/reconyzeFLow.png>]
-<images/interfazWithPeruvSign.png, id=694, 685.05937pt x 588.69937pt>
+<images/interfazWithPeruvSign.png, id=697, 685.05937pt x 588.69937pt>
 File: images/interfazWithPeruvSign.png Graphic file (type png)
 <use images/interfazWithPeruvSign.png>
 Package pdftex.def Info: images/interfazWithPeruvSign.png  used on input line 2
@@ -1634,48 +1708,62 @@ Underfull \hbox (badness 10000) in paragraph at lines 135--138
 o.
  []
 
-[143] [144]) [145] (origin.aux
-LaTeX Info: Redefining \. on input line 6.
-LaTeX Info: Redefining \% on input line 6.
+[143] [144]) (CAP8.tex [145]
+Ap\'{e}ndice A.
+
+LaTeX Warning: Float too large for page by 8.05789pt on input line 59.
+
+[146
+
+] [147]
+Overfull \hbox (0.9745pt too wide) in paragraph at lines 135--135
+[]\T1/ptm/b/n/12 Procedimiento \T1/ptm/m/n/12 ca-pa-To-tal-men-te-Co-nec-ta-da(
+entrada,numEntradas,numSalidas,usarRELU) 
+ []
+
+) [148] [149] (origin.aux
+LaTeX Info: Redefining \. on input line 7.
+LaTeX Info: Redefining \% on input line 7.
 ) ) 
 Here is how much of TeX's memory you used:
- 7904 strings out of 492970
- 130264 string characters out of 3125706
- 204046 words of memory out of 3000000
- 11434 multiletter control sequences out of 15000+200000
- 112903 words of font info for 235 fonts, out of 3000000 for 9000
+ 9245 strings out of 492970
+ 152399 string characters out of 3125706
+ 242693 words of memory out of 3000000
+ 12752 multiletter control sequences out of 15000+200000
+ 116243 words of font info for 237 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 37i,19n,39p,2054b,481s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 37i,19n,43p,2054b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.
 enc}<C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
 onts/cm/cmbx12.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Usuario/AppData/Local
-/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Usuari
-o/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><
-C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
-cm/cmmi8.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
-blic/amsfonts/cm/cmmi9.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Usuario/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Usuario/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/
-Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr6.p
-fb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmr8.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr9.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/Usuario/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/Users/Usuario/AppD
-ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Use
-rs/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
-y8.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
-msfonts/cm/cmsy9.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/
-fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Usuario/AppData/Local/Program
-s/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on origin.pdf (162 pages, 15887605 bytes).
+pe1/public/amsfonts/cm/cmbx8.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTe
+X 2.9/fonts/type1/public/amsfonts/cm/cmbx9.pfb><C:/Users/Usuario/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Usuario
+/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C
+:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmmi12.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmmi8.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Users/Usuario/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Usuario/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/
+Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.
+pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr6.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmr8.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/Usuario/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss8.pfb><C:/Users/Usuario/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmss9.pfb><C:/User
+s/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
+10.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmsy8.pfb><C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmsy9.pfb><C:/Users/Usuario/AppData/Local/Programs/MiK
+TeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Usuario/AppData/Local
+/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Usuario/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on origin.pdf (167 pages, 15907371 bytes).
 PDF statistics:
- 802 PDF objects out of 1000 (max. 8388607)
+ 822 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  556 words of extra memory for PDF output out of 10000 (max. 10000000)
 
