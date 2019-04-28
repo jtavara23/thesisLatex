@@ -43,7 +43,7 @@
 \contentsline {subsection}{\numberline {2.5.2}Variables de la Investigaci\IeC {\'o}n}{72}
 \contentsline {subsubsection}{\numberline {2.5.2.1}Variable Dependiente}{72}
 \contentsline {subsubsection}{\numberline {2.5.2.2}Variable Independiente}{72}
-\contentsline {subsection}{\numberline {2.5.3}Indicadores}{73}
+\contentsline {subsection}{\numberline {2.5.3}Indicadores}{72}
 \contentsline {subsection}{\numberline {2.5.4}Recolecci\IeC {\'o}n de Datos para la Construcci\IeC {\'o}n del Modelo}{74}
 \contentsline {subsubsection}{\numberline {2.5.4.1}T\IeC {\'e}cnica de Recolecci\IeC {\'o}n}{74}
 \contentsline {subsubsection}{\numberline {2.5.4.2}Poblaci\IeC {\'o}n}{74}
