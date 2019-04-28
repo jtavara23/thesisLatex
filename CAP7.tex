@@ -1,29 +1,136 @@
 %!TEX root = origin.TEX
-\chapter{Consideraciones finales}
-\pagenumbering{arabic}
-\setcounter{page}{138}
-\renewcommand{\baselinestretch}{2} %doble espacio paratodo el texto
-\textheight 21cm
+\appendix
+\chapter{Pseudocódigo del Diseño de Red}
+\begin{algorithm}
+\SetAlgoLined
 
-\section{Conclusiones}
+{$entradas\gets Tensor(LoteImagenes, Anchura, Altura, Profundidad)$}\;
+{$salidaDeseada\gets Tensor(LoteImagenes,NumeroClases)$}\;
+{$numFiltrosEntradaCapa_N\gets 1;$}\
 
-	Al finalizar la investigación podemos confirmar que se cumplieron los objetivos específicos planteados. Por lo cual, el objetivo general que trata sobre implementar un modelo basado en el aprendizaje profundo de redes neuronales convolucionales para reconocer automáticamente señales de tránsito vehicular fue conseguido a través del Modelo E.
+\While{$N < numCapasConvolucionales$}{
+	$capaConv_N, pesosConv_N \gets\textbf{capaConvolucion(} $\
+		$datosImagen = entradas,$\
+        $numCanales = numFiltrosEntradaCapa_N,$\
+        $tamFiltro = tamFiltroCapa_N,$\
+        $numFiltros=numFiltrosSalidaCapa_N,$\newline
+        $usarPooling=True$\newline
+        $\textbf{)}$;\newline
+    
+    $capaConvDropOut_N \gets dropout(capaconv_N, dropoutConv_N);$\\
+    $entradas \gets capaConvDropOut_N;$\\
+    $numFiltrosEntradaCapa_N\gets numFiltrosSalidaCapa_N;$\\
+}
 
-	\vskip 0.2cm
-	Al finalizar el análisis de los 5 modelos, se puede observar que por lo general cuanto más grande sea el tamaño de la data de entrada y más profunda sea la red neuronal, se obtienen mejores resultados. De este modo, el modelo final obtenido compuesto principalmente de 4 capas convolucionales, 2 capas totalmente conectadas, funciones de escala múltiple y cerca de 76393 neuronas(Sección 3.2.1.5 - Diseño E), contribuye en el reconocimiento de señales de Tránsito de Alemania con una tasa de acierto del {\bf 98.62\%}, mucho mejor que el resultado obtenido por \citep{Ayuque2016} - 95.29\% y mucho más próximo al mejor resultado obtenido en las investigaciones hechas en base al dataset GTSRB (99.46\% - \citep{Ciresan}).
-	\vskip 0.2cm
-	Por otra parte, un dataset de señales de Tránsito del Perú compuesto por 31314 imágenes distribuidas en 7 categorías(Sección 3.1.4.2), es ofrecido para futuras investigaciones. Para dicho dataset, el modelo con las mismas configuraciones(modelo E) también permite obtener un {\bf alto grado de acierto (99.83\%)} tras analizar 4698 imágenes. 
-	 
+\BlankLine
+\While{$N < (numCapasConvolucionales -1) $}{
+	$capaConvDropOut_N \gets\textbf{ejecutarPooling(} $\
+		$data = capaConvDropOut_N,$\newline
+        $tamFiltro = 2^\text{( numCapasConvolucionales - N)}$\newline
+        $\textbf{)}$;\newline
+    
+    $datosCapa_N \gets (datosCapa_N + capaConvDropOut_N[Anchura] * capaConvDropOut_N[Altura] * capaConvDropOut_N[Profundidad]);$\\
+    $capaSalida \gets (capaSalida + capaConvDropOut_N)$;
+}
+
+\BlankLine
+$capaFC1, pesosFC1 \gets \textbf{capaTotalmenteConectada(}$\
+$datosImagen = capaSalida,$\newline
+$numCanales = datosCapa_N,$\newline
+$tamFiltro = numSalidas,   ..... [Dadas Aleatoriamente]$\newline
+$usarRELU=True\textbf{)};$\newline
 
 
-\section{Trabajos futuros y Recomendaciones}
+$capaFC1dropOut\gets dropout(capaFC1, dropoutFC1=0.5);$\newline
+
+$capaFC2, pesosFC2 \gets\textbf{capaTotalmenteConectada(} $\
+$datosImagen = capaFC1dropOut,$\newline
+$numCanales = numSalidas,$\newline
+$tamFiltro = numClases, $\newline
+$usarRELU=False\textbf{)};$\newline
 
 
-	El modelo puede ser mejorado(ampliado), teniendo muchas más capas convolucionales y capas totalmente conectadas para poder experimentar si existe o no alguna mejora en los resultados. Además se recomienda obtener muchas más imágenes para exceder el rendimiento humano, \citep{Goodfellow-et-al-2016}
+$salidacalculada \gets \textbf{softmax}(capaFC2)$\;
+$error \gets \textbf{entropiaCruzada}(salidacalculada,salidadeseada)$\;
+$optimizador\gets \textbf{Adam}(TasaAprendizaje).minimize(error,iterac)$\;
 
-	El dataset de señales de tránsito del Perú también puede ser ampliado con la finalidad de abarcar más categorías, ya que se tiene confianza por lo mostrado con el dataset de Alemania que el modelo es robusto para soportar mayor cantidad de estas.
-	
-	Se sugiere integrar el modelo obtenido en un sistema más general que primero localize las señales de tránsito en escenas que abarcan más de una señal de tránsito, para luego proceder a su multi-reconocimiento.
 
-	%Se recomienda utilizar la herramienta computacional Tensorflow, ya que fue importante en el análisis e implementación de los modelos desarrollados, permitiendo realizar entrenamientos, validaciones y evaluaciones con mucha facilidad.
+\caption{Función Principal}
+\end{algorithm}
+
+
+
 \newpage
+\begin{procedure}[H]
+	\KwIn{datosImagen, numCanales, tamFiltro, numFiltros, usarPooling}
+	\KwOut{MatrizConvolucion, pesos}
+	\BlankLine
+	$forma\gets [tamFiltro, tamFiltro, numCanales, numFiltros];$\\
+	$pesos\gets inicializarPesos(forma);$\\
+	$biases\gets inicializarBias(numFiltros);$\\
+	$convolucion \gets convolucion2D($\
+	$input = datosImagen,$\newline
+	$filter=pesos,$\newline
+	$formaPadding=[1, 1, 1, 1],$\newline
+	$padding=activado);$\\
+
+	$convolucion\gets convolucion + biases;$\\
+	$convolucion\gets funcionRELU(convolucion);$\\
+
+	\If{usarPooling = True}{
+		$convolucion\gets ejecutarPooling(convolucion,2);$\\
+	}
+	\textbf{return} $(convolucion, pesos)$
+	\caption{capaConvolucion (Img, numCanales, tamFiltro, numFiltro, usarPool)}
+\end{procedure}
+
+
+\vskip 0.7cm
+\begin{procedure}[H]
+	\KwIn{datos de Convolucion}
+	\KwOut{Datos con funcion RELU aplicada}
+	\BlankLine
+	\ForEach{item in datosDeConvolucion}{$nuevosDatos[i] \gets max(datosDeConvolucion[i],0);$	}
+	\textbf{return} $nuevosDatos$
+	\caption{FuncionRELU (datosDeConvolucion)}
+\end{procedure}
+
+
+
+\vskip 0.7cm
+\begin{procedure}[H]
+	\KwIn{Vector de Salida Calculada y vector de Salida Deseada}
+	\KwOut{Validación Cruzada de Vectores}
+	\BlankLine
+	$crossEntropy\gets -suma(vectorSalidaDeseada * nlog(vectorSalidaCalculada));$\\
+	\textbf{return} $crossentropy$
+	\caption{entropiaCruzada (vectorSalidaCalculada,vectorSalidaDeseada)}
+\end{procedure}
+
+
+\vskip 0.7cm
+\begin{procedure}[H]
+	\KwIn{Vector de datos}
+	\KwOut{Vector de datos entre 0 y 1}
+	\BlankLine
+	\textbf{return} ${e^{\mathbf {vectorDatos}}} / {\sum _{k=1}^{K}e^{vectorDatos}};$
+	\caption{softmax (vectorDatos)}
+\end{procedure}
+
+
+
+\begin{procedure}[H]
+	\KwIn{entrada, numEntradas, numSalidas, usarRELU}
+	\KwOut{Vector de datos Resultantes, pesos por Item del Vector}
+	\BlankLine
+	$pesos\gets inicializarPesos([numEntradas, numSalidas]);$\\
+	$biases\gets inicializarBias(numSalidas);$\\
+	$capaFC\gets (entrada * pesos) + biases;$\\
+
+
+	\If{usarRELU = True}{
+		$capaFC \gets funcionRELU(capaFC);$\\
+	}
+	\textbf{return} $(capaFC, pesos)$
+	\caption{capaTotalmenteConectada (entrada,numEntradas,numSalidas,usarRELU)}
+\end{procedure}
