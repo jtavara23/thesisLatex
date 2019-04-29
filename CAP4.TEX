@@ -25,7 +25,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 	En esta etapa de la investigación se busca encontrar imágenes de señales de tránsito, las cuales conforman la principal fuente de los modelos que se pretenden crear. Estas será usadas durante el entrenamiento, validación y evaluación del modelo pretendido.
 	
 	\subsection{Datos Iniciales para el entrenamiento}
-		Se obtienen un conjunto de imágenes iniciales de señales de tránsito Alemán y Peruano, las cuales servirán para entrenar, validar los modelos creados.
+		Se obtienen un conjunto de imágenes iniciales de señales de tránsito de Alemania y Perú, las cuales servirán para entrenar y validar los modelos creados.
 		\subsubsection{Señales de Tránsito de Alemania}
 
 			En esta colección consta de un total de 51839 imágenes distribuidas en 43 clases no necesariamente balanceadas con un tamaño de 32 x 32 pixeles.
@@ -360,22 +360,22 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-		Las siguientes técnicas fueron utilizadas para ambos datasets de imágenes (Alemania y Perú).
+		A excepción de esta técnica, las siguientes fueron utilizadas para ambos datasets de imágenes (Alemania y Perú).
 		
 		\subsubsection{Projection(Proyección)}
-			Implica mover la imagen a lo largo de la dirección X o Y (o ambas). Este método de aumento es muy útil ya que la mayoría de los objetos se pueden ubicar en casi cualquier lugar de la imagen, obligando a la red neuronal convolucional a buscar en todas partes. Los márgenes de proyección se asignan al azar en un rango que depende del tamaño de la imagen. La transformación de proyección parece también ocuparse de escalar al azar a medida que colocamos al azar las esquinas de la imagen en un rango [-delta, +delta].
+			Implica mover la imagen a lo largo de la dirección X o Y (o ambas). Este método de aumento es muy útil ya que la mayoría de los objetos se pueden ubicar en casi cualquier lugar de la imagen, obligando a la red neuronal convolucional a buscar en todas partes. Los márgenes de proyección se asignan al azar en un rango que depende del tamaño de la imagen. La transformación de proyección también se ocupar de escalar al azar a medida que colocamos al azar las esquinas de la imagen en un rango [-delta, +delta].
 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth,height=7.8cm]{images/desarrollo/Augment/projection_transform3}
-				\includegraphics[width=1\textwidth,height=7.8cm]{images/desarrollo/Augment/projection_transform}
+				\includegraphics[width=1\textwidth,height=7.5cm]{images/desarrollo/Augment/projection_transform3}
+				\includegraphics[width=1\textwidth,height=7.5cm]{images/desarrollo/Augment/projection_transform}
 				\end{center}
 				\begin{center}
 				\vspace{1em}
 				\caption{\small{Ejemplo de cinco proyecciones por imagen - Dataset Perú y Alemania}}	
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
-				%\vspace{-1.5em}
+				\vspace{-1.5em}
 			\end{figure}
 		\newpage
 		\subsubsection{Rotation(Rotación)}
@@ -450,7 +450,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 
 	\newpage
 	\subsection{Dataset final para el Entrenamiento}
-		Finalmente, luego de haber aplicado de manera secuencial y/o aleatoriamente estas tecnicas a cada una de las imágenes, obtenemos nuevas distribuciones de datos. 
+		Finalmente, luego de haber aplicado de manera secuencial y/o aleatoriamente estas técnicas a cada una de las imágenes, obtenemos nuevas distribuciones de datos. 
 		\subsubsection{Señales de Tránsito de Alemania - Dataset Balanceado }
 			En una se tiene un conjunto balanceado de datos con {\bf 270900 imágenes}.
 			\begin{figure}[H]
@@ -580,9 +580,11 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		\end{table}
 		\vspace{-1.5em}
 
-		Recordemos que en cada época se procesa el dataset completo de imágenes, por lo que cada época es igual : \begingroup\makeatletter\def\f@size{11}\check@mathfonts	$Epoca = Mini batch \times iteraciones$ \endgroup
+		Recordemos que en cada época se procesa el dataset completo de imágenes, por lo que cada época es igual : \begingroup\makeatletter\def\f@size{11}\check@mathfonts	$Epoca = \text{\textit{Tamaño del Minibatch}} \times \text{\textit{iteraciones}}$ \endgroup
 
-		Sin embargo debido a que se tiene dos distintos datasets para el entrenamiento \textbf{(Seccion 3.1.4 - Dataset final para el Entrenamiento)}, el tamaño del Minibatch cambiará respecto al tamaño del dataset y por ende también será diferente la cantidad de iteraciones ejecutadas durante 100 épocas de entrenamiento.                        
+		Sin embargo debido a que se tiene dos distintos datasets para el entrenamiento \textbf{(Seccion 3.1.4 - Dataset final para el Entrenamiento)}, el tamaño del Minibatch cambiará respecto al tamaño del dataset y por ende también será diferente la cantidad de iteraciones ejecutadas durante 100 épocas de entrenamiento. 
+
+		A continuación se presentan 2 cuadros con las distribuciones del tamaño del Mini-batch y la cantidad de iteraciones necesarias durante las 100 épocas para ambos tipos de dataset(Alemania y Perú).                
 		
 		%\begin{center}\end{center}
 
@@ -614,24 +616,24 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		\end{table}
 
 
-		\begin{figure}[H]
-		%\begin{center}
-		\includegraphics[width=1\textwidth]{images/desarrollo/networkArquitec/tempGeneralCNNmodel}
-		%\end{center}
-		\begin{center}
-		\caption{\small{Arquitectura de la CNN}}
-		
-		{\small{\fontsize{10}{16.8}\selectfont {Extreme Learning Classifier}}}
-		\end{center}
-		\vspace{-1.5em}
-		\end{figure}
 
 	En esta investigación se implementó el modelo de redes neuronales convolucionales(CNN) donde las capas convolucionales iniciales de la red extraen características de la imagen(feature extractor), mientras que las capas totalmente conectadas predicen las probabilidades de salida(classifier).
 
-	La arquitectura de la red está inspirada en el arquitectura Inception \citep{Inception} y en la arquitectura AlexNet\citep{Krizhevsky2012} para la clasificación de imágenes. En la arquitectura Inception, el modelo creado es denominado GoogLeNet, similar a AlexNet donde varios módulos iniciales son apilados uno sobre el otro para producir el resultado final. En el módulo de inicio, en ese tipo de red se usaron diversos tamaños de filtros convolucionales para capturar características de diferente abstracción. El alto nivel de abstracción se captura con filtros de mayor tamaño y el de un nivel inferior con filtros de menor tamaño. Procesando información visual a diferentes escalas y al concatenarlas se obtiene un nivel eficiente de abstracción. 
+	\begin{figure}[H]
+		\begin{center}
+		\includegraphics[width=0.8\textwidth]{images/desarrollo/networkArquitec/tempGeneralCNNmodel}
+		\end{center}
+		\begin{center}
+		\caption{\small{Arquitectura de la CNN}}
+		{\small{\fontsize{10}{16.8}\selectfont {Extreme Learning Classifier}}}
+		\end{center}
+		\vspace{-1.5em}
+	\end{figure}
+	
+	La arquitectura de la red está inspirada en el arquitectura Inception \citep{Inception} y en la arquitectura AlexNet \citep{Krizhevsky2012} para la clasificación de imágenes. En la arquitectura Inception, el modelo creado es denominado GoogLeNet, similar a AlexNet donde varios módulos iniciales son apilados uno sobre el otro para producir el resultado final. En el módulo de inicio, en ese tipo de red se usaron diversos tamaños de filtros convolucionales para capturar características de diferente abstracción. El alto nivel de abstracción se captura con filtros de mayor tamaño y el de un nivel inferior con filtros de menor tamaño, procesando información visual a diferentes escalas y al concatenarlas se obtiene un nivel eficiente de abstracción. 
 	%%%	Dado que aplicar directamente más filtros convolucionales con datos de imagen y concatenarlos es computacionalmente costoso, en el modelo Inception finalmente se usaron filtros de reducción de dimensionalidad(pooling/acumulación). Además de ser muy exitoso para la reducción de dimensionalidad, estos filtros también llegan a ser útiles como activación lineal rectificada. La arquitectura de inicio es eficiente en términos de complejidad computacional con respecto al número de unidades en cada etapa. \citep{Mrinal2016}.las características abstractas locales desempeñan un papel importante. Las señales que pertenecen al mismo grupo tienen una ligera diferencia en la estructura local entre sí, lo que dificulta su distinción. Por lo que se optó por agregar un kernel de reducción convolucional de 3 × 3 extra con acumulación máxima en la parte superior para capturar la estructura local discriminativa al comienzo mismo. Los signos pertenecientes a diferentes grupos tienen una abstracción global que se puede capturar utilizando un núcleo de reducción convolucional de 5 × 5.
 
-	Para la clasificación de señales de tránsito en esta investigación se utilizó una versión modificada de las arquitecturas antes mencionadas. Se incorporó {\bf funciones de escala-múltiple} \citep{Multi_scale_feat}, lo que significa que la salida de las capas convolucionales no solo se envía a la capa posterior, sino que también se ramifica y se introduce al clasificador (capa totalmente conectada). La razón detrás de esto es que cuando el clasificador está tomando una decisión basada en convoluciones, podría encontrar que la salida de la primera o segunda capa convolucional también es útil. Básicamente con las características de escala múltiple depende del clasificador qué nivel de abstracción usar, ya que tiene acceso a las salidas de todas las capas convolucionales, es decir,características en todos los niveles de abstracción. Estas capas ramificadas se someten a un pooling máximo adicional, de modo que todas las convoluciones se submuestrean proporcionalmente antes de entrar en el clasificador. Así se garantiza que todas las funciones de escala múltiple experimenten la misma cantidad de máximo aprovechamiento.
+	Para la clasificación de señales de tránsito en esta investigación se utilizó una versión modificada de las arquitecturas antes mencionadas. Se incorporó {\bf funciones de escala-múltiple} \citep{Multi_scale_feat}, lo que significa que la salida de las capas convolucionales no solo se envía a la capa posterior, sino que también se ramifica y se introduce al clasificador (capa totalmente conectada). La razón detrás de esto es que cuando el clasificador está tomando una decisión basada en convoluciones, podría encontrar que la salida de la primera o seguna capa convolucional también es útil. Básicamente con las características de escala múltiple depende del clasificador qué nivel de abstracción usar, ya que tiene acceso a las salidas de todas las capas convolucionales, es decir, características en todos los niveles de abstracción. Estas capas ramificadas se someten a un pooling máximo adicional, de modo que todas las convoluciones se submuestrean proporcionalmente antes de entrar en el clasificador. Así se garantiza que todas las funciones de escala múltiple experimenten la misma cantidad de máximo aprovechamiento.
 	
 	\subsection{Diseño de la Red}
 	
@@ -889,17 +891,17 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 
 			\end{itemize}
 
-			En el apéndice A se muestran bloques de pseudocódigo que fueron implementados para la construcción del diseño de Red.
+			En el apéndice A se muestran bloques de pseudocódigo que fueron implementados para la construcción de los diseños de Red.
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
-\newpage
+%\newpage
 \section{Entrenamiento y Validación }
 
-	Para estimar el error de clasificación, como fue mencionado en la \textbf{Seccion 2.3.4 (Validación Cruzada)} se utilizó el méto do de validación cruzada. En la estimación del error se usa el conjunto de muestras disponible, el cual se divide en el conjunto de entrenamiento y el de validación. El clasificador se diseña usando las muestras de entrenamiento y luego se evalúa obteniendo el error de clasificación para las muestras de validación. Con base en el error obtenidose puede predecir el desempeño del clasificador ante nuevas muestras. Para obtener una medida confiable del desempeño, el conjunto de muestras es lo suficientemente grande y los conjuntos de entrenamiento y de validación son independientes.
+	Para estimar el error de clasificación, como fue mencionado en la \textbf{Seccion 2.3}, se utilizó el méto do de validación cruzada. En la estimación del error se usa el conjunto de muestras disponible, el cual se divide en el conjunto de entrenamiento y el de validación. El clasificador se diseña usando las muestras de entrenamiento y luego se evalúa obteniendo el error de clasificación para las muestras de validación. Con base en el error obtenido se puede predecir el desempeño del clasificador ante nuevas muestras. Para obtener una medida confiable del desempeño, el conjunto de muestras es lo suficientemente grande y los conjuntos de entrenamiento y de validación son independientes.
 
 
 	\subsection{Señales de Tránsito de Alemania}
 
-		Luego de haber entrenado las diferentes arquitecturas durante 100 épocas(38700 iteraciones), obtenemos los siguiente resultados:
+		Luego de haber entrenado las diferentes arquitecturas durante 100 épocas(38700 iteraciones), obtenemos los siguientes resultados:
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
 	 	\subsubsection{Análisis del Entrenamiento y Validación del Diseño A}  
 			\begin{figure}[H]
@@ -919,14 +921,14 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model0Loss} 
 				\end{center}
 				\begin{center}
-				\caption{\small{Modelo A Tasa de pérdida por iteración}}
+				\caption{\small{Modelo A Tasa de pérdida por iteración - Dataset de imágenes de Alemania}}
 				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
 				\vspace{-1.5em}
 			\end{figure}
 
-			Luego de 50 épocas iteradas(19350 iteraciones), se observa que rápidamente el modelo se sobreajusta al dataset de entrenamiento. Es decir, rápidamente el valor de pérdida es muy cercana a cero, lo que a su vez hace que se separe de manera abrupta de los resultados de validación. Iteraciones posteriores harán que el modelo no permita obtener resultados correctos durante la prueba de evaluación.
+			Luego de 50 épocas iteradas(19350 iteraciones), se observa que rápidamente el modelo se sobreajusta al dataset de entrenamiento. Es decir, rápidamente el valor de pérdida es muy cercana a cero, lo que a su vez hace que se separe de manera abrupta de los resultados de validación (color celeste). Iteraciones posteriores harán que el modelo no permita obtener resultados correctos durante la prueba de evaluación.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -950,14 +952,14 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model1Loss} 
 				\end{center}
 				\begin{center}
-				\caption{\small{Modelo B Tasa de pérdida por iteración}}
+				\caption{\small{Modelo B Tasa de pérdida por iteración - Dataset de imágenes de Alemania}}
 				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
 				\vspace{-1.5em}
 			\end{figure}
 
-			Durante 100 epocas iteradas(38700 iteraciones), aproximadamente en  \textbf{34830 iteraciones(80 épocas)} se obtiene la mejor tasa de acierto de validación(99.26\%). Iteraciones posteriores hacen que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
+			Durante 100 épocas iteradas(38700 iteraciones), aproximadamente en  \textbf{34830 iteraciones(80 épocas)} se obtiene la mejor tasa de acierto de validación(99.26\%). Iteraciones posteriores hacen que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -982,14 +984,14 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model4Loss} 
 				\end{center}
 				\begin{center}
-				\caption{\small{Modelo C Tasa de pérdida por iteración}}
+				\caption{\small{Modelo C Tasa de pérdida por iteración - Dataset de imágenes de Alemania}}
 				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
 				\vspace{-1.5em}
 			\end{figure}
 
-			Durante 100 epocas iteradas(38700 iteraciones),al finalizar estas, se obtiene la mejor tasa de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
+			Durante 100 épocas iteradas(38700 iteraciones), se observa que la mejor tasa acierto y pérdida durante el entremenamiento se produjo apróximadamente antes de las 50 iteraciones. Iteraciones posteriores hicieron que esta tasa de acierto se incremente ligeramente y que la tasa de validación no incrementara como se esperaba. Sin embargo al finalizar las 100 épocas se aprecia que se tiene una de las mejores tasas de acierto y pérdida de validación.
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------			
 		\subsubsection{Análisis del Entrenamiento y Validación del Diseño D} 
@@ -1010,14 +1012,14 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model6Loss} 
 				\end{center}
 				\begin{center}
-				\caption{\small{Modelo D Tasa de pérdida por iteración}}
+				\caption{\small{Modelo D Tasa de pérdida por iteración - Dataset de imágenes de Alemania}}
 				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
 				\vspace{-1.5em}
 			\end{figure}
 
-			Al finalizar 100 epocas (38700 iteraciones) se obtiene unda de las mejores tasas de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
+			Al finalizar 100 épocas (38700 iteraciones) se obtiene la mejor de las  tasas de acierto y pérdida de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
 			
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1039,14 +1041,14 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model7Loss} 
 				\end{center}
 				\begin{center}
-				\caption{\small{Modelo E Tasa de pérdida por iteración}}
+				\caption{\small{Modelo E Tasa de pérdida por iteración - Dataset de imágenes de Alemania}}
 				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
 				\vspace{-1.5em}
 			\end{figure}
 		
-			Al finalizar 100 épocas (38700 iteraciones) se obtiene una de las mejores tasas de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
+			Antes de finalizar las 100 épocas (38700 iteraciones) se obtiene una de las mejores tasas de acierto de validación y una de las más mínimas en la pérdida con tendencia a incrementarse, por lo que iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
 		
 		\vspace{2em}
@@ -1102,9 +1104,19 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\end{center}
 				\vspace{-1.5em}
 			\end{figure}
+	
+
+
+
+
+
+
+
+
+
 	\newpage
 	\subsection{Señales de Tránsito de Perú}
-		Luego de haber entrenado las diferentes arquitecturas durante 100 épocas(7700 iteraciones), obtenemos los siguiente resultados:
+		Luego de haber entrenado las diferentes arquitecturas durante 100 épocas (7700 iteraciones), obtenemos los siguientes resultados:
 
 		\subsubsection{Análisis del Entrenamiento y Validación del Diseño A}  
 			\begin{figure}[H]
@@ -1112,7 +1124,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model0Acierto} 
 				\end{center}
 				\begin{center}
-				\caption{\small{Modelo A Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
+				\caption{\small{Modelo A Tasa de Acierto por iteración - Dataset de imágenes de Perú  }}
 				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
@@ -1131,7 +1143,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Luego de 50 épocas iteradas(19350 iteraciones), se observa que rápidamente el modelo se sobreajusta al dataset de entrenamiento. Es decir, rápidamente el valor de pérdida es muy cercana a cero, lo que a su vez hace que se separe de manera abrupta de los resultados de validación. Iteraciones posteriores harán que el modelo no permita obtener resultados correctos durante la prueba de evaluación.
+			Luego de 50 épocas iteradas(3850 iteraciones), se observa que rápidamente el modelo se sobreajusta al dataset de entrenamiento. Es decir, rápidamente el valor de pérdida es muy cercana a cero, lo que a su vez hace que se separe de manera abrupta de los resultados de validación. Iteraciones posteriores harán que el modelo no permita obtener resultados correctos durante la prueba de evaluación.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1142,7 +1154,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model1Acierto} 
 				\end{center}
 				\begin{center}
-				\caption{\small{Modelo B Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
+				\caption{\small{Modelo B Tasa de Acierto por iteración - Dataset de imágenes de Perú  }}
 				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
@@ -1162,7 +1174,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Durante 100 epocas iteradas(38700 iteraciones), aproximadamente en  \textbf{34830 iteraciones(80 épocas)} se obtiene la mejor tasa de acierto de validación(99.26\%). Iteraciones posteriores hacen que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
+			Durante 100 épocas iteradas(7700 iteraciones), aproximadamente en  \textbf{34830 iteraciones(80 épocas)} se obtiene la mejor tasa de acierto de validación(99.26\%). Iteraciones posteriores hacen que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1174,7 +1186,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model4Acierto} 
 				\end{center}
 				\begin{center}
-				\caption{\small{Modelo C Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
+				\caption{\small{Modelo C Tasa de Acierto por iteración - Dataset de imágenes de Perú  }}
 				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
@@ -1194,7 +1206,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Durante 100 epocas iteradas(38700 iteraciones),al finalizar estas, se obtiene la mejor tasa de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
+			Durante 100 épocas iteradas(7700 iteraciones), se obtiene la mejor tasa de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------			
 		\subsubsection{Análisis del Entrenamiento y Validación del Diseño D} 
@@ -1203,7 +1215,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model6Acierto} 
 				\end{center}
 				\begin{center}
-				\caption{\small{Modelo D Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
+				\caption{\small{Modelo D Tasa de Acierto por iteración - Dataset de imágenes de Perú  }}
 				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
@@ -1222,7 +1234,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Al finalizar 100 epocas (38700 iteraciones) se obtiene unda de las mejores tasas de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
+			Al finalizar 100 épocas (7700 iteraciones) se obtiene una de las mejores tasas de acierto de validación con cierta tendencia a reducirse, por lo que iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
 			
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1232,7 +1244,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model7Acierto} 
 				\end{center}
 				\begin{center}
-				\caption{\small{Modelo E Tasa de Acierto por iteración - Dataset de imágenes de Alemania  }}
+				\caption{\small{Modelo E Tasa de Acierto por iteración - Dataset de imágenes de Perú  }}
 				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
@@ -1251,7 +1263,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 		
-			Al finalizar 100 épocas (38700 iteraciones) se obtiene una de las mejores tasas de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previmante nos analizadas.
+			Al finalizar 100 épocas (7700 iteraciones) se obtiene una de las mejores tasas de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
@@ -1283,7 +1295,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\end{figure}	
 
 
-			Sin embargo a través de la validación del modelo (usando dataset de imágenes no visto/analizado durante el entrenamiento), se puede apreciar que el Modelo E obtuvo una de las mejores tasas de Acierto y Error. 
+			A través de la validación del modelo (usando dataset de imágenes no analizadas durante el entrenamiento), se distingue que el Modelo E obtuvo una de las mejores tasas de Acierto y Error. 
 
 			\begin{figure}[H]
 				%\begin{center}
