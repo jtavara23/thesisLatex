@@ -918,7 +918,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model0Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model0Loss_1} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo A Tasa de pérdida por iteración - Dataset de imágenes de Alemania}}
@@ -928,7 +928,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Luego de 50 épocas iteradas(19350 iteraciones), se observa que rápidamente el modelo se sobreajusta al dataset de entrenamiento. Es decir, rápidamente el valor de pérdida es muy cercana a cero, lo que a su vez hace que se separe de manera abrupta de los resultados de validación (color celeste). Iteraciones posteriores harán que el modelo no permita obtener resultados correctos durante la prueba de evaluación.
+			Luego de 20 épocas iteradas(aproximadamente  7000 iteraciones), se observa que rápidamente el modelo se sobreajusta al dataset de entrenamiento. Es decir, rápidamente el valor de pérdida es muy cercana a cero, lo que a su vez hace que se separe de manera abrupta de los resultados de validación y lo mismo sucede con la tase de acierto, en la cual la de validación luego de estas 20 épocas es mucho menor al de entrenamiento. Iteraciones posteriores no permitirán mejores resultados.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -949,7 +949,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model1Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model1Loss_1} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo B Tasa de pérdida por iteración - Dataset de imágenes de Alemania}}
@@ -959,7 +959,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Durante 100 épocas iteradas(38700 iteraciones), aproximadamente en  \textbf{34830 iteraciones(80 épocas)} se obtiene la mejor tasa de acierto de validación(99.26\%). Iteraciones posteriores hacen que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
+			Durante 100 épocas iteradas(38700 iteraciones), apartir de \textbf{34830 iteraciones(80 épocas)} se obtiene la mejor tasa de acierto de validación(99.12\%) logrando resultados muy similares entre la tasa de acierto y pérdida del entrenamiento y validación, por lo que iteraciones posteriores harán que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -981,7 +981,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model4Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model4Loss_1} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo C Tasa de pérdida por iteración - Dataset de imágenes de Alemania}}
@@ -991,7 +991,8 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Durante 100 épocas iteradas(38700 iteraciones), se observa que la mejor tasa acierto y pérdida durante el entremenamiento se produjo apróximadamente antes de las 50 iteraciones. Iteraciones posteriores hicieron que esta tasa de acierto se incremente ligeramente y que la tasa de validación no incrementara como se esperaba. Sin embargo al finalizar las 100 épocas se aprecia que se tiene una de las mejores tasas de acierto y pérdida de validación.
+			Al igual que el modelo anterior, luego de 100 épocas iteradas(38700 iteraciones), se obtiene la mejor tasa de acierto y pérdida en la validación logrando resultados muy similares entre el entrenamiento y la validación, por lo que iteraciones posteriores harán que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
+
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------			
 		\subsubsection{Análisis del Entrenamiento y Validación del Diseño D} 
@@ -1009,7 +1010,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model6Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model6Loss_1} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo D Tasa de pérdida por iteración - Dataset de imágenes de Alemania}}
@@ -1019,7 +1020,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Al finalizar 100 épocas (38700 iteraciones) se obtiene la mejor de las  tasas de acierto y pérdida de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
+			Al finalizar 100 épocas (38700 iteraciones) se obtiene la mejor de las tasas de acierto y pérdida en la validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
 			
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1038,7 +1039,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model7Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/german/model7Loss_1} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo E Tasa de pérdida por iteración - Dataset de imágenes de Alemania}}
@@ -1048,7 +1049,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 		
-			Antes de finalizar las 100 épocas (38700 iteraciones) se obtiene una de las mejores tasas de acierto de validación y una de las más mínimas en la pérdida con tendencia a incrementarse, por lo que iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
+			Poco antes de finalizar las 100 épocas (38700 iteraciones) se obtiene una de las mejores tasas de acierto de validación y una de las tasas más mínimas de pérdida (error).
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
 		
 		\vspace{2em}
