@@ -6,7 +6,7 @@
 	
 	Al culminar con la investigación, para la prueba de resultados de clasificación se dispone de una matriz de confusión. La matriz de confusión es una matriz cuadrada cuyo orden es el número de clases. En las  columnas se presentan las clases reales mientras que en las filas se presentan las clases asignadas por el clasificador, por ende, la suma vertical muestra la distribución real de las clases, mientras que la suma horizontal muestra la distribución de las clases producida por el clasificador.
 
-	El análisis de los clasificadores se hace con base en la matriz de confusión de la cual se obtienen los 4 de los 6 indicadores de desempeño (mencionado en la \textbf{Seccion 2.5.3 Indicadores}).
+	El análisis de los clasificadores se hace con base en la matriz de confusión de la cual se obtienen los 4 de los 6 indicadores de desempeño mencionados en la \textbf{Seccion 2.5.3 Indicadores}.
 
 	\begin{itemize}
 
@@ -17,10 +17,10 @@
 	\end{itemize}	
 	Donde:
 	\begin{itemize}
-		\item[--] Verdaderos Positivos: Imágenes correctamente indentificadas.
-		\item[--] Falsos Positivos: Imágenes incorrectamente identificadas.
-		\item[--] Verdaderos Negativo:Imágenes correctamente rechazadas.
-		\item[--] Falsos Negativos:Imágenes incorrectamente rechazadas.
+		\item[--] \textit{Verdaderos Positivos}: Imágenes correctamente indentificadas.
+		\item[--] \textit{Falsos Positivos}: Imágenes incorrectamente identificadas.
+		\item[--] \textit{Verdaderos Negativo}: Imágenes correctamente rechazadas.
+		\item[--] \textit{Falsos Negativos}: Imágenes incorrectamente rechazadas.
 	\end{itemize}
 	
 	Utilizando los anteriores indicadores, podemos obtener dos más:
@@ -30,21 +30,21 @@
 	\end{itemize}
 
 	
-	Las curvas ROC (Característica Operativa del Receptor, del inglés - Receiver Operating Characteristic) define un sistema de coordenadas usadas para visualizar el desempeño del clasificador. Las curvas ROC presentan el compromiso entre efectividad(sensibilidad) y especificidad del clasificador, un aumento en la sensibilidad está acompañado por un decremento en la especificidad. Esto significa que la esquina superior izquierda de la gráfica es el punto ideal, debido a que muestran la relación entre las muestras clasificadas adecuadamente (Proporción de Verdaderos Positivos - PVP) y las muestras que no pertenecen a la clase pero se clasificaron como si lo fueran (Proporción de Falsos Positivos). Esta última, calculada a través de la Especificidad(PVN), siendo:
+	Las curvas ROC (Característica Operativa del Receptor, del inglés - \textit{Receiver Operating Characteristic}) define un sistema de coordenadas usadas para visualizar el desempeño del clasificador. Las curvas ROC presentan el compromiso entre efectividad (sensibilidad) y especificidad del clasificador, un aumento en la sensibilidad está acompañado por un decremento en la especificidad. Esto significa que la esquina superior izquierda de la gráfica es el punto ideal, debido a que muestran la relación entre las muestras clasificadas adecuadamente (\textit{Proporción de Verdaderos Positivos} - PVP) y las muestras que no pertenecen a la clase pero se clasificaron como si lo fueran (\textit{Proporción de Falsos Positivos - PFP}). Esta última, calculada a través de la Especificidad (PVN), siendo:
 	\begin{center}
 	{$PFP= 1 - PVN$}
 	\end{center}
 
-	Las curvas ROC se utilizan normalmente en la clasificación binaria para estudiar la salida de un clasificador. Para dibujarlas se construye la línea convexa formada por los puntos (PFP, PVP) de los clasificadores que se estén evaluando, junto con los puntos de los clasificadores triviales (0,0) y(1,1). La curva más cercana a los bordes izquierdo y superior en el espacio ROC, es la prueba más acertada porque significa que hay mayor acierto. La curva que más se acerque a la diagonal de 45 grados en el espacio ROC, es la prueba menos acertada. Para extender la curva ROC y obtener una área ROC a la clasificación de múltiples clases, como es el caso de esta investigación, solo es necesario binarizar la salida. Se puede dibujar una curva ROC por clase, pero también se puede dibujar una curva ROC considerando cada elemento de la matriz de confusion por clase, como una predicción binaria (micro-promedio). Otra medida de evaluación para la clasificación de múltiples clases es el macro promedio, que otorga igual peso a la clasificación de cada etiqueta. El mejor sistema de entrenamiento es el que produce un conjunto de clasificadores que maximice el área bajo la curva(AUC - Area Under the Curve)\citep{SandovalCereza}.
+	Las curvas ROC se utilizan normalmente en la clasificación binaria para estudiar la salida de un clasificador. Para dibujarlas se construye la línea convexa formada por los puntos (PFP, PVP) de los clasificadores que se estén evaluando, junto con los puntos de los clasificadores triviales (0,0) y (1,1). La curva más cercana a los bordes izquierdo y superior en el espacio ROC, es la prueba más acertada porque significa que hay mayor acierto. La curva que más se acerque a la diagonal de 45 grados en el espacio ROC, es la prueba menos acertada. Para extender la curva ROC y obtener una área ROC a la clasificación de múltiples clases, como es el caso de esta investigación, solo es necesario binarizar la salida. Se puede dibujar una curva ROC por clase, pero también se puede dibujar una curva ROC considerando cada elemento de la matriz de confusión por clase, como una predicción binaria (micro-promedio). Otra medida de evaluación para la clasificación de múltiples clases es el macro promedio, que otorga igual peso a la clasificación de cada etiqueta. El mejor sistema de entrenamiento es el que produce un conjunto de clasificadores que maximice el área bajo la curva (AUC - \textit{Area Under the Curve})\citep{SandovalCereza}.
 
 
-	De manera similar, las Curvas PR(Precision -Recall) define represetan la relación entre la Efectividad y Precisión del clasificador. El objetivo es tener un modelo que se posicione en la esquina superior derecha, que básicamente consiste en obtener solo los positivos verdaderos sin falsos positivos ni falsos negativos: un clasificador perfecto. En la situación en la que se tiene clases con cantidades no balanceadas, como es el caso del Dataset- Perú, a menudo es más útil utilizar el Área bajo la Curva PR como indicador del "clasificador", \citep{Davis-2006-RPR-1143844-1143874}.
+	De manera similar, las Curvas PR(\textit{Precision -Recall}) represetan la relación entre la Efectividad y Precisión del clasificador. El objetivo es tener un modelo que se posicione en la esquina superior derecha, que básicamente consiste en obtener solo los positivos verdaderos sin falsos positivos ni falsos negativos: un clasificador perfecto. En la situación en la que se tiene clases con cantidades no balanceadas, como es el caso del Dataset- Perú, a menudo es más útil utilizar el Área bajo la Curva PR como indicador del clasificador, \citep{Davis-2006-RPR-1143844-1143874}.
 
 
 		
 	%\newpage
 	\section{Señales de Tránsito de Alemania}
-		Luego de evaluar cada uno de los 5 modelos durante 100 épocas, el diseño del \underline{\bf modelo E} es el que presentó los mejores resultados:
+		Luego de evaluar cada uno de los 5 modelos durante 100 épocas, el diseño del \underline{\bf modelo E} es el que presentó los mejores resultados.
 
 		\subsection{Tabla de Resultados}
 
@@ -106,7 +106,7 @@
 	
 	\section{Señales de Tránsito de Perú}
 
-		Luego de evaluar cada uno de los 5 modelos, el diseño del \underline{\bf modelo E} es el que presentó los mejores resultados:
+		Luego de evaluar cada uno de los 5 modelos, el diseño del \underline{\bf modelo E} también es el que presentó los mejores resultados.
 
 		\subsection{Tabla de Resultados}
 
@@ -169,7 +169,7 @@
 	
 		
 	\section{Reconocimiento de Señal}
-		Para continuar con la evaluando el rendimiento del reconocimiento de señales de tránsito, los modelos para el Dataset de señales de Alemania y Perú con mejores resultados fueron utilizados en un aplicación programada en lenguaje python, la cual se encarga de analizar y reconocer una nueva imagen que contenga señales de tránsito.
+		Para continuar con la evaluación del rendimiento en el reconocimiento de señales de tránsito, los modelos para el Dataset de señales de Alemania y Perú con mejores resultados fueron utilizados en un aplicación programada en lenguaje python, la cual se encarga de analizar y reconocer una nueva imagen que contenga una señal de tránsito.
 
 		A continuación se muestran los pasos necesarios para reconocer una imagen que contiene una señal de tránsito:
 
