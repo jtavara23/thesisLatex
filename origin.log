@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  28 APR 2019 19:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  28 APR 2019 19:26
 entering extended mode
 **"D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
 ("D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
@@ -1729,10 +1729,10 @@ LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ) ) 
 Here is how much of TeX's memory you used:
- 9285 strings out of 492970
- 153148 string characters out of 3125706
- 242693 words of memory out of 3000000
- 12790 multiletter control sequences out of 15000+200000
+ 9288 strings out of 492970
+ 153217 string characters out of 3125706
+ 242724 words of memory out of 3000000
+ 12793 multiletter control sequences out of 15000+200000
  133635 words of font info for 269 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,19n,43p,2054b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1764,7 +1764,7 @@ TeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Usuario/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Usuario/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on origin.pdf (164 pages, 15942451 bytes).
+Output written on origin.pdf (164 pages, 15942588 bytes).
 PDF statistics:
  815 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

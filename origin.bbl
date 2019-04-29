@@ -230,4 +230,10 @@ Yadav, G., Maheshwari, S., and Agarwal, A. (2014).
 \newblock In {\em 2014 International Conference on Advances in Computing,
   Communications and Informatics (ICACCI)}, pages 2392--2397.
 
+\bibitem[Zeng et~al., 2015]{ExtremeLearning}
+Zeng, Y., Xu, X., Fang, Y., and Zhao, K. (2015).
+\newblock Traffic sign recognition using deep convolutional networks and
+  extreme learning machine.
+\newblock volume 9242, pages 272--280.
+
 \end{thebibliography}
