@@ -107,6 +107,6 @@
 \contentsline {subsection}{\numberline {4.3.1}Interfaz de Aplicaci\IeC {\'o}n}{137}
 \contentsline {chapter}{\numberline {5}Consideraciones finales}{138}
 \contentsline {section}{\numberline {5.1}Conclusiones}{138}
-\contentsline {section}{\numberline {5.2}Trabajos futuros y Recomendaciones}{139}
+\contentsline {section}{\numberline {5.2}Trabajos futuros y recomendaciones}{139}
 \contentsline {chapter}{Bibliografia}{140}
 \contentsline {chapter}{\numberline {A}Pseudoc\IeC {\'o}digo del Dise\IeC {\~n}o de Red}{145}

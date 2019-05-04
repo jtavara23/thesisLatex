@@ -928,7 +928,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Luego de 20 épocas iteradas(aproximadamente  7000 iteraciones), se observa que rápidamente el modelo se sobreajusta al dataset de entrenamiento. Es decir, rápidamente el valor de pérdida es muy cercana a cero, lo que a su vez hace que se separe de manera abrupta de los resultados de validación y lo mismo sucede con la tase de acierto, en la cual la de validación luego de estas 20 épocas es mucho menor al de entrenamiento. Iteraciones posteriores no permitirán mejores resultados.
+			Luego de 20 épocas iteradas(aproximadamente  7000 iteraciones), se observa que rápidamente el modelo se sobreajusta al dataset de entrenamiento. Es decir, rápidamente el valor de pérdida es muy cercana a cero, lo que a su vez hace que se separe de manera abrupta de los resultados de validación y lo mismo sucede con la tasa de acierto, en la cual la de validación luego de estas 20 épocas es mucho menor al de entrenamiento. Iteraciones posteriores no permitirán mejores resultados.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -959,7 +959,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Durante 100 épocas iteradas(38700 iteraciones), apartir de \textbf{34830 iteraciones(80 épocas)} se obtiene la mejor tasa de acierto de validación(99.12\%) logrando resultados muy similares entre la tasa de acierto y pérdida del entrenamiento y validación, por lo que iteraciones posteriores harán que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
+			Durante 100 épocas iteradas(38700 iteraciones), a partir aproximadamente de \textbf{34800 iteraciones(80 épocas)} se obtiene los mejores promedios de acierto y error, logrando resultados muy similares entre la tasa de acierto y pérdida del entrenamiento y validación.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -991,7 +991,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Al igual que el modelo anterior, luego de 100 épocas iteradas(38700 iteraciones), se obtiene la mejor tasa de acierto y pérdida en la validación logrando resultados muy similares entre el entrenamiento y la validación, por lo que iteraciones posteriores harán que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
+			Al igual que el modelo anterior, luego de 100 épocas iteradas(38700 iteraciones), se obtiene las mejores tasa de acierto y pérdida en la validación logrando resultados muy similares entre el entrenamiento y la validación, se podría seguir entrenando en iteraciones posteriores, es muy probable que el modelo obtenga mejoras en los resultados pero a su vez, haría que se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------			
@@ -1020,7 +1020,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Al finalizar 100 épocas (38700 iteraciones) se obtiene la mejor de las tasas de acierto y pérdida en la validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
+			Este modelo presenta características muy similares a los anteriores, sin embargo a diferencia del Modelo C y muy similar al modelo B, se observa que a la mitad de épocas entrenadas(20000 iteraciones) el promedio de acierto y pérdida no se se aumenta/reduce significativamente lo que resulta en un modelo que demora más en aprender las características importantes durante el entrenamiento.
 			
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1052,8 +1052,8 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			Poco antes de finalizar las 100 épocas (38700 iteraciones) se obtiene una de las mejores tasas de acierto de validación y una de las tasas más mínimas de pérdida (error).
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
 		
-		\vspace{2em}
-		En resumen, los 5 modelos lograron similares resultados de acierto y error durante el entrenamiento.
+		\newpage
+		En resumen, los 5 modelos lograron similares resultados de acierto y error durante el entrenamiento, siendo el modelo A el que obtuvo los mayores resultados observados en la tasa de acierto y error y el modelo E el peor de estos. Sin embargo esto no indicaría que el modelo A sea el seleccionado como mejor modelo ya que por lo antes mencionado se observa que el modelo A se sobreajusta rápidamente al conjunto de entrenamiento siendo la razón principal de la obtención de estos resultados.
 
 			\begin{figure}[H]
 				%\begin{center}
@@ -1080,7 +1080,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\end{figure}	
 
 
-			Sin embargo a través de la validación del modelo (usando dataset de imágenes no visto/analizado durante el entrenamiento), se puede apreciar que el Modelo E obtuvo una de las mejores tasas de Acierto y Error. 
+			Es por ello que a través de la validación del modelo (usando dataset de imágenes no visto/analizado durante el entrenamiento), se puede apreciar que el Modelo E a pesar que obtuvo las más bajas tasas de acierto y error durante el entrenamiento, es el que mejor generaliza el reconocimiento al presentar las mejores tasas de Acierto y Error ante el conjunto de validación. Esto será corroborado por segunda vez cuando se realize la evaluacón del modelo con el dataset de evaluación, el cual presenta mayor cantidad de imágenes que el dataset de validación.
 
 			\begin{figure}[H]
 				%\begin{center}
@@ -1117,12 +1117,12 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 
 	\newpage
 	\subsection{Señales de Tránsito de Perú}
-		Luego de haber entrenado las diferentes arquitecturas durante 100 épocas (7700 iteraciones), obtenemos los siguientes resultados:
+		Las cinco arquitecturas fueron entrenadas durante 100 épocas (7700 iteraciones) y se obtuvo los siguientes resultados:
 
 		\subsubsection{Análisis del Entrenamiento y Validación del Diseño A}  
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model0Acierto} 
+				\includegraphics[width=0.8\textwidth]{images/desarrollo/trainResults/peru/model0Acierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo A Tasa de Acierto por iteración - Dataset de imágenes de Perú  }}
@@ -1134,7 +1134,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model0Loss} 
+				\includegraphics[width=0.8\textwidth]{images/desarrollo/trainResults/peru/model0Loss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo A Tasa de pérdida por iteración}}
@@ -1144,7 +1144,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Luego de 50 épocas iteradas(3850 iteraciones), se observa que rápidamente el modelo se sobreajusta al dataset de entrenamiento. Es decir, rápidamente el valor de pérdida es muy cercana a cero, lo que a su vez hace que se separe de manera abrupta de los resultados de validación. Iteraciones posteriores harán que el modelo no permita obtener resultados correctos durante la prueba de evaluación.
+			Luego de 3850 iteraciones(50 épocas), el modelo se sobreajusta al dataset de entrenamiento, rápidamente el valor de pérdida es muy cercana a cero, y hace que se separe de manera abrupta de los resultados en la validación. De esta manera, el modelo rápidamente memoriza las señales con las cuales se está entrenando lo que no permitirá evaluar con exactitud señales nunca antes vistas.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1152,7 +1152,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/modelBAcierto} 
+				\includegraphics[width=0.85\textwidth]{images/desarrollo/trainResults/peru/modelBAcierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo B Tasa de Acierto por iteración - Dataset de imágenes de Perú  }}
@@ -1165,7 +1165,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/modelBLoss} 
+				\includegraphics[width=0.85\textwidth]{images/desarrollo/trainResults/peru/modelBLoss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo B Tasa de pérdida por iteración}}
@@ -1175,7 +1175,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Durante 100 épocas iteradas(7700 iteraciones), aproximadamente en  \textbf{34830 iteraciones(80 épocas)} se obtiene la mejor tasa de acierto de validación(99.26\%). Iteraciones posteriores hacen que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
+			En este modelo, a partir de 4000 iteraciones(50 épocas) se percibe que el modelo presenta dificultades para seguir extrayendo características que permitan un mejor entrenamiento, por lo que la tasa de Error no es disminuida en iteraciones posteriores, haciendo que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1207,13 +1207,13 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Durante 100 épocas iteradas(7700 iteraciones), se obtiene la mejor tasa de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
+			Al finalizar las 100 épocas iteradas, se obtienen buenas tasas de acierto y error de validación. Sin embargo a partir de 70 épocas entrenadas (5500 iteraciones), se observa que la tasas de acierto y error presentadas en el entrenamiento comienzan a diferir de las tasas de validación, por lo que se observa una tendencia a no mejorar estos resultados en iteraciones posteriores.
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------			
 		\subsubsection{Análisis del Entrenamiento y Validación del Diseño D} 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/modelDAcierto} 
+				\includegraphics[width=0.9\textwidth]{images/desarrollo/trainResults/peru/modelDAcierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo D Tasa de Acierto por iteración - Dataset de imágenes de Perú  }}
@@ -1225,7 +1225,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/modelDLoss} 
+				\includegraphics[width=0.9\textwidth]{images/desarrollo/trainResults/peru/modelDLoss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo D Tasa de pérdida por iteración}}
@@ -1235,7 +1235,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Al finalizar 100 épocas (7700 iteraciones) se obtiene una de las mejores tasas de acierto de validación con cierta tendencia a reducirse, por lo que iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
+			Este modelo presenta características muy similares al anterior e incluso se observa que al finalizar las 100 épocas, la tasa de acierto del entrenamiento es practicamente perfecta generando una pequeña mejora en los resultados de acierto y error en el conjunto de validación respecto a los modelos anteriores.
 			
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1264,12 +1264,12 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 		
-			Al finalizar 100 épocas (7700 iteraciones) se obtiene una de las mejores tasas de acierto de validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
+			Al finalizar 100 épocas (7700 iteraciones) se obtiene las mejores tasas de acierto y error en validación. Iteraciones posteriores harán probablemente que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-		\newpage
-		En resumen, los 5 modelos lograron similares resultados de acierto y error durante el entrenamiento. 
+		%\newpage
+		En resumen, los 5 modelos lograron similares resultados de acierto y error durante el entrenamiento y al igual que durante el entrenamiento del dataset de Alemania, el modelo A es el que presenta mayor tasa de acierto y menor tasa de pérdida, sin embargo como fue antes mencionado, esto no garantiza que sea el modelo que mejor generalize el reconociento de señales por lo que se tendrá que analizar los mismos resultados revisando los valores durante la validación de los modelos.
 
 			\begin{figure}[H]
 				%\begin{center}
@@ -1296,7 +1296,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\end{figure}	
 
 
-			A través de la validación del modelo (usando dataset de imágenes no analizadas durante el entrenamiento), se distingue que el Modelo E obtuvo una de las mejores tasas de Acierto y Error. 
+			A través de la validación del modelo (usando dataset de imágenes no analizadas durante el entrenamiento), se observa que el Modelo E obtuvo las mejores tasas de Acierto y Error. 
 
 			\begin{figure}[H]
 				%\begin{center}
