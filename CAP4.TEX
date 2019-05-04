@@ -692,7 +692,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\multirow{-2}{*}{1} &  32 de 60 x 60 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 30 x 30 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 32 de 15x15}\\ \hline
 				 & 32 de 30 x 30 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 30 x 30 neuronas & --\\ 
 				\multirow{-2}{*}{2} &  64 de 30 x 30 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 1) 64 de 15x15}\\ \hline
-				3 &  {\cellcolor[HTML]{DAE8FC}21600 neuronas} &  F.C.(DropOut : 0.5) &  3072 neuronas &  -- & 7 neuronas & --\\ \hline
+				3 &  {\cellcolor[HTML]{DAE8FC}21600 neuronas} &  F.C.(DropOut : 0.5) &  7200 neuronas &  -- & 7 neuronas & --\\ \hline
 
 				\end{tabular}
 				\end{center}
@@ -727,7 +727,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\item \underline{Dataset del Perú}
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño B - Dataset de Imágenes de Alemania}}
+				\caption{\small{Diseño B - Dataset de Imágenes de Perú}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
@@ -738,7 +738,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\multirow{-2}{*}{2} &  64 de 30 x 30 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 7x7}\\ \hline			
 				{\cellcolor[HTML]{ffb3b3}} & 64 de 15 x 15 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 128 de 15 x 15 neuronas & --\\ 			
 				{\cellcolor[HTML]{ffb3b3} \multirow{-2}{*}{3}} &  128 de 15 x 15 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 7x7 }\\ \hline
-				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 7 neuronas & --\\ \hline
+				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  2700 neuronas &  -- & 7 neuronas & --\\ \hline
 				\end{tabular}
 				\end{center}
 				\end{table}
@@ -765,7 +765,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\multirow{-2}{*}{2} &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 4x4}\\ \hline			
 				 & 64 de 8 x 8 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 64 de 8 x 8 neuronas & --\\ 			
 				\multirow{-2}{*}{3} &  128 de 8 x 8 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 4x4 }\\ \hline
-				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
+				4 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
 				\end{tabular}
 				\end{center}
 				\end{table}
@@ -774,7 +774,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\item \underline{Dataset del Perú}
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño C - Dataset de Imágenes de Alemania}}
+				\caption{\small{Diseño C - Dataset de Imágenes de Perú}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
@@ -785,7 +785,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\multirow{-2}{*}{2} &  64 de 30 x 30 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 7x7}\\ \hline			
 				 & 64 de 15 x 15 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 128 de 15 x 15 neuronas & --\\ 			
 				\multirow{-2}{*}{3} &  128 de 15 x 15 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 7x7 }\\ \hline
-				4 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
+				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  2700 neuronas &  -- & 7 neuronas & --\\ \hline
 				\end{tabular}
 				\end{center}
 				\end{table}
@@ -832,7 +832,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\multirow{-2}{*}{2} &  64 de 30 x 30 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 7x7}\\ \hline			
 				 & 64 de 15 x 15 neuronas & Conv(DropOut : 0.6) & {\cellcolor[HTML]{ffb3b3} 128 de 7 x 7} & Activo & 128 de 15 x 15 neuronas & --\\ 			
 				\multirow{-2}{*}{3} &  128 de 15 x 15 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 7x7 }\\ \hline
-				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 7 neuronas & --\\ \hline
+				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  2700 neuronas &  -- & 7 neuronas & --\\ \hline
 				\end{tabular}
 				\end{center}
 				\end{table}
@@ -847,7 +847,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño E - Dataset de Imágenes de alemania}}
+				\caption{\small{Diseño E - Dataset de Imágenes de Alemania}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
@@ -871,7 +871,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño E - Dataset de Imágenes de alemania}}
+				\caption{\small{Diseño E - Dataset de Imágenes de Perú}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
@@ -884,7 +884,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\multirow{-2}{*}{3} &  128 de 15 x 15 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 2) 128 de 3x3 }\\ \hline
 				{\cellcolor[HTML]{ffb3b3}}& 128 de 7 x 7 neuronas & Conv(DropOut : 0.6) & 128 de 7 x 7 & Activo & 128 de 7 x 7 neuronas & --\\ 			
 				{\cellcolor[HTML]{ffb3b3}\multirow{-2}{*}{4}} &  128 de 7 x 7 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 3 x 3 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 3x3 }\\ \hline
-				5 &  {\cellcolor[HTML]{DAE8FC}3168 neuronas} &  F.C.(DropOut : 0.5) &  702 neuronas &  -- & 43 neuronas & --\\ \hline
+				5 &  {\cellcolor[HTML]{DAE8FC}3168 neuronas} &  F.C.(DropOut : 0.5) &  1584 neuronas &  -- & 7 neuronas & --\\ \hline
 				\end{tabular}
 				\end{center}
 				\end{table}
@@ -1152,7 +1152,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model1Acierto} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/modelBAcierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo B Tasa de Acierto por iteración - Dataset de imágenes de Perú  }}
@@ -1165,7 +1165,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model1Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/modelBLoss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo B Tasa de pérdida por iteración}}
@@ -1184,7 +1184,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model4Acierto} 
+				\includegraphics[width=0.9\textwidth]{images/desarrollo/trainResults/peru/modelCAcierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo C Tasa de Acierto por iteración - Dataset de imágenes de Perú  }}
@@ -1197,7 +1197,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model4Loss} 
+				\includegraphics[width=0.9\textwidth]{images/desarrollo/trainResults/peru/modelCLoss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo C Tasa de pérdida por iteración}}
@@ -1213,7 +1213,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		\subsubsection{Análisis del Entrenamiento y Validación del Diseño D} 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model6Acierto} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/modelDAcierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo D Tasa de Acierto por iteración - Dataset de imágenes de Perú  }}
@@ -1225,7 +1225,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model6Loss} 
+				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/modelDLoss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo D Tasa de pérdida por iteración}}
@@ -1242,7 +1242,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		\subsubsection{Análisis del Entrenamiento y Validación del Diseño E} 
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model7Acierto} 
+				\includegraphics[width=0.9\textwidth]{images/desarrollo/trainResults/peru/modelEAcierto} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo E Tasa de Acierto por iteración - Dataset de imágenes de Perú  }}
@@ -1254,7 +1254,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth]{images/desarrollo/trainResults/peru/model7Loss} 
+				\includegraphics[width=0.9\textwidth]{images/desarrollo/trainResults/peru/modelELoss} 
 				\end{center}
 				\begin{center}
 				\caption{\small{Modelo E Tasa de pérdida por iteración}}
