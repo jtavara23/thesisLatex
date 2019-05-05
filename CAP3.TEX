@@ -18,19 +18,19 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\citep{VicenBueno2007} en la investigación denominada "Traffic Sign Classification by Image Preprocessing and Neural Networks", propusieron clasificar 9 tipos de señales de tráfico de circulación(color azul) de España utilizando una combinación de diferentes técnicas de preprocesamiento de imágenes junto con una red perceptron de 2 capas la cual produjo un acierto de 98.72\% sobre un conjunto de 78 imágenes para la evaluación. El orden de aplicación de técnicas de preprocesamiento de imágenes es lo más destacable de este antecedente, recomendando usar el filtro mediano para suavizar la imagen, ecualización de histogramas e histogramas vertical y horizontal con un umbral fijo de 185.
 		\vskip 0.4cm
 
-		\citep{Rocha2010} en su investigación "Sistema de Visión Artificial para la Detección y el Reconocimiento de Señales de Tráfico basado en Redes Neuronales", diseñaron un sistema de detección basado en redes neuronales feedfoward y descriptores de forma conocidos como momentos invariantes. Este sistema fue capaz de entrenarse con algunas señales de tránsito con la meta de asistir al conductor de no cometer una infracción o en el peor de los casos un accidente, reconociendo una señal de tránsito a cierta distancia para que así el conductor a priori tenga el conocimiento de esta. El sistema fue implementado en MATLAB y presentó mejorías frente a sistemas basados en lógica difusa o basados únicamente en procesamiento de imágenes, sin embargo la tasa de acierto no es tan buena obteniéndose un 88.6\% y se recomendó buscar otro método de invarianza que conjuntamente a una red neuronal pueda conseguir mejores resultados. Así el antecedente contribuye a descartar algunos métodos que no puedan presentar mejoras en el reconocimiento de señales de tránsito.
+		\citep{Rocha2010} en su investigación "Sistema de Visión Artificial para la Detección y el Reconocimiento de Señales de Tráfico basado en Redes Neuronales", diseñaron un sistema de detección basado en redes neuronales feedfoward y descriptores de forma conocidos como momentos invariantes. Este sistema fue capaz de entrenarse con algunas señales de tránsito con la meta de asistir al conductor de no cometer una infracción o en el peor de los casos un accidente, reconociendo una señal de tránsito a cierta distancia para que así el conductor a priori tenga el conocimiento de esta. El sistema fue implementado en MATLAB y presentó mejorías frente a sistemas basados en lógica difusa o basados únicamente en procesamiento de imágenes, sin embargo, la tasa de acierto no es tan buena obteniéndose un 88.6\% y se recomendó buscar otro método de invarianza que conjuntamente a una red neuronal pueda conseguir mejores resultados. Así el antecedente contribuye a descartar algunos métodos que no puedan presentar mejoras en el reconocimiento de señales de tránsito.
 		\vskip 0.4cm
 
 		\citep{Krizhevsky2012} en su investigación """The ImageNet Classification with Deep Convolutional Neural Networks", desarrollaron una red neuronal convolucional grande y profunda para clasificar 1,2 millones de imágenes de alta resolución del concurso ImageNet LSVRC-2010 que categorizaban 1000 clases diferentes de imágenes. Como dato destacable utilizaron un método de regularización muy efectivo para evitar el overfitting de la red denominado dropout, que permitió alcanzar mejores tasas de error en la clasificación que las anteriores técnicas en el estado del arte.
 		\vskip 0.4cm	
 
-		\citep{Hannan2014} en la investigación realizada en Malasia "Traffic Sign Classification based on Neural Network for Advance Driver Assistance System", elaboraron un sistema con pasos de preprocesamiento y extracción de características para clasificar señales de tránsito usando una red perceptron multicapa que funcione en diferentes condiciones de luminosidad. Lo destacable de la investigación, a parte de que el sistema fue capaz de superar la mayor parte del efecto de iluminación en las imágenes, es el tiempo computacional requerido para el análisis de una imagen, siendo en promedio 0.134s, sin embargo la tasa de precisión no fue buena obteniendose un 84.4\% de acierto para un conjunto de evaluación compuesta por 300 imágenes. 
+		\citep{Hannan2014} en la investigación realizada en Malasia "Traffic Sign Classification based on Neural Network for Advance Driver Assistance System", elaboraron un sistema con pasos de preprocesamiento y extracción de características para clasificar señales de tránsito usando una red perceptron multicapa que funcione en diferentes condiciones de luminosidad. Lo destacable de la investigación, aparte de que el sistema fue capaz de superar la mayor parte del efecto de iluminación en las imágenes, es el tiempo computacional requerido para el análisis de una imagen, siendo en promedio 0.134s, sin embargo la tasa de precisión no fue buena obteniéndose un 84.4\% de acierto para un conjunto de evaluación compuesta por 300 imágenes. 
 		\vskip 0.4cm	
 
-		\citep{Hai2014} en su artículo "Morphological Classification for Traffic Sign Recognition", propone un nuevo método para el Reconocimiento de Señales de Tránsito usando el Análisis de Componentes Principales (PCA) y una red Perceptron de Multi-Capa (MLP). En este método propuesto, las señales se detectan individualmente a partir de dos componentes, uno es el color y luego se clasifican en tres clases según la forma: círculo, cuadrado y triángulo. Las características basadas en PCA de estas señales se utilizarán como entrada para la MLP durante la fase de entrenamiento o para responder a clases previamente determinadas. Como contribución resaltante, este enfoque no sólo redujo el tiempo sino que también aumentó el rendimiento en el proceso de reconocimiento. En la simulación, el método propuesto fue evaluado con más de 500 imágenes y su tasa de precisión llegó a cerca del 96\%. 
+		\citep{Hai2014} en su artículo "Morphological Classification for Traffic Sign Recognition", propone un nuevo método para el Reconocimiento de Señales de Tránsito usando el Análisis de Componentes Principales (PCA) y una red Perceptron de Multi-Capa (MLP). En este método propuesto, las señales se detectan individualmente a partir de dos componentes, uno es el color y luego se clasifican en tres clases según la forma: círculo, cuadrado y triángulo. Las características basadas en PCA de estas señales se utilizarán como entrada para la MLP durante la fase de entrenamiento o para responder a clases previamente determinadas. Como contribución resaltante, este enfoque no sólo redujo el tiempo, sino que también aumentó el rendimiento en el proceso de reconocimiento. En la simulación, el método propuesto fue evaluado con más de 500 imágenes y su tasa de precisión llegó a cerca del 96\%. 
 
 		\vskip 0.4cm	
-		Como antecedente más relavante para clasificación de señales de tránsito es el realizado en base a datos de Alemania, GTSRB (German Traffic Sign Benchmark) cuenta con más de 50 mil imágenes a color distribuidas en 43 clases, dicha base de datos ha sido tomada como base en la realización de estudios de diferentes métodos tales como: Clasificación basada en la Representación Dispersa (Sparse Representation-based Classification), el algoritmo de Vecinos Más Cercanos (Nearest Neightbor Classifier), Máquina de Soporte de Vectores (Support Vector Machine), entre otros. El mejor resultado fue usando redes neuronales convolucionales \citep{Ciresan}.
+		Como antecedente más relevante para clasificación de señales de tránsito es el realizado en base a datos de Alemania, GTSRB (German Traffic Sign Benchmark) cuenta con más de 50 mil imágenes a color distribuidas en 43 clases, dicha base de datos ha sido tomada como base en la realización de estudios de diferentes métodos tales como: Clasificación basada en la Representación Dispersa (Sparse Representation-based Classification), el algoritmo de Vecinos Más Cercanos (Nearest Neightbor Classifier), Máquina de Soporte de Vectores (Support Vector Machine), entre otros. El mejor resultado fue usando redes neuronales convolucionales \citep{Ciresan}.
 		Este conjunto de datos refleja las fuertes variaciones en la apariencia visual de las señales debido a la distancia, la iluminación, las condiciones climáticas, las oclusiones parciales y las rotaciones. %Las imágenes se complementan con varios conjuntos de características precalculadas para permitir, de ser necesario, la aplicación de algoritmos de aprendizaje automático sin conocimientos básicos en el procesamiento de imágenes.
 		\vskip 0.4cm
 
@@ -47,17 +47,17 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\vspace{-1.5em}
 		\end{figure}
 
-		Los resultados sobre la base de datos GTSRB producieron un acierto del 99.46\% para el conjunto de imágenes evaluadas, \citep{Stallkamp2012}; sin embargo, desde entonces se han propuesto nuevas variantes de redes neuronales convolucionales, ya sea usando una funciones de activación diferentes, usando más capas en la red, mas filtros o introduciendo nuevos métodos de optimización. Lo importante del antecendente es que servirá como elemento de comparación para la investigación propuesta. 
+		Los resultados sobre la base de datos GTSRB produjeron un acierto del 99.46\% para el conjunto de imágenes evaluadas, \citep{Stallkamp2012}; sin embargo, desde entonces se han propuesto nuevas variantes de redes neuronales convolucionales, ya sea usando funciones de activación diferentes, usando más capas en la red, mas filtros o introduciendo nuevos métodos de optimización. Lo importante del antecedente es que servirá como elemento de comparación para la investigación propuesta. 
 
 
 	\newpage		
 	\subsubsection
 	{NACIONALES:}
 
-		\citep{Vargas2015} en su tésis ”Implementación de un Sistema Inteligente para el Reconocimiento de Señales Preventivas de Seguridad vial", desarrolló un sistema basado enteramente en procesamiento de imágenes para la detección y el reconocimiento de señales de tránsito del tipo preventivas, usando para la detección la técnica de segmentación por color y luego un análisis por la forma y posteriormente para el reconocimiento se usó el algoritmo Speed Up Robust Features (SURF). Todo el proceso fue implementado utilizando la herramienta OpenCV, obteniendose un acierto del 88\% en un total de 100 señales evaluadas. De este antecedente se analizará la importancia de introducir la segmentación por color al modelo de reconocimiento que se pretende elaborar.
+		\citep{Vargas2015} en su tesis ”Implementación de un Sistema Inteligente para el Reconocimiento de Señales Preventivas de Seguridad vial", desarrolló un sistema basado enteramente en procesamiento de imágenes para la detección y el reconocimiento de señales de tránsito del tipo preventivas, usando para la detección la técnica de segmentación por color y luego un análisis por la forma y posteriormente para el reconocimiento se usó el algoritmo Speed Up Robust Features (SURF). Todo el proceso fue implementado utilizando la herramienta OpenCV, obteniéndose un acierto del 88\% en un total de 100 señales evaluadas. De este antecedente se analizará la importancia de introducir la segmentación por color al modelo de reconocimiento que se pretende elaborar.
 		\vskip 0.4cm
 
-		\citep{Ayuque2016} en su tésis "Diseño de un sistema de clasificación de señales de tránsito vehicular utilizando redes neuronales convolucionales", diseñó 6 modelos de arquitecturas de redes convolucionales para clasificar diversas señales de tránsito de Alemania usando el dataset GTSRB, de los cuales el mejor resultado logró un acierto de 95.29\% en un total de 12630 señales evaluadas, cercano al 99.46\% \citep{Ciresan}. Lo importante del antecendente es que servirá como elemento de comparación para la investigación propuesta. 
+		\citep{Ayuque2016} en su tesis "Diseño de un sistema de clasificación de señales de tránsito vehicular utilizando redes neuronales convolucionales", diseñó 6 modelos de arquitecturas de redes convolucionales para clasificar diversas señales de tránsito de Alemania usando el dataset GTSRB, de los cuales el mejor resultado logró un acierto de 95.29\% en un total de 12630 señales evaluadas, cercano al 99.46\% \citep{Ciresan}. Lo importante del antecedente es que servirá como elemento de comparación para la investigación propuesta. 
 		
 
 %***********************************************************************************************************
@@ -67,7 +67,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	En los primeros días de la inteligencia artificial, el campo atacó y resolvió rápidamente problemas que son intelectualmente difíciles para los seres humanos pero relativamente sencillos para las computadoras, problemas que pueden describirse mediante una lista de reglas formales y matemáticas. El verdadero desafío para la inteligencia artificial fue y es resolver las tareas que son fáciles de realizar para las personas pero difíciles de describir de manera formal, problemas que resolvemos intuitivamente, que se sienten automáticos, como reconocer palabras, rostros u objetos en las imágenes \citep{Goodfellow-et-al-2016}.
 
 	\vskip 0.4cm  
-	Si bien aprendizaje automático(del inglés, {\bf machine learning}) se describe a menudo como una subdisciplina de la inteligencia artificial(IA), es mejor considerarla como la mejor técnica de la disciplina; es decir, es el campo de la IA que hoy en día muestra la mayor promesa al proporcionar herramientas que la industria y la sociedad pueden usar para producir algún cambio. En tal sentido,el aprendizaje automático toma algunas de las ideas centrales de la inteligencia artificial y las enfoca en resolver problemas del mundo real con redes neuronales diseñadas para imitar nuestra propia toma de decisiones; sin embargo, el {\bf aprendizaje profundo} o avanzado de máquinas (del inglés, {\bf deep learning}) se centra aún más estrechamente en un subconjunto de herramientas y técnicas del aprendizaje automático y los aplica a la solución de casi cualquier problema que requiera "pensamiento", ya sea humano o artificial \citep{Goodfellow-et-al-2016}.
+	Si bien aprendizaje automático (del inglés, {\bf machine learning}) se describe a menudo como una subdisciplina de la inteligencia artificial(IA), es mejor considerarla como la mejor técnica de la disciplina; es decir, es el campo de la IA que hoy en día muestra la mayor promesa al proporcionar herramientas que la industria y la sociedad pueden usar para producir algún cambio. En tal sentido, el aprendizaje automático toma algunas de las ideas centrales de la inteligencia artificial y las enfoca en resolver problemas del mundo real con redes neuronales diseñadas para imitar nuestra propia toma de decisiones; sin embargo, el {\bf aprendizaje profundo} o avanzado de máquinas (del inglés, {\bf deep learning}) se centra aún más estrechamente en un subconjunto de herramientas y técnicas del aprendizaje automático y los aplica a la solución de casi cualquier problema que requiera "pensamiento", ya sea humano o artificial \citep{Goodfellow-et-al-2016}.
 
 	\vskip 0.4cm  
 	El aprendizaje profundo es un enfoque específico utilizado para construir y entrenar redes neuronales para la toma de decisiones altamente prometedoras. Se considera que un algoritmo es profundo si los datos de entrada se pasan a través de una serie de no linealidades o transformaciones no lineales antes de que se emita. Este enfoque permitir que las computadoras aprendan de la experiencia y entiendan el mundo en términos de una jerarquía de conceptos, con cada concepto definido a través de su relación con conceptos más simples. Al reunir el conocimiento de la experiencia, este enfoque evita la necesidad de que los operadores humanos especifiquen formalmente todo el conocimiento que necesita la computadora. La jerarquía de conceptos permite que la computadora aprenda conceptos complicados mediante la construcción de los más simples. Si dibujamos un gráfico que muestra cómo estos conceptos se construyen uno encima del otro, el gráfico es profundo, con muchas capas. Por esta razón, este enfoque se conoce como el aprendizaje profundo de la inteligencia artificial \citep{Goodfellow-et-al-2016}.
@@ -102,7 +102,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\vspace{-1.5em}
 		\end{figure}
 	\vskip 0.4cm 
-	La idea de aprender la representación correcta de los datos proporciona una perspectiva para el aprendizaje profundo.\citep{Goodfellow-et-al-2016}. Otra perspectiva del aprendizaje profundo es que la profundidad permite que la computadora aprenda un programa de computadora de varios pasos. Cada capa de la representación se puede considerar como el estado de la memoria del computador después de ejecutar otro conjunto de instrucciones en paralelo. Las redes con mayor profundidad pueden ejecutar más instrucciones en secuencia. Las instrucciones secuenciales ofrecen gran poder porque las instrucciones posteriores pueden referirse a los resultados de instrucciones anteriores. De acuerdo con esta visión del aprendizaje profundo, no toda la información en las activaciones de una capa necesariamente codifica los factores de variación que explican la entrada. La representación también almacena información del estado que ayuda a ejecutar un programa el cual puede dar sentido a la entrada. Esta información de estado podría ser análoga a un contador o puntero en un programa informático tradicional. No tiene nada que ver con el contenido de la entrada específicamente, pero ayuda al modelo a organizar su procesamiento.
+	La idea de aprender la representación correcta de los datos proporciona una perspectiva para el aprendizaje profundo, \citep{Goodfellow-et-al-2016}. Otra perspectiva del aprendizaje profundo es que la profundidad permite que la computadora aprenda un programa de computadora de varios pasos. Cada capa de la representación se puede considerar como el estado de la memoria del computador después de ejecutar otro conjunto de instrucciones en paralelo. Las redes con mayor profundidad pueden ejecutar más instrucciones en secuencia. Las instrucciones secuenciales ofrecen gran poder porque las instrucciones posteriores pueden referirse a los resultados de instrucciones anteriores. De acuerdo con esta visión del aprendizaje profundo, no toda la información en las activaciones de una capa necesariamente codifica los factores de variación que explican la entrada. La representación también almacena información del estado que ayuda a ejecutar un programa el cual puede dar sentido a la entrada. Esta información de estado podría ser análoga a un contador o puntero en un programa informático tradicional. No tiene nada que ver con el contenido de la entrada específicamente, pero ayuda al modelo a organizar su procesamiento.
 	\vskip 0.4cm 
 	Hay dos formas principales de medir la profundidad de un modelo, \citep{Goodfellow-et-al-2016}. La primera vista se basa en la cantidad de instrucciones secuenciales que se deben ejecutar para evaluar la arquitectura. Podemos considerar esto como la longitud de la ruta más larga a través de un diagrama de flujo que describe cómo calcular cada una de las salidas del modelo a partir de sus entradas. Otro enfoque, utilizado por modelos probabilísticos profundos, considera que la profundidad de un modelo no es la profundidad del gráfico computacional sino la profundidad del gráfico que describe cómo los conceptos se relacionan entre sí. En este caso, la profundidad del diagrama de flujo de los cálculos necesarios para calcular la representación de cada concepto puede ser mucho más profunda que la gráfica de los conceptos mismos. Esto se debe a que la comprensión del sistema de los conceptos más simples puede ser refinado dada la información sobre conceptos más complejos.
 	\vskip 0.4cm 
@@ -127,10 +127,10 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	Nueve de cada diez veces, cuando se escucha que el aprendizaje profundo rompe una nueva barrera tecnológica, las redes neuronales convolucionales están involucradas. También llamados CNN(del inglés , {\bf Convolutional Neural Networks}) o  {\bf ConvNets}, estas son las preferidas del campo de redes neuronales profundas. Han aprendido a clasificar las imágenes en categorías incluso mejor que los humanos en algunos casos, \citep{Rohrer}.
 	
 	\vskip 0.4cm  
-	Las arquitecturas de redes convolucionales siempre suponen explícitamente que las entradas deben ser mapeadas en forma de imágenes, lo que nos permite configurar parte inicla de las propiedades o características de la arquitectura a diseñar.  Debido a esta característica la limitación de las ConvNets radica en que solo capturan patrones espaciales locales en datos. Es decir, si no se puede hacer que los datos se vean como una imagen, las ConvNets son practicamente muy poco útiles,\citep{Rohrer}.
+	Las arquitecturas de redes convolucionales siempre suponen explícitamente que las entradas deben ser mapeadas en forma de imágenes, lo que nos permite configurar parte inicial de las propiedades o características de la arquitectura a diseñar.  Debido a esta característica la limitación de las ConvNets radica en que solo capturan patrones espaciales locales en datos. Es decir, si no se puede hacer que los datos se vean como una imagen, las ConvNets son prácticamente muy poco útiles,\citep{Rohrer}.
 
 	\vskip 0.4cm  
-	Las redes neuronales convolucionales son muy similares a las redes neuronales ordinarias, están formadas por neuronas que tienen pesos y biases(sesgos) que se pueden aprender durante el entrenamiento de estas. Cada neurona recibe algunas entradas y realiza operaciones matemáticas. Toda la red expresa una única función de puntuación diferenciable: desde el contenido de los píxeles de la imagen en un extremo(entrada) hasta los puntajes que definen la clase o resultado correspondiente en el otro extremo(salida).
+	Las redes neuronales convolucionales son muy similares a las redes neuronales ordinarias, están formadas por neuronas que tienen pesos y biases (sesgos) que se pueden aprender durante el entrenamiento de estas. Cada neurona recibe algunas entradas y realiza operaciones matemáticas. Toda la red expresa una única función de puntuación diferenciable: desde el contenido de los píxeles de la imagen en un extremo(entrada) hasta los puntajes que definen la clase o resultado correspondiente en el otro extremo(salida).
 
 	\begin{figure}[H]
 	\begin{center}
@@ -144,7 +144,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	\vspace{-1.5em}
 	\end{figure}
 
-	El resultado de las CNNs es que pueden encontrar si una característica está en una imagen sin preocuparse exactamente de donde está. Esto ayuda a resolver el problema de las computadoras al comparar imágenes de manera hiper-literal, es decir, que coincida pixel a pixel para que se trate de imágenes iguales.
+	El resultado de las CNNs es que pueden encontrar si una característica está en una imagen sin preocuparse exactamente de donde está. Esto ayuda a resolver el problema de las computadoras al comparar imágenes de manera híper-literal, es decir, que coincida pixel a pixel para que se trate de imágenes iguales.
 
 	\begin{figure}[H]
 	\begin{center}
@@ -158,9 +158,9 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	\vspace{-1.5em}
 	\end{figure}
 
-	Una ConvNet se caracteriza por tener una secuencia de capas donde cada una de estas transforma un volumen de activaciones en otro nuevo a través de funciones y el aprendizaje profundo se produce cuando se utilizan varias de estas capas variando los parámetros de configuación dentro y entre dichas capas. 
+	Una ConvNet se caracteriza por tener una secuencia de capas donde cada una de estas transforma un volumen de activaciones en otro nuevo a través de funciones y el aprendizaje profundo se produce cuando se utilizan varias de estas capas variando los parámetros de configuración dentro y entre dichas capas. 
 	\vskip 0.4cm  
-	Existen dos conjuntos de terminologías para describir estas capas. Una es cuando la red convolucional es vista como un número largo de capas simples y cada paso del procesamiento se considera como una capa en sí misma. Otra terminología es cuando la red convolucional es vista como un número pequeño de capas relativamente complejas, donde cada capa tiene multiples etapas. En esta terminología, existe un mapeo directo entre los volumenes de activaciones y las capas de red. En esta investigación se usará esta terminología.
+	Existen dos conjuntos de terminologías para describir estas capas. Una es cuando la red convolucional es vista como un número largo de capas simples y cada paso del procesamiento se considera como una capa en sí misma. Otra terminología es cuando la red convolucional es vista como un número pequeño de capas relativamente complejas, donde cada capa tiene múltiples etapas. En esta terminología, existe un mapeo directo entre los volúmenes de activaciones y las capas de red. En esta investigación se usará esta terminología.
 
 	
 	\begin{figure}[H]
@@ -176,11 +176,11 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	
 	\subsection{Capa Convolucional}
 
-		Los parámetros de la capa convolucional consisten basicamente en dos datos. La entrada y todo lo que respecta a un conjunto de filtros(también denomidados kernels) cuyos valores se aprenden, es decir, empiezan con datos aleatorios y conforme avance el entrenamiento se van alterando. 
+		Los parámetros de la capa convolucional consisten básicamente en dos datos. La entrada y todo lo que respecta a un conjunto de filtros (también denominados kernels) cuyos valores se aprenden, es decir, empiezan con datos aleatorios y conforme avance el entrenamiento se van alterando. 
 		\vskip 0.3cm 
 		\subsubsection {Etapa de Convolución} 
 		  
-		Para el proceso convolucional cada filtro es pequeño espacialmente (a lo ancho y alto), incluso se extiende a través de la profundidad total del volumen de entrada(imagen). Por ejemplo, un filtro típico en una primera capa de una ConvNet podría tener un tamaño de 5x5x3 (es decir, 5 píxeles de ancho y alto, y 3 de profundidad debido a que los canales de color - RGB). Durante el proceso hacia adelante, se desliza (más precisamente, convolve) cada filtro a través del ancho y alto(incluso produnfidad) del volumen de entrada para calcular los productos de puntos entre las entradas del filtro y la entrada en cualquier posición.
+		Para el proceso convolucional cada filtro es pequeño espacialmente (a lo ancho y alto), incluso se extiende a través de la profundidad total del volumen de entrada(imagen). Por ejemplo, un filtro típico en una primera capa de una ConvNet podría tener un tamaño de 5x5x3 (es decir, 5 píxeles de ancho y alto, y 3 de profundidad debido a que los canales de color - RGB). Durante el proceso hacia adelante, se desliza (más precisamente, convoluciona) cada filtro a través del ancho y alto (incluso profundidad) del volumen de entrada para calcular los productos de puntos entre las entradas del filtro y la entrada en cualquier posición.
 
 		\begin{figure}[H]
 		\begin{center}
@@ -205,7 +205,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\vspace{-1.9em}
 		\end{figure}
 
-		A medida que deslizamos el filtro sobre el ancho y la altura del volumen de entrada produciremos un mapa de activación bidimensional que proporciona las respuestas de ese filtro en cada posición espacial. Es decir, el proceso en esta capa consiste en calcular la coincidencia de un filtro con una parte de la imagen,y para conseguirlo simplemente se multiplica cada píxel en el filtro por el valor del píxel en la imagen. Para luego, sumar las respuestas y dividirlas por el número total de píxeles en el filtro.
+		A medida que deslizamos el filtro sobre el ancho y la altura del volumen de entrada produciremos un mapa de activación bidimensional que proporciona las respuestas de ese filtro en cada posición espacial. Es decir, el proceso en esta capa consiste en calcular la coincidencia de un filtro con una parte de la imagen, y para conseguirlo simplemente se multiplica cada píxel en el filtro por el valor del píxel en la imagen. Para luego, sumar las respuestas y dividirlas por el número total de píxeles en el filtro.
 
 		\begin{figure}[H]
 		\begin{center}
@@ -253,7 +253,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{figure} 	
 
 		  
-		En una red convolucional profunda, las unidades en las capas más profundas pueden interactuar indirectamente con una porción más grande de la entrada. Esto permite que la red describa de manera eficiente las interacciones complicadas entre muchas variables mediante la construcción de tales interacciones a partir de bloques de construcción simples que describen cada una de ellas. Por lo tanto, aunque las conexiones directas en una red convolucional son muy dispersas, las unidades en las capas más profundas pueden conectarse indirectamente a la totalidad o a la mayoría de la imagen de entrada,\citep{Goodfellow-et-al-2016}.
+		En una red convolucional profunda, las unidades en las capas más profundas pueden interactuar indirectamente con una porción más grande de la entrada. Esto permite que la red describa de manera eficiente las interacciones complicadas entre muchas variables mediante la construcción de tales interacciones a partir de bloques de construcción simples que describen cada una de ellas. Por lo tanto, aunque las conexiones directas en una red convolucional son muy dispersas, las unidades en las capas más profundas pueden conectarse indirectamente a la totalidad o a la mayoría de la imagen de entrada, \citep{Goodfellow-et-al-2016}.
 		\begin{figure}[H]
 		\begin{center}
 		\includegraphics[width=0.5\textwidth]{images/marcoteorico/sparceCondeep}
@@ -267,10 +267,10 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{figure} 	
 
 		
-		El uso {\bf compartido de parámetros} hace referencia al uso del mismo parámetro para más de una función en un modelo. En una red neuronal tradicional, cada elemento de la matriz de pesos se usa exactamente una vez cuando se calcula la salida de una capa. Se multiplica por un elemento de la entrada y luego nunca se vuelve a visitar. Como sinónimo de compartición de parámetros, se puede decir que una red tiene ponderaciones vinculadas, porque el valor de la ponderación aplicada a una entrada está vinculado al valor de una ponderación aplicada a otra parte. En una red neuronal convolucional, cada miembro del kernel se utiliza en cada posición de la entrada (excepto tal vez algunos de los píxeles de los bordes, dependiendo de las decisiones de diseño con respecto al límite). El uso compartido de parámetros utilizado por la operación de convolución significa que en lugar de aprender conjuntos de parámetros para cada ubicación por separado, aprendemos un solo conjunto, \citep{Goodfellow-et-al-2016}.
+		El uso {\bf compartido de parámetros} hace referencia al uso del mismo parámetro para más de una función en un modelo. En una red neuronal tradicional, cada elemento de la matriz de pesos se usa exactamente una vez cuando se calcula la salida de una capa. Se multiplica por un elemento de la entrada y luego nunca se vuelve a visitar. Como sinónimo de compartición de parámetros, se puede decir que una red tiene ponderaciones vinculadas, porque el valor de la ponderación aplicada a una entrada está vinculado al valor de una ponderación aplicada a otra parte. En una red neuronal convolucional, cada miembro del kernel se utiliza en cada posición de la entrada (excepto tal vez algunos de los píxeles de los bordes, dependiendo de las decisiones de diseño con respecto al límite). El uso compartido de parámetros utilizado por la operación de convolución significa que, en lugar de aprender conjuntos de parámetros para cada ubicación por separado, aprendemos un solo conjunto, \citep{Goodfellow-et-al-2016}.
 		\vskip 0.4cm  
 
-		En el caso de la convolución, la forma particular de compartir los parámetros hace que la capa tenga una propiedad llamada {\bf representaciones equivalentes}. Decir que una función es equivalente significa que si la entrada cambia, la salida cambia de la misma manera.
+		En el caso de la convolución, la forma particular de compartir los parámetros hace que la capa tenga una propiedad llamada {\bf representaciones equivalentes}. Decir que una función es equivalente significa que, si la entrada cambia, la salida cambia de la misma manera.
 		La convolución crea un mapa en 2-D de donde aparecen ciertas características en la entrada. Si movemos el objeto en la entrada, su representación se moverá la misma cantidad en la salida. Esto es útil cuando sabemos que se utiliza alguna función de un número pequeño de píxeles vecinos cuando se aplica a ubicaciones de entrada múltiples. Por ejemplo, al procesar imágenes, es útil detectar bordes en la primera capa de una red convolucional. Los mismos bordes aparecen más o menos en todas partes en la imagen, por lo que es práctico compartir los parámetros en toda la imagen.
 
 		\begin{figure}[H]
@@ -279,14 +279,14 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{center}
 		\begin{center}
 		\vskip 0.1cm  
-		\caption{\small{Resultado de Convolución(conjunto de mapas de activación. generado a partir de 3 filtros para 3 carecteristicas: diagonal derecha, cruzamiento central y diagonal izquierda). Simbolo de convolución: $\otimes$}}
+		\caption{\small{Resultado de Convolución(conjunto de mapas de activación. generado a partir de 3 filtros para 3 características: diagonal derecha, cruzamiento central y diagonal izquierda). Símbolo de convolución: $\otimes$}}
 		\vskip -0.1cm  
 		{\small{Fuente: \cite{Rohrer}}}
 		\end{center}
 		\vspace{-1.9em}
 		\end{figure}
 
-		En resumen, se tiene un conjunto completo de "n"  filtros en cada capa convolucional(determinando la profundidad de la capa) y cada uno de estos filtros producirá un mapa de activación bidimensional por separado. Apilaremos estos mapas de activación a lo largo de la dimensión de profundidad y produciremos el volumen de salida, es decir el resultado es un conjunto de imágenes que muestran un versión filtrada de la imagen original resaltando características o patrones importantes de ella, como puede ser visto en la figura 2.13.
+		En resumen, se tiene un conjunto completo de "n"  filtros en cada capa convolucional (determinando la profundidad de la capa) y cada uno de estos filtros producirá un mapa de activación bidimensional por separado. Apilaremos estos mapas de activación a lo largo de la dimensión de profundidad y produciremos el volumen de salida, es decir el resultado es un conjunto de imágenes que muestran una versión filtrada de la imagen original resaltando características o patrones importantes de ella, como puede ser visto en la figura 2.13.
 
 		\vskip 0.4cm  
 		Cabe resaltar que para la construcción de un filtro o kernel, es necesario considerar tres aspectos importantes: la extensión espacial (spatial extent), el paso (stride) y la cantidad de zero a rellenar (zero-padding).
@@ -330,9 +330,9 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{enumerate}
 		%\vskip 0.4cm  
 
-		\noindent Cada capa convolucional recibe como dato de entrada llos parámetros:
+		\noindent Cada capa convolucional recibe como dato de entrada los parámetros:
 		${W_{0}}\times{H_{0}}\times{D_{0}}$ \newline
-		Produce un dato de salida con los siguiente parámetros: ${W_{1}}\times{H_{1}}\times{D_{1}}$\newline
+		Produce un dato de salida con los siguientes parámetros: ${W_{1}}\times{H_{1}}\times{D_{1}}$\newline
 		Estas salidas, son influenciadas por la manera de configuración de los filtros.\newline
 		\vspace{-2em} 
 		
@@ -371,7 +371,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		
 		En el que:\vskip 0.1cm
 		\begin{itemize}
-			\item $x,w,b$ son valores de entrada, pesos y biases(sesgos), respectivamente
+			\item $x,w,b$ son valores de entrada, pesos y biases (sesgos), respectivamente.
 			\item $n$ es el número de la capa
 			\item $j$ es el número del filtro de salida
 			\item $k$ es la cantidad de filtros en la capa $n-1$ o $n$
@@ -479,9 +479,9 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\vspace{-1.5em}
 		\end{figure}
 
-		Después de algunas capas ReLU, es común optar por aplicar una capa de agrupamiento. En esta categoría, la operación MAX(conocida como Max-pooling) es la más popular reduciendo progresivamente el tamaño espacial de la representación de una imágen(mapa de características) mientras conserva la información más importante en ella, esto se ejecuta con dos objetivos, el primero de reducir la cantidad de parámetros y reducir el cálculo en la red. Este último de gran importancia en el control del sobreajuste, \citep{Rohrer}.
+		Después de algunas capas ReLU, es común optar por aplicar una capa de agrupamiento. En esta categoría, la operación MAX (conocida como Max-pooling) es la más popular reduciendo progresivamente el tamaño espacial de la representación de una imagen (mapa de características) mientras conserva la información más importante en ella, esto se ejecuta con dos objetivos, el primero de reducir la cantidad de parámetros y reducir el cálculo en la red. Este último de gran importancia en el control del sobreajuste, \citep{Rohrer}.
 		\vskip 0.4cm 
-		La capa de agrupación opera independientemente en cada segmento de profundidad de la entrada y la cambia de tamaño espacialmente (reduce su resolución). El proceso matemático consiste en pasar una pequeña ventana(kernel) através de una imagen y tomar el valor máximo de la ventana en cada paso. 
+		La capa de agrupación opera independientemente en cada segmento de profundidad de la entrada y la cambia de tamaño espacialmente (reduce su resolución). El proceso matemático consiste en pasar una pequeña ventana(kernel) a través de una imagen y tomar el valor máximo de la ventana en cada paso. 
 
 
 		\begin{figure}[H]
@@ -496,7 +496,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\vspace{-1.5em}
 		\end{figure}
 
-		Este proceso es aplicado para cada mapa de activación(salida de la capa de convolución). Análogamente con la capa de convolución, el resultado en esta capa es un conjunto de imágenes que muestran un versión agrupada de las imágenes de entrada.
+		Este proceso es aplicado para cada mapa de activación (salida de la capa de convolución). Análogamente con la capa de convolución, el resultado en esta capa es un conjunto de imágenes que muestran una versión agrupada de las imágenes de entrada.
 
 		\begin{figure}[H]
 		\begin{center}
@@ -513,7 +513,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 
 		\noindent Esta capa pooling recibe como dato de entrada los parámetros:
 		${W_{0}}\times{H_{0}}\times{D_{0}}$ \newline
-		Produce un dato de salida con los siguiente parámetros: ${W_{1}}\times{H_{1}}\times{D_{1}}$\newline		
+		Produce un dato de salida con los siguientes parámetros: ${W_{1}}\times{H_{1}}\times{D_{1}}$\newline		
 		% first column
 		\begin{minipage}[t]{0.5\textwidth}
 		En el que:
@@ -550,7 +550,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 
 	\subsection{Capa totalmente conectada (Fully-connected layer)}
 
-		Esta capa por lo general aparece al final de la arquitectura y es similar al Perceptrón Multicapa(MultilayerPerceptron - MLP), en el cual la neurona de salida se conecta a todas las neuronas de entrada y el peso de las conexiones son actualizadas usando el método de retropropagación.
+		Esta capa por lo general aparece al final de la arquitectura y es similar al Perceptrón Multicapa (MultilayerPerceptron - MLP), en el cual la neurona de salida se conecta a todas las neuronas de entrada y el peso de las conexiones son actualizadas usando el método de retropropagación.
 		
 		Eventualmente, con un mapa de características lo suficientemente pequeño, el contenido se aplastará en un vector de una sola dimensión y será entrada para en un MLP totalmente conectado para su procesamiento.
 		
@@ -558,7 +558,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	
 
 
-En resumen, una arquitecuta o modelo de red convolucional estará compuesto de varias capas y ejecutará las siguientas actividades:
+En resumen, una arquitectura o modelo de red convolucional estará compuesto de varias capas y ejecutará las siguientes actividades:
 \begin{figure}[H]
 	\begin{center}
 	\includegraphics[width=0.8\textwidth]{images/marcoteorico/modelo}
@@ -594,7 +594,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 \newpage
 \section{Entrenamiento y Validación}
 
-	La red procesa los registros en los datos de entrenamiento uno a la vez, usando los pesos, bias y las funciones en las capas ocultas, luego compara las salidas resultantes con las salidas deseadas. Los errores se propagan a través del sistema, lo que hace que el sistema ajuste los pesos y biases que serán procesados en la siguiente iteración de entrenamiento. Este proceso ocurre una y otra vez para el mismo conjunto de datos, a medida que los pesos se ajustan (refinan) continuamente. Para realizar este proceso, existe una método de optimización muy popular denominado {\bf Descenso de gradiente}(Gradient Descent).
+	La red procesa los registros en los datos de entrenamiento uno a la vez, usando los pesos, bias y las funciones en las capas ocultas, luego compara las salidas resultantes con las salidas deseadas. Los errores se propagan a través del sistema, lo que hace que el sistema ajuste los pesos y biases que serán procesados en la siguiente iteración de entrenamiento. Este proceso ocurre una y otra vez para el mismo conjunto de datos, a medida que los pesos se ajustan (refinan) continuamente. Para realizar este proceso, existe una método de optimización muy popular denominado {\bf Descenso de gradiente} (Gradient Descent).
 
 	\subsection{Descenso de Gradiente}
 
@@ -602,7 +602,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 
 		En el caso del entrenamiento de una red neuronal, el gradiente simplemente mide el cambio en todos los pesos con respecto al cambio en el error. El gradiente se puede representar como la pendiente de una función. Cuanto más alto es el gradiente, más pronunciada es la pendiente y más rápido puede aprender un modelo. Pero si la pendiente es cero, el modelo deja de aprender. Dicho matemáticamente, un gradiente es una derivada parcial con respecto a sus entradas, \citep{gradient}.
 
-		El descenso de gradiente es un algoritmo de optimización iterativa utilizado al entrenar un modelo de aprendizaje automático, basado en una función convexa, que ajusta sus parámetros iterativamente para minimizar la función de pérdida (error) hasta su mínimo local.\citep{gradient}
+		El descenso de gradiente es un algoritmo de optimización iterativa utilizado al entrenar un modelo de aprendizaje automático, basado en una función convexa, que ajusta sus parámetros iterativamente para minimizar la función de pérdida (error) hasta su mínimo local, \citep{gradient}.
 
 		La idea detrás del descenso de gradiente es disminuir de forma gradual, pero constante, el error de salida ajustando los pesos y biases. Intuitivamente, se conoce que si un cambio en un peso aumentará o disminuirá el error, entonces queremos disminuir o aumentar ese peso. Matemáticamente, representa el cambio en el error dado un cambio de unidad en el peso:
 
@@ -645,7 +645,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 		
 			Calcula el error para cada ejemplo dentro del conjunto de datos de entrenamiento, pero el modelo se actualiza solo después de que se hayan evaluado todos los ejemplos de entrenamiento. Todo este proceso es como un ciclo y se denomina época de entrenamiento.
 
-		\subsubsection{Gradiente Descendiente Estocástico(Stochastic Gradient Descent-SGD)}
+		\subsubsection{Gradiente Descendiente Estocástico (Stochastic Gradient Descent-SGD)}
 
 			Por el contrario, hace esto para cada ejemplo de entrenamiento dentro del conjunto de datos. Esto significa que actualiza los parámetros para cada ejemplo de entrenamiento, uno por uno. Esto puede hacer que el SGD sea más rápido que el Descenso de gradiente por lotes, dependiendo del problema. Una ventaja es que las actualizaciones frecuentes nos permiten tener una tasa de mejora bastante detallada. El hecho es que las actualizaciones frecuentes son más costosas desde el punto de vista computacional que el enfoque del BGD y la frecuencia de esas actualizaciones también puede generar gradientes ruidosos, lo que puede hacer que la tasa de error salte, en lugar de disminuir lentamente.
 
@@ -674,7 +674,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 
 		Cuando la tasa de aprendizaje es demasiado pequeña, es necesario realizar muchas iteraciones de aprendizaje; pero cuando la tasa de aprendizaje es demasiado grande, el resultado se moverá hacia adelante y hacia atrás en ambos sentidos de los valores extremos(oscila), y no se podrá lograr la solución óptima como puede ser observado en la figura 2.27.
 
-		Debido a esto es que al entrenar redes neuronales profundas, a menudo es útil reducir la tasa de aprendizaje a medida que avanza el entrenamiento y no mantenerlo constante y así evitar la divergencia (punto apartir del cual la pérdida ya no se reduce y en lugar de eso comienza a incrementarse).
+		Debido a esto es que al entrenar redes neuronales profundas, a menudo es útil reducir la tasa de aprendizaje a medida que avanza el entrenamiento y no mantenerlo constante y así evitar la divergencia (punto a partir del cual la pérdida ya no se reduce y en lugar de eso comienza a incrementarse).
 
 
 		\begin{figure}[H]
@@ -688,7 +688,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 		\vspace{-1.5em}
 		\end{figure}
 
-		Reduciendo lentamente la tasa de aprendizaje a lo largo del tiempo ayuda a acelerar el aprendizaje. Esto es lo que se conoce como tasa de decaimiento de aprendizaje{\bf(learning rate decay)}.
+		Reduciendo lentamente la tasa de aprendizaje a lo largo del tiempo ayuda a acelerar el aprendizaje. Esto es lo que se conoce como tasa de decaimiento de aprendizaje {\bf(learning rate decay)}.
 			\begin{figure}[H]
 				\begin{center}
 				\includegraphics[width=0.6\textwidth,height=5.5cm]{images/desarrollo/entrenamiento/LR_decay} 
@@ -754,14 +754,12 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 			\endgroup		
 	
 
-		Es por ello que la la función de costo/pérdida dada por la validacion cruzada ayuda para decidir cuándo se debe terminar el entrenamiento de una red.\citep{AulaMLP}. Usualmente se utiliza el error cuadrático medio como función de pérdida para medir el rendimiento de un modelo de regresión. Sin embargo, en casos de clasificación, la función de costo de pérdida a través del cálculo de la entropía cruzada es preferible, ya que tiende a no causar saturación de las neuronas de salida, produciendo un aprendizaje más rápido,\citep{AulaDNN}.
-
-		La pérdida de entropía cruzada aumentará a medida que la probabilidad prevista diverge de la clasificación real. Por lo tanto, un modelo casi perfecto tendría una pérdida de entropía cercana a cero, \citep{crossMSE}.
+		Es por ello que la la función de costo/pérdida dada por la validación cruzada ayuda para decidir cuándo se debe terminar el entrenamiento de una red, \citep{AulaMLP}. Usualmente se utiliza el error cuadrático medio como función de pérdida para medir el rendimiento de un modelo de regresión. Sin embargo, en casos de clasificación, la función de costo de pérdida a través del cálculo de la entropía cruzada es preferible, ya que tiende a no causar saturación de las neuronas de salida, produciendo un aprendizaje más rápido, \citep{AulaDNN}. La pérdida de entropía cruzada aumentará a medida que la probabilidad prevista diverge de la clasificación real. Por lo tanto, un modelo casi perfecto tendría una pérdida de entropía cercana a cero, \citep{crossMSE}.
 		
 
 
 	\subsection{Función Softmax}
-		Conocida tambien como función exponencial normalizada, es la función de activación utilizada en la última capa de una red neuronal. La salida de una red neuronal completamente conectada no es una distribución de probabilidad, sin embargo, el uso de esta función ayuda a obternela. Por lo que esta función permitirá estimar la probabilidad de que la imagen de entrada pertenezca a cada una de las clases al realizar una normalización con el objetivo que el valor de cada neurona esté limitado entre cero y uno y así permitir que el resultado de las neuronas de salida sumen a uno. 
+		Conocida tambien como función exponencial normalizada, es la función de activación utilizada en la última capa de una red neuronal. La salida de una red neuronal completamente conectada no es una distribución de probabilidad, sin embargo, el uso de esta función ayuda a obtenerla. Por lo que esta función permitirá estimar la probabilidad de que la imagen de entrada pertenezca a cada una de las clases al realizar una normalización con el objetivo que el valor de cada neurona esté limitado entre cero y uno y así permitir que los resultados de las neuronas de salida sumen a uno. 
 
 			\begingroup\makeatletter\def\f@size{17.8}\check@mathfonts
 			\begin{center}
@@ -772,7 +770,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 			\end{center}
 			\endgroup
 			
-		Esto se puede ver como la composición de K funciones lineales ${x} \mapsto \mathbf {x} ^{\mathsf {T}}\mathbf {w} _{1},\ldots ,\mathbf {x} \mapsto \mathbf {x} ^{\mathsf {T}}\mathbf {w} _{K}$, donde ${\mathbf {x} ^{\mathsf {T}}\mathbf {w}}$ denota el producto interno de $x$(entrada) y $w$(peso).	La operación es equivalente a aplicar un operador lineal definido por $ w $ a vectores $ x $, transformando así la entrada original, probablemente altamente dimensional(reales arbitrarios), en vectores K-dimensional de valores reales en el rango [0, 1] que suman 1. \citep{Bishop}. 
+		Esto se puede ver como la composición de K funciones lineales ${x} \mapsto \mathbf {x} ^{\mathsf {T}}\mathbf {w} _{1},\ldots ,\mathbf {x} \mapsto \mathbf {x} ^{\mathsf {T}}\mathbf {w} _{K}$, donde ${\mathbf {x} ^{\mathsf {T}}\mathbf {w}}$ denota el producto interno de $x$(entrada) y $w$(peso).	La operación es equivalente a aplicar un operador lineal definido por $ w $ a vectores $ x $, transformando así la entrada original, probablemente altamente dimensional (reales arbitrarios), en vectores K-dimensional de valores reales en el rango [0, 1] que suman 1. \citep{Bishop}. 
 
 		Esta función permite que al estar normalizadas las salidas de la segunda capa totalmente conectada, pueda ser aplicada la validación cruzada y conocer la pérdida de entropía.
 
@@ -792,7 +790,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 		Donde $R(\theta)$ caracteriza la complejidad del modelo y $\lambda$ representa la proporción de la pérdida total del modelo, generalmente $\lambda$ es una constante y estará cerca de 0 porque si $\lambda$ es demasiado grande, conducirá a un ajuste insuficiente(underfitting). Por otro lado, para evitar el exceso de ajuste(overfitting) cuando se tiene una gran cantidad de características en su conjunto de datos, no optimizamos directamente $L(\theta,D)$ (la entropía cruzada), sino que optimizamos $L(\theta,D) +\lambda R(\theta)$.
 
 		\newpage
-		En esta investigación se usará una constante {\bf lambda($\lambda$) = 0.0001}. La regularización de pérdida L2 solo debe incluir los pesos de las capas totalmente conectadas, y normalmente no incluye a los bias(sesgos). La intuición detrás de esto es que el bias contribuye al overfitting(sobreajuste), y no estaría agregando ningún nuevo grado de libertad al modelo.
+		En esta investigación se usará una constante {\bf lambda($\lambda$) = 0.0001}. La regularización de pérdida L2 solo debe incluir los pesos de las capas totalmente conectadas, y normalmente no incluye a los bias (sesgos). La intuición detrás de esto es que el bias contribuye al overfitting(sobreajuste), y no estaría agregando ningún nuevo grado de libertad al modelo.
 
 
 
@@ -813,13 +811,13 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 		
 \subsection{Indicadores}
 		\renewcommand{\baselinestretch}{2}
-		Los indicadores nos permiten realizar mediciones y a su vez determinan la validez de la hipótesis planteada en la presente investigación. El desempeño de la clasificación se puede verificar con los siguinetes cinco indicadores: 
+		Los indicadores nos permiten realizar mediciones y a su vez determinan la validez de la hipótesis planteada en la presente investigación. El desempeño de la clasificación se puede verificar con los siguientes cinco indicadores: 
 		\begin{table}[H]
 		\centering
 		\caption{\small{Indicadores para la investigación}}
 		\begin{tabular}{|>{\small}c|>{\small}c|>{\small}c|}
 		\hline
-		{\ul \textbf{Indicador}} & {\ul \textbf{Descripcion}} & {\ul \textbf{Instrumento}} \\ \hline
+		{\ul \textbf{Indicador}} & {\ul \textbf{Descripción}} & {\ul \textbf{Instrumento}} \\ \hline
 		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Verdaderos Positivos\\ (Efectividad - Sensibilidad)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos}{{Verdaderos\,Positivos}+{Falsos\,Negativos}}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
 		 &  &  \\ \hline
 		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Verdaderos Negativos \\ (Especificidad)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Negativos}{{Verdaderos\,Negativos}+{Falsos\,Positivos}}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
@@ -831,7 +829,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 		%\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tiempo de\\ Procesamiento\end{tabular}} & \multirow{2}{*}{$S= \frac{\sum_{i=1}^{Total} tiempo_{i}}{Total\,de\,muestras}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Cronometro\\ Computacional\end{tabular}} \\
 		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Curvas ROC \\ (Receiver Operating Characteristic)\end{tabular}} & \multirow{2}{*}{Relación entre Efectividad y Especificidad} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
 		 &  &  \\ \hline
-		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Acuracia \\ (Exactitud)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos+Verdaderos\,Negativos}{Total\,de\,Imagenes}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Acierto \\ (Exactitud)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos+Verdaderos\,Negativos}{Total\,de\,Imagenes}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
 		 &  &  \\ \hline		 
 		\end{tabular}
 		\vspace{-1.0em}
@@ -842,12 +840,12 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 		%\renewcommand{\baselinestretch}{1.2}
 		\subsubsection{Técnica de Recolección}
 		\begin{enumerate}		
-			\item[]   {Revisión de la literatura(análisis de documentos)}
+			\item[]   {Revisión de la literatura (análisis de documentos)}.
 		\end{enumerate}
 
 		\subsubsection{Población}
 		\begin{enumerate}		
-			\item[] Existen diversas arquitecturas de redes neuronales convolucionales usadas para propósitos específicos. La idea principal es que al principio la arquitectura de la red neuronal toma como entrada una imagen y su especificación de dimensiones en 3 valores(largo, ancho y profundidad). Capas convolucionales y capas de activación(optimización) se apilan juntas y luego son seguidas por capas de agrupamientos. Esta estructura se usa comúnmente y se repite hasta que la entrada (imagen) se fusiona espacialmente a un tamaño pequeño. Después de eso, se envía a capas completamente conectadas y la salida de la última capa completamente conectada, que está al final de la arquitectura, produce los puntajes de clase de la imagen de entrada.
+			\item[] Existen diversas arquitecturas de redes neuronales convolucionales usadas para propósitos específicos. La idea principal es que al principio la arquitectura de la red neuronal toma como entrada una imagen y su especificación de dimensiones en 3 valores (largo, ancho y profundidad). Capas convolucionales y capas de activación(optimización) se apilan juntas y luego son seguidas por capas de agrupamientos. Esta estructura se usa comúnmente y se repite hasta que la entrada (imagen) se fusiona espacialmente a un tamaño pequeño. Después de eso, se envía a capas completamente conectadas y la salida de la última capa completamente conectada, que está al final de la arquitectura, produce los puntajes de clase de la imagen de entrada.
 		\end{enumerate}
 		
 	
@@ -865,7 +863,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 		\item[] {\bf \underline {Arquitectura Inception}}\newline
 			Es una arquitectura de red neuronal convolucional profunda, creada por un grupo de investigación de Google que fue responsable de establecer el nuevo estado del arte de la técnica para la clasificación y detección en la competencia de reconocimiento visual a gran escala ImageNet 2014(ILSVRC14). 
 			\vskip 0.1cm
-			El principal sello distintivo de esta arquitectura es la utilización mejorada de los recursos informáticos dentro de la red. Esto fue logrado por un cuidadoso que permite aumentar la profundidad y el ancho de la red mientras se manteniene el costo computacional constante. Para optimizar la calidad, las decisiones para elaborar la arquitectura se basaron en el principio Hebbiano y la intuición de procesamiento a escala múltiple. Una encarnación particular utilizada en la competencia ILSVRC14 es llamada GoogLeNet, una red de 22 capas de profundidad, cuya calidad se evalúa en el contexto de reconocimiento y detección, \citep{Inception}.
+			El principal sello distintivo de esta arquitectura es la utilización mejorada de los recursos informáticos dentro de la red. Esto fue logrado gracias al aumento de la profundidad y el ancho de la red mientras se mantiene el costo computacional constante. Para optimizar la calidad, las decisiones para elaborar la arquitectura se basaron en el principio Hebbiano y la intuición de procesamiento a escala múltiple. Una encarnación particular utilizada en la competencia ILSVRC14 es llamada GoogLeNet, una red de 22 capas de profundidad, cuya calidad se evalúa en el contexto de reconocimiento y detección, \citep{Inception}.
 		\end{enumerate}
 		%====================================================================================
 		% subsection Recolección de Datos para la Construcción del Modelo (end)
@@ -874,7 +872,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 		
 		\subsubsection{Técnica de Recolección}
 		\begin{enumerate}		
-			\item[]  Revisión de la literatura(análisis de documentos) y captura de imágenes del Perú a través de la aplicación Google Maps
+			\item[]  Revisión de la literatura (análisis de documentos) y captura de imágenes del Perú a través de la aplicación Google Maps
 		\end{enumerate}
 
 		\subsubsection{Población} 
@@ -886,7 +884,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 		\end{enumerate}
 
 		\begin{enumerate}		
-			\item[]  La población es infinita para esta investigación, debido al número infinito de formas distintas en que una señal de tránsito puede ser capturada.Se tomaran en cuenta imágenes donde se muestren señales de tránsito vehicular del tipo vertical en sus 3 subcategorias.
+			\item[]  La población es infinita para esta investigación, debido al número infinito de formas distintas en que una señal de tránsito puede ser capturada. Se tomarán en cuenta imágenes donde se muestren señales de tránsito vehicular del tipo vertical en sus 3 subcategorías.
 		\end{enumerate}
 
 		\subsubsection{Muestra} 
@@ -932,15 +930,15 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 
 		\item[a)]	Investigación bibliográfica de los diferentes temas necesarios para la elaboración de la investigación, tales como dispositivos de control de tránsito, vehículos autónomos, sistemas avanzados de asistencia al conductor, aprendizaje profundo (deep learning), procesamiento de imágenes, entre otros.
 		
-		\item[b)]	Búsqueda de los principales casos de éxito en el reconocimiento de señales de tránsito a tráves de trabajos de investigación en el Perú como tambíen en otros países.
+		\item[b)]	Búsqueda de los principales casos de éxito en el reconocimiento de señales de tránsito a través de trabajos de investigación en el Perú como también en otros países.
 
 		\item[c)]	Recolección de imágenes de señales de tránsito vehicular que se utilizarán en el desarrollo de la investigación.
 
-		\item[d)]	Análisis e implementación de diversas técnicas de procesamiento de imágenes que serán aplicadas al dataset recolectado con la finalidad de contribuir en el diseño inicial del modelo modelo convolucional.
+		\item[d)]	Análisis e implementación de diversas técnicas de procesamiento de imágenes que serán aplicadas al dataset recolectado con la finalidad de contribuir en el diseño inicial del modelo convolucional.
 
-		\item[e)]	Puesto a que las redes neuronales son heurísticas por naturaleza (requieren un constante ajuste de híper-parámetros para obtener un óptimo resultado), se realizarán diferentes diseños de arquitecturas de modelos convolucionales y se escogerá el modelo que otorge los mejores resultados.
+		\item[e)]	Puesto a que las redes neuronales son heurísticas por naturaleza (requieren un constante ajuste de híper-parámetros para obtener un óptimo resultado), se realizarán diferentes diseños de arquitecturas de modelos convolucionales y se escogerá el modelo que otorgue los mejores resultados.
 		
-		\item[f)]	Para el análisis de resultados, además de los indicadores conocidos com tasa de sensibilidad, especificidad, precisión, se pretende usar una Matriz de confusión. A través de esta matriz se pueden conocer valores estadísticos del espacio ROC(Receiver Operating Characteristic), métrica usada para evaluar la calidad del modelo reconocedor.
+		\item[f)]	Para el análisis de resultados, además de los indicadores conocidos con tasa de sensibilidad, especificidad, precisión, se pretende usar una Matriz de confusión. A través de esta matriz se pueden conocer valores estadísticos del espacio ROC (Receiver Operating Characteristic), métrica usada para evaluar la calidad del modelo reconocedor.
 		
 		\end{enumerate}
 

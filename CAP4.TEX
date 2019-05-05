@@ -22,7 +22,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 
 \section{Análisis del conjunto de Imágenes}
 	
-	En esta etapa de la investigación se busca encontrar imágenes de señales de tránsito, las cuales conforman la principal fuente de los modelos que se pretenden crear. Estas será usadas durante el entrenamiento, validación y evaluación del modelo pretendido.
+	En esta etapa de la investigación se busca encontrar imágenes de señales de tránsito, las cuales conforman la principal fuente de los modelos que se pretenden crear. Estas serán usadas durante el entrenamiento, validación y evaluación del modelo pretendido.
 	
 	\subsection{Datos Iniciales para el entrenamiento}
 		Se obtienen un conjunto de imágenes iniciales de señales de tránsito de Alemania y Perú, las cuales servirán para entrenar y validar los modelos creados.
@@ -256,16 +256,16 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\vspace{-1.5em}
 		\end{figure}
 
-	\subsection{Proceso de Aumento de Datos(Data Augmentation)}
+	\subsection{Proceso de Aumento de Datos (Data Augmentation)}
 
-		Las redes convolucionales durante el aprendizaje profundo requieren una gran cantidad de datos para conseguir realizar un mejor entrenamiento(aprendizaje) y obtener un modelo que generalice eficazmente. Muchas veces esta recopilación de datos suele ser costosa y laboriosa es por eso que el proceso de Data Augmentation ayuda a superar este problema a través del uso de métodos o técnicas de procesamiento de imágenes. Recientemente se ha utilizado ampliamente el aumento de datos genéricos para mejorar el rendimiento de las Redes Neuronales Convolucionales,\citep{DL_augmentData}. 
+		Las redes convolucionales durante el aprendizaje profundo requieren una gran cantidad de datos para conseguir realizar un mejor entrenamiento(aprendizaje) y obtener un modelo que generalice eficazmente. Muchas veces esta recopilación de datos suele ser costosa y laboriosa es por eso que el proceso de Data Augmentation ayuda a superar este problema a través del uso de métodos o técnicas de procesamiento de imágenes. Recientemente se ha utilizado ampliamente el aumento de datos genéricos para mejorar el rendimiento de las Redes Neuronales Convolucionales, \citep{DL_augmentData}. 
 
 		\begin{figure}[H]
 		\begin{center}
 		\includegraphics[width=0.5\textwidth ]{images/desarrollo/Augment/exampleaug}
 		\end{center}
 		\begin{center}
-		\caption{\small{El aumento de datos infla artificialmente los conjuntos de datos usando transformaciones que preservan las categorias de los objetos}}
+		\caption{\small{El aumento de datos infla artificialmente los conjuntos de datos usando transformaciones que preservan las categorías de los objetos}}
 		{\small{\cite{DL_augmentData}}}
 		\end{center}
 		\vspace{-1.5em}
@@ -278,7 +278,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		\item[2)] Proyección
 		\item[3)] Rotación
 		\item[4)] Zoom (Out/In)
-		\item[5)] Equialización de Histrogama
+		\item[5)] Ecualización de Histrogama
 		\vskip 3cm
 		\end{enumerate} 
 		
@@ -347,7 +347,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\end{figure}
 
 
-			Finalmente obtenemos una nueva distribución de datos luego de haber aplicado flipping a ciertas imagenes. Esta distribución consta de 63538 imágenes.
+			Finalmente obtenemos una nueva distribución de datos luego de haber aplicado flipping a ciertas imágenes. Esta distribución consta de 63538 imágenes.
 			\begin{figure}[H]
 				\begin{center}
 				\includegraphics[width=1\textwidth]{images/desarrollo/histograms/train_flipped63538}
@@ -378,9 +378,9 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 		\newpage
-		\subsubsection{Rotation(Rotación)}
+		\subsubsection{Rotation (Rotación)}
 			%\vspace{-1.5em}
-			Aplica la rotación aleatoria en un rango de grados definido(hasta 30º) a un subconjunto aleatorio de imágenes.
+			Aplica la rotación aleatoria en un rango de grados definido (hasta 30º) a un subconjunto aleatorio de imágenes.
 	        El rango en sí está sujeto a escala dependiendo de la intensidad de aumento.
 
 	        \begin{figure}[H]
@@ -399,7 +399,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		\newpage
 	    \subsubsection{Zoom}
 	    	%\vspace{-1.5em}
-	    	Acerca(zoom in) o aleja(zoom out) la imagen  tratando de preservar el fondo.
+	    	Acerca (zoom in) o aleja (zoom out) la imagen  tratando de preservar el fondo.
 
 	    	%\begin{figure}[H]
 			%	\begin{center}
@@ -421,7 +421,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\end{figure}
 
 		\vspace{1.5em}
-		\subsubsection{Equalizacion del histograma}
+		\subsubsection{Ecualización del histograma}
 			Aumenta el contraste global de muchas imágenes, especialmente cuando los datos utilizables de la imagen están representados por valores de contraste cercanos. Esto permite que áreas de menor contraste local puedan obtener un mayor contraste. La ecualización del histograma logra esto al distribuir eficazmente los valores de intensidad más frecuentes.
 
 			\begin{figure}[H]
@@ -458,13 +458,13 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\includegraphics[width=1\textwidth, height=8.5cm]{images/desarrollo/histograms/train_extended_balanced270900}
 				%\end{center}
 				\begin{center}
-				\caption{\small{Dataset balanceado(cada categoría posee igual cantidad de imágenes)}}
+				\caption{\small{Dataset balanceado (cada categoría posee igual cantidad de imágenes)}}
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
 
 			\end{figure}
 
-			Teniendo en cuenta lo descrito en la \textbf{Seccion 2.3.4 (Validación Cruzada)}, para la etapa del entrenamiento, el conjunto de datos Balanceados compuesto por 270900 imágenes fue dividido en un subconjunto de entrenamiento y otro para validación, con la siguiente distribución:
+			Teniendo en cuenta lo descrito en la \textbf{Sección 2.3.4 (Validación Cruzada)}, para la etapa del entrenamiento, el conjunto de datos Balanceados compuesto por 270900 imágenes fue dividido en un subconjunto de entrenamiento y otro para validación, con la siguiente distribución:
 			\vspace{1.5em}
 			\begin{table}[H]
 				\caption{\small{Distribución Entrenamiento y Validación Dataset Balanceado - Señales de Tránsito de Alemania}}
@@ -481,7 +481,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 	%---------------------------------------------------------------------------------------------------------------------------------------------------------
 	
 		\subsubsection{Señales de Tránsito de Perú - Dataset No Balanceado}
-			Con el objetivo de obtener una gran cantidad de datos, para el Dataset de señales de Tránsito del Perú, por cada imágen fueron creadas 50 nuevas imágenes, obteniéndose {\bf 31314 imágenes}.
+			Con el objetivo de obtener una gran cantidad de datos, para el Dataset de señales de Tránsito del Perú, por cada imagen fueron creadas 50 nuevas imágenes, obteniéndose {\bf 31314 imágenes}.
 			\begin{figure}[H]
 				%\begin{center}
 				\includegraphics[width=1\textwidth, height=8.5cm]{images/desarrollo/histograms/train_extended_per_51_31314}
@@ -510,10 +510,10 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 
 	%---------------------------------------------------------------------------------------------------------------------------------------------------------
 	%\newpage
-	\subsection{Pre-procesamiento de Imágenes(Normalization)}
-		Existe una técnica de procesamiento de imágenes por computadora que se utiliza para mejorar el contraste en las imágenes denominada Ecualización Adaptativa del Histograma(AHE por sus siglas en inglés). Difiere de la ecualización de histograma ordinaria en el sentido de que el método adaptativo computa varios histogramas, cada uno correspondiente a una sección distinta de la imagen, y los utiliza para redistribuir los valores de luminosidad de la imagen. Por lo tanto, es adecuado para mejorar el contraste local y mejorar las definiciones de los bordes en cada región de una imagen. Sin embargo, AHE tiene una tendencia a amplificar el ruido en regiones relativamente homogéneas de una imagen. Una variante de la ecualización de histograma adaptativo llamada ecualización de histograma adaptativo limitado por contraste (CLAHE por sus siglas en inglés) evita que se genere esto al limitar la amplificación.
+	\subsection{Pre-procesamiento de Imágenes (Normalization)}
+		Existe una técnica de procesamiento de imágenes por computadora que se utiliza para mejorar el contraste en las imágenes denominada Ecualización Adaptativa del Histograma (AHE por sus siglas en inglés). Difiere de la ecualización de histograma ordinaria en el sentido de que el método adaptativo computa varios histogramas, cada uno correspondiente a una sección distinta de la imagen, y los utiliza para redistribuir los valores de luminosidad de la imagen. Por lo tanto, es adecuado para mejorar el contraste local y mejorar las definiciones de los bordes en cada región de una imagen. Sin embargo, AHE tiene una tendencia a amplificar el ruido en regiones relativamente homogéneas de una imagen. Una variante de la ecualización de histograma adaptativo llamada ecualización de histograma adaptativo limitado por contraste (CLAHE por sus siglas en inglés) evita que se genere esto al limitar la amplificación.
 
-		En esta investigación, aplicaremos la técnica CLAHE, un algoritmo para la mejora del contraste local, que utiliza histogramas calculados sobre diferentes regiones en una imagen. Utilizado frecuentemente para mejorar el nivel de visibilidad de una imagen o video con niebla ya que permite mejorar los detalles locales incluso en regiones que son más oscuras o más claras que la mayoría de regiones de la imagen. Este algoritmo mejorará aún más la extracción de características de cada imágen.\citep{CLAHE}
+		En esta investigación, aplicaremos la técnica CLAHE, un algoritmo para la mejora del contraste local, que utiliza histogramas calculados sobre diferentes regiones en una imagen. Utilizado frecuentemente para mejorar el nivel de visibilidad de una imagen o video con niebla ya que permite mejorar los detalles locales incluso en regiones que son más oscuras o más claras que la mayoría de regiones de la imagen. Este algoritmo mejorará aún más la extracción de características de cada imagen, \citep{CLAHE}
 
 			\begin{figure}[H]
 			%\begin{center}
@@ -529,7 +529,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\vspace{-1.5em}
 			\end{figure}
 		
-		Por otra parte, para convertir un color de un espacio de color basado en un modelo de color RGB típico de gamma comprimido (no lineal) a una representación en escala de grises de su luminancia, primero se debe eliminar la función de compresión gamma mediante la expansión gamma (linealización) para transformar la imagen en un RGB lineal espacio de color, de modo que la suma ponderada apropiada se puede aplicar a los componentes de color lineales ($R_{linear} , G_{linear} , B_{linear}$) para calcular la luminancia lineal $Y_{linear}$.
+		Por otra parte, para convertir un color de un espacio de color basado en un modelo de color RGB típico de gamma comprimido (no lineal) a una representación en escala de grises de su luminancia, primero se debe eliminar la función de compresión gamma mediante la expansión gamma para transformar la imagen en un RGB lineal espacio de color, de modo que la suma ponderada apropiada se puede aplicar a los componentes de color lineales ($R_{linear} , G_{linear} , B_{linear}$) para calcular la luminancia lineal $Y_{linear}$.
 
 		Para imágenes en espacios de color como Y'UV y sus derivados, que se usan en sistemas de TV y video a color estándar como PAL, SECAM y NTSC, un componente de luma no lineal ($Y'$) se calcula directamente a partir de intensidades primarias comprimidas con gamma como una suma ponderada, que aunque no es una representación perfecta de la luminancia colorimétrica, puede calcularse más rápidamente sin la expansión gamma y sin la compresión utilizadas en los cálculos fotométricos o colorimétricos,\citep{POYNTON2003257}. En los modelos utilizados por PAL y NTSC para conseguir tener las imágenes en escala de grises, el componente de luma no lineal ($Y'$) se calcula como: \begingroup\makeatletter\def\f@size{14.8}\check@mathfonts	$Y' = 0.299R' + 0.587G' +0.114B'$ \endgroup \citep{CookJ}
 
@@ -554,7 +554,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 \section{Arquitectura del Modelo}
 
 
-	Los hiperparámetros engloban funciones, variables y constantes utilizadas durante la construcción de las diferentes arquitecturas; estas varían, sin embargo siguiendo conceptos teóricos, antecedentes(investigaciones previas) y sobretodo despues de algunas pruebas realizadas, los siguientes hiperparámetros fueron seleccionados de manera específica:
+	Los hiperparámetros engloban funciones, variables y constantes utilizadas durante la construcción de las diferentes arquitecturas; estas varían, sin embargo, siguiendo conceptos teóricos, antecedentes (investigaciones previas) y sobretodo después de algunas pruebas realizadas, los siguientes hiperparámetros fueron seleccionados de manera específica:
 		% Please add the following required packages to your document preamble:
 		% \usepackage{multirow}
 		%\usepackage[table,xcdraw]{xcolor}
@@ -580,17 +580,17 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		\end{table}
 		\vspace{-1.5em}
 
-		Recordemos que en cada época se procesa el dataset completo de imágenes, por lo que cada época es igual : \begingroup\makeatletter\def\f@size{11}\check@mathfonts	$Epoca = \text{\textit{Tamaño del Minibatch}} \times \text{\textit{iteraciones}}$ \endgroup
+		Recordemos que en cada época se procesa el dataset completo de imágenes, por lo que cada época es igual: \begingroup\makeatletter\def\f@size{11}\check@mathfonts	$Epoca = \text{\textit{Tamaño del Minibatch}} \times \text{\textit{iteraciones}}$ \endgroup
 
-		Sin embargo debido a que se tiene dos distintos datasets para el entrenamiento \textbf{(Seccion 3.1.4 - Dataset final para el Entrenamiento)}, el tamaño del Minibatch cambiará respecto al tamaño del dataset y por ende también será diferente la cantidad de iteraciones ejecutadas durante 100 épocas de entrenamiento. 
+		Sin embargo, debido a que se tiene dos distintos datasets para el entrenamiento \textbf{(Sección 3.1.4 - Dataset final para el Entrenamiento)}, el tamaño del Minibatch cambiará respecto al tamaño del dataset y por ende también será diferente la cantidad de iteraciones ejecutadas durante 100 épocas de entrenamiento. 
 
-		A continuación se presentan 2 cuadros con las distribuciones del tamaño del Mini-batch y la cantidad de iteraciones necesarias durante las 100 épocas para ambos tipos de dataset(Alemania y Perú).                
+		A continuación se presentan 2 cuadros con las distribuciones del tamaño del Mini-batch y la cantidad de iteraciones necesarias durante las 100 épocas para ambos tipos de dataset (Alemania y Perú).                
 		
 		%\begin{center}\end{center}
 
 		\begin{table}[H]
 			\begin{center}
-			\caption{\small{Minibatch e iteraciones en el Dataset de Señales de Tránsito de Alemania Balanceado}}
+			\caption{\small{Mini-batch e iteraciones en el Dataset de Señales de Tránsito de Alemania Balanceado}}
 			\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c|>{\scriptsize}c|>{\scriptsize}c|}
 			\hline
 			\textbf{Imágenes totales }                 &\textit{203175}                       \\ \hline
@@ -604,7 +604,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 
 		\begin{table}[H]
 			\begin{center}
-			\caption{\small{Minibatch e iteraciones en el Dataset de Señales de Tránsito de Peru No Balanceado}}
+			\caption{\small{Mini-batch e iteraciones en el Dataset de Señales de Tránsito de Perú No Balanceado}}
 			\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c|>{\scriptsize}c|>{\scriptsize}c|}
 			\hline
 			\textbf{Imágenes totales }                 &\textit{23485}                       \\ \hline
@@ -617,7 +617,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 
 
 
-	En esta investigación se implementó el modelo de redes neuronales convolucionales(CNN) donde las capas convolucionales iniciales de la red extraen características de la imagen(feature extractor), mientras que las capas totalmente conectadas predicen las probabilidades de salida(classifier).
+	En esta investigación se implementó el modelo de redes neuronales convolucionales(CNN) donde las capas convolucionales iniciales de la red extraen características de la imagen (feature extractor), mientras que las capas totalmente conectadas predicen las probabilidades de salida(classifier).
 
 	\begin{figure}[H]
 		\begin{center}
@@ -630,14 +630,14 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		\vspace{-1.5em}
 	\end{figure}
 	
-	La arquitectura de la red está inspirada en el arquitectura Inception \citep{Inception} y en la arquitectura AlexNet \citep{Krizhevsky2012} para la clasificación de imágenes. En la arquitectura Inception, el modelo creado es denominado GoogLeNet, similar a AlexNet donde varios módulos iniciales son apilados uno sobre el otro para producir el resultado final. En el módulo de inicio, en ese tipo de red se usaron diversos tamaños de filtros convolucionales para capturar características de diferente abstracción. El alto nivel de abstracción se captura con filtros de mayor tamaño y el de un nivel inferior con filtros de menor tamaño, procesando información visual a diferentes escalas y al concatenarlas se obtiene un nivel eficiente de abstracción. 
+	La arquitectura de la red está inspirada en la arquitectura Inception \citep{Inception} y en la arquitectura AlexNet \citep{Krizhevsky2012} para la clasificación de imágenes. En la arquitectura Inception, el modelo creado es denominado GoogLeNet, similar a AlexNet donde varios módulos iniciales son apilados uno sobre el otro para producir el resultado final. En el módulo de inicio, en ese tipo de red se usaron diversos tamaños de filtros convolucionales para capturar características de diferente abstracción. El alto nivel de abstracción se captura con filtros de mayor tamaño y el de un nivel inferior con filtros de menor tamaño, procesando información visual a diferentes escalas y al concatenarlas se obtiene un nivel eficiente de abstracción. 
 	%%%	Dado que aplicar directamente más filtros convolucionales con datos de imagen y concatenarlos es computacionalmente costoso, en el modelo Inception finalmente se usaron filtros de reducción de dimensionalidad(pooling/acumulación). Además de ser muy exitoso para la reducción de dimensionalidad, estos filtros también llegan a ser útiles como activación lineal rectificada. La arquitectura de inicio es eficiente en términos de complejidad computacional con respecto al número de unidades en cada etapa. \citep{Mrinal2016}.las características abstractas locales desempeñan un papel importante. Las señales que pertenecen al mismo grupo tienen una ligera diferencia en la estructura local entre sí, lo que dificulta su distinción. Por lo que se optó por agregar un kernel de reducción convolucional de 3 × 3 extra con acumulación máxima en la parte superior para capturar la estructura local discriminativa al comienzo mismo. Los signos pertenecientes a diferentes grupos tienen una abstracción global que se puede capturar utilizando un núcleo de reducción convolucional de 5 × 5.
 
-	Para la clasificación de señales de tránsito en esta investigación se utilizó una versión modificada de las arquitecturas antes mencionadas. Se incorporó {\bf funciones de escala-múltiple} \citep{Multi_scale_feat}, lo que significa que la salida de las capas convolucionales no solo se envía a la capa posterior, sino que también se ramifica y se introduce al clasificador (capa totalmente conectada). La razón detrás de esto es que cuando el clasificador está tomando una decisión basada en convoluciones, podría encontrar que la salida de la primera o seguna capa convolucional también es útil. Básicamente con las características de escala múltiple depende del clasificador qué nivel de abstracción usar, ya que tiene acceso a las salidas de todas las capas convolucionales, es decir, características en todos los niveles de abstracción. Estas capas ramificadas se someten a un pooling máximo adicional, de modo que todas las convoluciones se submuestrean proporcionalmente antes de entrar en el clasificador. Así se garantiza que todas las funciones de escala múltiple experimenten la misma cantidad de máximo aprovechamiento.
+	Para la clasificación de señales de tránsito en esta investigación se utilizó una versión modificada de las arquitecturas antes mencionadas. Se incorporó {\bf funciones de escala-múltiple} \citep{Multi_scale_feat}, lo que significa que la salida de las capas convolucionales no solo se envía a la capa posterior, sino que también se ramifica y se introduce al clasificador (capa totalmente conectada). La razón detrás de esto es que cuando el clasificador está tomando una decisión basada en convoluciones, podría encontrar que la salida de la primera o segunda capa convolucional también es útil. Básicamente con las características de escala múltiple depende del clasificador qué nivel de abstracción usar, ya que tiene acceso a las salidas de todas las capas convolucionales, es decir, características en todos los niveles de abstracción. Estas capas ramificadas se someten a un pooling máximo adicional, de modo que todas las convoluciones se submuestrean proporcionalmente antes de entrar en el clasificador. Así se garantiza que todas las funciones de escala múltiple experimenten la misma cantidad de máximo aprovechamiento.
 	
 	\subsection{Diseño de la Red}
 	
-	Teniendo en cuenta lo descrito en la {\bf seccion 2.2 (Figura 2.6)}, para describir las capas convolucionales se utilizará la terminología compleja(cada capa tiene múltiples etapas).
+	Teniendo en cuenta lo descrito en la {\bf sección 2.2 (Figura 2.6)}, para describir las capas convolucionales se utilizará la terminología compleja (cada capa tiene múltiples etapas).
 	
 		\begin{figure}[H]
 		%\begin{center}
@@ -650,7 +650,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		\vspace{-1.5em}
 		\end{figure}
 
-	Para el proceso de entrenamiento fueron tomados en cuenta 5 diferentes diseños. Estos fueron ejectudados durante el entrenamiento del dataset que contiene señales de tránsito de Alemania y Perú.
+	Para el proceso de entrenamiento fueron tomados en cuenta 5 diferentes diseños. Estos fueron ejecutados durante el entrenamiento del dataset que contiene señales de tránsito de Alemania y Perú.
 
 	Estos 5 modelos son descritos a continuación.
 		\newpage 
@@ -896,12 +896,12 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 %\newpage
 \section{Entrenamiento y Validación }
 
-	Para estimar el error de clasificación, como fue mencionado en la \textbf{Seccion 2.3}, se utilizó el méto do de validación cruzada. En la estimación del error se usa el conjunto de muestras disponible, el cual se divide en el conjunto de entrenamiento y el de validación. El clasificador se diseña usando las muestras de entrenamiento y luego se evalúa obteniendo el error de clasificación para las muestras de validación. Con base en el error obtenido se puede predecir el desempeño del clasificador ante nuevas muestras. Para obtener una medida confiable del desempeño, el conjunto de muestras es lo suficientemente grande y los conjuntos de entrenamiento y de validación son independientes.
+	Para estimar el error de clasificación, como fue mencionado en la \textbf{Sección 2.3}, se utilizó el método de validación cruzada. En la estimación del error se usa el conjunto de muestras disponible, el cual se divide en el conjunto de entrenamiento y el de validación. El clasificador se diseña usando las muestras de entrenamiento y luego se evalúa obteniendo el error de clasificación para las muestras de validación. Con base en el error obtenido se puede predecir el desempeño del clasificador ante nuevas muestras. Para obtener una medida confiable del desempeño, el conjunto de muestras es lo suficientemente grande y los conjuntos de entrenamiento y de validación son independientes.
 
 
 	\subsection{Señales de Tránsito de Alemania}
 
-		Luego de haber entrenado las diferentes arquitecturas durante 100 épocas(38700 iteraciones), obtenemos los siguientes resultados:
+		Luego de haber entrenado las diferentes arquitecturas durante 100 épocas (38700 iteraciones), obtenemos los siguientes resultados:
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
 	 	\subsubsection{Análisis del Entrenamiento y Validación del Diseño A}  
 			\begin{figure}[H]
@@ -928,7 +928,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Luego de 20 épocas iteradas(aproximadamente  7000 iteraciones), se observa que rápidamente el modelo se sobreajusta al dataset de entrenamiento. Es decir, rápidamente el valor de pérdida es muy cercana a cero, lo que a su vez hace que se separe de manera abrupta de los resultados de validación y lo mismo sucede con la tasa de acierto, en la cual la de validación luego de estas 20 épocas es mucho menor al de entrenamiento. Iteraciones posteriores no permitirán mejores resultados.
+			Luego de 20 épocas iteradas (aproximadamente  7000 iteraciones), se observa que rápidamente el modelo se sobreajusta al dataset de entrenamiento. Es decir, rápidamente el valor de pérdida es muy cercano a cero, lo que a su vez hace que se separe de manera abrupta de los resultados de validación y lo mismo sucede con la tasa de acierto, en la cual la de validación luego de estas 20 épocas es mucho menor al de entrenamiento. Iteraciones posteriores no permitirán mejores resultados.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -959,7 +959,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Durante 100 épocas iteradas(38700 iteraciones), a partir aproximadamente de \textbf{34800 iteraciones(80 épocas)} se obtiene los mejores promedios de acierto y error, logrando resultados muy similares entre la tasa de acierto y pérdida del entrenamiento y validación.
+			Durante 100 épocas iteradas (38700 iteraciones), a partir aproximadamente de \textbf{34800 iteraciones (80 épocas)} se obtiene los mejores promedios de acierto y error, logrando resultados muy similares entre la tasa de acierto y pérdida del entrenamiento y validación.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -991,7 +991,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Al igual que el modelo anterior, luego de 100 épocas iteradas(38700 iteraciones), se obtiene las mejores tasa de acierto y pérdida en la validación logrando resultados muy similares entre el entrenamiento y la validación, se podría seguir entrenando en iteraciones posteriores, es muy probable que el modelo obtenga mejoras en los resultados pero a su vez, haría que se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
+			Al igual que el modelo anterior, luego de 100 épocas iteradas (38700 iteraciones), se obtiene las mejores tasa de acierto y pérdida en la validación logrando resultados muy similares entre el entrenamiento y la validación, se podría seguir entrenando en iteraciones posteriores, es muy probable que el modelo obtenga mejoras en los resultados pero a su vez, haría que se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------			
@@ -1020,7 +1020,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Este modelo presenta características muy similares a los anteriores, sin embargo a diferencia del Modelo C y muy similar al modelo B, se observa que a la mitad de épocas entrenadas(20000 iteraciones) el promedio de acierto y pérdida no se se aumenta/reduce significativamente lo que resulta en un modelo que demora más en aprender las características importantes durante el entrenamiento.
+			Este modelo presenta características muy similares a los anteriores, sin embargo, a diferencia del Modelo C y muy similar al modelo B, se observa que a la mitad de épocas entrenadas (20000 iteraciones) el promedio de acierto y pérdida no se aumenta/reduce significativamente lo que resulta en un modelo que demora más en aprender las características importantes durante el entrenamiento.
 			
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1053,7 +1053,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
 		
 		\newpage
-		En resumen, los 5 modelos lograron similares resultados de acierto y error durante el entrenamiento, siendo el modelo A el que obtuvo los mayores resultados observados en la tasa de acierto y error y el modelo E el peor de estos. Sin embargo esto no indicaría que el modelo A sea el seleccionado como mejor modelo ya que por lo antes mencionado se observa que el modelo A se sobreajusta rápidamente al conjunto de entrenamiento siendo la razón principal de la obtención de estos resultados.
+		En resumen, los 5 modelos lograron similares resultados de acierto y error durante el entrenamiento, siendo el modelo A el que obtuvo los mayores resultados observados en la tasa de acierto y error y el modelo E el peor de estos. Sin embargo, esto no indicaría que el modelo A sea el seleccionado como mejor modelo ya que por lo antes mencionado se observa que el modelo A se sobreajusta rápidamente al conjunto de entrenamiento siendo la razón principal de la obtención de estos resultados.
 
 			\begin{figure}[H]
 				%\begin{center}
@@ -1080,7 +1080,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\end{figure}	
 
 
-			Es por ello que a través de la validación del modelo (usando dataset de imágenes no visto/analizado durante el entrenamiento), se puede apreciar que el Modelo E a pesar que obtuvo las más bajas tasas de acierto y error durante el entrenamiento, es el que mejor generaliza el reconocimiento al presentar las mejores tasas de Acierto y Error ante el conjunto de validación. Esto será corroborado por segunda vez cuando se realize la evaluacón del modelo con el dataset de evaluación, el cual presenta mayor cantidad de imágenes que el dataset de validación.
+			Es por ello que a través de la validación del modelo (usando dataset de imágenes no visto/analizado durante el entrenamiento), se puede apreciar que el Modelo E a pesar que obtuvo las más bajas tasas de acierto y error durante el entrenamiento, es el que mejor generaliza el reconocimiento al presentar las mejores tasas de Acierto y Error ante el conjunto de validación. Esto será corroborado por segunda vez cuando se realice la evaluación del modelo con el dataset de evaluación, el cual presenta mayor cantidad de imágenes que el dataset de validación.
 
 			\begin{figure}[H]
 				%\begin{center}
@@ -1144,7 +1144,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Luego de 3850 iteraciones(50 épocas), el modelo se sobreajusta al dataset de entrenamiento, rápidamente el valor de pérdida es muy cercana a cero, y hace que se separe de manera abrupta de los resultados en la validación. De esta manera, el modelo rápidamente memoriza las señales con las cuales se está entrenando lo que no permitirá evaluar con exactitud señales nunca antes vistas.
+			Luego de 3850 iteraciones (50 épocas), el modelo se sobreajusta al dataset de entrenamiento, rápidamente el valor de pérdida es muy cercano a cero, y hace que se separe de manera abrupta de los resultados en la validación. De esta manera, el modelo rápidamente memoriza las señales con las cuales se está entrenando lo que no permitirá evaluar con exactitud señales nunca antes vistas.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1175,7 +1175,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			En este modelo, a partir de 4000 iteraciones(50 épocas) se percibe que el modelo presenta dificultades para seguir extrayendo características que permitan un mejor entrenamiento, por lo que la tasa de Error no es disminuida en iteraciones posteriores, haciendo que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
+			En este modelo, a partir de 4000 iteraciones (50 épocas) se percibe que el modelo presenta dificultades para seguir extrayendo características que permitan un mejor entrenamiento, por lo que la tasa de Error no es disminuida en iteraciones posteriores, haciendo que el modelo se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -1207,7 +1207,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Al finalizar las 100 épocas iteradas, se obtienen buenas tasas de acierto y error de validación. Sin embargo a partir de 70 épocas entrenadas (5500 iteraciones), se observa que la tasas de acierto y error presentadas en el entrenamiento comienzan a diferir de las tasas de validación, por lo que se observa una tendencia a no mejorar estos resultados en iteraciones posteriores.
+			Al finalizar las 100 épocas iteradas, se obtienen buenas tasas de acierto y error de validación. Sin embargo, a partir de 70 épocas entrenadas (5500 iteraciones), se observa que la tasas de acierto y error presentadas en el entrenamiento comienzan a diferir de las tasas de validación, por lo que se observa una tendencia a no mejorar estos resultados en iteraciones posteriores.
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------			
 		\subsubsection{Análisis del Entrenamiento y Validación del Diseño D} 
@@ -1269,7 +1269,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 
 
 		%\newpage
-		En resumen, los 5 modelos lograron similares resultados de acierto y error durante el entrenamiento y al igual que durante el entrenamiento del dataset de Alemania, el modelo A es el que presenta mayor tasa de acierto y menor tasa de pérdida, sin embargo como fue antes mencionado, esto no garantiza que sea el modelo que mejor generalize el reconociento de señales por lo que se tendrá que analizar los mismos resultados revisando los valores durante la validación de los modelos.
+		En resumen, los 5 modelos lograron similares resultados de acierto y error durante el entrenamiento y al igual que durante el entrenamiento del dataset de Alemania, el modelo A es el que presenta mayor tasa de acierto y menor tasa de pérdida, sin embargo, como fue antes mencionado, esto no garantiza que sea el modelo que mejor generalice el reconocimiento de señales por lo que se tendrá que analizar los mismos resultados revisando los valores durante la validación de los modelos.
 
 			\begin{figure}[H]
 				%\begin{center}
