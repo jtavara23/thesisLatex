@@ -6,13 +6,13 @@
 \contentsline {chapter}{\IeC {\'I}ndice de Figuras}{\es@scroman {xiv}}
 \contentsline {chapter}{\IeC {\'I}ndice de Tablas}{\es@scroman {xvi}}
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}
-\contentsline {section}{\numberline {1.1}Justificaci\IeC {\'o}n de la investigaci\IeC {\'o}n}{6}
-\contentsline {subsection}{\numberline {1.1.1}Justificaci\IeC {\'o}n Acad\IeC {\'e}mica}{6}
-\contentsline {subsection}{\numberline {1.1.2}Justificaci\IeC {\'o}n Social}{7}
+\contentsline {section}{\numberline {1.1}Justificaci\IeC {\'o}n de la investigaci\IeC {\'o}n}{5}
+\contentsline {subsection}{\numberline {1.1.1}Justificaci\IeC {\'o}n Acad\IeC {\'e}mica}{5}
+\contentsline {subsection}{\numberline {1.1.2}Justificaci\IeC {\'o}n Social}{6}
 \contentsline {section}{\numberline {1.2}Formulaci\IeC {\'o}n del problema}{8}
-\contentsline {section}{\numberline {1.3}Hip\IeC {\'o}tesis}{9}
-\contentsline {section}{\numberline {1.4}Objetivos}{9}
-\contentsline {subsection}{\numberline {1.4.1}Objetivo general}{9}
+\contentsline {section}{\numberline {1.3}Hip\IeC {\'o}tesis}{8}
+\contentsline {section}{\numberline {1.4}Objetivos}{8}
+\contentsline {subsection}{\numberline {1.4.1}Objetivo general}{8}
 \contentsline {subsection}{\numberline {1.4.2}Objetivos espec\IeC {\'\i }ficos}{9}
 \contentsline {section}{\numberline {1.5}Estructura de la tesis}{10}
 \contentsline {chapter}{\numberline {2}Materiales y M\IeC {\'e}todos}{20}
@@ -24,36 +24,36 @@
 \contentsline {section}{\numberline {2.3}Red Convolucional}{35}
 \contentsline {subsection}{\numberline {2.3.1}Capa Convolucional}{38}
 \contentsline {subsubsection}{\numberline {2.3.1.1}Etapa de Convoluci\IeC {\'o}n}{38}
-\contentsline {subsubsection}{\numberline {2.3.1.2}Capa ReLU(Rectified Linear Units)}{50}
+\contentsline {subsubsection}{\numberline {2.3.1.2}Capa ReLU(Rectified Linear Units)}{49}
 \contentsline {subsubsection}{\numberline {2.3.1.3}T\IeC {\'e}cnica Dropout}{52}
-\contentsline {subsubsection}{\numberline {2.3.1.4}Capa de Agrupaci\IeC {\'o}n(Pooling)}{54}
-\contentsline {subsection}{\numberline {2.3.2}Capa totalmente conectada (Fully-connected layer)}{57}
-\contentsline {section}{\numberline {2.4}Entrenamiento y Validaci\IeC {\'o}n}{60}
-\contentsline {subsection}{\numberline {2.4.1}Descenso de Gradiente}{60}
-\contentsline {subsubsection}{\numberline {2.4.1.1}Gradiente Descendiente por Lotes(Batch Gradient Descent)}{62}
-\contentsline {subsubsection}{\numberline {2.4.1.2}Gradiente Descendiente Estoc\IeC {\'a}stico(Stochastic Gradient Descent-SGD)}{62}
-\contentsline {subsubsection}{\numberline {2.4.1.3}Mini-batch Gradient Descent}{63}
-\contentsline {subsection}{\numberline {2.4.2}Tasa de Aprendizaje (Learning Rate)}{63}
-\contentsline {subsection}{\numberline {2.4.3}Optimizador ADAM}{66}
-\contentsline {subsection}{\numberline {2.4.4}Validaci\IeC {\'o}n Cruzada}{67}
-\contentsline {subsection}{\numberline {2.4.5}Funci\IeC {\'o}n Softmax}{70}
-\contentsline {subsection}{\numberline {2.4.6}M\IeC {\'e}todo de Regularizaci\IeC {\'o}n L2}{71}
-\contentsline {section}{\numberline {2.5}M\IeC {\'e}todo de la investigaci\IeC {\'o}n}{72}
-\contentsline {subsection}{\numberline {2.5.1} Tipo de investigaci\IeC {\'o}n}{72}
-\contentsline {subsection}{\numberline {2.5.2}Variables de la Investigaci\IeC {\'o}n}{72}
-\contentsline {subsubsection}{\numberline {2.5.2.1}Variable Dependiente}{72}
-\contentsline {subsubsection}{\numberline {2.5.2.2}Variable Independiente}{72}
+\contentsline {subsubsection}{\numberline {2.3.1.4}Capa de Agrupaci\IeC {\'o}n(Pooling)}{53}
+\contentsline {subsection}{\numberline {2.3.2}Capa totalmente conectada (Fully-connected layer)}{56}
+\contentsline {section}{\numberline {2.4}Entrenamiento y Validaci\IeC {\'o}n}{59}
+\contentsline {subsection}{\numberline {2.4.1}Descenso de Gradiente}{59}
+\contentsline {subsubsection}{\numberline {2.4.1.1}Gradiente Descendiente por Lotes(Batch Gradient Descent)}{61}
+\contentsline {subsubsection}{\numberline {2.4.1.2}Gradiente Descendiente Estoc\IeC {\'a}stico(Stochastic Gradient Descent-SGD)}{61}
+\contentsline {subsubsection}{\numberline {2.4.1.3}Mini-batch Gradient Descent}{62}
+\contentsline {subsection}{\numberline {2.4.2}Tasa de Aprendizaje (Learning Rate)}{62}
+\contentsline {subsection}{\numberline {2.4.3}Optimizador ADAM}{65}
+\contentsline {subsection}{\numberline {2.4.4}Validaci\IeC {\'o}n Cruzada}{66}
+\contentsline {subsection}{\numberline {2.4.5}Funci\IeC {\'o}n Softmax}{69}
+\contentsline {subsection}{\numberline {2.4.6}M\IeC {\'e}todo de Regularizaci\IeC {\'o}n L2}{70}
+\contentsline {section}{\numberline {2.5}M\IeC {\'e}todo de la investigaci\IeC {\'o}n}{71}
+\contentsline {subsection}{\numberline {2.5.1} Tipo de investigaci\IeC {\'o}n}{71}
+\contentsline {subsection}{\numberline {2.5.2}Variables de la Investigaci\IeC {\'o}n}{71}
+\contentsline {subsubsection}{\numberline {2.5.2.1}Variable Dependiente}{71}
+\contentsline {subsubsection}{\numberline {2.5.2.2}Variable Independiente}{71}
 \contentsline {subsection}{\numberline {2.5.3}Indicadores}{72}
-\contentsline {subsection}{\numberline {2.5.4}Recolecci\IeC {\'o}n de Datos para la Construcci\IeC {\'o}n del Modelo}{74}
-\contentsline {subsubsection}{\numberline {2.5.4.1}T\IeC {\'e}cnica de Recolecci\IeC {\'o}n}{74}
-\contentsline {subsubsection}{\numberline {2.5.4.2}Poblaci\IeC {\'o}n}{74}
-\contentsline {subsubsection}{\numberline {2.5.4.3}Muestra}{74}
-\contentsline {subsection}{\numberline {2.5.5}Recolecci\IeC {\'o}n de Datos para el Entrenamiento y Evaluaci\IeC {\'o}n del Modelo}{76}
-\contentsline {subsubsection}{\numberline {2.5.5.1}T\IeC {\'e}cnica de Recolecci\IeC {\'o}n}{76}
-\contentsline {subsubsection}{\numberline {2.5.5.2}Poblaci\IeC {\'o}n}{76}
-\contentsline {subsubsection}{\numberline {2.5.5.3}Muestra}{77}
-\contentsline {subsection}{\numberline {2.5.6}Etapas de la investigaci\IeC {\'o}n}{78}
-\contentsline {subsubsection}{\numberline {2.5.6.1}Metodolog\IeC {\'\i }a para el dise\IeC {\~n}o del Modelo}{79}
+\contentsline {subsection}{\numberline {2.5.4}Recolecci\IeC {\'o}n de Datos para la Construcci\IeC {\'o}n del Modelo}{73}
+\contentsline {subsubsection}{\numberline {2.5.4.1}T\IeC {\'e}cnica de Recolecci\IeC {\'o}n}{73}
+\contentsline {subsubsection}{\numberline {2.5.4.2}Poblaci\IeC {\'o}n}{73}
+\contentsline {subsubsection}{\numberline {2.5.4.3}Muestra}{73}
+\contentsline {subsection}{\numberline {2.5.5}Recolecci\IeC {\'o}n de Datos para el Entrenamiento y Evaluaci\IeC {\'o}n del Modelo}{75}
+\contentsline {subsubsection}{\numberline {2.5.5.1}T\IeC {\'e}cnica de Recolecci\IeC {\'o}n}{75}
+\contentsline {subsubsection}{\numberline {2.5.5.2}Poblaci\IeC {\'o}n}{75}
+\contentsline {subsubsection}{\numberline {2.5.5.3}Muestra}{76}
+\contentsline {subsection}{\numberline {2.5.6}Etapas de la investigaci\IeC {\'o}n}{77}
+\contentsline {subsubsection}{\numberline {2.5.6.1}Metodolog\IeC {\'\i }a para el dise\IeC {\~n}o del Modelo}{78}
 \contentsline {chapter}{\numberline {3}Desarrollo de la Investigaci\IeC {\'o}n}{82}
 \contentsline {section}{\numberline {3.1}An\IeC {\'a}lisis del conjunto de Im\IeC {\'a}genes}{84}
 \contentsline {subsection}{\numberline {3.1.1}Datos Iniciales para el entrenamiento}{84}

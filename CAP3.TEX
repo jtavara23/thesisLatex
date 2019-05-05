@@ -299,7 +299,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 
 				\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=0.65\textwidth]{images/marcoteorico/stride}
+				\includegraphics[width=0.55\textwidth]{images/marcoteorico/stride}
 				\end{center}
 				\begin{center}
 				\caption{\small{Imagen con stride igual a 2, para el filtro tanto en largura como anchura}}
@@ -437,7 +437,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 
 		\begin{figure}[H]
 		\begin{center}
-		\includegraphics[width=0.8\textwidth]{images/marcoteorico/dropout_sample}
+		\includegraphics[width=0.7\textwidth]{images/marcoteorico/dropout_sample}
 		\end{center}
 		\begin{center}
 		\caption{\small{En la izquierda la red neuronal común y a la derecha la red neuronal diluida producida por la aplicación de dropout}}
@@ -500,7 +500,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 
 		\begin{figure}[H]
 		\begin{center}
-		\includegraphics[width=0.7\textwidth]{images/marcoteorico/pool2}
+		\includegraphics[width=0.6\textwidth]{images/marcoteorico/pool2}
 		\end{center}
 		\begin{center}
 		\caption{\small{Resultado de Agrupación}}
@@ -539,7 +539,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 
 		\begin{figure}[H]
 		\begin{center}
-		\includegraphics[width=0.5\textwidth]{images/marcoteorico/pool4}
+		\includegraphics[width=0.45\textwidth]{images/marcoteorico/pool4}
 		\end{center}
 		\begin{center}
 		\caption{\small{Max-pooling con filtro 2x2 y paso 2}}
@@ -551,9 +551,9 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	\subsection{Capa totalmente conectada (Fully-connected layer)}
 
 		Esta capa por lo general aparece al final de la arquitectura y es similar al Perceptrón Multicapa(MultilayerPerceptron - MLP), en el cual la neurona de salida se conecta a todas las neuronas de entrada y el peso de las conexiones son actualizadas usando el método de retropropagación.
-		\vskip 0.4cm  
+		
 		Eventualmente, con un mapa de características lo suficientemente pequeño, el contenido se aplastará en un vector de una sola dimensión y será entrada para en un MLP totalmente conectado para su procesamiento.
-		\vskip 0.4cm  
+		
 		Habiendo detallado que la función ReLU es la más utilizada en las capas anteriores, en esta última capa del modelo generalmente se utiliza una función de activación diferente, porque en esta capa se pretende que tenga una salida determinada. La {\bf función softmax} es muy popular cuando se hace la clasificación.
 	
 
@@ -573,13 +573,13 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 \begin{itemize}
 	\item Se pasa una imagen de entrada a la primera capa convolucional, cuya salida se obtiene como un mapa de activación. Los filtros aplicados en la capa de convolución extraen características relevantes de la imagen de entrada para pasar más lejos.
 
-	\item Cada filtro dará una característica diferente para ayudar en la clasificación de clase correcta. En caso de que necesitemos retener el tamaño de la imagen, usamos el mismo relleno (padding cero), de lo contrario se usa el relleno válido ya que ayuda a reducir el número de características. \vspace{-0.5em}
+	\item Los valores de cada filtro se irán ajustando durante el entrenamiento y en caso de que necesitemos retener el tamaño de la imagen, usamos el mismo relleno (padding cero), de lo contrario se usa el relleno válido ya que ayuda a reducir el número de características. \vspace{-0.5em}
 
 	\item Las capas de agrupamiento se agregan para reducir aún más el número de parámetros.\vspace{-0.5em}
 
 	\item Se agregan varias capas de convolución y agrupación antes de realizar la clasificación. \vspace{-0.5em}
 
-	\item A medida que profundizamos en la red convolucional, se extraen características más específicas en comparación con una red lineal donde las características extraídas son más genéricas. \vspace{-0.5em}
+	\item A medida que profundizamos en la red convolucional, se extraen características más específicas en comparación con una red lineal donde las características extraídas son más genéricas.
 
 	\item La capa de salida en una CNN, como se mencionó anteriormente, es una capa totalmente conectada, donde la entrada de las otras capas se aplana y se envía para transformar la salida en el número de clases que desea la red. \vspace{-0.5em}
 
@@ -590,6 +590,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 	\item Finalmente, un ciclo de entrenamiento se completa en un solo pase hacia adelante y hacia atrás. Por lo que se tiene que repetir todo el proceso durante varias iteraciones para obtener mejores resultados.\vspace{-0.5em}
 
 \end{itemize}
+
 \newpage
 \section{Entrenamiento y Validación}
 
@@ -628,7 +629,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 		La tasa de Aprendizaje suele disminuir gradualmente durante las épocas de la fase de entrenamiento. Si actualizamos todos los pesos usando esta misma fórmula, esto equivale a moverse en la dirección de descenso más pronunciado a lo largo de la superficie de error, de ahí el nombre, descenso de gradiente.
 		\begin{figure}[H]
 		\begin{center}
-		\includegraphics[width=0.8\textwidth,height=6.5cm]{images/desarrollo/entrenamiento/gradient}
+		\includegraphics[width=0.45\textwidth]{images/desarrollo/entrenamiento/gradient}
 		\end{center}
 		\begin{center}
 		\caption{\small{Descenso de Gradiente a través de ajustes en los pesos y biases}}
@@ -646,7 +647,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 
 		\subsubsection{Gradiente Descendiente Estocástico(Stochastic Gradient Descent-SGD)}
 
-			Por el contrario, hace esto para cada ejemplo de entrenamiento dentro del conjunto de datos. Esto significa que actualiza los parámetros para cada ejemplo de entrenamiento, uno por uno. Esto puede hacer que el SGD sea más rápido que el Descenso de gradiente por lotes, dependiendo del problema. Una ventaja es que las actualizaciones frecuentes nos permiten tener una tasa de mejora bastante detallada. El hecho es que las actualizaciones frecuentes son más costosas desde el punto de vista computacional que el enfoque del BGD y La frecuencia de esas actualizaciones también puede generar gradientes ruidosos, lo que puede hacer que la tasa de error salte, en lugar de disminuir lentamente.
+			Por el contrario, hace esto para cada ejemplo de entrenamiento dentro del conjunto de datos. Esto significa que actualiza los parámetros para cada ejemplo de entrenamiento, uno por uno. Esto puede hacer que el SGD sea más rápido que el Descenso de gradiente por lotes, dependiendo del problema. Una ventaja es que las actualizaciones frecuentes nos permiten tener una tasa de mejora bastante detallada. El hecho es que las actualizaciones frecuentes son más costosas desde el punto de vista computacional que el enfoque del BGD y la frecuencia de esas actualizaciones también puede generar gradientes ruidosos, lo que puede hacer que la tasa de error salte, en lugar de disminuir lentamente.
 
 			El MOMENTUM es otro argumento en el optimizador SGD que podríamos ajustar para obtener una convergencia más rápida. Ayuda al vector de parámetros a aumentar la velocidad en cualquier dirección con un descenso constante del gradiente para evitar oscilaciones. Una elección típica de momento es entre 0.5 a 0.9.
 
@@ -657,7 +658,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 
 	\subsection{Tasa de Aprendizaje (Learning Rate)}
 		Uno de los hiperparámetros clave durante el entrenamiento de una red neuronal es la velocidad/tasa de aprendizaje para el descenso del gradiente.
-		Este parámetro puede entenderse como el tamaño del paso en la optimización para minimizar la función de pérdida de la red, es decir, es un parámetro que determina cuánto influye un paso de actualización en el valor actual de los pesos, por ejemplo, el tamaño del paso en el que el gradiente cae en la dirección máxima de la pendiente, \citep {AdamImg}.
+		Este parámetro puede entenderse como el tamaño del paso en la optimización para minimizar la función de pérdida de la red, es decir, es un parámetro que determina cuánto influye un paso de actualización en el valor actual de los pesos, \citep {AdamImg}. %Es decir, determina el tamaño del paso en el que el gradiente cae en la dirección máxima de la pendiente.
 
 		\begin{figure}[H]
 		%\begin{center}
@@ -777,9 +778,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 
 	
 	\subsection{Método de Regularización L2}
-		En la regularización, lo que se hace normalmente es mantener el mismo número de funciones, pero se reduce la magnitud de los coeficientes.
-
-		El método de Regularización L2 o también conocido como Regresión Lasso (Lasso Regression - Least Absolute Shrinkage and Selection Operator), trata de agregar un término adicional(lambda) a la función de pérdida, la cual penaliza parametrizaciones con pesos más elevados, es decir, reduce el coeficiente de la función menos importante a cero, eliminando así algunas características. Por lo tanto, esto funciona bien para la selección de funciones en caso de que tengamos una gran cantidad de funciones, \citep{AulaMLP}.
+		En la regularización, lo que se hace normalmente es mantener el mismo número de funciones, pero se reduce la magnitud de los coeficientes, sin embargo, el método de Regularización L2 o también conocido como Regresión Lasso (Lasso Regression - Least Absolute Shrinkage and Selection Operator), trata de agregar un término adicional(lambda) a la función de pérdida, la cual penaliza parametrizaciones con pesos más elevados, es decir, reduce el coeficiente de la función menos importante a cero, eliminando así algunas características. Por lo tanto, esto funciona bien para la selección de funciones en caso de que tengamos una gran cantidad de funciones, \citep{AulaMLP}.
 
 		Si $L(\theta, D)$ es la función de pérdida, $\theta$ es el conjunto de parámetros libres y $D$ es un ejemplo de entrenamiento, entonces a la función de pérdida regularizada será:
 
@@ -792,6 +791,7 @@ En resumen, una arquitecuta o modelo de red convolucional estará compuesto de v
 
 		Donde $R(\theta)$ caracteriza la complejidad del modelo y $\lambda$ representa la proporción de la pérdida total del modelo, generalmente $\lambda$ es una constante y estará cerca de 0 porque si $\lambda$ es demasiado grande, conducirá a un ajuste insuficiente(underfitting). Por otro lado, para evitar el exceso de ajuste(overfitting) cuando se tiene una gran cantidad de características en su conjunto de datos, no optimizamos directamente $L(\theta,D)$ (la entropía cruzada), sino que optimizamos $L(\theta,D) +\lambda R(\theta)$.
 
+		\newpage
 		En esta investigación se usará una constante {\bf lambda($\lambda$) = 0.0001}. La regularización de pérdida L2 solo debe incluir los pesos de las capas totalmente conectadas, y normalmente no incluye a los bias(sesgos). La intuición detrás de esto es que el bias contribuye al overfitting(sobreajuste), y no estaría agregando ningún nuevo grado de libertad al modelo.
 
 
