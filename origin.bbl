@@ -77,6 +77,12 @@ Goodfellow, I., Bengio, Y., and Courville, A. (2016).
 \newblock MIT Press.
 \newblock http://www.deeplearningbook.org.
 
+\bibitem[Gu et~al., 2015]{recentCNN}
+Gu, J., Wang, Z., Kuen, J., Ma, L., Shahroudy, A., Shuai, B., Liu, T., Wang,
+  X., and Wang, G. (2015).
+\newblock Recent advances in convolutional neural networks.
+\newblock {\em CoRR}, abs/1512.07108.
+
 \bibitem[Hai~Nguyen, 2014]{Hai2014}
 Hai~Nguyen, T. (2014).
 \newblock Morphological classification for traffic sign recognition.
