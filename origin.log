@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  8 JUN 2019 13:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  8 JUN 2019 19:07
 entering extended mode
 **"D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
 ("D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
@@ -1260,8 +1260,12 @@ png  used on input line 542.
  [91 <./images/desarrollo/Normalization_Processing/proc_test1.png> <./images/de
 sarrollo/Normalization_Processing/proc_test3.png> <./images/desarrollo/Normaliz
 ation_Processing/proc_test4.png>]
+Overfull \hbox (0.99089pt too wide) in paragraph at lines 567--579
+ [] 
+ []
+
 LaTeX Font Info:    Calculating math sizes for size <11> on input line 583.
- [92]
+[92]
 <images/desarrollo/networkArquitec/tempGeneralCNNmodel.jpg, id=510, 653.44125pt
  x 314.67563pt>
 File: images/desarrollo/networkArquitec/tempGeneralCNNmodel.jpg Graphic file (t
@@ -1270,8 +1274,8 @@ ype jpg)
 Package pdftex.def Info: images/desarrollo/networkArquitec/tempGeneralCNNmodel.
 jpg  used on input line 624.
 (pdftex.def)             Requested size: 375.57779pt x 180.86505pt.
-
-[93 <./images/desarrollo/networkArquitec/tempGeneralCNNmodel.jpg>] [94]
+ [93 <./images/desarrollo/networkArquitec/tempGeneralCNNmodel.jpg>]
+[94]
 <images/desarrollo/networkArquitec/designNet.png, id=517, 1320.43312pt x 356.83
 313pt>
 File: images/desarrollo/networkArquitec/designNet.png Graphic file (type png)
@@ -1279,8 +1283,7 @@ File: images/desarrollo/networkArquitec/designNet.png Graphic file (type png)
 Package pdftex.def Info: images/desarrollo/networkArquitec/designNet.png  used 
 on input line 644.
 (pdftex.def)             Requested size: 469.47046pt x 126.86993pt.
-
-[95 <./images/desarrollo/networkArquitec/designNet.png>]
+ [95 <./images/desarrollo/networkArquitec/designNet.png>]
 Overfull \hbox (3.6554pt too wide) in paragraph at lines 668--679
  [] 
  []
@@ -1677,13 +1680,13 @@ png>]
 Cap\'{\i }tulo 5.
 [128
 
-] [129]) (origin.bbl
+] [129] [130]) (origin.bbl
 Underfull \hbox (badness 10000) in paragraph at lines 25--29
 []\T1/ptm/m/n/12 Cook, J. D. (2009).  Th-ree al-go-rithms for con-ver-ting co-l
 or to grays-ca-le.
  []
 
-[130
+[131
 
 ]
 Underfull \hbox (badness 2293) in paragraph at lines 75--79
@@ -1691,26 +1694,26 @@ Underfull \hbox (badness 2293) in paragraph at lines 75--79
 ptm/m/it/12 Deep Lear-ning\T1/ptm/m/n/12 .  MIT Press.
  []
 
-[131]
+[132]
 Underfull \hbox (badness 10000) in paragraph at lines 141--144
 []\T1/ptm/m/n/12 OMS (2017).  10 da-tos so-bre la se-gu-ri-dad vial en el mun-d
 o.
  []
 
-[132] [133]) (CAP7.tex [134]
+[133] [134]) (CAP7.tex [135]
 Ap\'{e}ndice A.
 
 LaTeX Warning: Float too large for page by 8.05789pt on input line 59.
 
-[135
+[136
 
-] [136]
+] [137]
 Overfull \hbox (0.9745pt too wide) in paragraph at lines 135--135
 []\T1/ptm/b/n/12 Procedimiento \T1/ptm/m/n/12 ca-pa-To-tal-men-te-Co-nec-ta-da(
 entrada,numEntradas,numSalidas,usarRELU) 
  []
 
-) [137] [138] (origin.aux
+) [138] [139] (origin.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ) ) 
@@ -1750,9 +1753,9 @@ TeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Usuario/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Usuario/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on origin.pdf (162 pages, 17692977 bytes).
+Output written on origin.pdf (163 pages, 17694436 bytes).
 PDF statistics:
- 810 PDF objects out of 1000 (max. 8388607)
+ 814 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  561 words of extra memory for PDF output out of 10000 (max. 10000000)
 
