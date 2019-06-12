@@ -550,13 +550,10 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 
 	\subsection{Capa totalmente conectada (Fully-connected layer)}
 
-		Esta capa por lo general aparece al final del modelo y es similar al Perceptrón Multicapa (MultilayerPerceptron - MLP), en el cual la neurona de salida se conecta a todas las neuronas de entrada y el peso de las conexiones son actualizadas usando el método de retropropagación.
-		
-		Eventualmente, con un mapa de características lo suficientemente pequeño, el contenido se aplastará en un vector de una sola dimensión y será entrada para en un MLP totalmente conectado para su procesamiento.
-		
-		Habiendo detallado que la función ReLU es la más utilizada en las capas anteriores, en esta última capa del modelo generalmente se utiliza una función de activación diferente, porque en esta capa se pretende que tenga una salida determinada. La {\bf función Softmax} es muy popular cuando se hace la clasificación y es por ello que se utilizará en esta última capa \citep{Krizhevsky2012}.
-	
+		Luego de que los datos pasen por las capas de convolución, eventualmente, se tiene un mapa de características lo suficientemente pequeño y el contenido se aplasta en un vector de una sola dimensión. Hasta este punto, los datos ya son suficientes para un cierto grado de precisión en el reconocimiento de clases. Sin embargo, para obtener un mejor resultado en términos de complejidad y precisión, será usada al final de modelo, una capa neuronal totalmente conectada similar al Perceptrón Multicapa (MultilayerPerceptron - MLP), en el cual la neurona de salida se conecta a todas las neuronas de entrada y el peso de las conexiones son actualizadas usando el método de retropropagación, \citep{FCL}.
 
+		El vector resultante obtenido de las capas de convolución será la entrada del MLP totalmente conectado con el cual se logrará obtener una salida determinada que represente la probabilidad de predicción del clasificador, esta será conseguida usando una función de activación diferente a la usada durante la convolución (función RELU), esta nueva función es conocida como función softmax, la cual es comúnmente usada en esta capa final del modelo \citep{Krizhevsky2012}.
+	
 
 En resumen, un modelo de red convolucional estará compuesto de varias capas y ejecutará las siguientes actividades:
 \begin{figure}[H]
@@ -759,7 +756,7 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 
 
 	\subsection{Función Softmax}
-		Conocida también como función exponencial normalizada, es la función de activación utilizada en la última capa de una red neuronal. La salida de una red neuronal completamente conectada no es una distribución de probabilidad, sin embargo, el uso de esta función ayuda a obtenerla. Por lo que esta función permitirá estimar la probabilidad de que la imagen de entrada pertenezca a cada una de las clases al realizar una normalización con el objetivo que el valor de cada neurona esté limitado entre cero y uno y así permitir que los resultados de las neuronas de salida sumen a uno. 
+		Conocida también como función exponencial normalizada, es la función de activación utilizada en la última capa de una red neuronal. La salida de una red neuronal completamente conectada no es una distribución de probabilidad, sin embargo, el uso de esta función ayuda a obtenerla. Por lo que esta función permitirá estimar la probabilidad de que la imagen de entrada pertenezca a cada una de las clases al realizar una normalización con el objetivo que el valor de cada neurona esté limitado entre cero y uno y así permitir que los resultados de las neuronas de salida sumen a uno,\citep{Bishop}. 
 
 			\begingroup\makeatletter\def\f@size{17.8}\check@mathfonts
 			\begin{center}

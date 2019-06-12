@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  8 JUN 2019 19:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  11 JUN 2019 21:49
 entering extended mode
 **"D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
 ("D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
@@ -899,25 +899,25 @@ Package pdftex.def Info: images/marcoteorico/pool4.png  used on input line 542.
 <images/marcoteorico/modelo.png, id=276, 956.07187pt x 349.305pt>
 File: images/marcoteorico/modelo.png Graphic file (type png)
 <use images/marcoteorico/modelo.png>
-Package pdftex.def Info: images/marcoteorico/modelo.png  used on input line 564
+Package pdftex.def Info: images/marcoteorico/modelo.png  used on input line 561
 .
 (pdftex.def)             Requested size: 375.57779pt x 137.21977pt.
  [48 <./images/marcoteorico/modelo.png>] [49] [50]
-LaTeX Font Info:    Calculating math sizes for size <20.8> on input line 609.
-LaTeX Font Info:    Calculating math sizes for size <17.8> on input line 620.
+LaTeX Font Info:    Calculating math sizes for size <20.8> on input line 606.
+LaTeX Font Info:    Calculating math sizes for size <17.8> on input line 617.
 <images/desarrollo/entrenamiento/gradient.png, id=288, 435.87843pt x 253.69781p
 t>
 File: images/desarrollo/entrenamiento/gradient.png Graphic file (type png)
 <use images/desarrollo/entrenamiento/gradient.png>
 Package pdftex.def Info: images/desarrollo/entrenamiento/gradient.png  used on 
-input line 632.
+input line 629.
 (pdftex.def)             Requested size: 211.26027pt x 122.96199pt.
  [51] [52 <./images/desarrollo/entrenamiento/gradient.png>]
 <images/desarrollo/entrenamiento/LR.png, id=296, 781.41937pt x 323.70938pt>
 File: images/desarrollo/entrenamiento/LR.png Graphic file (type png)
 <use images/desarrollo/entrenamiento/LR.png>
 Package pdftex.def Info: images/desarrollo/entrenamiento/LR.png  used on input 
-line 665.
+line 662.
 (pdftex.def)             Requested size: 469.47046pt x 194.48396pt.
  [53]
 <images/desarrollo/entrenamiento/lr_finder.png, id=300, 950.55125pt x 488.82625
@@ -925,7 +925,7 @@ pt>
 File: images/desarrollo/entrenamiento/lr_finder.png Graphic file (type png)
 <use images/desarrollo/entrenamiento/lr_finder.png>
 Package pdftex.def Info: images/desarrollo/entrenamiento/lr_finder.png  used on
- input line 682.
+ input line 679.
 (pdftex.def)             Requested size: 469.47046pt x 241.42896pt.
  [54 <./images/desarrollo/entrenamiento/LR.png>]
 <images/desarrollo/entrenamiento/LR_decay.png, id=305, 265.74281pt x 173.14688p
@@ -933,20 +933,20 @@ t>
 File: images/desarrollo/entrenamiento/LR_decay.png Graphic file (type png)
 <use images/desarrollo/entrenamiento/LR_decay.png>
 Package pdftex.def Info: images/desarrollo/entrenamiento/LR_decay.png  used on 
-input line 694.
+input line 691.
 (pdftex.def)             Requested size: 281.7063pt x 156.49388pt.
  [55 <./images/desarrollo/entrenamiento/lr_finder.png> <./images/desarrollo/ent
 renamiento/LR_decay.png>] [56] [57] [58] [59] [60]
-LaTeX Font Info:    Calculating math sizes for size <15.8> on input line 783.
+LaTeX Font Info:    Calculating math sizes for size <15.8> on input line 780.
  [61]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 820.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 817.
  [62] [63] [64] [65] [66] [67]
 [68]
 <images/intro/disenho.png, id=357, 1116.42094pt x 626.34pt>
 File: images/intro/disenho.png Graphic file (type png)
 <use images/intro/disenho.png>
-Package pdftex.def Info: images/intro/disenho.png  used on input line 951.
+Package pdftex.def Info: images/intro/disenho.png  used on input line 948.
 (pdftex.def)             Requested size: 422.52054pt x 237.04639pt.
  [69]) (CAP4.tex [70 <./images/intro/disenho.png>]
 Cap\'{\i }tulo 3.
@@ -1700,20 +1700,32 @@ Underfull \hbox (badness 10000) in paragraph at lines 141--144
 o.
  []
 
-[133] [134]) (CAP7.tex [135]
+[133] [134]
+Underfull \hbox (badness 4872) in paragraph at lines 215--219
+[]\T1/ptm/m/n/12 Team, S. (2018).  Con-vo-lu-tio-nal neu-ral net-works (cnn): S
+tep 4 - full con-nec-tion.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 215--219
+\T1/ptm/m/n/12 https://www.superdatascience.com/blogs/convolutional-neural-netw
+orks-cnn-step-4-full-
+ []
+
+[135]) (CAP7.tex [136]
 Ap\'{e}ndice A.
 
 LaTeX Warning: Float too large for page by 8.05789pt on input line 59.
 
-[136
+[137
 
-] [137]
+] [138]
 Overfull \hbox (0.9745pt too wide) in paragraph at lines 135--135
 []\T1/ptm/b/n/12 Procedimiento \T1/ptm/m/n/12 ca-pa-To-tal-men-te-Co-nec-ta-da(
 entrada,numEntradas,numSalidas,usarRELU) 
  []
 
-[138])
+[139])
 Overfull \hbox (9.33878pt too wide) in paragraph at lines 138--106
 []\T1/ptm/m/n/12 Código de la im-ple-man-ta-ción com-ple-ta ubi-ca-do en: https
 ://github.com/jtavara23/SignalsWindows
@@ -1724,15 +1736,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--106
 
  []
 
-[139] (origin.aux
+[140] (origin.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ) ) 
 Here is how much of TeX's memory you used:
- 9298 strings out of 492970
- 153395 string characters out of 3125706
- 242753 words of memory out of 3000000
- 12794 multiletter control sequences out of 15000+200000
+ 9301 strings out of 492970
+ 153428 string characters out of 3125706
+ 242777 words of memory out of 3000000
+ 12797 multiletter control sequences out of 15000+200000
  133635 words of font info for 269 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  37i,19n,43p,2061b,503s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1764,9 +1776,9 @@ TeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Usuario/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Usuario/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on origin.pdf (163 pages, 17694512 bytes).
+Output written on origin.pdf (164 pages, 17695319 bytes).
 PDF statistics:
- 814 PDF objects out of 1000 (max. 8388607)
+ 817 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  561 words of extra memory for PDF output out of 10000 (max. 10000000)
 

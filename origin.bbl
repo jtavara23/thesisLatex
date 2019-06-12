@@ -211,6 +211,12 @@ Taylor, L. and Nitschke, G. (2017).
 \newblock Improving deep learning using generic data augmentation.
 \newblock {\em CoRR}, abs/1708.06020.
 
+\bibitem[Team, 2018]{FCL}
+Team, S. (2018).
+\newblock Convolutional neural networks (cnn): Step 4 - full connection.
+\newblock
+  https://www.superdatascience.com/blogs/convolutional-neural-networks-cnn-step-4-full-connection.
+
 \bibitem[Vargas~Romero, 2015]{Vargas2015}
 Vargas~Romero, F. (2015).
 \newblock Implementación de un sistema inteligente para el reconocimiento de
