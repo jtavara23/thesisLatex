@@ -18,6 +18,9 @@
 \usepackage{fancyhdr,graphicx,amsmath,amssymb}
 \usepackage[ruled,vlined,linesnumbered,spanish,onelanguage]{algorithm2e}
 
+\usepackage[final]{pdfpages}
+
+
 
 \usepackage{graphicx}
 \usepackage[spanish,es-tabla]{babel} % Idioma español con tablas
@@ -103,6 +106,11 @@
 \bibliography{bibliografia}{} % Bibliografia formato APA
 \bibliographystyle{apalike}
 	\input{CAP7.tex}    % Apendice 
+
+	\setboolean{@twoside}{false}
+	\includepdf[pages=-, offset=75 -75]{autorizacion.pdf}
+
+	
 \end{document}
 
 

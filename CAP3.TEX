@@ -108,7 +108,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	\vskip 0.4cm 
 	Debido a que no siempre está claro cuál de estos dos puntos de vista (la profundidad del gráfico computacional o la profundidad del gráfico de modelado probabilístico) es más relevante, y debido a que diferentes personas eligen diferentes conjuntos de elementos más pequeños para construir sus gráficos, no hay un solo valor correcto para la profundidad de un modelo, así como no hay un solo valor correcto para la longitud de un programa de computadora. Tampoco hay consenso sobre la profundidad que requiere un modelo para calificar como "profundo", \citep{Goodfellow-et-al-2016}. Sin embargo, el aprendizaje profundo puede considerarse con seguridad como el estudio de modelos que implican una mayor cantidad de composición de funciones o conceptos aprendidos en comparación con el aprendizaje automático tradicional.
 	\vskip 0.4cm 
-	En resumen, el aprendizaje profundo, es un enfoque a la IA. Específicamente, es un tipo de aprendizaje automático, una técnica que permite que los sistemas computacionales mejoren con la experiencia y los datos. En este sentido, se puede sostener que el aprendizaje automático es el único enfoque viable para construir sistemas de inteligencia artificial que puedan operar en entornos complicados del mundo real y el aprendizaje profundo es un tipo particular de aprendizaje automático que logra gran poder y flexibilidad al representar el mundo como una jerarquía de conceptos anidados, con cada concepto definido en relación a conceptos más simples y representaciones más abstractas calculadas en base a representaciones menos abstractas. La siguiente imagen es un diagrama de Venn que muestra cómo el aprendizaje profundo es una especie de aprendizaje de representación, que a su vez es una especie de aprendizaje automático que se utiliza para muchos (pero no todos) los enfoques de la IA. 
+	En resumen, el aprendizaje profundo, es un enfoque a la IA; específicamente, es un tipo de aprendizaje automático, una técnica que permite que los sistemas computacionales mejoren con la experiencia y los datos. En este sentido, se puede sostener que el aprendizaje automático es el único enfoque viable para construir sistemas de inteligencia artificial que puedan operar en entornos complicados del mundo real y el aprendizaje profundo es un tipo particular de aprendizaje automático que logra gran poder y flexibilidad al representar el mundo como una jerarquía de conceptos anidados, con cada concepto definido en relación a conceptos más simples y representaciones más abstractas calculadas en base a representaciones menos abstractas. La siguiente imagen es un diagrama de Venn que muestra cómo el aprendizaje profundo es una especie de aprendizaje de representación, que a su vez es una especie de aprendizaje automático que se utiliza para muchos de los enfoques de la IA. 
 
 	\begin{figure}[H]
 		\begin{center}
@@ -215,7 +215,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\caption{\small{Proceso matemático convolucional}}
 		{\small{Fuente: \cite{Rohrer}}}
 		\end{center}
-		\vspace{-1.5em}
+		\vspace{-1em}
 		\end{figure}
 
 		\begin{figure}[H]
@@ -229,7 +229,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\vspace{-1.9em}
 		\end{figure}
 
-		Cada filtro puede ser representado como una neurona de salida, cuyo valor se halla usando la sumatoria de pesos como se muestra en la figura 11. Intuitivamente, la red aprenderá los filtros que se activan cuando ven algún tipo de característica visual, como un borde o contorno en alguna orientación específica. 
+		Cada filtro puede ser representado como una neurona de salida, cuyo valor se halla usando la sumatoria de pesos como se muestra en la figura 2.10. Intuitivamente, la red aprenderá los filtros que se activan cuando ven algún tipo de característica visual, como un borde o contorno en alguna orientación específica. 
 		
 		\vskip 0.4cm  
 		
@@ -441,7 +441,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 		\end{center}
 		\begin{center}
 		\caption{\small{En la izquierda la red neuronal común y a la derecha la red neuronal diluida producida por la aplicación de dropout}}
-		{\small{\cite{AulaDNN}}}
+		{\small{Fuente: \cite{AulaDNN}}}
 		\end{center}
 		\vspace{-1.5em}
 		\end{figure}
@@ -631,7 +631,7 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 		\begin{center}
 		\caption{\small{Descenso de Gradiente a través de ajustes en los pesos y biases}}
 		\vspace{-0.5em}
-		{\small{\cite{gradientimg}}}
+		{\small{Fuente: \cite{gradientimg}}}
 		\end{center}
 		\vspace{-1.5em}
 		\end{figure}
@@ -664,7 +664,7 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 		\begin{center}
 		\caption{\small{Establecimiento de la Tasa de Aprendizaje}}
 		\vspace{-0.5em}
-		{\small{\cite{AdamImg}}}
+		{\small{Fuente: \cite{AdamImg}}}
 		\end{center}
 		\vspace{-1.5em}
 		\end{figure}
@@ -680,7 +680,7 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 		%\end{center}
 		\begin{center}
 		\caption{\small{Comportamientos en la reducción de la Tasa de Aprendizaje}}
-		{\small{\cite{AdamImg}}}
+		{\small{Fuente: \cite{AdamImg}}}
 		\end{center}
 		\vspace{-1.5em}
 		\end{figure}
@@ -815,20 +815,24 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 		\begin{tabular}{|>{\small}c|>{\small}c|>{\small}c|}
 		\hline
 		{\ul \textbf{Indicador}} & {\ul \textbf{Descripción}} & {\ul \textbf{Instrumento}} \\ \hline
-		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Verdaderos Positivos\\ (Efectividad - Sensibilidad)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos}{{Verdaderos\,Positivos}+{Falsos\,Negativos}}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Verdaderos Positivos\\ (Efectividad - Sensibilidad)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos}{{Verdaderos\,Positivos}+{Falsos\,Negativos}}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Matriz de\\ Confusión\end{tabular}} \\
 		 &  &  \\ \hline
-		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Verdaderos Negativos \\ (Especificidad)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Negativos}{{Verdaderos\,Negativos}+{Falsos\,Positivos}}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Verdaderos Negativos \\ (Especificidad)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Negativos}{{Verdaderos\,Negativos}+{Falsos\,Positivos}}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Matriz de\\ Confusión\end{tabular}} \\
 		 &  &  \\ \hline
-		 \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Valor Predictivo Positivo \\ (Precisión)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos}{{Verdaderos\,Positivos}+{Falsos\,Positivos}}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		 \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Valor Predictivo Positivo \\ (Precisión)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos}{{Verdaderos\,Positivos}+{Falsos\,Positivos}}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Matriz de\\ Confusión\end{tabular}} \\
 		 &  &  \\ \hline
-		 \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Curvas PR \\ (Precision - Recall)\end{tabular}} & \multirow{2}{*}{Relación entre Efectividad(Recall) y Precision} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		 \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Curvas PR \\ (Precision - Recall)\end{tabular}} & \multirow{2}{*}{Relación entre Efectividad(Recall) y Precision} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Matriz de\\ Confusión\end{tabular}} \\
 		 &  &  \\ \hline
 		%\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tiempo de\\ Procesamiento\end{tabular}} & \multirow{2}{*}{$S= \frac{\sum_{i=1}^{Total} tiempo_{i}}{Total\,de\,muestras}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Cronometro\\ Computacional\end{tabular}} \\
-		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Curvas ROC \\ (Receiver Operating Characteristic)\end{tabular}} & \multirow{2}{*}{Relación entre Efectividad y Especificidad} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Curvas ROC \\ (Receiver Operating Characteristic)\end{tabular}} & \multirow{2}{*}{Relación entre Efectividad y Especificidad} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Matriz de\\ Confusión\end{tabular}} \\
 		 &  &  \\ \hline
-		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Acierto \\ (Exactitud)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos+Verdaderos\,Negativos}{Total\,de\,Imagenes}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Modelo de\\ Reconocimiento\end{tabular}} \\
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Acierto \\ (Exactitud)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos+Verdaderos\,Negativos}{Total\,de\,Imagenes}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Matriz de\\ Confusión\end{tabular}} \\
 		 &  &  \\ \hline		 
 		\end{tabular}
+		\begin{center}
+				\vskip 0.3cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 		\vspace{-1.0em}
 		\end{table}
 
@@ -935,7 +939,7 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 
 		\item[e)]	Puesto a que las redes neuronales son heurísticas por naturaleza (requieren un constante ajuste de híper-parámetros para obtener un óptimo resultado), se realizarán diferentes diseños de arquitecturas de modelos convolucionales y se escogerá el modelo que otorgue los mejores resultados.
 		
-		\item[f)]	Para el análisis de resultados, además de los indicadores conocidos con tasa de sensibilidad, especificidad, precisión, se pretende usar una Matriz de confusión. A través de esta matriz se pueden conocer valores estadísticos del espacio ROC (Receiver Operating Characteristic), métrica usada para evaluar la calidad del modelo reconocedor.
+		\item[f)]	Para el análisis de resultados, se pretende usar una Matriz de confusión. A través de esta matriz, se pueden conocer los indicadores conocidos con tasa de sensibilidad, especificidad, precisión y valores estadísticos del espacio ROC (Receiver Operating Characteristic), métrica usada para evaluar la calidad del modelo reconocedor.
 		
 		\end{enumerate}
 

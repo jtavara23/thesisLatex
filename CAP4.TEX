@@ -476,6 +476,10 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\textbf{Validación}                       & \text{67725 (25\%)}                    \\ \hline
 				\end{tabular}
 				\end{center}
+				\begin{center}
+				\vskip 0.3cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 			\end{table}
 
 	%---------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -488,11 +492,10 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				%\end{center}
 				\begin{center}
 				\caption{\small{Dataset no balanceado - Señales de Tránsito de Perú}}
-				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
 			\end{figure}
-
+			\vspace{-2.5em}
 			Para este caso, el dataset aumentado se configuró con una distribución de datos para entrenamiento, validación y evaluación: 
 			\vspace{1.5em}
 			\begin{table}[H]
@@ -505,6 +508,10 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\textbf{Validación}                       & \text{3131 (10\%)}                    \\ \hline
 				\textbf{Evaluación}                       & \text{4698 (15\%)}                    \\ \hline
 				\end{tabular}
+				\end{center}
+				\begin{center}
+				\vskip 0.3cm
+				{\small{Fuente: Elaboración propia.}}
 				\end{center}
 			\end{table}
 
@@ -577,8 +584,12 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\textbf{Épocas}                                             &\textit{100}		 				\\ \hline
 			\end{tabular}
 			\end{center}
+			\begin{center}
+				\vskip 0.3cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 		\end{table}
-		\vspace{-1.5em}
+		\vspace{-2.5em}
 
 		Recordemos que en cada época se procesa el dataset completo de imágenes, por lo que cada época es igual: \begingroup\makeatletter\def\f@size{11}\check@mathfonts	$epoca = \text{\textit{Tamaño del Minibatch}} \times \text{\textit{iteraciones}}$ \endgroup
 
@@ -599,8 +610,13 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\textbf{Épocas entrenadas}                &\textit{100 épocas (38700 iter.)}                       \\ \hline
 			\end{tabular}
 			\end{center}
+			\begin{center}
+				\vskip 0.3cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 		\end{table}
 
+		\vspace{-2.0em}
 
 		\begin{table}[H]
 			\begin{center}
@@ -613,8 +629,12 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\textbf{Épocas entrenadas}                &\textit{100 épocas (7700 iter.)}                       \\ \hline
 			\end{tabular}
 			\end{center}
+			\begin{center}
+				\vskip 0.3cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 		\end{table}
-
+		\vspace{-2em}
 
 
 	En esta investigación se implementó el modelo de redes neuronales convolucionales(CNN) donde las capas convolucionales iniciales de la red extraen características de la imagen (feature extractor), mientras que las capas totalmente conectadas predicen las probabilidades de salida(classifier).
@@ -629,6 +649,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		\end{center}
 		\vspace{-1.5em}
 	\end{figure}
+	\vspace{-1.5em}
 	
 	La arquitectura de la red está inspirada en la arquitectura Inception \citep{Inception} y en la arquitectura AlexNet \citep{Krizhevsky2012} para la clasificación de imágenes. En la arquitectura Inception, el modelo creado es denominado GoogLeNet, similar a AlexNet donde varios módulos iniciales son apilados uno sobre el otro para producir el resultado final. En el módulo de inicio, en ese tipo de red se usaron diversos tamaños de filtros convolucionales para capturar características de diferente abstracción. El alto nivel de abstracción se captura con filtros de mayor tamaño y el de un nivel inferior con filtros de menor tamaño, procesando información visual a diferentes escalas y al concatenarlas se obtiene un nivel eficiente de abstracción. 
 	%%%	Dado que aplicar directamente más filtros convolucionales con datos de imagen y concatenarlos es computacionalmente costoso, en el modelo Inception finalmente se usaron filtros de reducción de dimensionalidad(pooling/acumulación). Además de ser muy exitoso para la reducción de dimensionalidad, estos filtros también llegan a ser útiles como activación lineal rectificada. La arquitectura de inicio es eficiente en términos de complejidad computacional con respecto al número de unidades en cada etapa. \citep{Mrinal2016}.las características abstractas locales desempeñan un papel importante. Las señales que pertenecen al mismo grupo tienen una ligera diferencia en la estructura local entre sí, lo que dificulta su distinción. Por lo que se optó por agregar un kernel de reducción convolucional de 3 × 3 extra con acumulación máxima en la parte superior para capturar la estructura local discriminativa al comienzo mismo. Los signos pertenecientes a diferentes grupos tienen una abstracción global que se puede capturar utilizando un núcleo de reducción convolucional de 5 × 5.
@@ -647,7 +668,6 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		\caption{\small{Modelo del diseño de la Red propuesta}}
 		{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 		\end{center}
-		\vspace{-1.5em}
 		\end{figure}
 
 	Para el proceso de entrenamiento fueron tomados en cuenta 5 diferentes diseños. Estos fueron ejecutados durante el entrenamiento del dataset que contiene señales de tránsito de Alemania y Perú.
@@ -677,9 +697,13 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 
 				\end{tabular}
 				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 				\end{table}
-			\vspace{-1.5em}
-			\vskip 2cm
+			\vspace{-2.5em}
+			
 			\item \underline{Dataset del Perú}
 				\begin{table}[H]
 				\begin{center}
@@ -695,6 +719,10 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				3 &  {\cellcolor[HTML]{DAE8FC}21600 neuronas} &  F.C.(DropOut : 0.5) &  7200 neuronas &  -- & 7 neuronas & --\\ \hline
 
 				\end{tabular}
+				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
 				\end{center}
 				\end{table}
 
@@ -721,6 +749,10 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				4 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
 				\end{tabular}
 				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 				\end{table}
 			\vspace{2em}
 			%\vskip 2cm
@@ -740,6 +772,10 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				{\cellcolor[HTML]{ffb3b3} \multirow{-2}{*}{3}} &  128 de 15 x 15 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 7x7 }\\ \hline
 				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  2700 neuronas &  -- & 7 neuronas & --\\ \hline
 				\end{tabular}
+				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
 				\end{center}
 				\end{table}
 
@@ -768,6 +804,10 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				4 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
 				\end{tabular}
 				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 				\end{table}
 			\vspace{-1.5em}
 			%\vskip 2cm
@@ -787,6 +827,10 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\multirow{-2}{*}{3} &  128 de 15 x 15 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 7x7 }\\ \hline
 				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  2700 neuronas &  -- & 7 neuronas & --\\ \hline
 				\end{tabular}
+				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
 				\end{center}
 				\end{table}
 
@@ -816,8 +860,12 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				4 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
 				\end{tabular}
 				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 				\end{table}
-
+			\vspace{-1.5em}
 			\item \underline{Dataset del Perú}
 				\begin{table}[H]
 				\begin{center}
@@ -835,13 +883,19 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  2700 neuronas &  -- & 7 neuronas & --\\ \hline
 				\end{tabular}
 				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 				\end{table}
 
 			\end{itemize}
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
 		%\newpage
 		\subsubsection{Diseño E}
+		\vspace{-1em}
 			Diseño compuesto de 4 capas convolucionales y 2 capas totalmente conectadas.
+			\vspace{-1em}
 			\begin{itemize}
 			\item \underline{Dataset de Alemania}		
 
@@ -863,9 +917,13 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				5 &  {\cellcolor[HTML]{DAE8FC}1408 neuronas} &  F.C.(DropOut : 0.5) &  702 neuronas &  -- & 43 neuronas & --\\ \hline
 				\end{tabular}
 				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 				\end{table}
 
-			\vspace{-1.5em}
+			\vspace{-2em}
 			
 			\item \underline{Dataset del Perú}
 
@@ -887,11 +945,15 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				5 &  {\cellcolor[HTML]{DAE8FC}3168 neuronas} &  F.C.(DropOut : 0.5) &  1584 neuronas &  -- & 7 neuronas & --\\ \hline
 				\end{tabular}
 				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 				\end{table}
 
 			\end{itemize}
 
-			En el apéndice A se muestran bloques de pseudocódigo que fueron implementados para la construcción de los diseños de Red.
+			En el apéndice A se muestran bloques de pseudocódigo que fueron usando para la construcción de todos los diseños de red mostrados anteriormente.
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
 %\newpage
 \section{Entrenamiento y Validación }
