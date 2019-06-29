@@ -135,6 +135,13 @@ Moore, A.~W. (2001).
 \newblock Cross-validation for detecting and preventing overfitting.
 \newblock {\em School of Computer Science Carneigie Mellon University}.
 
+\bibitem[Moujahid, 2016]{Adil}
+Moujahid, A. (2016).
+\newblock A practical introduction to deep learning with caffe and python.
+\newblock
+  http://adilmoujahid.com/posts/2016/06/introduction-deep-learning-python-caffe/.
+\newblock [Online; accesado Agosto 12, 2018].
+
 \bibitem[Nair and Hinton, 2010]{RELU}
 Nair, V. and Hinton, G.~E. (2010).
 \newblock Rectified linear units improve restricted boltzmann machines.

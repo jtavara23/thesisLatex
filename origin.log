@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  23 JUN 2019 12:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  29 JUN 2019 17:30
 entering extended mode
 **"D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
 ("D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
@@ -2120,7 +2120,13 @@ Underfull \hbox (badness 2293) in paragraph at lines 80--84
 ptm/m/it/12 Deep Lear-ning\T1/ptm/m/n/12 .  MIT Press.
  []
 
-[132] [133] [134] [135]) (CAP7.tex [136]
+[132] [133]
+Underfull \hbox (badness 1122) in paragraph at lines 139--144
+[]\T1/ptm/m/n/12 Moujahid, A. (2016).  A prac-ti-cal in-tro-duc-tion to deep le
+ar-ning with caf-fe and pyt-hon.
+ []
+
+[134] [135]) (CAP7.tex [136]
 Ap\'{e}ndice A.
 
 LaTeX Warning: Float too large for page by 8.05789pt on input line 59.
@@ -2180,10 +2186,10 @@ LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ) ) 
 Here is how much of TeX's memory you used:
- 22208 strings out of 492970
- 443371 string characters out of 3125706
- 509034 words of memory out of 3000000
- 25438 multiletter control sequences out of 15000+200000
+ 22211 strings out of 492970
+ 443407 string characters out of 3125706
+ 509062 words of memory out of 3000000
+ 25441 multiletter control sequences out of 15000+200000
  134713 words of font info for 270 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,19n,77p,2061b,540s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -2215,7 +2221,7 @@ TeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Usuario/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Usuario/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on origin.pdf (165 pages, 18251296 bytes).
+Output written on origin.pdf (165 pages, 18251412 bytes).
 PDF statistics:
  863 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
