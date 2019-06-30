@@ -16,10 +16,13 @@ Bishop, C.~M. (2006).
 Cireşan, D., Meier, U., Masci, J., and Schmidhuber, J. (2012).
 \newblock Multi-column deep neural network for traffic sign classification.
 \newblock {\em Neural Networks from IJCNN 2011}, 32(C):333 -- 338.
+\newblock http://www.deeplearningbook.org.
 
 \bibitem[Consejo Nacional~de Seguridad~Vial, 2014]{CNSV}
 Consejo Nacional~de Seguridad~Vial, . (2014).
 \newblock La seguridad vial a nivel mundial.
+\newblock
+  https://www.mtc.gob.pe/cnsv/documentos/PONENCIA%20DE%20SEGURIDAD%20VIAL.pdf.
 \newblock [Online; accesado Noviembre 23, 2018].
 
 \bibitem[Cook, 2009]{CookJ}
@@ -57,11 +60,9 @@ Dong, X. and Zhou, D.-X. (2008).
 \bibitem[Donges, 2018]{gradientimg}
 Donges, N. (2018).
 \newblock Gradient descent in a nutshell.
+\newblock
+  https://towardsdatascience.com/gradient-descent-in-a-nutshell-eaf8c18212f0.
 \newblock [Online; accesado Noviembre 23, 2018].
-
-\bibitem[Elkan, 2012]{Elkan12evaluatingclassifiers}
-Elkan, C. (2012).
-\newblock Evaluating classifiers.
 
 \bibitem[Gestión.pe, 2016a]{Gestion2}
 Gestión.pe, D. (2016a).
@@ -80,14 +81,13 @@ Gestión.pe, D. (2016b).
 
 \bibitem[Golik et~al., 2013]{crossMSE}
 Golik, P., Doetsch, P., and Ney, H. (2013).
-\newblock Cross-entropy vs. squared error training: a theoretical and
-  experimental comparison.
+\newblock {\em Cross-Entropy vs. Squared Error Training: a Theoretical and
+  Experimental Comparison}.
 
 \bibitem[Goodfellow et~al., 2016]{Goodfellow-et-al-2016}
 Goodfellow, I., Bengio, Y., and Courville, A. (2016).
 \newblock {\em Deep Learning}.
 \newblock MIT Press.
-\newblock http://www.deeplearningbook.org.
 
 \bibitem[Gu et~al., 2015]{recentCNN}
 Gu, J., Wang, Z., Kuen, J., Ma, L., Shahroudy, A., Shuai, B., Liu, T., Wang,
@@ -116,12 +116,14 @@ Jia, Y., Shelhamer, E., Donahue, J., Karayev, S., Long, J., Girshick, R.,
 \bibitem[Jordan, 2018]{AdamImg}
 Jordan, J. (2018).
 \newblock Setting the learning rate of your neural network.
+\newblock https://www.jeremyjordan.me/nn-learning-rate.
 \newblock [Online; accesado Noviembre 23, 2018].
 
 \bibitem[Karpathy, 2016]{cs231n}
 Karpathy, A. (2016).
 \newblock Convolutional neural networks (cnns / convnets).
-\newblock {\em Cs231- Stanford Course}.
+\newblock http://cs231n.github.io/convolutional-networks/.
+\newblock [Online; accesado Noviembre 23, 2018].
 
 \bibitem[Kingma and Ba, 2015]{Adam}
 Kingma, D.~P. and Ba, J. (2015).
@@ -130,7 +132,9 @@ Kingma, D.~P. and Ba, J. (2015).
 
 \bibitem[Krizhevsky et~al., 2012]{Krizhevsky2012}
 Krizhevsky, A., Sutskever, I., and Hinton, G. (2012).
-\newblock Imagenet classification with deep convolutional neural networks.
+\newblock {\em ImageNet Classification with Deep Convolutional Neural
+  Networks}.
+\newblock Curran Associates, Inc.
 
 \bibitem[LeCun et~al., 1998]{LeCun}
 LeCun, Y., L.Botou, Y.Bengio, and P.Haffner (1998).
@@ -161,6 +165,7 @@ OMS (2017).
 \newblock Organización mundial de la salud - 10 datos sobre la seguridad vial
   en el mundo.
 \newblock http://www.who.int/features/factfiles/roadsafety/es/.
+\newblock [Online; accesado Agosto 23, 2018].
 
 \bibitem[Poynton, 2003]{POYNTON2003257}
 Poynton, C. (2003).
@@ -179,25 +184,29 @@ Rocha, C. and Escorcia, G. (2010).
 \bibitem[Rohrer, 2016]{Rohrer}
 Rohrer, B. (2016).
 \newblock How convolutional neural networks work.
-\newblock {\em Data Science and Robots Blog}.
+\newblock [Online; accesado Octubre 23, 2018].
 
 \bibitem[Romero, 2015a]{AulaDNN}
 Romero, R.~F. (2015a).
 \newblock Scc0270/scc5809 - redes neurais - deep learning.
+\newblock {\em ICMC - USP}.
 
 \bibitem[Romero, 2015b]{AulaMLP}
 Romero, R.~F. (2015b).
 \newblock Scc0270/scc5809 - redes neurais - multilayer perceptron.
+\newblock {\em ICMC - USP}.
 
 \bibitem[Romero~Benites, 2017]{RPPData}
 Romero~Benites, R. (2017).
 \newblock Ocho peruanos mueren cada día en accidentes de tránsito.
 \newblock
   http://rpp.pe/data/ocho-peruanos-mueren-cada-dia-en-accidentes-de-transito-1068532.
+\newblock [Online; accesado Julio 23, 2018].
 
-\bibitem[Sandoval and Prieto, 2009]{SandovalCereza}
-Sandoval and Prieto (2009).
-\newblock Procesamiento de imágenes para la clasificación de café cereza.
+\bibitem[S. and P., 2009]{SandovalCereza}
+S., Z. and P., F. (2009).
+\newblock Procesamiento de imágenes para la clasificación de café cerez.
+\newblock {\em PROSPECTIVA}, 7:67--73.
 
 \bibitem[Sermanet and LeCun, 2011]{Multi_scale_feat}
 Sermanet, P. and LeCun, Y. (2011).
@@ -256,6 +265,7 @@ Waze (2016).
 \newblock Las mejores y peores ciudades para conducir en américa latina,
   según waze.
 \newblock http://cnnespanol.cnn.com/2016/09/15/las-mejores-y-peores-ciudades.
+\newblock [Online; accesado Julio 23, 2018].
 
 \bibitem[Yadav et~al., 2014]{CLAHE}
 Yadav, G., Maheshwari, S., and Agarwal, A. (2014).

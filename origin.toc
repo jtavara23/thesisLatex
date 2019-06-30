@@ -53,7 +53,7 @@
 \contentsline {subsubsection}{\numberline {2.5.5.2}Poblaci\IeC {\'o}n}{67}
 \contentsline {subsubsection}{\numberline {2.5.5.3}Muestra}{68}
 \contentsline {subsection}{\numberline {2.5.6}Etapas de la investigaci\IeC {\'o}n}{69}
-\contentsline {subsubsection}{\numberline {2.5.6.1}Metodolog\IeC {\'\i }a para el dise\IeC {\~n}o del Modelo}{70}
+\contentsline {subsubsection}{\numberline {2.5.6.1}Metodolog\IeC {\'\i }a para el dise\IeC {\~n}o del Modelo}{71}
 \contentsline {chapter}{\numberline {3}Desarrollo de la Investigaci\IeC {\'o}n}{72}
 \contentsline {section}{\numberline {3.1}An\IeC {\'a}lisis del conjunto de Im\IeC {\'a}genes}{74}
 \contentsline {subsection}{\numberline {3.1.1}Datos Iniciales para el entrenamiento}{74}
@@ -92,21 +92,21 @@
 \contentsline {subsubsection}{\numberline {3.3.2.3}An\IeC {\'a}lisis del Entrenamiento y Validaci\IeC {\'o}n del Dise\IeC {\~n}o C}{112}
 \contentsline {subsubsection}{\numberline {3.3.2.4}An\IeC {\'a}lisis del Entrenamiento y Validaci\IeC {\'o}n del Dise\IeC {\~n}o D}{113}
 \contentsline {subsubsection}{\numberline {3.3.2.5}An\IeC {\'a}lisis del Entrenamiento y Validaci\IeC {\'o}n del Dise\IeC {\~n}o E}{114}
-\contentsline {chapter}{\numberline {4}Resultados de la tesis}{116}
-\contentsline {section}{\numberline {4.1}Se\IeC {\~n}ales de Tr\IeC {\'a}nsito de Alemania}{119}
-\contentsline {subsection}{\numberline {4.1.1}Tabla de Resultados}{119}
-\contentsline {subsection}{\numberline {4.1.2}Matriz de Confusi\IeC {\'o}n}{120}
-\contentsline {subsection}{\numberline {4.1.3}Curvas ROC - AUC}{121}
-\contentsline {subsection}{\numberline {4.1.4}Curvas PR - AUC}{121}
-\contentsline {section}{\numberline {4.2}Se\IeC {\~n}ales de Tr\IeC {\'a}nsito de Per\IeC {\'u}}{122}
-\contentsline {subsection}{\numberline {4.2.1}Tabla de Resultados}{122}
-\contentsline {subsection}{\numberline {4.2.2}Matriz de Confusi\IeC {\'o}n}{123}
-\contentsline {subsection}{\numberline {4.2.3}Curvas ROC - AUC}{124}
-\contentsline {subsection}{\numberline {4.2.4}Curvas PR - AUC}{124}
-\contentsline {section}{\numberline {4.3}Reconocimiento de Se\IeC {\~n}al}{125}
-\contentsline {subsection}{\numberline {4.3.1}Interfaz de Aplicaci\IeC {\'o}n}{126}
-\contentsline {chapter}{\numberline {5}Consideraciones finales}{128}
-\contentsline {section}{\numberline {5.1}Conclusiones}{128}
-\contentsline {section}{\numberline {5.2}Trabajos futuros y recomendaciones}{130}
-\contentsline {chapter}{Bibliografia}{131}
-\contentsline {chapter}{\numberline {A}Pseudoc\IeC {\'o}digo del Dise\IeC {\~n}o de Red}{137}
+\contentsline {chapter}{\numberline {4}Resultados de la tesis}{117}
+\contentsline {section}{\numberline {4.1}Se\IeC {\~n}ales de Tr\IeC {\'a}nsito de Alemania}{120}
+\contentsline {subsection}{\numberline {4.1.1}Tabla de Resultados}{120}
+\contentsline {subsection}{\numberline {4.1.2}Matriz de Confusi\IeC {\'o}n}{121}
+\contentsline {subsection}{\numberline {4.1.3}Curvas ROC - AUC}{122}
+\contentsline {subsection}{\numberline {4.1.4}Curvas PR - AUC}{122}
+\contentsline {section}{\numberline {4.2}Se\IeC {\~n}ales de Tr\IeC {\'a}nsito de Per\IeC {\'u}}{123}
+\contentsline {subsection}{\numberline {4.2.1}Tabla de Resultados}{123}
+\contentsline {subsection}{\numberline {4.2.2}Matriz de Confusi\IeC {\'o}n}{124}
+\contentsline {subsection}{\numberline {4.2.3}Curvas ROC - AUC}{125}
+\contentsline {subsection}{\numberline {4.2.4}Curvas PR - AUC}{125}
+\contentsline {section}{\numberline {4.3}Reconocimiento de Se\IeC {\~n}al}{126}
+\contentsline {subsection}{\numberline {4.3.1}Interfaz de Aplicaci\IeC {\'o}n}{127}
+\contentsline {chapter}{\numberline {5}Consideraciones finales}{129}
+\contentsline {section}{\numberline {5.1}Conclusiones}{129}
+\contentsline {section}{\numberline {5.2}Trabajos futuros y recomendaciones}{131}
+\contentsline {chapter}{Bibliografia}{132}
+\contentsline {chapter}{\numberline {A}Pseudoc\IeC {\'o}digo del Dise\IeC {\~n}o de Red}{138}

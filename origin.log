@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  29 JUN 2019 19:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  29 JUN 2019 22:12
 entering extended mode
 **"D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
 ("D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
@@ -1371,13 +1371,13 @@ LaTeX Font Info:    Calculating math sizes for size <15.8> on input line 803.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 839.
  [63] [64] [65]
-[66] [67] [68] [69]
-<images/intro/disenho.png, id=366, 1116.42094pt x 626.34pt>
+[66] [67] [68] [69] [70]
+<images/intro/disenho.png, id=369, 1116.42094pt x 626.34pt>
 File: images/intro/disenho.png Graphic file (type png)
 <use images/intro/disenho.png>
-Package pdftex.def Info: images/intro/disenho.png  used on input line 974.
+Package pdftex.def Info: images/intro/disenho.png  used on input line 976.
 (pdftex.def)             Requested size: 422.52054pt x 237.04639pt.
- [70]) (CAP4.tex [71 <./images/intro/disenho.png>]
+) (CAP4.tex [71 <./images/intro/disenho.png>]
 Cap\'{\i }tulo 3.
 <images/summaryflowchart.png, id=374, 444.91219pt x 555.57562pt>
 File: images/summaryflowchart.png Graphic file (type png)
@@ -2017,9 +2017,9 @@ png  used on input line 1377.
 ) (CAP5.tex [116 <./images/desarrollo/trainResults/peruSummary_validAcierto.png
 > <./images/desarrollo/trainResults/peruSummary_validError.png>]
 Cap\'{\i }tulo 4.
-[116
+[117
 
-] [117] [118]
+] [118] [119]
 Overfull \hbox (29.44547pt too wide) in paragraph at lines 56--66
  [] 
  []
@@ -2032,10 +2032,10 @@ File: images/desarrollo/testResults/german/model_A_A.png Graphic file (type png
 Package pdftex.def Info: images/desarrollo/testResults/german/model_A_A.png  us
 ed on input line 77.
 (pdftex.def)             Requested size: 469.47095pt x 512.14885pt.
-[119]
+[120]
 Overfull \vbox (7.654pt too high) has occurred while \output is active []
 
- [120 <./images/desarrollo/testResults/german/model_A_A.png>]
+ [121 <./images/desarrollo/testResults/german/model_A_A.png>]
 <images/desarrollo/testResults/german/ROC_curve_modelE.png, id=669, 1266.98344p
 t x 744.53156pt>
 File: images/desarrollo/testResults/german/ROC_curve_modelE.png Graphic file (t
@@ -2052,7 +2052,7 @@ pe png)
 Package pdftex.def Info: images/desarrollo/testResults/german/PR_curve_modelE.p
 ng  used on input line 101.
 (pdftex.def)             Requested size: 469.46025pt x 213.39792pt.
- [121 <./images/desarrollo/testResults/german/ROC_curve_modelE.png> <./images/d
+ [122 <./images/desarrollo/testResults/german/ROC_curve_modelE.png> <./images/d
 esarrollo/testResults/german/PR_curve_modelE.png>]
 Overfull \hbox (29.44547pt too wide) in paragraph at lines 121--131
  [] 
@@ -2065,7 +2065,7 @@ File: images/desarrollo/testResults/peru/modelE_.png Graphic file (type png)
 Package pdftex.def Info: images/desarrollo/testResults/peru/modelE_.png  used o
 n input line 141.
 (pdftex.def)             Requested size: 258.21017pt x 485.5442pt.
-[122]
+[123]
 <images/desarrollo/testResults/peru/ROC_curve_modelE.png, id=680, 1387.584pt x 
 710.4141pt>
 File: images/desarrollo/testResults/peru/ROC_curve_modelE.png Graphic file (typ
@@ -2074,7 +2074,7 @@ e png)
 Package pdftex.def Info: images/desarrollo/testResults/peru/ROC_curve_modelE.pn
 g  used on input line 154.
 (pdftex.def)             Requested size: 469.46448pt x 213.39687pt.
- [123 <./images/desarrollo/testResults/peru/modelE_.png>]
+ [124 <./images/desarrollo/testResults/peru/modelE_.png>]
 <images/desarrollo/testResults/peru/PR_curve_modelE.png, id=685, 1387.584pt x 7
 10.4141pt>
 File: images/desarrollo/testResults/peru/PR_curve_modelE.png Graphic file (type
@@ -2083,7 +2083,7 @@ File: images/desarrollo/testResults/peru/PR_curve_modelE.png Graphic file (type
 Package pdftex.def Info: images/desarrollo/testResults/peru/PR_curve_modelE.png
   used on input line 167.
 (pdftex.def)             Requested size: 469.46448pt x 213.39687pt.
- [124 <./images/desarrollo/testResults/peru/ROC_curve_modelE.png> <./images/des
+ [125 <./images/desarrollo/testResults/peru/ROC_curve_modelE.png> <./images/des
 arrollo/testResults/peru/PR_curve_modelE.png>]
 <images/reconyzeFLow.png, id=691, 566.86781pt x 570.48131pt>
 File: images/reconyzeFLow.png Graphic file (type png)
@@ -2096,7 +2096,7 @@ File: images/interfazWithGermSign.png Graphic file (type png)
 Package pdftex.def Info: images/interfazWithGermSign.png  used on input line 20
 1.
 (pdftex.def)             Requested size: 469.46947pt x 341.44977pt.
- [125 <./images/reconyzeFLow.png>]
+ [126 <./images/reconyzeFLow.png>]
 <images/interfazWithPeruvSign.png, id=697, 685.05937pt x 588.69937pt>
 File: images/interfazWithPeruvSign.png Graphic file (type png)
 <use images/interfazWithPeruvSign.png>
@@ -2104,63 +2104,81 @@ Package pdftex.def Info: images/interfazWithPeruvSign.png  used on input line 2
 13.
 (pdftex.def)             Requested size: 469.48236pt x 403.44527pt.
 ) (CAP6.tex
-[126 <./images/interfazWithGermSign.png>] [127 <./images/interfazWithPeruvSign.
+[127 <./images/interfazWithGermSign.png>] [128 <./images/interfazWithPeruvSign.
 png>]
 Cap\'{\i }tulo 5.
-[128
+[129
 
-] [129] [130]) (origin.bbl
-Underfull \hbox (badness 10000) in paragraph at lines 26--31
+] [130] [131]) (origin.bbl
+Underfull \hbox (badness 3108) in paragraph at lines 22--27
+[]\T1/ptm/m/n/12 Consejo Na-cio-nal de Se-gu-ri-dad Vial, . (2014).  La se-gu-r
+i-dad vial a ni-vel mun-dial.
+ []
+
+
+Underfull \hbox (badness 3354) in paragraph at lines 22--27
+\T1/ptm/m/n/12 https://www.mtc.gob.pe/cnsv/documentos/PONENCIA [On-li-ne; ac-ce
+-sa-do No-viem-bre 23,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--34
 []\T1/ptm/m/n/12 Cook, J. D. (2009).  Th-ree al-go-rithms for con-ver-ting co-l
 or to grays-ca-le.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 26--31
+Underfull \hbox (badness 10000) in paragraph at lines 29--34
 \T1/ptm/m/n/12 https://www.johndcook.com/blog/2009/08/24/algorithms-convert-col
 or-grayscale.  [On-li-
  []
 
-[131
+[132
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 41--46
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
 []\T1/ptm/m/n/12 Dabbura, I. (2017).  Gra-dient des-cent al-go-rithm and its va
 -riants.
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 41--46
+Underfull \hbox (badness 10000) in paragraph at lines 44--49
 \T1/ptm/m/n/12 https://towardsdatascience.com/gradient-descent-algorithm-and-it
 s-variants-10f652806a3.
  []
 
-
-Underfull \hbox (badness 2293) in paragraph at lines 87--91
-[]\T1/ptm/m/n/12 Goodfellow, I., Ben-gio, Y., and Cour-vi-lle, A. (2016).  \T1/
-ptm/m/it/12 Deep Lear-ning\T1/ptm/m/n/12 .  MIT Press.
+[133]
+Underfull \hbox (badness 10000) in paragraph at lines 117--121
+[]\T1/ptm/m/n/12 Jordan, J. (2018).  Set-ting the lear-ning ra-te of your neu-r
+al net-work.
  []
 
-[132] [133]
-Underfull \hbox (badness 1122) in paragraph at lines 146--151
+
+Underfull \hbox (badness 10000) in paragraph at lines 123--127
+[]\T1/ptm/m/n/12 Karpathy, A. (2016).  Con-vo-lu-tio-nal neu-ral net-works (cnn
+s / conv-nets).
+ []
+
+[134]
+Underfull \hbox (badness 1122) in paragraph at lines 150--155
 []\T1/ptm/m/n/12 Moujahid, A. (2016).  A prac-ti-cal in-tro-duc-tion to deep le
 ar-ning with caf-fe and pyt-hon.
  []
 
-[134] [135]) (CAP7.tex [136]
+[135] [136]) (CAP7.tex [137]
 Ap\'{e}ndice A.
 
 LaTeX Warning: Float too large for page by 8.05789pt on input line 59.
 
-[137
+[138
 
-] [138]
+] [139]
 Overfull \hbox (0.9745pt too wide) in paragraph at lines 135--135
 []\T1/ptm/b/n/12 Procedimiento \T1/ptm/m/n/12 ca-pa-To-tal-men-te-Co-nec-ta-da(
 entrada,numEntradas,numSalidas,usarRELU) 
  []
 
-[139])
+[140])
 Overfull \hbox (9.33878pt too wide) in paragraph at lines 138--109
 []\T1/ptm/m/n/12 Código de la im-ple-man-ta-ción com-ple-ta ubi-ca-do en: https
 ://github.com/jtavara23/SignalsWindows
@@ -2189,7 +2207,7 @@ File: autorizacion.pdf Graphic file (type pdf)
 <use autorizacion.pdf, page 1>
 Package pdftex.def Info: autorizacion.pdf , page1 used on input line 111.
 (pdftex.def)             Requested size: 598.30069pt x 845.96486pt.
-[140]
+[141]
 File: autorizacion.pdf Graphic file (type pdf)
 <use autorizacion.pdf, page 1>
 Package pdftex.def Info: autorizacion.pdf , page1 used on input line 111.
@@ -2202,16 +2220,16 @@ File: autorizacion.pdf Graphic file (type pdf)
 <use autorizacion.pdf, page 1>
 Package pdftex.def Info: autorizacion.pdf , page1 used on input line 111.
 (pdftex.def)             Requested size: 598.30069pt x 845.96486pt.
- [141 <./autorizacion.pdf>] (origin.aux
+ [142 <./autorizacion.pdf>] (origin.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
 ) ) 
 Here is how much of TeX's memory you used:
- 22224 strings out of 492970
- 443763 string characters out of 3125706
- 509089 words of memory out of 3000000
- 25451 multiletter control sequences out of 15000+200000
- 133069 words of font info for 269 fonts, out of 3000000 for 9000
+ 22222 strings out of 492970
+ 443670 string characters out of 3125706
+ 509054 words of memory out of 3000000
+ 25449 multiletter control sequences out of 15000+200000
+ 134713 words of font info for 270 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  55i,19n,77p,2061b,540s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/Usuario/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.
@@ -2242,7 +2260,7 @@ TeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Usuario/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Usuario/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on origin.pdf (166 pages, 18386678 bytes).
+Output written on origin.pdf (166 pages, 18387471 bytes).
 PDF statistics:
  869 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

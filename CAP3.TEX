@@ -736,7 +736,7 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 	
 		%Cross-entropy loss, or log loss, measures the performance of a classification model whose output is a probability value between 0 and 1. Cross-entropy loss increases as the predicted probability diverges from the actual label. So predicting a probability of .012 when the actual observation label is 1 would be bad and result in a high loss value. A perfect model would have a log loss of 0.
 
-		Para el entrenamiento, el conjunto de datos se divide en un subconjunto de entrenamiento y otro para validación. En esta investigación se dividirá el 75\% para entrenamiento y 25\% para validación, {\citep {Elkan12evaluatingclassifiers}}. La división en subgrupos de entrenamiento y validación generalmente se realiza de manera aleatoria, para garantizar que ambos subconjuntos sean muestras aleatorias de la misma distribución. Puede ser razonable realizar un muestreo estratificado, lo que significa asegurar que cada clase esté presente en la misma proporción en los subconjuntos de entrenamiento y prueba. En esta investigación se trabajará con 2 tipos de muestreos (balanceado/estratificado y no balanceado)
+		Para el entrenamiento, el conjunto de datos se divide en un subconjunto de entrenamiento y otro para validación. La división en subgrupos de entrenamiento y validación generalmente se realiza de manera aleatoria, para garantizar que ambos subconjuntos sean muestras aleatorias de la misma distribución. Puede ser razonable realizar un muestreo estratificado, lo que significa asegurar que cada clase esté presente en la misma proporción en los subconjuntos de entrenamiento y prueba. En esta investigación se trabajará con 2 tipos de muestreos (balanceado/estratificado y no balanceado).
 
 		El subconjunto de validación es utilizado para evaluar el desempeño del entrenamiento en diferentes arquitecturas del modelo (diferentes topologías), para luego escoger una de ellas. Este conjunto de validación se usa para verificar si el error está dentro de algún rango y no se usa directamente para ajustar los pesos, por el contrario, \textbf{se usa para indicar el número óptimo de neuronas ocultas o determina el punto de parada para el entrenamiento}.  Por lo tanto, el modelo es entrenado sobre el conjunto de entrenamiento completo y la capacidad de generalización es medida en el conjunto de validación. 
 
@@ -879,14 +879,16 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 				
 		\begin{enumerate}
 		\item[] {\bf \underline {Arquitectura AlexNet }}\newline
-			Esta arquitectura hizo que las Redes Convolucionales fueran populares en el campo de Visión por Computadora. AlexNet fue desarrollado por \citep{Krizhevsky2012}. La entrada consiste en una imagen de 224x224 pixeles en formato RGB (3 canales). La arquitectura consta de 8 capas, las primeras cinco capas son convolucionales y el resto son capas totalmente conectadas. La primera y segunda capa convolucional son seguidas por capas de normalización de respuesta local, luego estas capas de normalización de respuesta son seguidas por capas de agrupación máxima. La salida de cada capa convolucional y cada capa completamente conectada se activa a través de  una función no linear conocida como RELU. Similar a LenNet-5\citep{LeCun} pero más grande, teniendo aproximadamente 60 millones de parámetros.
+			AlexNet fue desarrollado por \cite{Krizhevsky2012}. Esta arquitectura hizo que las redes convolucionales fueran populares cuando en el 2012, AlexNet en el concurso ImageNet LSVRC-2012 superó significativamente a todas las otras redes neuronales a través de su diseño de red convolucional profunda para clasificar 1.2 millones de imágenes en 1000 clases diferentes. Ganó el desafío al obtener un error de 15.3\% y el segundo lugar (que no fue una variación de una CNN) obtuvo una tasa de error alrededor del 26,2\%.
+
+			Compuesta aproximadamente de 60 millones de neuronas, la entrada consiste en una imagen de 224x224 pixeles en formato RGB (3 canales). La arquitectura consta de 8 capas, las primeras cinco capas son convolucionales y el resto son capas totalmente conectadas. La salida de cada capa convolucional y cada capa completamente conectada se activa a través de la función no linear RELU.  Presenta filtros de tamaño 11x11, 5x5 , 3x3 y capas de agrupación(pooling), siendo lo más destacable el uso de dropout como técnica de regularización y el uso del proceso de Data Augmentation para conseguir esos excelentes resultados.
 		\end{enumerate}
 
 		\begin{enumerate}
 		\item[] {\bf \underline {Arquitectura Inception}}\newline
 			Es una arquitectura de red neuronal convolucional profunda, creada por un grupo de investigación de Google que fue responsable de establecer el nuevo estado del arte de la técnica para la clasificación y detección en la competencia de reconocimiento visual a gran escala ImageNet 2014(ILSVRC14). 
 			\vskip 0.1cm
-			El principal sello distintivo de esta arquitectura es la utilización mejorada de los recursos informáticos dentro de la red. Esto fue logrado gracias al aumento de la profundidad y el ancho de la red mientras se mantiene el costo computacional constante. Para optimizar la calidad, las decisiones para elaborar la arquitectura se basaron en el principio Hebbiano y la intuición de procesamiento a escala múltiple. Una encarnación particular utilizada en la competencia ILSVRC14 es llamada GoogLeNet, una red de 22 capas de profundidad, cuya calidad se evalúa en el contexto de reconocimiento y detección, \citep{Inception}.
+			El principal sello distintivo de esta arquitectura es la utilización mejorada de los recursos informáticos dentro de la red. Esto fue logrado gracias al aumento de la profundidad y el ancho de la red mientras se mantiene el costo computacional constante. Para optimizar la calidad, las decisiones para elaborar la arquitectura se basaron en el principio Hebbiano y la intuición de procesamiento a escala múltiple, \citep{Inception}. Una encarnación particular utilizada en la competencia ILSVRC14 es llamada GoogLeNet, una red de 22 capas de profundidad, cuya calidad se evalúa en el contexto de reconocimiento y detección, logrando una tasa de error del 6.67\%, muy cercano al rendimiento a nivel humano.
 		\end{enumerate}
 		%====================================================================================
 		% subsection Recolección de Datos para la Construcción del Modelo (end)
@@ -923,7 +925,7 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 		%\item[B)] {\bf Señales de Tránsito de Bélgica} \citep{Timofte-MVA-2011} \newline
 		%	Conjunto de datos creados con a la captura simultánea de imágenes durante el día realizada por 8 cámaras mientras se conducía aproximadamente a 35Km/h, con el objetivo de obtener una localización 3D y un refinamiento simultáneo. Las señales de tránsito fueron capturados a una distancia de menos de 50 metros y almacenadas en formato PPM cuyas dimensiones varían entre 25x30 y 260x250 pixeles. En esta colección se obtuvieron un total de 7125 imágenes distribuidas en 62 clases.
 		
-		
+		\newpage
 		\begin{enumerate}
 			\item[]  {\bf \underline {Señales de Tránsito de Perú}}\newline
 			Conjunto de aproximadamente 614 imágenes originalmente tomadas de la aplicación Google Maps agrupadas en 7 categorías. Dado que la población de imágenes es infinita, se optó por usar un muestreo aleatorio simple para poblaciones desconocidas con un nivel de confianza del 95\% y un error de muestreo del 4\%.
@@ -959,9 +961,9 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 
 		\item[d)]	Análisis e implementación de diversas técnicas de procesamiento de imágenes que serán aplicadas al dataset recolectado con la finalidad de contribuir en el diseño inicial del modelo convolucional.
 
-		\item[e)]	Puesto a que las redes neuronales son heurísticas por naturaleza (requieren un constante ajuste de híper-parámetros para obtener un óptimo resultado), se realizarán diferentes diseños de arquitecturas de modelos convolucionales y se escogerá el modelo que otorgue los mejores resultados.
+		\item[e)]	Puesto a que las redes neuronales son heurísticas por naturaleza (requieren un constante ajuste de hiperparámetros para obtener un óptimo resultado), se realizarán diferentes diseños de arquitecturas de modelos convolucionales y se escogerá el modelo que otorgue los mejores resultados.
 		
-		\item[f)]	Para el análisis de resultados, se pretende usar una Matriz de confusión. A través de esta matriz, se pueden conocer los indicadores conocidos con tasa de sensibilidad, especificidad, precisión y valores estadísticos del espacio ROC (Receiver Operating Characteristic), métrica usada para evaluar la calidad del modelo reconocedor.
+		\item[f)]	Para el análisis de resultados, se pretende usar una Matriz de confusión. A través de esta matriz, se pueden conocer los indicadores conocidos con tasa de sensibilidad, especificidad, precisión y valores estadísticos del espacio ROC (Receiver Operating Characteristic), métricas usadas comúnmente para evaluar la calidad del modelo reconocedor.
 		
 		\end{enumerate}
 
