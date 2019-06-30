@@ -37,6 +37,13 @@ Cordova~Rampant, A. (2017).
   http://rpp.pe/data/los-peruanos-mueren-mas-por-los-accidentes-de-transito-1071653.
 \newblock [Online; accesado Octubre 10, 2018].
 
+\bibitem[Dabbura, 2017]{Imad}
+Dabbura, I. (2017).
+\newblock Gradient descent algorithm and its variants.
+\newblock
+  https://towardsdatascience.com/gradient-descent-algorithm-and-its-variants-10f652806a3.
+\newblock [Online; accesado Octubre 3, 2018].
+
 \bibitem[Davis and Goadrich, 2006]{Davis-2006-RPR-1143844-1143874}
 Davis, J. and Goadrich, M. (2006).
 \newblock The relationship between precision-recall and roc curves.
@@ -116,8 +123,8 @@ Karpathy, A. (2016).
 \newblock Convolutional neural networks (cnns / convnets).
 \newblock {\em Cs231- Stanford Course}.
 
-\bibitem[Kingma and Ba, 2014]{Adam}
-Kingma, D.~P. and Ba, J. (2014).
+\bibitem[Kingma and Ba, 2015]{Adam}
+Kingma, D.~P. and Ba, J. (2015).
 \newblock Adam: A method for stochastic optimization.
 \newblock {\em CoRR}, abs/1412.6980.
 

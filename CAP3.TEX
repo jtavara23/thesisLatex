@@ -597,7 +597,7 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 
 		Un gradiente mide cuánto cambia la salida de una función si se cambia un poco las entradas.
 
-		En el caso del entrenamiento de una red neuronal, el gradiente simplemente mide el cambio en todos los pesos con respecto al cambio en el error. El gradiente se puede representar como la pendiente de una función. Cuanto más alto es el gradiente, más pronunciada es la pendiente y más rápido puede aprender un modelo. Pero si la pendiente es cero, el modelo deja de aprender. Dicho matemáticamente, un gradiente es una derivada parcial con respecto a sus entradas, \citep{gradient}.
+		En el caso del entrenamiento de una red neuronal, el gradiente simplemente mide el cambio en todos los pesos con respecto al cambio en el error. El gradiente se puede representar como la pendiente de una función, cuanto más alto es el gradiente, más pronunciada es la pendiente y más rápido puede aprender un modelo. Pero si la pendiente es cero, el modelo deja de aprender. Dicho matemáticamente, un gradiente es una derivada parcial con respecto a sus entradas, \citep{gradient}.
 
 		El descenso de gradiente es un algoritmo de optimización iterativa utilizado al entrenar un modelo de aprendizaje automático, basado en una función convexa, que ajusta sus parámetros iterativamente para minimizar la función de pérdida (error) hasta su mínimo local, \citep{gradient}.
 
@@ -638,19 +638,31 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 
 		Se tienen diversos tipos de descenso de gradiente, estos son:
 		%con el objetivo principal de optimizar la funcion de error o pérdida de la red y por consecuente garantizar que el modelo neuronal pueda generalizar las clasificaciones a realizar. 
-		\subsubsection{Gradiente Descendiente por Lotes (Batch Gradient Descent)}
+		\subsubsection{Gradiente Descendiente por Lotes (Batch Gradient Descent - BGD)}
 		
 			Calcula el error para cada ejemplo dentro del conjunto de datos de entrenamiento, pero el modelo se actualiza solo después de que se hayan evaluado todos los ejemplos de entrenamiento. Todo este proceso es como un ciclo y se denomina época de entrenamiento.
 
-		\subsubsection{Gradiente Descendiente Estocástico (Stochastic Gradient Descent-SGD)}
+		\subsubsection{Gradiente Descendiente Estocástico (Stochastic Gradient Descent - SGD)}
 
 			Por el contrario, hace esto para cada ejemplo de entrenamiento dentro del conjunto de datos. Esto significa que actualiza los parámetros para cada ejemplo de entrenamiento, uno por uno. Esto puede hacer que el SGD sea más rápido que el Descenso de gradiente por lotes, dependiendo del problema. Una ventaja es que las actualizaciones frecuentes nos permiten tener una tasa de mejora bastante detallada. El hecho es que las actualizaciones frecuentes son más costosas desde el punto de vista computacional que el enfoque del BGD y la frecuencia de esas actualizaciones también puede generar gradientes ruidosos, lo que puede hacer que la tasa de error salte, en lugar de disminuir lentamente.
 
-			El MOMENTUM es otro argumento en el optimizador SGD que podríamos ajustar para obtener una convergencia más rápida. Ayuda al vector de parámetros a aumentar la velocidad en cualquier dirección con un descenso constante del gradiente para evitar oscilaciones. Una elección típica de momento es entre 0.5 a 0.9.
+			%El MOMENTUM es otro argumento en el optimizador SGD que podríamos ajustar para obtener una convergencia más rápida. Ayuda al vector de parámetros a aumentar la velocidad en cualquier dirección con un descenso constante del gradiente para evitar oscilaciones. Una elección típica de momento es entre 0.5 a 0.9.
 
 		\subsubsection{Mini-batch Gradient Descent}
 
-			Es el método de gradiente más usado, ya que es una combinación de los conceptos de SGD y Batch Gradient Descent. Simplemente divide el conjunto de datos de entrenamiento en pequeños lotes y realiza una actualización para cada uno de estos lotes. Por lo tanto, crea un equilibrio entre la robustez del descenso del gradiente estocástico y la eficiencia del descenso del gradiente discontinuo. Este método es el usado en esta investigación.
+			Es el método de gradiente más usado, ya que es una combinación de los conceptos de SGD y BGD, y es el usado en esta investigación. Simplemente divide el conjunto de datos de entrenamiento en pequeños lotes y realiza una actualización para cada uno de estos lotes. Por lo tanto, es más rápido que los métodos anteriormente mencionados y agrega ruido al proceso de aprendizaje, ayudando a mejorar el error de generalización. Además, al evaluar pequeños lotes, se seleccionan aleatoriamente diversos ejemplos evitando procesar ejemplos muy similares que no contribuyen mucho al aprendizaje. %crea un equilibrio entre la robustez del descenso del gradiente estocástico y la eficiencia del descenso del gradiente discontinuo.
+
+			\begin{figure}[H]
+			\begin{center}
+			\includegraphics[width=0.65\textwidth]{images/desarrollo/gradientDescent}
+			\end{center}
+			\begin{center}
+			\caption{\small{Variantes del descenso del gradiente y su dirección hacia el mínimo error}}
+			\vspace{-0.5em}
+			{\small{Fuente: \cite{Imad}}}
+			\end{center}
+			\vspace{-1.5em}
+			\end{figure}
 
 
 	\subsection{Tasa de Aprendizaje (Learning Rate)}
@@ -669,9 +681,9 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 		\vspace{-1.5em}
 		\end{figure}
 
-		Cuando la tasa de aprendizaje es demasiado pequeña, es necesario realizar muchas iteraciones de aprendizaje; pero cuando la tasa de aprendizaje es demasiado grande, el resultado se moverá hacia adelante y hacia atrás en ambos sentidos de los valores extremos(oscila), y no se podrá lograr la solución óptima como puede ser observado en la figura 2.27.
+		Cuando la tasa de aprendizaje es demasiado pequeña, es necesario realizar muchas iteraciones de aprendizaje; pero cuando la tasa de aprendizaje es demasiado grande, el resultado se moverá hacia adelante y hacia atrás en ambos sentidos de los valores extremos(oscila), y no se podrá lograr la solución óptima como puede ser observado en la figura 2.28.
 
-		Debido a esto es que al entrenar redes neuronales profundas, a menudo es útil reducir la tasa de aprendizaje a medida que avanza el entrenamiento y no mantenerlo constante y así evitar la divergencia (punto a partir del cual la pérdida ya no se reduce y en lugar de eso comienza a incrementarse).
+		Debido a esto es que al entrenar redes neuronales profundas, a menudo es útil reducir la tasa de aprendizaje a medida que avanza el entrenamiento y no mantenerlo constante y así evitar la divergencia (punto a partir del cual la pérdida ya no se reduce y en lugar de eso comienza a incrementarse), \cite{AdamImg}.
 
 
 		\begin{figure}[H]
@@ -697,17 +709,28 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 				\end{center}
 				\vspace{-1.5em}
 			\end{figure}
-		Sin embargo, el optimizador Gradient Descent (en cualquiera de sus tipos) con una tasa de decaimiento de aprendizaje, no es usado a menudo para entrenar redes neuronales profundas ya que genera un desafío el determinar los hiperparámetros que deben definirse de antemano y dependen en gran medida del tipo de modelo y problema. Además de que la misma tasa de aprendizaje se aplica a todas las actualizaciones de los parámetros. Por lo que opta en usar optimizadores más avanzados que tienen una tasa de convergencia más rápida y adaptable a diversas situaciones. Proporcionan una alternativa a los clásicos y son conocidos como optimizadores de descenso de gradiente de segundo orden; tales como optimizador Adagrad, Adadelta, RMSprop, Adam, entre otros. 
+		Sin embargo, el optimizador Gradient Descent (en cualquiera de sus tipos) con una tasa de decaimiento de aprendizaje, no es usado a menudo para entrenar redes neuronales profundas ya que genera un desafío el determinar los hiperparámetros que deben definirse de antemano y dependen en gran medida del tipo de modelo y problema. Además de que la misma tasa de aprendizaje se aplica a todas las actualizaciones de los parámetros. Por lo que opta en usar optimizadores más avanzados que tienen una tasa de convergencia más rápida, adaptable a diversas situaciones y son conocidos como optimizadores de descenso de gradiente de segundo orden; tales como optimizador Adagrad, Adadelta, RMSprop, Adam, entre otros. 
 
 		%AdaGrad or adaptive gradient allows the learning rate to adapt based on parameters. It performs larger updates for infrequent parameters and smaller updates for frequent one. Because of this it is well suited for sparse data (NLP or image recognition). Another advantage is that it basically illiminates the need to tune the learning rate. Each parameter has its own learning rate and due to the peculiarities of the algorithm the learning rate is monotonically decreasing. This causes the biggest problem: at some point of time the learning rate is so small that the system stops learning.AdaDelta resolves the problem of monotonically decreasing learning rate in AdaGrad. In AdaGrad the learning rate was calculated approximately as one divided by the sum of square roots. At each stage you add another square root to the sum, which causes denominator to constantly decrease. In AdaDelta instead of summing all past square roots it uses sliding window which allows the sum to decrease. RMSprop is very similar to AdaDelta. Adam or adaptive momentum is an algorithm similar to AdaDelta. But in addition to storing learning rates for each of the parameters it also stores momentum changes for each of them separately
 
-		En esta investigación se usarán los métodos de Descenso de Gradiente Mini-batch y el método Adam como optimizador de segundo orden.
+		En esta investigación se usa el método Adam como optimizador de segundo orden.
 
 	\subsection{Optimizador ADAM}
 	
-		El método calcula las tasas de aprendizaje individuales de manera adaptativa para diferentes parámetros a partir de las estimaciones de los primeros y segundos momentos de los gradientes; el nombre Adam deriva de Estimación del Momento Adaptativo \citep {Adam},
+		Es un algoritmo de optimización de tasa de aprendizaje adaptativo que ha sido diseñado específicamente para el entrenamiento de redes neuronales profundas; el nombre Adam deriva de Estimación del Momento Adaptativo \citep {Adam},
 
-		Permite que la tasa de aprendizaje se adapte según los parámetros y realiza actualizaciones más grandes para parámetros infrecuentes y actualizaciones más pequeñas para los frecuentes. Debido a esto, es adecuado para datos dispersos, como lo es en el procesamiento de lenguaje natural o en el reconocimiento de imágenes. Otra ventaja es que básicamente simplifica la necesidad de ajustar la tasa de aprendizaje debido a que cada parámetro tiene su propia tasa de aprendizaje, sin embargo, la tasa de aprendizaje no disminuye monótonamente. Además de almacenar las tasas de aprendizaje para cada uno de los parámetros, también almacena los cambios de momento para cada uno de ellos por separado.
+		Permite que la tasa de aprendizaje se adapte según los parámetros y realiza actualizaciones más grandes para parámetros infrecuentes y actualizaciones más pequeñas para los frecuentes. Debido a esto, es adecuado para datos dispersos, como lo es en el procesamiento de lenguaje natural o en el reconocimiento de imágenes. Otra ventaja es que básicamente simplifica la necesidad de ajustar la tasa de aprendizaje debido a que cada parámetro tiene su propia tasa de aprendizaje. 
+		\begin{figure}[H]
+				\begin{center}
+				\includegraphics[width=0.6\textwidth, height=0.4\textheight]{images/desarrollo/adam} 
+				\end{center}
+				\begin{center}
+				\caption{\small{Comparación de Adam con otros algoritmos de optimización que entrenan a un perceptrón multicapa}}
+				\vspace{-0.5em}
+				{\small{{Fuente: \cite{Adam}}}}
+				\end{center}
+				\vspace{-1.5em}
+			\end{figure}
 
 	\subsection{Validación Cruzada}
 	
@@ -728,7 +751,7 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 			\end{center}
 			\endgroup		
 
-		Para una red neuronal, normalmente verá la ecuación escrita en una forma donde $y$ es el vector de verdad y la variable $\hat{y}$ (o algún otro valor tomado directamente de la última salida de la capa) es la estimación, y se vería así para un solo ejemplo:
+		Para una red neuronal, normalmente verá la ecuación escrita en una forma donde $y$ es el vector de datos reales y la variable $\hat{y}$ (o algún otro valor tomado directamente de la última salida de la capa) es la estimación, y se vería así para un solo ejemplo:
 			
 			\begingroup\makeatletter\def\f@size{17.8}\check@mathfonts
 			\begin{center}
@@ -751,12 +774,12 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 			\endgroup		
 	
 
-		Es por ello que la función de costo/pérdida dada por la validación cruzada ayuda para decidir cuándo se debe terminar el entrenamiento de una red, \citep{AulaMLP}. Usualmente se utiliza el error cuadrático medio como función de pérdida para medir el rendimiento de un modelo de regresión. Sin embargo, en casos de clasificación, la función de costo de pérdida a través del cálculo de la entropía cruzada es preferible, ya que tiende a no causar saturación de las neuronas de salida, produciendo un aprendizaje más rápido, \citep{AulaDNN}. La pérdida de entropía cruzada aumentará a medida que la probabilidad prevista diverge de la clasificación real. Por lo tanto, un modelo casi perfecto tendría una pérdida de entropía cercana a cero, \citep{crossMSE}.
+		Es por ello que la función de costo dada por la validación cruzada ayuda para decidir cuándo se debe terminar el entrenamiento de una red, \citep{AulaMLP}. Usualmente se utiliza el error cuadrático medio como función de pérdida para medir el rendimiento de un modelo de regresión. Sin embargo, en casos de clasificación, el cálculo de la entropía cruzada es preferible, ya que produce un aprendizaje más rápido al no causar saturación de las neuronas de salida (proceso cuando la entrada es próxima a cero, generando que el peso correspondiente se ajusta lentamente),  \citep{AulaDNN}. La pérdida de entropía cruzada aumentará a medida que la probabilidad prevista diverge de la clasificación real. Por lo tanto, un modelo casi perfecto tendría una pérdida de entropía cercana a cero, \citep{crossMSE}.
 		
 
 
 	\subsection{Función Softmax}
-		Conocida también como función exponencial normalizada, es la función de activación utilizada en la última capa de una red neuronal. La salida de una red neuronal completamente conectada no es una distribución de probabilidad, sin embargo, el uso de esta función ayuda a obtenerla. Por lo que esta función permitirá estimar la probabilidad de que la imagen de entrada pertenezca a cada una de las clases al realizar una normalización con el objetivo que el valor de cada neurona esté limitado entre cero y uno y así permitir que los resultados de las neuronas de salida sumen a uno,\citep{Bishop}. 
+		Conocida también como función exponencial normalizada, es la función de activación utilizada en la última capa de una red neuronal. La salida de una red neuronal completamente conectada no es una distribución de probabilidad, sin embargo, el uso de esta función ayuda a obtenerla. Por lo que esta función permitirá estimar la probabilidad de que la imagen de entrada pertenezca a cada una de las clases al realizar una normalización con el objetivo que el valor de cada neurona esté limitado entre cero y uno y así permitir que los resultados de las neuronas de salida sumen a uno, \citep{Bishop}. 
 
 			\begingroup\makeatletter\def\f@size{17.8}\check@mathfonts
 			\begin{center}
@@ -773,9 +796,9 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 
 	
 	\subsection{Método de Regularización L2}
-		En la regularización, lo que se hace normalmente es mantener el mismo número de funciones, pero se reduce la magnitud de los coeficientes, sin embargo, el método de Regularización L2 o también conocido como Regresión Lasso (Lasso Regression - Least Absolute Shrinkage and Selection Operator), trata de agregar un término adicional(lambda) a la función de pérdida, la cual penaliza parametrizaciones con pesos más elevados, es decir, reduce el coeficiente de la función menos importante a cero, eliminando así algunas características. Por lo tanto, esto funciona bien para la selección de funciones en caso de que tengamos una gran cantidad de funciones, \citep{AulaMLP}.
+		La regularización es una técnica que realiza ligeras modificaciones en el algoritmo de aprendizaje, de manera que el modelo se generaliza mejor. En la regularización, lo que se hace normalmente es mantener el mismo número de funciones, pero se reduce la magnitud de los coeficientes(pesos de neuronas), sin embargo, el método de Regularización L2 o también conocido como Regresión Lasso, trata de agregar un término adicional(lambda) a la función de coste, la cual penaliza parametrizaciones con pesos más elevados, es decir, reduce el coeficiente(peso) de las funciones menos importantes a cero eliminando así algunas características. Por lo tanto, mantiene los pesos pequeños, evitando que la red utilice pesos que no necesite realmente, logrando que la red no se ajuste demasiado al conjunto de entrenamiento \citep{AulaMLP}.
 
-		Si $L(\theta, D)$ es la función de pérdida, $\theta$ es el conjunto de parámetros libres y $D$ es un ejemplo de entrenamiento, entonces a la función de pérdida regularizada será:
+		Si $L(\theta, D)$ es la función de coste, $\theta$ es el conjunto de parámetros libres y $D$ es un ejemplo de entrenamiento, entonces a la función de pérdida regularizada será:
 
 			\begingroup\makeatletter\def\f@size{15.8}\check@mathfonts
 			\begin{center}
@@ -784,10 +807,9 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 			\endgroup
 		
 
-		Donde $R(\theta)$ caracteriza la complejidad del modelo y $\lambda$ representa la proporción de la pérdida total del modelo, generalmente $\lambda$ es una constante y estará cerca de 0 porque si $\lambda$ es demasiado grande, conducirá a un ajuste insuficiente (underfitting). Por otro lado, para evitar el exceso de ajuste (overfitting) cuando se tiene una gran cantidad de características en su conjunto de datos, no optimizamos directamente $L(\theta,D)$ (la entropía cruzada), sino que optimizamos $L(\theta,D) +\lambda R(\theta)$.
+		Donde $R(\theta)$ caracteriza la complejidad del modelo y $\lambda$ representa la proporción de la coste total del modelo, generalmente $\lambda$ es una constante y estará cerca de 0 porque si $\lambda$ es demasiado grande, conducirá a un ajuste insuficiente (underfitting). Por otro lado, para evitar el exceso de ajuste (overfitting) cuando se tiene una gran cantidad de características en su conjunto de datos, no optimizamos directamente $L(\theta,D)$ (la entropía cruzada), sino que optimizamos $L(\theta,D) +\lambda R(\theta)$.
 
-		\newpage
-		En esta investigación se usará una constante {\bf lambda($\lambda$) = 0.0001}. La regularización de pérdida L2 solo debe incluir los pesos de las capas totalmente conectadas, y normalmente no incluye a los biases (sesgos). La intuición detrás de esto es que el bias contribuye al overfitting (sobreajuste), y no estaría agregando ningún nuevo grado de libertad al modelo.
+		En esta investigación se usará una constante {\bf lambda($\lambda$) = 0.0001}. La regularización L2 incluye los pesos de las capas totalmente conectadas, y normalmente no incluye a los biases (sesgos). La intuición detrás de esto es que el bias contribuye al overfitting (sobreajuste) y no estaría agregando ningún nuevo grado de libertad al modelo, \citep{AulaMLP}.
 
 
 
@@ -821,13 +843,13 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 		 &  &  \\ \hline
 		 \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Valor Predictivo Positivo \\ (Precisión)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos}{{Verdaderos\,Positivos}+{Falsos\,Positivos}}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Matriz de\\ Confusión\end{tabular}} \\
 		 &  &  \\ \hline
+		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Acierto \\ (Exactitud)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos+Verdaderos\,Negativos}{Total\,de\,Imagenes}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Matriz de\\ Confusión\end{tabular}} \\
+		 &  &  \\ \hline
 		 \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Curvas PR \\ (Precision - Recall)\end{tabular}} & \multirow{2}{*}{Relación entre Efectividad(Recall) y Precision} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Matriz de\\ Confusión\end{tabular}} \\
 		 &  &  \\ \hline
 		%\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tiempo de\\ Procesamiento\end{tabular}} & \multirow{2}{*}{$S= \frac{\sum_{i=1}^{Total} tiempo_{i}}{Total\,de\,muestras}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Cronometro\\ Computacional\end{tabular}} \\
 		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Curvas ROC \\ (Receiver Operating Characteristic)\end{tabular}} & \multirow{2}{*}{Relación entre Efectividad y Especificidad} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Matriz de\\ Confusión\end{tabular}} \\
-		 &  &  \\ \hline
-		\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Tasa de Acierto \\ (Exactitud)\end{tabular}} & \multirow{2}{*}{$ \frac{Verdaderos\,Positivos+Verdaderos\,Negativos}{Total\,de\,Imagenes}$} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Matriz de\\ Confusión\end{tabular}} \\
-		 &  &  \\ \hline		 
+		&  &  \\ \hline 		 
 		\end{tabular}
 		\begin{center}
 				\vskip 0.3cm
