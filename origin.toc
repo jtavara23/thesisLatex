@@ -50,9 +50,9 @@
 \contentsline {subsubsection}{\numberline {2.5.4.3}Muestra}{65}
 \contentsline {subsection}{\numberline {2.5.5}Recolecci\IeC {\'o}n de Datos para el Entrenamiento y Evaluaci\IeC {\'o}n del Modelo}{67}
 \contentsline {subsubsection}{\numberline {2.5.5.1}T\IeC {\'e}cnica de Recolecci\IeC {\'o}n}{67}
-\contentsline {subsubsection}{\numberline {2.5.5.2}Poblaci\IeC {\'o}n}{67}
+\contentsline {subsubsection}{\numberline {2.5.5.2}Poblaci\IeC {\'o}n}{68}
 \contentsline {subsubsection}{\numberline {2.5.5.3}Muestra}{68}
-\contentsline {subsection}{\numberline {2.5.6}Etapas de la investigaci\IeC {\'o}n}{69}
+\contentsline {subsection}{\numberline {2.5.6}Etapas de la investigaci\IeC {\'o}n}{70}
 \contentsline {subsubsection}{\numberline {2.5.6.1}Metodolog\IeC {\'\i }a para el dise\IeC {\~n}o del Modelo}{71}
 \contentsline {chapter}{\numberline {3}Desarrollo de la Investigaci\IeC {\'o}n}{72}
 \contentsline {section}{\numberline {3.1}An\IeC {\'a}lisis del conjunto de Im\IeC {\'a}genes}{74}

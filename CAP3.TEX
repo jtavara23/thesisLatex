@@ -67,7 +67,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	En los primeros días de la inteligencia artificial, el campo atacó y resolvió rápidamente problemas que son intelectualmente difíciles para los seres humanos, pero relativamente sencillos para las computadoras, problemas que pueden describirse mediante una lista de reglas formales y matemáticas. El verdadero desafío para la inteligencia artificial fue y es resolver las tareas que son fáciles de realizar para las personas pero difíciles de describir de manera formal, problemas que resolvemos intuitivamente, que se sienten automáticos, como reconocer palabras, rostros u objetos en las imágenes \citep{Goodfellow-et-al-2016}.
 
 	
-	Si bien aprendizaje automático (del inglés, {\bf machine learning}) se describe a menudo como una subdisciplina de la inteligencia artificial(IA), es mejor considerarla como la mejor técnica de la disciplina; es decir, es el campo de la IA que hoy en día muestra la mayor promesa al proporcionar herramientas que la industria y la sociedad pueden usar para producir algún cambio. En tal sentido, el aprendizaje automático toma algunas de las ideas centrales de la inteligencia artificial y las enfoca en resolver problemas del mundo real con redes neuronales diseñadas para imitar nuestra propia toma de decisiones; sin embargo, el {\bf aprendizaje profundo} o avanzado de máquinas (del inglés, {\bf deep learning}) se centra aún más estrechamente en un subconjunto de herramientas y técnicas del aprendizaje automático y los aplica a la solución de casi cualquier problema que requiera "pensamiento", ya sea humano o artificial \citep{Goodfellow-et-al-2016}.
+	Si bien aprendizaje automático (del inglés, {\bf machine learning}) se describe a menudo como una subdisciplina de la inteligencia artificial(IA), es mejor considerarla como la mejor técnica de la disciplina; es decir, es el campo de la IA que hoy en día muestra la mayor promesa al proporcionar herramientas que la industria y la sociedad pueden usar para producir algún cambio, \citep{Goodfellow-et-al-2016}. En tal sentido, el aprendizaje automático toma algunas de las ideas centrales de la inteligencia artificial y las enfoca en resolver problemas del mundo real con redes neuronales diseñadas para imitar nuestra propia toma de decisiones; sin embargo, el {\bf aprendizaje profundo} o avanzado de máquinas (del inglés, {\bf deep learning}) se centra aún más estrechamente en un subconjunto de herramientas y técnicas del aprendizaje automático y los aplica a la solución de casi cualquier problema que requiera "pensamiento", ya sea humano o artificial \citep{Goodfellow-et-al-2016}.
 
 	
 	El aprendizaje profundo es un enfoque específico utilizado para construir y entrenar redes neuronales para la toma de decisiones altamente prometedoras. Se considera que un algoritmo es profundo si los datos de entrada se pasan a través de una serie de no linealidades o transformaciones no lineales antes de que se emita. Este enfoque permitir que las computadoras aprendan de la experiencia y entiendan el mundo en términos de una jerarquía de conceptos, con cada concepto definido a través de su relación con conceptos más simples. Al reunir el conocimiento de la experiencia, este enfoque evita la necesidad de que los operadores humanos especifiquen formalmente todo el conocimiento que necesita la computadora. La jerarquía de conceptos permite que la computadora aprenda conceptos complicados mediante la construcción de los más simples. Si dibujamos un gráfico que muestra cómo estos conceptos se construyen uno encima del otro, el gráfico es profundo, con muchas capas. Por esta razón, este enfoque se conoce como el aprendizaje profundo de la inteligencia artificial \citep{Goodfellow-et-al-2016}.
@@ -130,7 +130,7 @@ En este capítulo se presenta una reseña del material bibliográfico investigad
 	Los modelos de redes convolucionales siempre suponen explícitamente que las entradas deben ser mapeadas en forma de imágenes, lo que nos permite configurar parte inicial de las propiedades o características del modelo a diseñar.  Debido a esta característica la limitación de las ConvNets radica en que solo capturan patrones espaciales locales en datos. Es decir, si no se puede hacer que los datos se vean como una imagen, las ConvNets son prácticamente muy poco útiles, \citep{Rohrer}.
 
 	\vskip 0.4cm  
-	Las redes neuronales convolucionales son muy similares a las redes neuronales ordinarias, están formadas por neuronas que tienen pesos y biases (sesgos) que se pueden aprender durante el entrenamiento de estas. Cada neurona recibe algunas entradas y realiza operaciones matemáticas. Toda la red expresa una única función de puntuación diferenciable: desde el contenido de los píxeles de la imagen en un extremo(entrada) hasta los puntajes que definen la clase o resultado correspondiente en el otro extremo(salida).
+	Las redes neuronales convolucionales son muy similares a las redes neuronales ordinarias, están formadas por neuronas que tienen pesos y biases (sesgos) que pueden aprender información durante el entrenamiento de estas. Cada neurona recibe algunas entradas y realiza operaciones matemáticas. Toda la red expresa una única función de puntuación diferenciable: desde el contenido de los píxeles de la imagen en un extremo(entrada) hasta los puntajes que definen la clase o resultado correspondiente en el otro extremo(salida).
 
 	\begin{figure}[H]
 	\begin{center}
@@ -888,7 +888,7 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 		\item[] {\bf \underline {Arquitectura Inception}}\newline
 			Es una arquitectura de red neuronal convolucional profunda, creada por un grupo de investigación de Google que fue responsable de establecer el nuevo estado del arte de la técnica para la clasificación y detección en la competencia de reconocimiento visual a gran escala ImageNet 2014(ILSVRC14). 
 			\vskip 0.1cm
-			El principal sello distintivo de esta arquitectura es la utilización mejorada de los recursos informáticos dentro de la red. Esto fue logrado gracias al aumento de la profundidad y el ancho de la red mientras se mantiene el costo computacional constante. Para optimizar la calidad, las decisiones para elaborar la arquitectura se basaron en el principio Hebbiano y la intuición de procesamiento a escala múltiple, \citep{Inception}. Una encarnación particular utilizada en la competencia ILSVRC14 es llamada GoogLeNet, una red de 22 capas de profundidad, cuya calidad se evalúa en el contexto de reconocimiento y detección, logrando una tasa de error del 6.67\%, muy cercano al rendimiento a nivel humano.
+			El principal sello distintivo de esta arquitectura es la utilización mejorada de los recursos informáticos dentro de la red. Esto fue logrado gracias al aumento de la profundidad y el ancho de la red mientras se mantiene el costo computacional constante, reduciendo el número de parametros usados en AlexNet(60 millones) a 4 millones. Para optimizar la calidad, las decisiones para elaborar la arquitectura se basaron en el principio Hebbiano y la intuición de funciones de procesamiento a escala múltiple, \citep{Inception}.  Lo que significa que la salida de las capas convolucionales no solo se envía a la capa posterior, sino que también se ramifica y se introduce al clasificador (capa totalmente conectada). Una encarnación particular utilizada en la competencia ILSVRC14 es llamada GoogLeNet, una red de 22 capas de profundidad, cuya calidad se evalúa en el contexto de reconocimiento y detección, logrando una tasa de error del 6.67\%, muy cercano al rendimiento a nivel humano.
 		\end{enumerate}
 		%====================================================================================
 		% subsection Recolección de Datos para la Construcción del Modelo (end)
@@ -899,7 +899,7 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 		\begin{enumerate}		
 			\item[]  Revisión de la literatura (análisis de documentos) y captura de imágenes del Perú a través de la aplicación Google Maps.
 		\end{enumerate}
-
+		\newpage
 		\subsubsection{Población} 
 		\begin{enumerate}
 		\item[]				
@@ -925,7 +925,7 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 		%\item[B)] {\bf Señales de Tránsito de Bélgica} \citep{Timofte-MVA-2011} \newline
 		%	Conjunto de datos creados con a la captura simultánea de imágenes durante el día realizada por 8 cámaras mientras se conducía aproximadamente a 35Km/h, con el objetivo de obtener una localización 3D y un refinamiento simultáneo. Las señales de tránsito fueron capturados a una distancia de menos de 50 metros y almacenadas en formato PPM cuyas dimensiones varían entre 25x30 y 260x250 pixeles. En esta colección se obtuvieron un total de 7125 imágenes distribuidas en 62 clases.
 		
-		\newpage
+		
 		\begin{enumerate}
 			\item[]  {\bf \underline {Señales de Tránsito de Perú}}\newline
 			Conjunto de aproximadamente 614 imágenes originalmente tomadas de la aplicación Google Maps agrupadas en 7 categorías. Dado que la población de imágenes es infinita, se optó por usar un muestreo aleatorio simple para poblaciones desconocidas con un nivel de confianza del 95\% y un error de muestreo del 4\%.
@@ -947,7 +947,7 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 		\end{enumerate}
 		%====================================================================================
 		% subsection Recolección de Datos para el Entrenamiento y Evaluación del Modelo (end)
-
+\newpage
 \subsection{Etapas de la investigación} 
 	El desarrollo de la investigación comprenderá las siguientes etapas de trabajo a saber:
 
@@ -973,14 +973,15 @@ En resumen, un modelo de red convolucional estará compuesto de varias capas y e
 			
 			\begin{figure}[H]
 			\begin{center}
-			\includegraphics[width=0.9\textwidth]{images/intro/disenho}
+			\includegraphics[width=0.9\textwidth, height=0.4\textheight]{images/intro/disenho}
 			\end{center}
 			\begin{center}
 			\vskip 0.6cm	
 			\caption{\small{Diseño del Modelo del Ciclo de Vida del Desarrollo}}
+			\vspace{-1.5em}
 			{\small{Fuente: Elaboración propia}}
 			\end{center}
-			\vspace{-1.5em}
+			
 			\end{figure}
 
 

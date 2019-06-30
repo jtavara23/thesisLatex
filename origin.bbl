@@ -203,11 +203,6 @@ Romero~Benites, R. (2017).
   http://rpp.pe/data/ocho-peruanos-mueren-cada-dia-en-accidentes-de-transito-1068532.
 \newblock [Online; accesado Julio 23, 2018].
 
-\bibitem[S. and P., 2009]{SandovalCereza}
-S., Z. and P., F. (2009).
-\newblock Procesamiento de imágenes para la clasificación de café cerez.
-\newblock {\em PROSPECTIVA}, 7:67--73.
-
 \bibitem[Sermanet and LeCun, 2011]{Multi_scale_feat}
 Sermanet, P. and LeCun, Y. (2011).
 \newblock Traffic sign recognition with multi-scale convolutional networks.
@@ -279,5 +274,10 @@ Zeng, Y., Xu, X., Fang, Y., and Zhao, K. (2015).
 \newblock Traffic sign recognition using deep convolutional networks and
   extreme learning machine.
 \newblock volume 9242, pages 272--280.
+
+\bibitem[Zulma and Flavio, 2009]{SandovalCereza}
+Zulma, S. and Flavio, P. (2009).
+\newblock Procesamiento de imágenes para la clasificación de café cerez.
+\newblock {\em PROSPECTIVA}, 7:67--73.
 
 \end{thebibliography}
