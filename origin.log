@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  30 JUN 2019 17:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  30 JUN 2019 20:31
 entering extended mode
 **"D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
 ("D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
@@ -1689,7 +1689,7 @@ png  used on input line 549.
  [92 <./images/desarrollo/Normalization_Processing/proc_test1.png> <./images/de
 sarrollo/Normalization_Processing/proc_test3.png> <./images/desarrollo/Normaliz
 ation_Processing/proc_test4.png>]
-Overfull \hbox (0.99089pt too wide) in paragraph at lines 574--586
+Overfull \hbox (7.54251pt too wide) in paragraph at lines 574--586
  [] 
  []
 
@@ -1703,8 +1703,7 @@ ype jpg)
 Package pdftex.def Info: images/desarrollo/networkArquitec/tempGeneralCNNmodel.
 jpg  used on input line 644.
 (pdftex.def)             Requested size: 375.57779pt x 180.86505pt.
- [94 <./images/desarrollo/networkArquitec/tempGeneralCNNmodel.jpg>]
-[95]
+ [94] [95 <./images/desarrollo/networkArquitec/tempGeneralCNNmodel.jpg>]
 <images/desarrollo/networkArquitec/designNet.png, id=526, 1320.43312pt x 356.83
 313pt>
 File: images/desarrollo/networkArquitec/designNet.png Graphic file (type png)
@@ -1712,7 +1711,8 @@ File: images/desarrollo/networkArquitec/designNet.png Graphic file (type png)
 Package pdftex.def Info: images/desarrollo/networkArquitec/designNet.png  used 
 on input line 665.
 (pdftex.def)             Requested size: 469.47046pt x 126.86993pt.
- [96 <./images/desarrollo/networkArquitec/designNet.png>]
+
+[96 <./images/desarrollo/networkArquitec/designNet.png>] [97]
 Overfull \hbox (3.6554pt too wide) in paragraph at lines 688--699
  [] 
  []
@@ -1722,7 +1722,7 @@ Overfull \hbox (11.6554pt too wide) in paragraph at lines 711--722
  [] 
  []
 
-[97]
+[98]
 Overfull \hbox (9.6554pt too wide) in paragraph at lines 739--751
  [] 
  []
@@ -1732,7 +1732,7 @@ Overfull \hbox (17.6554pt too wide) in paragraph at lines 763--775
  [] 
  []
 
-[98]
+[99]
 Overfull \hbox (9.6554pt too wide) in paragraph at lines 794--806
  [] 
  []
@@ -1742,7 +1742,7 @@ Overfull \hbox (17.6554pt too wide) in paragraph at lines 818--830
  [] 
  []
 
-[99]
+[100]
 Overfull \hbox (9.6554pt too wide) in paragraph at lines 850--862
  [] 
  []
@@ -1752,7 +1752,7 @@ Overfull \hbox (17.6554pt too wide) in paragraph at lines 873--885
  [] 
  []
 
-[100]
+[101]
 Overfull \hbox (9.6554pt too wide) in paragraph at lines 905--919
  [] 
  []
@@ -1762,8 +1762,8 @@ Overfull \hbox (17.6554pt too wide) in paragraph at lines 933--947
  [] 
  []
 
-[101]
-<images/desarrollo/trainResults/german/model0Acierto.png, id=547, 1137.4997pt x
+[102]
+<images/desarrollo/trainResults/german/model0Acierto.png, id=550, 1137.4997pt x
  338.01282pt>
 File: images/desarrollo/trainResults/german/model0Acierto.png Graphic file (typ
 e png)
@@ -1771,8 +1771,8 @@ e png)
 Package pdftex.def Info: images/desarrollo/trainResults/german/model0Acierto.pn
 g  used on input line 971.
 (pdftex.def)             Requested size: 469.47046pt x 139.5042pt.
- [102]
-<images/desarrollo/trainResults/german/model0Loss_1.png, id=551, 1154.06157pt x
+ [103]
+<images/desarrollo/trainResults/german/model0Loss_1.png, id=555, 1154.06157pt x
  336.50719pt>
 File: images/desarrollo/trainResults/german/model0Loss_1.png Graphic file (type
  png)
@@ -1780,7 +1780,7 @@ File: images/desarrollo/trainResults/german/model0Loss_1.png Graphic file (type
 Package pdftex.def Info: images/desarrollo/trainResults/german/model0Loss_1.png
   used on input line 983.
 (pdftex.def)             Requested size: 469.47046pt x 136.89055pt.
-<images/desarrollo/trainResults/german/model1Acierto.png, id=552, 1160.83687pt 
+<images/desarrollo/trainResults/german/model1Acierto.png, id=556, 1160.83687pt 
 x 344.03531pt>
 File: images/desarrollo/trainResults/german/model1Acierto.png Graphic file (typ
 e png)
@@ -1788,9 +1788,9 @@ e png)
 Package pdftex.def Info: images/desarrollo/trainResults/german/model1Acierto.pn
 g  used on input line 1001.
 (pdftex.def)             Requested size: 469.47046pt x 139.13405pt.
- [103 <./images/desarrollo/trainResults/german/model0Acierto.png> <./images/des
+ [104 <./images/desarrollo/trainResults/german/model0Acierto.png> <./images/des
 arrollo/trainResults/german/model0Loss_1.png>]
-<images/desarrollo/trainResults/german/model1Loss_1.png, id=559, 1157.82562pt x
+<images/desarrollo/trainResults/german/model1Loss_1.png, id=562, 1157.82562pt x
  338.76563pt>
 File: images/desarrollo/trainResults/german/model1Loss_1.png Graphic file (type
  png)
@@ -1798,7 +1798,7 @@ File: images/desarrollo/trainResults/german/model1Loss_1.png Graphic file (type
 Package pdftex.def Info: images/desarrollo/trainResults/german/model1Loss_1.png
   used on input line 1014.
 (pdftex.def)             Requested size: 469.47046pt x 137.35956pt.
-<images/desarrollo/trainResults/german/model4Acierto.png, id=560, 1153.30875pt 
+<images/desarrollo/trainResults/german/model4Acierto.png, id=563, 1153.30875pt 
 x 341.02406pt>
 File: images/desarrollo/trainResults/german/model4Acierto.png Graphic file (typ
 e png)
@@ -1806,9 +1806,9 @@ e png)
 Package pdftex.def Info: images/desarrollo/trainResults/german/model4Acierto.pn
 g  used on input line 1033.
 (pdftex.def)             Requested size: 469.47046pt x 138.81647pt.
- [104 <./images/desarrollo/trainResults/german/model1Acierto.png> <./images/des
+ [105 <./images/desarrollo/trainResults/german/model1Acierto.png> <./images/des
 arrollo/trainResults/german/model1Loss_1.png>]
-<images/desarrollo/trainResults/german/model4Loss_1.png, id=566, 1161.58969pt x
+<images/desarrollo/trainResults/german/model4Loss_1.png, id=569, 1161.58969pt x
  341.77687pt>
 File: images/desarrollo/trainResults/german/model4Loss_1.png Graphic file (type
  png)
@@ -1816,7 +1816,7 @@ File: images/desarrollo/trainResults/german/model4Loss_1.png Graphic file (type
 Package pdftex.def Info: images/desarrollo/trainResults/german/model4Loss_1.png
   used on input line 1046.
 (pdftex.def)             Requested size: 469.47046pt x 138.13203pt.
-<images/desarrollo/trainResults/german/model6Acierto.png, id=567, 1135.99406pt 
+<images/desarrollo/trainResults/german/model6Acierto.png, id=570, 1135.99406pt 
 x 338.76563pt>
 File: images/desarrollo/trainResults/german/model6Acierto.png Graphic file (typ
 e png)
@@ -1824,9 +1824,9 @@ e png)
 Package pdftex.def Info: images/desarrollo/trainResults/german/model6Acierto.pn
 g  used on input line 1063.
 (pdftex.def)             Requested size: 469.47046pt x 140.00099pt.
- [105 <./images/desarrollo/trainResults/german/model4Acierto.png> <./images/des
+ [106 <./images/desarrollo/trainResults/german/model4Acierto.png> <./images/des
 arrollo/trainResults/german/model4Loss_1.png>]
-<images/desarrollo/trainResults/german/model6Loss_1.png, id=573, 1166.85938pt x
+<images/desarrollo/trainResults/german/model6Loss_1.png, id=576, 1166.85938pt x
  334.24875pt>
 File: images/desarrollo/trainResults/german/model6Loss_1.png Graphic file (type
  png)
@@ -1834,7 +1834,7 @@ File: images/desarrollo/trainResults/german/model6Loss_1.png Graphic file (type
 Package pdftex.def Info: images/desarrollo/trainResults/german/model6Loss_1.png
   used on input line 1075.
 (pdftex.def)             Requested size: 469.47046pt x 134.47746pt.
-<images/desarrollo/trainResults/german/model7Acierto.png, id=574, 1144.275pt x 
+<images/desarrollo/trainResults/german/model7Acierto.png, id=577, 1144.275pt x 
 344.78813pt>
 File: images/desarrollo/trainResults/german/model7Acierto.png Graphic file (typ
 e png)
@@ -1842,9 +1842,9 @@ e png)
 Package pdftex.def Info: images/desarrollo/trainResults/german/model7Acierto.pn
 g  used on input line 1092.
 (pdftex.def)             Requested size: 469.47046pt x 141.45874pt.
- [106 <./images/desarrollo/trainResults/german/model6Acierto.png> <./images/des
+ [107 <./images/desarrollo/trainResults/german/model6Acierto.png> <./images/des
 arrollo/trainResults/german/model6Loss_1.png>]
-<images/desarrollo/trainResults/german/model7Loss_1.png, id=580, 1151.80313pt x
+<images/desarrollo/trainResults/german/model7Loss_1.png, id=583, 1151.80313pt x
  336.50719pt>
 File: images/desarrollo/trainResults/german/model7Loss_1.png Graphic file (type
  png)
@@ -1852,9 +1852,9 @@ File: images/desarrollo/trainResults/german/model7Loss_1.png Graphic file (type
 Package pdftex.def Info: images/desarrollo/trainResults/german/model7Loss_1.png
   used on input line 1104.
 (pdftex.def)             Requested size: 469.47046pt x 137.15755pt.
- [107 <./images/desarrollo/trainResults/german/model7Acierto.png> <./images/des
+ [108 <./images/desarrollo/trainResults/german/model7Acierto.png> <./images/des
 arrollo/trainResults/german/model7Loss_1.png>]
-<images/desarrollo/trainResults/germanSummary_entreAcierto.png, id=586, 1232.35
+<images/desarrollo/trainResults/germanSummary_entreAcierto.png, id=589, 1232.35
 406pt x 349.305pt>
 File: images/desarrollo/trainResults/germanSummary_entreAcierto.png Graphic fil
 e (type png)
@@ -1862,7 +1862,7 @@ e (type png)
 Package pdftex.def Info: images/desarrollo/trainResults/germanSummary_entreAcie
 rto.png  used on input line 1122.
 (pdftex.def)             Requested size: 469.46527pt x 133.06773pt.
-<images/desarrollo/trainResults/germanSummary_entreError.png, id=587, 1327.2084
+<images/desarrollo/trainResults/germanSummary_entreError.png, id=590, 1327.2084
 4pt x 374.90062pt>
 File: images/desarrollo/trainResults/germanSummary_entreError.png Graphic file 
 (type png)
@@ -1870,9 +1870,9 @@ File: images/desarrollo/trainResults/germanSummary_entreError.png Graphic file
 Package pdftex.def Info: images/desarrollo/trainResults/germanSummary_entreErro
 r.png  used on input line 1134.
 (pdftex.def)             Requested size: 469.47128pt x 132.61298pt.
- [108 <./images/desarrollo/trainResults/germanSummary_entreAcierto.png> <./imag
+ [109 <./images/desarrollo/trainResults/germanSummary_entreAcierto.png> <./imag
 es/desarrollo/trainResults/germanSummary_entreError.png>]
-<images/desarrollo/trainResults/germanSummary_validAcierto.png, id=593, 1373.13
+<images/desarrollo/trainResults/germanSummary_validAcierto.png, id=597, 1373.13
 pt x 393.72093pt>
 File: images/desarrollo/trainResults/germanSummary_validAcierto.png Graphic fil
 e (type png)
@@ -1880,7 +1880,7 @@ e (type png)
 Package pdftex.def Info: images/desarrollo/trainResults/germanSummary_validAcie
 rto.png  used on input line 1149.
 (pdftex.def)             Requested size: 469.45612pt x 134.60829pt.
-<images/desarrollo/trainResults/germanSummary_validError.png, id=594, 1367.1075
+<images/desarrollo/trainResults/germanSummary_validError.png, id=598, 1367.1075
 pt x 391.4625pt>
 File: images/desarrollo/trainResults/germanSummary_validError.png Graphic file 
 (type png)
@@ -1888,9 +1888,9 @@ File: images/desarrollo/trainResults/germanSummary_validError.png Graphic file
 Package pdftex.def Info: images/desarrollo/trainResults/germanSummary_validErro
 r.png  used on input line 1161.
 (pdftex.def)             Requested size: 469.46227pt x 134.4275pt.
- [109 <./images/desarrollo/trainResults/germanSummary_validAcierto.png> <./imag
+ [110 <./images/desarrollo/trainResults/germanSummary_validAcierto.png> <./imag
 es/desarrollo/trainResults/germanSummary_validError.png>]
-<images/desarrollo/trainResults/peru/model0Acierto.png, id=601, 1138.2525pt x 3
+<images/desarrollo/trainResults/peru/model0Acierto.png, id=604, 1138.2525pt x 3
 46.29375pt>
 File: images/desarrollo/trainResults/peru/model0Acierto.png Graphic file (type 
 png)
@@ -1898,7 +1898,7 @@ png)
 Package pdftex.def Info: images/desarrollo/trainResults/peru/model0Acierto.png 
  used on input line 1187.
 (pdftex.def)             Requested size: 375.57779pt x 114.26143pt.
-<images/desarrollo/trainResults/peru/model0Loss.png, id=602, 1129.21875pt x 325
+<images/desarrollo/trainResults/peru/model0Loss.png, id=605, 1129.21875pt x 325
 .215pt>
 File: images/desarrollo/trainResults/peru/model0Loss.png Graphic file (type png
 )
@@ -1906,7 +1906,7 @@ File: images/desarrollo/trainResults/peru/model0Loss.png Graphic file (type png
 Package pdftex.def Info: images/desarrollo/trainResults/peru/model0Loss.png  us
 ed on input line 1199.
 (pdftex.def)             Requested size: 375.57779pt x 108.16487pt.
-<images/desarrollo/trainResults/peru/modelBAcierto.png, id=603, 1087.81406pt x 
+<images/desarrollo/trainResults/peru/modelBAcierto.png, id=606, 1087.81406pt x 
 420.82219pt>
 File: images/desarrollo/trainResults/peru/modelBAcierto.png Graphic file (type 
 png)
@@ -1914,9 +1914,9 @@ png)
 Package pdftex.def Info: images/desarrollo/trainResults/peru/modelBAcierto.png 
  used on input line 1217.
 (pdftex.def)             Requested size: 399.05275pt x 154.37257pt.
- [110 <./images/desarrollo/trainResults/peru/model0Acierto.png> <./images/desar
+ [111 <./images/desarrollo/trainResults/peru/model0Acierto.png> <./images/desar
 rollo/trainResults/peru/model0Loss.png>]
-<images/desarrollo/trainResults/peru/modelBLoss.png, id=609, 1114.1625pt x 427.
+<images/desarrollo/trainResults/peru/modelBLoss.png, id=612, 1114.1625pt x 427.
 5975pt>
 File: images/desarrollo/trainResults/peru/modelBLoss.png Graphic file (type png
 )
@@ -1924,7 +1924,7 @@ File: images/desarrollo/trainResults/peru/modelBLoss.png Graphic file (type png
 Package pdftex.def Info: images/desarrollo/trainResults/peru/modelBLoss.png  us
 ed on input line 1230.
 (pdftex.def)             Requested size: 399.05275pt x 153.1455pt.
-<images/desarrollo/trainResults/peru/modelCAcierto.png, id=610, 1111.15125pt x 
+<images/desarrollo/trainResults/peru/modelCAcierto.png, id=613, 1111.15125pt x 
 431.36156pt>
 File: images/desarrollo/trainResults/peru/modelCAcierto.png Graphic file (type 
 png)
@@ -1932,9 +1932,9 @@ png)
 Package pdftex.def Info: images/desarrollo/trainResults/peru/modelCAcierto.png 
  used on input line 1249.
 (pdftex.def)             Requested size: 422.52054pt x 164.0244pt.
-[111 <./images/desarrollo/trainResults/peru/modelBAcierto.png> <./images/desarr
+[112 <./images/desarrollo/trainResults/peru/modelBAcierto.png> <./images/desarr
 ollo/trainResults/peru/modelBLoss.png>]
-<images/desarrollo/trainResults/peru/modelCLoss.png, id=616, 1111.15125pt x 430
+<images/desarrollo/trainResults/peru/modelCLoss.png, id=619, 1111.15125pt x 430
 .60875pt>
 File: images/desarrollo/trainResults/peru/modelCLoss.png Graphic file (type png
 )
@@ -1942,7 +1942,7 @@ File: images/desarrollo/trainResults/peru/modelCLoss.png Graphic file (type png
 Package pdftex.def Info: images/desarrollo/trainResults/peru/modelCLoss.png  us
 ed on input line 1262.
 (pdftex.def)             Requested size: 422.52054pt x 163.73814pt.
-<images/desarrollo/trainResults/peru/modelDAcierto.png, id=617, 1100.61188pt x 
+<images/desarrollo/trainResults/peru/modelDAcierto.png, id=620, 1100.61188pt x 
 421.575pt>
 File: images/desarrollo/trainResults/peru/modelDAcierto.png Graphic file (type 
 png)
@@ -1950,9 +1950,9 @@ png)
 Package pdftex.def Info: images/desarrollo/trainResults/peru/modelDAcierto.png 
  used on input line 1278.
 (pdftex.def)             Requested size: 422.52054pt x 161.8405pt.
- [112 <./images/desarrollo/trainResults/peru/modelCAcierto.png> <./images/desar
+ [113 <./images/desarrollo/trainResults/peru/modelCAcierto.png> <./images/desar
 rollo/trainResults/peru/modelCLoss.png>]
-<images/desarrollo/trainResults/peru/modelDLoss.png, id=623, 1111.15125pt x 431
+<images/desarrollo/trainResults/peru/modelDLoss.png, id=626, 1111.15125pt x 431
 .36156pt>
 File: images/desarrollo/trainResults/peru/modelDLoss.png Graphic file (type png
 )
@@ -1960,7 +1960,7 @@ File: images/desarrollo/trainResults/peru/modelDLoss.png Graphic file (type png
 Package pdftex.def Info: images/desarrollo/trainResults/peru/modelDLoss.png  us
 ed on input line 1290.
 (pdftex.def)             Requested size: 422.52054pt x 164.0244pt.
-<images/desarrollo/trainResults/peru/modelEAcierto.png, id=624, 1095.3422pt x 4
+<images/desarrollo/trainResults/peru/modelEAcierto.png, id=627, 1095.3422pt x 4
 28.35031pt>
 File: images/desarrollo/trainResults/peru/modelEAcierto.png Graphic file (type 
 png)
@@ -1968,9 +1968,9 @@ png)
 Package pdftex.def Info: images/desarrollo/trainResults/peru/modelEAcierto.png 
  used on input line 1307.
 (pdftex.def)             Requested size: 422.52054pt x 165.23238pt.
-[113 <./images/desarrollo/trainResults/peru/modelDAcierto.png> <./images/desarr
+[114 <./images/desarrollo/trainResults/peru/modelDAcierto.png> <./images/desarr
 ollo/trainResults/peru/modelDLoss.png>]
-<images/desarrollo/trainResults/peru/modelELoss.png, id=630, 1111.15125pt x 432
+<images/desarrollo/trainResults/peru/modelELoss.png, id=633, 1111.15125pt x 432
 .86719pt>
 File: images/desarrollo/trainResults/peru/modelELoss.png Graphic file (type png
 )
@@ -1978,9 +1978,9 @@ File: images/desarrollo/trainResults/peru/modelELoss.png Graphic file (type png
 Package pdftex.def Info: images/desarrollo/trainResults/peru/modelELoss.png  us
 ed on input line 1319.
 (pdftex.def)             Requested size: 422.52054pt x 164.59691pt.
- [114 <./images/desarrollo/trainResults/peru/modelEAcierto.png> <./images/desar
+ [115 <./images/desarrollo/trainResults/peru/modelEAcierto.png> <./images/desar
 rollo/trainResults/peru/modelELoss.png>]
-<images/desarrollo/trainResults/peruSummary_entreAcierto.png, id=636, 1398.7256
+<images/desarrollo/trainResults/peruSummary_entreAcierto.png, id=640, 1398.7256
 3pt x 428.35031pt>
 File: images/desarrollo/trainResults/peruSummary_entreAcierto.png Graphic file 
 (type png)
@@ -1988,7 +1988,7 @@ File: images/desarrollo/trainResults/peruSummary_entreAcierto.png Graphic file
 Package pdftex.def Info: images/desarrollo/trainResults/peruSummary_entreAciert
 o.png  used on input line 1338.
 (pdftex.def)             Requested size: 469.45639pt x 143.76785pt.
-<images/desarrollo/trainResults/peruSummary_entreError.png, id=637, 1400.23125p
+<images/desarrollo/trainResults/peruSummary_entreError.png, id=641, 1400.23125p
 t x 423.83344pt>
 File: images/desarrollo/trainResults/peruSummary_entreError.png Graphic file (t
 ype png)
@@ -1996,9 +1996,9 @@ ype png)
 Package pdftex.def Info: images/desarrollo/trainResults/peruSummary_entreError.
 png  used on input line 1350.
 (pdftex.def)             Requested size: 469.4703pt x 142.10309pt.
-[115 <./images/desarrollo/trainResults/peruSummary_entreAcierto.png> <./images/
+[116 <./images/desarrollo/trainResults/peruSummary_entreAcierto.png> <./images/
 desarrollo/trainResults/peruSummary_entreError.png>]
-<images/desarrollo/trainResults/peruSummary_validAcierto.png, id=644, 1400.9840
+<images/desarrollo/trainResults/peruSummary_validAcierto.png, id=647, 1400.9840
 7pt x 623.32875pt>
 File: images/desarrollo/trainResults/peruSummary_validAcierto.png Graphic file 
 (type png)
@@ -2006,7 +2006,7 @@ File: images/desarrollo/trainResults/peruSummary_validAcierto.png Graphic file
 Package pdftex.def Info: images/desarrollo/trainResults/peruSummary_validAciert
 o.png  used on input line 1365.
 (pdftex.def)             Requested size: 469.46619pt x 208.87587pt.
-<images/desarrollo/trainResults/peruSummary_validError.png, id=645, 1343.0175pt
+<images/desarrollo/trainResults/peruSummary_validError.png, id=648, 1343.0175pt
  x 591.71063pt>
 File: images/desarrollo/trainResults/peruSummary_validError.png Graphic file (t
 ype png)
@@ -2014,7 +2014,7 @@ ype png)
 Package pdftex.def Info: images/desarrollo/trainResults/peruSummary_validError.
 png  used on input line 1377.
 (pdftex.def)             Requested size: 469.46889pt x 206.83998pt.
-) (CAP5.tex [116 <./images/desarrollo/trainResults/peruSummary_validAcierto.png
+) (CAP5.tex [117 <./images/desarrollo/trainResults/peruSummary_validAcierto.png
 > <./images/desarrollo/trainResults/peruSummary_validError.png>]
 Cap\'{\i }tulo 4.
 [117
@@ -2024,7 +2024,7 @@ Overfull \hbox (29.44547pt too wide) in paragraph at lines 58--68
  [] 
  []
 
-<images/desarrollo/testResults/german/model_A_A.png, id=660, 710.4141pt x 1387.
+<images/desarrollo/testResults/german/model_A_A.png, id=663, 710.4141pt x 1387.
 584pt>
 File: images/desarrollo/testResults/german/model_A_A.png Graphic file (type png
 )
@@ -2036,7 +2036,7 @@ ed on input line 79.
 Overfull \vbox (7.654pt too high) has occurred while \output is active []
 
  [121 <./images/desarrollo/testResults/german/model_A_A.png>]
-<images/desarrollo/testResults/german/ROC_curve_modelE.png, id=669, 1266.98344p
+<images/desarrollo/testResults/german/ROC_curve_modelE.png, id=672, 1266.98344p
 t x 744.53156pt>
 File: images/desarrollo/testResults/german/ROC_curve_modelE.png Graphic file (t
 ype png)
@@ -2044,7 +2044,7 @@ ype png)
 Package pdftex.def Info: images/desarrollo/testResults/german/ROC_curve_modelE.
 png  used on input line 91.
 (pdftex.def)             Requested size: 469.47252pt x 213.39792pt.
-<images/desarrollo/testResults/german/PR_curve_modelE.png, id=670, 1250.42157pt
+<images/desarrollo/testResults/german/PR_curve_modelE.png, id=673, 1250.42157pt
  x 744.53156pt>
 File: images/desarrollo/testResults/german/PR_curve_modelE.png Graphic file (ty
 pe png)
@@ -2058,7 +2058,7 @@ Overfull \hbox (29.44547pt too wide) in paragraph at lines 123--133
  [] 
  []
 
-<images/desarrollo/testResults/peru/modelE_.png, id=676, 724.20563pt x 1361.837
+<images/desarrollo/testResults/peru/modelE_.png, id=679, 724.20563pt x 1361.837
 81pt>
 File: images/desarrollo/testResults/peru/modelE_.png Graphic file (type png)
 <use images/desarrollo/testResults/peru/modelE_.png>
@@ -2066,7 +2066,7 @@ Package pdftex.def Info: images/desarrollo/testResults/peru/modelE_.png  used o
 n input line 143.
 (pdftex.def)             Requested size: 258.21017pt x 485.5442pt.
 [123]
-<images/desarrollo/testResults/peru/ROC_curve_modelE.png, id=680, 1387.584pt x 
+<images/desarrollo/testResults/peru/ROC_curve_modelE.png, id=683, 1387.584pt x 
 710.4141pt>
 File: images/desarrollo/testResults/peru/ROC_curve_modelE.png Graphic file (typ
 e png)
@@ -2075,7 +2075,7 @@ Package pdftex.def Info: images/desarrollo/testResults/peru/ROC_curve_modelE.pn
 g  used on input line 156.
 (pdftex.def)             Requested size: 469.46448pt x 213.39687pt.
  [124 <./images/desarrollo/testResults/peru/modelE_.png>]
-<images/desarrollo/testResults/peru/PR_curve_modelE.png, id=685, 1387.584pt x 7
+<images/desarrollo/testResults/peru/PR_curve_modelE.png, id=688, 1387.584pt x 7
 10.4141pt>
 File: images/desarrollo/testResults/peru/PR_curve_modelE.png Graphic file (type
  png)
@@ -2085,19 +2085,19 @@ Package pdftex.def Info: images/desarrollo/testResults/peru/PR_curve_modelE.png
 (pdftex.def)             Requested size: 469.46448pt x 213.39687pt.
  [125 <./images/desarrollo/testResults/peru/ROC_curve_modelE.png> <./images/des
 arrollo/testResults/peru/PR_curve_modelE.png>]
-<images/reconyzeFLow.png, id=691, 566.86781pt x 570.48131pt>
+<images/reconyzeFLow.png, id=694, 566.86781pt x 570.48131pt>
 File: images/reconyzeFLow.png Graphic file (type png)
 <use images/reconyzeFLow.png>
 Package pdftex.def Info: images/reconyzeFLow.png  used on input line 188.
 (pdftex.def)             Requested size: 375.58705pt x 284.52615pt.
-<images/interfazWithGermSign.png, id=692, 687.16725pt x 589.0005pt>
+<images/interfazWithGermSign.png, id=695, 687.16725pt x 589.0005pt>
 File: images/interfazWithGermSign.png Graphic file (type png)
 <use images/interfazWithGermSign.png>
 Package pdftex.def Info: images/interfazWithGermSign.png  used on input line 20
 3.
 (pdftex.def)             Requested size: 469.46947pt x 341.44977pt.
  [126 <./images/reconyzeFLow.png>]
-<images/interfazWithPeruvSign.png, id=697, 685.05937pt x 588.69937pt>
+<images/interfazWithPeruvSign.png, id=701, 685.05937pt x 588.69937pt>
 File: images/interfazWithPeruvSign.png Graphic file (type png)
 <use images/interfazWithPeruvSign.png>
 Package pdftex.def Info: images/interfazWithPeruvSign.png  used on input line 2
@@ -2189,7 +2189,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--109
 
  []
 
-<autorizacion.pdf, id=746, 597.6729pt x 845.07718pt>
+<autorizacion.pdf, id=749, 597.6729pt x 845.07718pt>
 File: autorizacion.pdf Graphic file (type pdf)
 <use autorizacion.pdf>
 Package pdftex.def Info: autorizacion.pdf  used on input line 111.
@@ -2198,7 +2198,7 @@ File: autorizacion.pdf Graphic file (type pdf)
 <use autorizacion.pdf>
 Package pdftex.def Info: autorizacion.pdf  used on input line 111.
 (pdftex.def)             Requested size: 597.67143pt x 845.07512pt.
-<autorizacion.pdf, id=749, page=1, 597.6729pt x 845.07718pt>
+<autorizacion.pdf, id=752, page=1, 597.6729pt x 845.07718pt>
 File: autorizacion.pdf Graphic file (type pdf)
 <use autorizacion.pdf, page 1>
 Package pdftex.def Info: autorizacion.pdf , page1 used on input line 111.
@@ -2260,9 +2260,9 @@ TeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Usuario/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Usuario/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on origin.pdf (166 pages, 18387783 bytes).
+Output written on origin.pdf (167 pages, 18388177 bytes).
 PDF statistics:
- 869 PDF objects out of 1000 (max. 8388607)
+ 872 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  603 words of extra memory for PDF output out of 10000 (max. 10000000)
 
