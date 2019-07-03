@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  2 JUL 2019 10:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.1)  2 JUL 2019 12:01
 entering extended mode
 **"D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
 ("D:/TG/TESIS CNN/latex_tesis - v2/origin.TEX"
@@ -2142,37 +2142,37 @@ Underfull \hbox (badness 10000) in paragraph at lines 138--109
 
  []
 
-<autorizacion.pdf, id=746, 597.6729pt x 845.07718pt>
+<autorizacion.pdf, id=746, 597.63278pt x 845.1575pt>
 File: autorizacion.pdf Graphic file (type pdf)
 <use autorizacion.pdf>
 Package pdftex.def Info: autorizacion.pdf  used on input line 111.
-(pdftex.def)             Requested size: 597.67143pt x 845.07512pt.
+(pdftex.def)             Requested size: 597.63132pt x 845.15544pt.
 File: autorizacion.pdf Graphic file (type pdf)
 <use autorizacion.pdf>
 Package pdftex.def Info: autorizacion.pdf  used on input line 111.
-(pdftex.def)             Requested size: 597.67143pt x 845.07512pt.
-<autorizacion.pdf, id=749, page=1, 597.6729pt x 845.07718pt>
+(pdftex.def)             Requested size: 597.63132pt x 845.15544pt.
+<autorizacion.pdf, id=749, page=1, 597.63278pt x 845.1575pt>
 File: autorizacion.pdf Graphic file (type pdf)
 <use autorizacion.pdf, page 1>
 Package pdftex.def Info: autorizacion.pdf , page1 used on input line 111.
-(pdftex.def)             Requested size: 597.67143pt x 845.07512pt.
+(pdftex.def)             Requested size: 597.63132pt x 845.15544pt.
 File: autorizacion.pdf Graphic file (type pdf)
 <use autorizacion.pdf, page 1>
 Package pdftex.def Info: autorizacion.pdf , page1 used on input line 111.
-(pdftex.def)             Requested size: 598.30069pt x 845.96486pt.
+(pdftex.def)             Requested size: 598.26053pt x 846.04526pt.
 [141]
 File: autorizacion.pdf Graphic file (type pdf)
 <use autorizacion.pdf, page 1>
 Package pdftex.def Info: autorizacion.pdf , page1 used on input line 111.
-(pdftex.def)             Requested size: 598.30069pt x 845.96486pt.
+(pdftex.def)             Requested size: 598.26053pt x 846.04526pt.
 File: autorizacion.pdf Graphic file (type pdf)
 <use autorizacion.pdf, page 1>
 Package pdftex.def Info: autorizacion.pdf , page1 used on input line 111.
-(pdftex.def)             Requested size: 598.30069pt x 845.96486pt.
+(pdftex.def)             Requested size: 598.26053pt x 846.04526pt.
 File: autorizacion.pdf Graphic file (type pdf)
 <use autorizacion.pdf, page 1>
 Package pdftex.def Info: autorizacion.pdf , page1 used on input line 111.
-(pdftex.def)             Requested size: 598.30069pt x 845.96486pt.
+(pdftex.def)             Requested size: 598.26053pt x 846.04526pt.
  [142 <./autorizacion.pdf>] (origin.aux
 LaTeX Info: Redefining \. on input line 7.
 LaTeX Info: Redefining \% on input line 7.
@@ -2213,7 +2213,7 @@ TeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/Usuario/AppData/Local/Progra
 ms/MiKTeX 2.9/fonts/type1/urw/times/utmbi8a.pfb><C:/Users/Usuario/AppData/Local
 /Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/Usuario/AppData
 /Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on origin.pdf (166 pages, 18388033 bytes).
+Output written on origin.pdf (166 pages, 18389758 bytes).
 PDF statistics:
  869 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

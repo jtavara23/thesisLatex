@@ -907,7 +907,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
 
 				 & 1 de 32 x 32  & Conv(DropOut : 0.8) & 32 de 3 x 3 neuronas & Activo & 32 de 32 x 32  & --\\ 
-				\multirow{-2}{*}{1} &  32 de 32 x 32  &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16  & {\cellcolor[HTML]{DAE8FC}(Kernel = 8) 32 de 2x2}\\ \hline
+				\multirow{-2}{*}{1} &  32 de 32 x 32  &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 8) 32 de 2x2}\\ \hline
 				 & 32 de 16 x 16  & Conv(DropOut : 0.7) & 64 de 5 x 5 neuronas & Activo & 64 de 16 x 16  & --\\ 
 				\multirow{-2}{*}{2} &  64 de 16 x 16  &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 4) 64 de 2x2}\\ \hline			
 				 & 64 de 8 x 8  & Conv(DropOut : 0.6) & 128 de 5 x 5 neuronas & Activo & 128 de 8 x 8  & --\\ 			
