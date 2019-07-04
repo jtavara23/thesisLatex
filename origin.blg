@@ -1,5 +1,8 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: origin.aux
 The style file: apalike.bst
 Database file #1: bibliografia.bib
+Warning--empty publisher in crossMSE
+Warning--can't use both author and editor fields in Krizhevsky2012
+Warning--empty booktitle in Stallkamp2012
 Warning--empty booktitle in ExtremeLearning
-(There was 1 warning)
+(There were 4 warnings)

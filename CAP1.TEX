@@ -16,11 +16,21 @@
   \end{center}
   \end{figure}
 
-  \vskip 1.15cm
+  \tcbset{CajaSimple/.style={colback=black!2}, boxrule = 2.5pt}
+  \begin{tcolorbox}
+  [CajaSimple]
+  \begin{center}
+  {\Large{TESIS}}
+  \end{center}
+  {\large{\hspace*{0.4cm} PARA OBTENER EL TÍTULO PROFESIONAL DE: \Large{INGENIERO \\ \hspace*{0.4cm} INFORMÁTICO}}}
+  \end{tcolorbox}
+
+
+  \vskip 1cm
   \begin{center}
     {  
       {\bf \fontsize{17}{20.4}\selectfont{MODELO DE RECONOCIMIENTO AUTOMÁTICO DE SEÑALES DE TRÁNSITO VEHICULAR MEDIANTE APRENDIZAJE PROFUNDO DE REDES NEURONALES CONVOLUCIONALES }}     
-      \vskip 3cm
+      \vskip 1cm
       {\bf \fontsize{14}{16.8}\selectfont {\hspace{-0.4cm}AUTOR: Josué Gastón Távara Idrogo}}\\
       \vskip 0.2cm
       {\bf \fontsize{14}{20.4}\selectfont{\hspace*{-1.7cm} ASESOR: Jorge Luis Gutierrez Gutierrez }}  
@@ -83,7 +93,7 @@
 \begin{center}
  {\bf {\Large HOJA DE APROBACIÓN }     
  \vskip 1.5cm
-  {\Large Modelo De Reconocimiento Automático De Señales De Tránsito Vehicular Mediante Aprendizaje Profundo De Redes Neuronales Convolucionales }}
+  {\Large Modelo de Reconocimiento Automático de Señales de Tránsito Vehicular Mediante Aprendizaje Profundo de Redes Neuronales Convolucionales }}
  \vskip 1cm 
   {\large{Josué Gastón Távara Idrogo}}\\
 
@@ -91,26 +101,31 @@
 \end{center} 
 Tesis defendida y aprobada por el jurado examinador:
 \vskip 1.2 cm
+
 \begin{flushleft} 
 $\overline{\mbox{Prof. Dr. Jorge Luis Gutierrez Gutierrez - Asesor}}$\\
 \vskip -0.5cm
 Departamento de Informática - UNT
 \end{flushleft} 
 \vskip 1cm
-\begin{flushleft} 
-$\overline{\mbox{Prof. Mg. Anthony Gomez Gonzales}}$\\
-\vskip -0.5cm
-Departamento de Informática - UNT
-\end{flushleft} 
-\vskip 1cm
+
+
 \begin{flushleft} 
 $\overline{\mbox{Prof. Mg. Jose Luis Peralta Luján}}$\\
 \vskip -0.5cm
 Departamento de Informática - UNT
 \end{flushleft}
-\vskip 0.5cm 
+\vskip 1cm 
+
+\begin{flushleft} 
+$\overline{\mbox{Prof. Mg. Anthony Gomez Gonzales}}$\\
+\vskip -0.5cm
+Departamento de Informática - UNT
+\end{flushleft} 
+\vskip 0.5cm
+
 \begin{center}    
-Trujillo, DIA de MES del 2019
+Trujillo, 03 de Julio del 2019
 \end{center} 
 \newpage
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -119,7 +134,7 @@ Trujillo, DIA de MES del 2019
 %%%%%%%%%%%%%%%%%%%%%%%%%%%% DEDICATORIA %%%%%%%%%%%%%%%%%%%%%%
  
  \addcontentsline{toc}{chapter}{Dedicatoria}
- {\bf\Large {Dedico esta tesis a :}}
+ {\bf\Large {Dedico esta tesis a:}}
  \vskip 1cm
   \begin{quotation}
   {\it Mi madre María y mi padre Gastón; amare et sapere vix deo concesitur.
@@ -156,9 +171,9 @@ Trujillo, DIA de MES del 2019
   \vskip 0.5cm
   \begin{quotation}
   
-  La presente investigación tiene por objetivo principal implementar un modelo basado en el aprendizaje profundo de redes neuronales convolucionales para reconocer automáticamente señales de tránsito vehicular usando fundamentos de cálculo matemático, técnicas de procesamiento de imágenes y algoritmos de inteligencia artificial.
+  La presente investigación tiene por objetivo principal implementar un modelo basado en el aprendizaje profundo de redes neuronales convolucionales para reconocer automáticamente señales de tránsito vehicular usando técnicas de procesamiento de imágenes y fundamentos de inteligencia artificial.
   \vskip 0.2cm
-  El proyecto se centra en un grupo de señales de Tránsito vehicular de Alemania y Perú, identificando 43 y 7 categorías respectivamente. Iniciando con  la adquisición de imágenes, se procedió a realizar el procesamiento de estas con la finalidad de aumentar el conjunto de datos y poder ejecutar el aprendizaje profundo a través de diversos diseños de arquitecturas de redes neuronales convolucionales.
+  El proyecto se centra en un grupo de señales de Tránsito vehicular de Alemania y Perú, identificando 43 y 7 categorías respectivamente. Iniciando con  la adquisición de imágenes, se procedió a realizar el procesamiento de estas con la finalidad de aumentar el conjunto de datos y poder ejecutar el aprendizaje profundo a través de diversos diseños de modelos de redes neuronales convolucionales.
   \vskip 0.2cm
   Como resultado final, se obtuvo un modelo con buenos indicadores y resultados en el reconocimiento de señales de tránsito vehicular. De esta manera, se pretende contribuir en los esfuerzos de la industria automotriz en el campo de sistemas avanzados de asistencia al conductor, así como también puede formar parte de diversos mecanismos que buscan dar soluciones a la inseguridad vial.
 
@@ -175,7 +190,7 @@ Trujillo, DIA de MES del 2019
   \end{center} 
   \begin{quotation}
 
-  The main objective of this research is to implement a model based on the deep learning through convolutional neural networks to automatically recognize vehicular traffic signals using mathematical calculation funds, image processing techniques and artificial intelligence algorithms.
+  The main objective of this research is to implement a model based on the deep learning through convolutional neural networks to automatically recognize vehicular traffic signals using image processing techniques and foundations of artificial intelligence.
   \vskip 0.2cm
   
   The project focuses on a group of traffic signals from Germany and Peru, identifying 43 and 7 categories respectively. Starting with the acquisition of images, the processing of these activities is carried out with the purpose of increasing the data set so then be able to carry out in-depth learning through various designs of convolutional neural network architectures.

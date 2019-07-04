@@ -1,7 +1,7 @@
 %!TEX root = origin.TEX
 \chapter{Desarrollo de la Investigación}
 \pagenumbering{arabic}
-\setcounter{page}{71}
+\setcounter{page}{72}
 \renewcommand{\baselinestretch}{1.2} %doble espacio paratodo el texto
 
 En la siguiente imagen se detallan los procesos de implementación computacional más importantes que fueron realizados durante el desarrollo de la investigación:
@@ -114,10 +114,10 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\vskip 0.75cm
 			\begin{figure}[H]
 				\begin{center}
-				\includegraphics[width=1\textwidth, height=1.2\textheight,keepaspectratio]{images/desarrollo/histograms/initial39209}
+				\includegraphics[width=1\textwidth, height=1.3\textheight,keepaspectratio]{images/desarrollo/histograms/initial39209}
 				\end{center}
 				\begin{center}
-				\caption{\small{Distribución de ejemplos por señal para el entrenamiento(Total 39209)}}	
+				\caption{\small{Distribución de ejemplos por señal para el entrenamiento (Total 39209)}}	
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -217,7 +217,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\includegraphics[width=1\textwidth]{images/desarrollo/histograms/inicioTrain614}
 				\end{center}
 				\begin{center}
-				\caption{\small{Distribución de ejemplos por señal para el entrenamiento(Total 614)}}
+				\caption{\small{Distribución de ejemplos por señal para el entrenamiento (Total 614)}}
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -225,7 +225,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 
 			
 
-	\subsection{Datos para el evaluación}
+	\subsection{Datos para la evaluación}
 		Al igual que en el anterior punto, se obtienen un conjunto de menor cantidad de imágenes de señales de tránsito alemán y peruano, las cuales servirán para evaluar los modelos creados.
 
 		\subsubsection{Señales de Tránsito de Alemania}
@@ -354,7 +354,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\end{center}
 				\begin{center}
 				\vspace{1em}
-				\caption{\small{Distribución de categoría, luego de aplicar el Flip(en sus distintos tipos)- Señales de Alemania}}
+				\caption{\small{Distribución de categoría, luego de aplicar el Flip (en sus distintos tipos)- Señales de Alemania}}
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
 				\vspace{-1.5em}
@@ -476,6 +476,10 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\textbf{Validación}                       & \text{67725 (25\%)}                    \\ \hline
 				\end{tabular}
 				\end{center}
+				\begin{center}
+				\vskip 0.3cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 			\end{table}
 
 	%---------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -488,11 +492,10 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				%\end{center}
 				\begin{center}
 				\caption{\small{Dataset no balanceado - Señales de Tránsito de Perú}}
-				
 				{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 				\end{center}
 			\end{figure}
-
+			\vspace{-2.5em}
 			Para este caso, el dataset aumentado se configuró con una distribución de datos para entrenamiento, validación y evaluación: 
 			\vspace{1.5em}
 			\begin{table}[H]
@@ -505,6 +508,10 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\textbf{Validación}                       & \text{3131 (10\%)}                    \\ \hline
 				\textbf{Evaluación}                       & \text{4698 (15\%)}                    \\ \hline
 				\end{tabular}
+				\end{center}
+				\begin{center}
+				\vskip 0.3cm
+				{\small{Fuente: Elaboración propia.}}
 				\end{center}
 			\end{table}
 
@@ -567,8 +574,8 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c|>{\scriptsize}c|>{\scriptsize}c|}
 			\hline
 			{\ul \textbf{HIPERPARÁMETROS}}  & {\ul \textbf{TIPO}}       & {\ul \textbf{HIPERPARÁMETROS}}        & {\ul \textbf{TIPO}}        \\ \hline
-			{\textbf{Inicialización de Pesos}}                     		& {\textit{Xavier}}  				  &
-			\textbf{Tasa de Aprendizaje}                                & \textit{0.0005}                    \\ \hline
+			{\textbf{Tasa de Aprendizaje - Dataset Alemania}}                     		& {\textit{0.0005 (5e-4)}}  				  &
+			\textbf{Tasa de Aprendizaje - Dataset Perú}                                & \textit{0.0001 (1e-4)}                    \\ \hline
 			\textbf{Alg. de Optimización}                               & \textit{Optimizador Adam}          &
 			\textbf{Método de Validación}                               & \textit{Entropía Cruzada}          \\ \hline
 			\textbf{Fun. Activ. Capas Convolucionales}        			& \textit{RELU y DropOut}                      &
@@ -577,10 +584,14 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\textbf{Épocas}                                             &\textit{100}		 				\\ \hline
 			\end{tabular}
 			\end{center}
+			\begin{center}
+				\vskip 0.3cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 		\end{table}
-		\vspace{-1.5em}
+		\vspace{-2.5em}
 
-		Recordemos que en cada época se procesa el dataset completo de imágenes, por lo que cada época es igual: \begingroup\makeatletter\def\f@size{11}\check@mathfonts	$Epoca = \text{\textit{Tamaño del Minibatch}} \times \text{\textit{iteraciones}}$ \endgroup
+		Recordemos que en cada época se procesa el dataset completo de imágenes, por lo que cada época es igual: \begingroup\makeatletter\def\f@size{11}\check@mathfonts	$epoca = \text{\textit{Tamaño del Minibatch}} \times \text{\textit{iteraciones}}$ \endgroup
 
 		Sin embargo, debido a que se tiene dos distintos datasets para el entrenamiento \textbf{(Sección 3.1.4 - Dataset final para el Entrenamiento)}, el tamaño del Minibatch cambiará respecto al tamaño del dataset y por ende también será diferente la cantidad de iteraciones ejecutadas durante 100 épocas de entrenamiento. 
 
@@ -594,13 +605,18 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c|>{\scriptsize}c|>{\scriptsize}c|}
 			\hline
 			\textbf{Imágenes totales }                 &\textit{203175}                       \\ \hline
-			\textbf{Iteraciones por Época}                 &\textit{387}                             \\ \hline
 			\textbf{Tamaño del Mini-batch}                 &\textit{525 imágenes analizadas por iteración}                       \\ \hline
+			\textbf{Iteraciones por Época}                 &\textit{387}                             \\ \hline
 			\textbf{Épocas entrenadas}                &\textit{100 épocas (38700 iter.)}                       \\ \hline
 			\end{tabular}
 			\end{center}
+			\begin{center}
+				\vskip 0.3cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 		\end{table}
 
+		\vspace{-2.0em}
 
 		\begin{table}[H]
 			\begin{center}
@@ -608,16 +624,20 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c|>{\scriptsize}c|>{\scriptsize}c|}
 			\hline
 			\textbf{Imágenes totales }                 &\textit{23485}                       \\ \hline
-			\textbf{Iteraciones por Época}                 &\textit{77}                             \\ \hline
 			\textbf{Tamaño del Mini-batch}                 &\textit{305 imágenes analizadas por iteración}                       \\ \hline
+			\textbf{Iteraciones por Época}                 &\textit{77}                             \\ \hline
 			\textbf{Épocas entrenadas}                &\textit{100 épocas (7700 iter.)}                       \\ \hline
 			\end{tabular}
 			\end{center}
+			\begin{center}
+				\vskip 0.3cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 		\end{table}
+		\vspace{-2em}
 
 
-
-	En esta investigación se implementó el modelo de redes neuronales convolucionales(CNN) donde las capas convolucionales iniciales de la red extraen características de la imagen (feature extractor), mientras que las capas totalmente conectadas predicen las probabilidades de salida(classifier).
+	En esta investigación se implementó el modelo de redes neuronales convolucionales(CNN) donde las capas convolucionales iniciales de la red extraen características de la imagen (feature extractor), mientras que las capas totalmente conectadas predicen las probabilidades de salida (classifier).
 
 	\begin{figure}[H]
 		\begin{center}
@@ -629,11 +649,12 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		\end{center}
 		\vspace{-1.5em}
 	\end{figure}
+	\vspace{-1.5em}
 	
 	La arquitectura de la red está inspirada en la arquitectura Inception \citep{Inception} y en la arquitectura AlexNet \citep{Krizhevsky2012} para la clasificación de imágenes. En la arquitectura Inception, el modelo creado es denominado GoogLeNet, similar a AlexNet donde varios módulos iniciales son apilados uno sobre el otro para producir el resultado final. En el módulo de inicio, en ese tipo de red se usaron diversos tamaños de filtros convolucionales para capturar características de diferente abstracción. El alto nivel de abstracción se captura con filtros de mayor tamaño y el de un nivel inferior con filtros de menor tamaño, procesando información visual a diferentes escalas y al concatenarlas se obtiene un nivel eficiente de abstracción. 
 	%%%	Dado que aplicar directamente más filtros convolucionales con datos de imagen y concatenarlos es computacionalmente costoso, en el modelo Inception finalmente se usaron filtros de reducción de dimensionalidad(pooling/acumulación). Además de ser muy exitoso para la reducción de dimensionalidad, estos filtros también llegan a ser útiles como activación lineal rectificada. La arquitectura de inicio es eficiente en términos de complejidad computacional con respecto al número de unidades en cada etapa. \citep{Mrinal2016}.las características abstractas locales desempeñan un papel importante. Las señales que pertenecen al mismo grupo tienen una ligera diferencia en la estructura local entre sí, lo que dificulta su distinción. Por lo que se optó por agregar un kernel de reducción convolucional de 3 × 3 extra con acumulación máxima en la parte superior para capturar la estructura local discriminativa al comienzo mismo. Los signos pertenecientes a diferentes grupos tienen una abstracción global que se puede capturar utilizando un núcleo de reducción convolucional de 5 × 5.
 
-	Para la clasificación de señales de tránsito en esta investigación se utilizó una versión modificada de las arquitecturas antes mencionadas. Se incorporó {\bf funciones de escala-múltiple} \citep{Multi_scale_feat}, lo que significa que la salida de las capas convolucionales no solo se envía a la capa posterior, sino que también se ramifica y se introduce al clasificador (capa totalmente conectada). La razón detrás de esto es que cuando el clasificador está tomando una decisión basada en convoluciones, podría encontrar que la salida de la primera o segunda capa convolucional también es útil. Básicamente con las características de escala múltiple depende del clasificador qué nivel de abstracción usar, ya que tiene acceso a las salidas de todas las capas convolucionales, es decir, características en todos los niveles de abstracción. Estas capas ramificadas se someten a un pooling máximo adicional, de modo que todas las convoluciones se submuestrean proporcionalmente antes de entrar en el clasificador. Así se garantiza que todas las funciones de escala múltiple experimenten la misma cantidad de máximo aprovechamiento.
+	Para la clasificación de señales de tránsito en esta investigación se utilizó una versión modificada de las arquitecturas antes mencionadas. Se incorporó {\bf funciones de escala-múltiple} \citep{Inception}, lo que significa que la salida de las capas convolucionales no solo se envía a la capa posterior, sino que también se ramifica y se introduce al clasificador (capa totalmente conectada). La razón detrás de esto es que cuando el clasificador está tomando una decisión basada en convoluciones, podría encontrar que la salida de la primera o segunda capa convolucional también es útil. Básicamente con las características de escala múltiple depende del clasificador qué nivel de abstracción usar, ya que tiene acceso a las salidas de todas las capas convolucionales, es decir, características en todos los niveles de abstracción. Estas capas ramificadas se someten a un pooling máximo adicional, de modo que todas las convoluciones se submuestrean proporcionalmente antes de entrar en el clasificador. Así se garantiza que todas las funciones de escala múltiple experimenten la misma cantidad de máximo aprovechamiento.
 	
 	\subsection{Diseño de la Red}
 	
@@ -647,13 +668,12 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		\caption{\small{Modelo del diseño de la Red propuesta}}
 		{\small{\fontsize{10}{16.8}\selectfont {Fuente: Elaboración propia}}}
 		\end{center}
-		\vspace{-1.5em}
 		\end{figure}
-
+\newpage
 	Para el proceso de entrenamiento fueron tomados en cuenta 5 diferentes diseños. Estos fueron ejecutados durante el entrenamiento del dataset que contiene señales de tránsito de Alemania y Perú.
 
 	Estos 5 modelos son descritos a continuación.
-		\newpage 
+
 		\subsubsection{Diseño A} 
 			Diseño compuesto de 2 capas convolucionales y 2 capas totalmente conectadas.
 			% Please add the following required packages to your document preamble:
@@ -664,62 +684,74 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\item \underline{Dataset de Alemania}			
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño A (73995 neuronas) - Dataset de Imágenes de Alemania}}
+				\caption{\small{Diseño A (19'057 952 neuronas) - Dataset de Imágenes de Alemania}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
 
-				 & 1 de 32 x 32 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 32 x 32 neuronas & --\\ 
-				\multirow{-2}{*}{1} &  32 de 32 x 32 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 32 de 8x8}\\ \hline
-				 & 32 de 16 x 16 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 16 x 16 neuronas & --\\ 
-				\multirow{-2}{*}{2} &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 1) 64 de 8x8}\\ \hline
-				3 &  {\cellcolor[HTML]{DAE8FC}6144 neuronas} &  F.C.(DropOut : 0.5) &  3072 neuronas &  -- & 43 neuronas & --\\ \hline
+				 & 1 de 32 x 32  & Conv(DropOut : 0.8) & 32 de 3 x 3 neuronas & Activo & 32 de 32 x 32 & --\\ 
+				\multirow{-2}{*}{1} &  32 de 32 x 32  &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 2) 32 de 8x8}\\ \hline
+				 & 32 de 16 x 16  & Conv(DropOut : 0.7) & 64 de 5 x 5 neuronas & Activo & 64 de 16 x 16 & --\\ 
+				\multirow{-2}{*}{2} &  64 de 16 x 16  &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 1) 64 de 8x8}\\ \hline
+				3 &  {\cellcolor[HTML]{DAE8FC}6144 neuronas} &  F.C.(DropOut : 0.5) &  3072 neuronas &  -- & 43  & --\\ \hline
 
 				\end{tabular}
 				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 				\end{table}
-			\vspace{-1.5em}
-			\vskip 2cm
+			\vspace{-2.5em}
+			
 			\item \underline{Dataset del Perú}
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño A (250679 neuronas) - Dataset de Imágenes de Perú}}
+				\caption{\small{Diseño A (66'428 192 neuronas) - Dataset de Imágenes de Perú}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
 
-				 & 1 de 60 x 60 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 60 x 60 neuronas & --\\ 
-				\multirow{-2}{*}{1} &  32 de 60 x 60 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 30 x 30 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 32 de 15x15}\\ \hline
-				 & 32 de 30 x 30 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 30 x 30 neuronas & --\\ 
-				\multirow{-2}{*}{2} &  64 de 30 x 30 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 1) 64 de 15x15}\\ \hline
-				3 &  {\cellcolor[HTML]{DAE8FC}21600 neuronas} &  F.C.(DropOut : 0.5) &  7200 neuronas &  -- & 7 neuronas & --\\ \hline
+				 & 1 de 60 x 60 & Conv(DropOut : 0.8) & 32 de 3 x 3 neuronas & Activo & 32 de 60 x 60  & --\\ 
+				\multirow{-2}{*}{1} &  32 de 60 x 60  &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 30 x 30  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 2) 32 de 15x15}\\ \hline
+				 & 32 de 30 x 30  & Conv(DropOut : 0.7) & 64 de 5 x 5 neuronas & Activo & 64 de 30 x 30  & --\\ 
+				\multirow{-2}{*}{2} &  64 de 30 x 30  &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 1) 64 de 15x15}\\ \hline
+				3 &  {\cellcolor[HTML]{DAE8FC}21600 neuronas} &  F.C.(DropOut : 0.5) &  7200 neuronas &  -- & 7  & --\\ \hline
 
 				\end{tabular}
+				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
 				\end{center}
 				\end{table}
 
 			\end{itemize}
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
-		\vskip 2cm 
+		%\vskip 2cm 
 		\subsubsection{Diseño B}
 		Diseño compuesto de 3 capas convolucionales y 2 capas totalmente conectadas.
 			\begin{itemize}
 			\item \underline{Dataset de Alemania}		
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño B (83339 neuronas) - Dataset de Imágenes de Alemania}}
+				\caption{\small{Diseño B (3'970 336 neuronas) - Dataset de Imágenes de Alemania}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
 
-				 & 1 de 32 x 32 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 32 x 32 neuronas & --\\ 
-				\multirow{-2}{*}{1} &  32 de 32 x 32 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 4x4}\\ \hline
-				 & 32 de 16 x 16 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 16 x 16 neuronas & --\\ 
-				\multirow{-2}{*}{2} &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 4x4}\\ \hline			
-				{\cellcolor[HTML]{ffb3b3}} & 64 de 8 x 8 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 128 de 8 x 8 neuronas & --\\ 			
-				{\cellcolor[HTML]{ffb3b3} \multirow{-2}{*}{3}} &  128 de 8 x 8 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 4x4 }\\ \hline
-				4 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
+				 & 1 de 32 x 32  & Conv(DropOut : 0.8) & 32 de 3 x 3 neuronas& Activo & 32 de 32 x 32  & --\\ 
+				\multirow{-2}{*}{1} &  32 de 32 x 32  &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 4) 32 de 4x4}\\ \hline
+				 & 32 de 16 x 16  & Conv(DropOut : 0.7) & 64 de 5 x 5 neuronas& Activo & 64 de 16 x 16  & --\\ 
+				\multirow{-2}{*}{2} &  64 de 16 x 16  &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 2) 64 de 4x4}\\ \hline			
+				{\cellcolor[HTML]{ffb3b3}} & 64 de 8 x 8  & Conv(DropOut : 0.6) & 128 de 5 x 5 neuronas & Activo & 128 de 8 x 8  & --\\ 			
+				{\cellcolor[HTML]{ffb3b3} \multirow{-2}{*}{3}} &  128 de 8 x 8  &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4  & {\cellcolor[HTML]{DAE8FC} (MaxPool = 1) 128 de 4x4 }\\ \hline
+				4 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43  & --\\ \hline
 				\end{tabular}
+				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
 				\end{center}
 				\end{table}
 			\vspace{2em}
@@ -727,19 +759,23 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\item \underline{Dataset del Perú}
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño B (274339 neuronas) - Dataset de Imágenes de Perú}}
+				\caption{\small{Diseño B (29'910 388 neuronas) - Dataset de Imágenes de Perú}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
 
-				 & 1 de 60 x 60 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 60 x 60 neuronas & --\\ 
-				\multirow{-2}{*}{1} &  32 de 60 x 60 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 30 x 30 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 7x7}\\ \hline
-				 & 32 de 30 x 30 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 30 x 30 neuronas & --\\ 
-				\multirow{-2}{*}{2} &  64 de 30 x 30 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 7x7}\\ \hline			
-				{\cellcolor[HTML]{ffb3b3}} & 64 de 15 x 15 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 128 de 15 x 15 neuronas & --\\ 			
-				{\cellcolor[HTML]{ffb3b3} \multirow{-2}{*}{3}} &  128 de 15 x 15 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 7x7 }\\ \hline
-				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  2700 neuronas &  -- & 7 neuronas & --\\ \hline
+				 & 1 de 60 x 60  & Conv(DropOut : 0.8) & 32 de 3 x 3 neuronas& Activo & 32 de 60 x 60  & --\\ 
+				\multirow{-2}{*}{1} &  32 de 60 x 60  &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 30 x 30  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 4) 32 de 7x7}\\ \hline
+				 & 32 de 30 x 30  & Conv(DropOut : 0.7) & 64 de 5 x 5 neuronas& Activo & 64 de 30 x 30  & --\\ 
+				\multirow{-2}{*}{2} &  64 de 30 x 30  &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 2) 64 de 7x7}\\ \hline			
+				{\cellcolor[HTML]{ffb3b3}} & 64 de 15 x 15  & Conv(DropOut : 0.6) & 128 de 5 x 5 neuronas & Activo & 128 de 15 x 15  & --\\ 			
+				{\cellcolor[HTML]{ffb3b3} \multirow{-2}{*}{3}} &  128 de 15 x 15  &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7  & {\cellcolor[HTML]{DAE8FC} (MaxPool = 1) 128 de 7x7 }\\ \hline
+				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  2700 neuronas &  -- & 7  & --\\ \hline
 				\end{tabular}
+				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
 				\end{center}
 				\end{table}
 
@@ -754,19 +790,23 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\item \underline{Dataset de Alemania} 	
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño C (82315 neuronas) - Dataset de Imágenes de Alemania}}
+				\caption{\small{Diseño C (3'937 568 neuronas) - Dataset de Imágenes de Alemania}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
 
-				 & 1 de 32 x 32 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 32 x 32 neuronas & --\\ 
-				\multirow{-2}{*}{1} &  32 de 32 x 32 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 4x4}\\ \hline
-				 & 32 de 16 x 16 neuronas & Conv(DropOut : 0.7) & {\cellcolor[HTML]{ffb3b3} 64 de 3 x 3} & Activo & 64 de 16 x 16 neuronas & --\\ 
-				\multirow{-2}{*}{2} &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 4x4}\\ \hline			
-				 & 64 de 8 x 8 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 128 de 8 x 8 neuronas & --\\ 			
-				\multirow{-2}{*}{3} &  128 de 8 x 8 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 4x4 }\\ \hline
-				4 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
+				 & 1 de 32 x 32  & Conv(DropOut : 0.8) & 32 de 3 x 3 neuronas& Activo & 32 de 32 x 32  & --\\ 
+				\multirow{-2}{*}{1} &  32 de 32 x 32  &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 4) 32 de 4x4}\\ \hline
+				 & 32 de 16 x 16  & Conv(DropOut : 0.7) & {\cellcolor[HTML]{ffb3b3} 64 de 3 x 3 neuronas} & Activo & 64 de 16 x 16  & --\\ 
+				\multirow{-2}{*}{2} &  64 de 16 x 16  &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 2) 64 de 4x4}\\ \hline			
+				 & 64 de 8 x 8  & Conv(DropOut : 0.6) & 128 de 5 x 5 neuronas& Activo & 128 de 8 x 8  & --\\ 			
+				\multirow{-2}{*}{3} &  128 de 8 x 8  &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4  & {\cellcolor[HTML]{DAE8FC} (MaxPool = 1) 128 de 4x4 }\\ \hline
+				4 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024  neuronas&  -- & 43  & --\\ \hline
 				\end{tabular}
+				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
 				\end{center}
 				\end{table}
 			\vspace{-1.5em}
@@ -774,19 +814,23 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 			\item \underline{Dataset del Perú}
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño C (273315 neuronas) - Dataset de Imágenes de Perú}}
+				\caption{\small{Diseño C (29'877 620 neuronas) - Dataset de Imágenes de Perú}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
 
-				 & 1 de 60 x 60 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 60 x 60 neuronas & --\\ 
-				\multirow{-2}{*}{1} &  32 de 60 x 60 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 30 x 30 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 7x7}\\ \hline
-				 & 32 de 30 x 30 neuronas & Conv(DropOut : 0.7) & {\cellcolor[HTML]{ffb3b3} 64 de 3 x 3} & Activo & 64 de 30 x 30 neuronas & --\\ 
-				\multirow{-2}{*}{2} &  64 de 30 x 30 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 7x7}\\ \hline			
-				 & 64 de 15 x 15 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 128 de 15 x 15 neuronas & --\\ 			
-				\multirow{-2}{*}{3} &  128 de 15 x 15 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 7x7 }\\ \hline
-				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  2700 neuronas &  -- & 7 neuronas & --\\ \hline
+				 & 1 de 60 x 60  & Conv(DropOut : 0.8) & 32 de 3 x 3 neuronas & Activo & 32 de 60 x 60  & --\\ 
+				\multirow{-2}{*}{1} &  32 de 60 x 60  &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 30 x 30  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 4) 32 de 7x7}\\ \hline
+				 & 32 de 30 x 30  & Conv(DropOut : 0.7) & {\cellcolor[HTML]{ffb3b3} 64 de 3 x 3 neuronas} & Activo & 64 de 30 x 30  & --\\ 
+				\multirow{-2}{*}{2} &  64 de 30 x 30  &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 2) 64 de 7x7}\\ \hline			
+				 & 64 de 15 x 15  & Conv(DropOut : 0.6) & 128 de 5 x 5 neuronas & Activo & 128 de 15 x 15  & --\\ 			
+				\multirow{-2}{*}{3} &  128 de 15 x 15  &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7  & {\cellcolor[HTML]{DAE8FC} (MaxPool = 1) 128 de 7x7 }\\ \hline
+				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  2700 neuronas &  -- & 7  & --\\ \hline
 				\end{tabular}
+				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
 				\end{center}
 				\end{table}
 
@@ -802,38 +846,46 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño D (86411 neuronas) - Dataset de Imágenes de Alemania}}
+				\caption{\small{Diseño D (4'166 944 neuronas) - Dataset de Imágenes de Alemania}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
 
-				 & 1 de 32 x 32 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 32 x 32 neuronas & --\\ 
-				\multirow{-2}{*}{1} &  32 de 32 x 32 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 4x4}\\ \hline
-				 & 32 de 16 x 16 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 16 x 16 neuronas & --\\ 
-				\multirow{-2}{*}{2} &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 4x4}\\ \hline			
-				 & 64 de 8 x 8 neuronas & Conv(DropOut : 0.6) & {\cellcolor[HTML]{ffb3b3} 128 de 7 x 7} & Activo & 128 de 8 x 8 neuronas & --\\ 			
-				\multirow{-2}{*}{3} &  128 de 8 x 8 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 4x4 }\\ \hline
-				4 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43 neuronas & --\\ \hline
+				 & 1 de 32 x 32  & Conv(DropOut : 0.8) & 32 de 3 x 3 neuronas & Activo & 32 de 32 x 32  & --\\ 
+				\multirow{-2}{*}{1} &  32 de 32 x 32  &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 4) 32 de 4x4}\\ \hline
+				 & 32 de 16 x 16  & Conv(DropOut : 0.7) & 64 de 5 x 5 neuronas & Activo & 64 de 16 x 16  & --\\ 
+				\multirow{-2}{*}{2} &  64 de 16 x 16  &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 2) 64 de 4x4}\\ \hline			
+				 & 64 de 8 x 8  & Conv(DropOut : 0.6) & {\cellcolor[HTML]{ffb3b3} 128 de 7 x 7 neuronas} & Activo & 128 de 8 x 8  & --\\ 			
+				\multirow{-2}{*}{3} &  128 de 8 x 8  &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4  & {\cellcolor[HTML]{DAE8FC} (MaxPool = 1) 128 de 4x4 }\\ \hline
+				4 &  {\cellcolor[HTML]{DAE8FC}3584 neuronas} &  F.C.(DropOut : 0.5) &  1024 neuronas &  -- & 43  & --\\ \hline
 				\end{tabular}
 				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
+				\end{center}
 				\end{table}
-
+			\vspace{-1.5em}
 			\item \underline{Dataset del Perú}
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño D (277411 neuronas) - Dataset de Imágenes de Perú}}
+				\caption{\small{Diseño D (30'106 996 neuronas) - Dataset de Imágenes de Perú}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
 
-				 & 1 de 60 x 60 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 60 x 60 neuronas & --\\ 
-				\multirow{-2}{*}{1} &  32 de 60 x 60 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 30 x 30 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 32 de 7x7}\\ \hline
-				 & 32 de 30 x 30 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 30 x 30 neuronas & --\\ 
-				\multirow{-2}{*}{2} &  64 de 30 x 30 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 2) 64 de 7x7}\\ \hline			
-				 & 64 de 15 x 15 neuronas & Conv(DropOut : 0.6) & {\cellcolor[HTML]{ffb3b3} 128 de 7 x 7} & Activo & 128 de 15 x 15 neuronas & --\\ 			
-				\multirow{-2}{*}{3} &  128 de 15 x 15 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 7x7 }\\ \hline
-				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas} &  F.C.(DropOut : 0.5) &  2700 neuronas &  -- & 7 neuronas & --\\ \hline
+				 & 1 de 60 x 60  & Conv(DropOut : 0.8) & 32 de 3 x 3 neuronas & Activo & 32 de 60 x 60  & --\\ 
+				\multirow{-2}{*}{1} &  32 de 60 x 60  &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 30 x 30  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 4) 32 de 7x7}\\ \hline
+				 & 32 de 30 x 30  & Conv(DropOut : 0.7) & 64 de 5 x 5 neuronas & Activo & 64 de 30 x 30  & --\\ 
+				\multirow{-2}{*}{2} &  64 de 30 x 30  &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 2) 64 de 7x7}\\ \hline			
+				 & 64 de 15 x 15  & Conv(DropOut : 0.6) & {\cellcolor[HTML]{ffb3b3} 128 de 7 x 7 neuronas} & Activo & 128 de 15 x 15  & --\\ 			
+				\multirow{-2}{*}{3} &  128 de 15 x 15  &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7  & {\cellcolor[HTML]{DAE8FC} (MaxPool = 1) 128 de 7x7 }\\ \hline
+				4 &  {\cellcolor[HTML]{DAE8FC}10976 neuronas } &  F.C.(DropOut : 0.5) &  2700 neuronas &  -- & 7  & --\\ \hline
 				\end{tabular}
+				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
 				\end{center}
 				\end{table}
 
@@ -841,57 +893,67 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
 		%\newpage
 		\subsubsection{Diseño E}
+		\vspace{-1em}
 			Diseño compuesto de 4 capas convolucionales y 2 capas totalmente conectadas.
+			\vspace{-1em}
 			\begin{itemize}
 			\item \underline{Dataset de Alemania}		
 
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño E (90185 neuronas) - Dataset de Imágenes de Alemania}}
+				\caption{\small{Diseño E (2'077 706 neuronas) - Dataset de Imágenes de Alemania}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
 
-				 & 1 de 32 x 32 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 32 x 32 neuronas & --\\ 
-				\multirow{-2}{*}{1} &  32 de 32 x 32 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 8) 32 de 2x2}\\ \hline
-				 & 32 de 16 x 16 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 16 x 16 neuronas & --\\ 
-				\multirow{-2}{*}{2} &  64 de 16 x 16 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 64 de 2x2}\\ \hline			
-				 & 64 de 8 x 8 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 128 de 8 x 8 neuronas & --\\ 			
-				\multirow{-2}{*}{3} &  128 de 8 x 8 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 2) 128 de 2x2 }\\ \hline
-				{\cellcolor[HTML]{ffb3b3}}& 128 de 4 x 4 neuronas & Conv(DropOut : 0.6) & 128 de 7 x 7 & Activo & 128 de 4 x 4 neuronas & --\\ 			
-				{\cellcolor[HTML]{ffb3b3}\multirow{-2}{*}{4}} &  128 de 4 x 4 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 2 x 2 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 2x2 }\\ \hline
-				5 &  {\cellcolor[HTML]{DAE8FC}1408 neuronas} &  F.C.(DropOut : 0.5) &  702 neuronas &  -- & 43 neuronas & --\\ \hline
+				 & 1 de 32 x 32  & Conv(DropOut : 0.8) & 32 de 3 x 3 neuronas & Activo & 32 de 32 x 32  & --\\ 
+				\multirow{-2}{*}{1} &  32 de 32 x 32  &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 16 x 16  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 8) 32 de 2x2}\\ \hline
+				 & 32 de 16 x 16  & Conv(DropOut : 0.7) & 64 de 5 x 5 neuronas & Activo & 64 de 16 x 16  & --\\ 
+				\multirow{-2}{*}{2} &  64 de 16 x 16  &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 8 x 8  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 4) 64 de 2x2}\\ \hline			
+				 & 64 de 8 x 8  & Conv(DropOut : 0.6) & 128 de 5 x 5 neuronas & Activo & 128 de 8 x 8  & --\\ 			
+				\multirow{-2}{*}{3} &  128 de 8 x 8  &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 4 x 4  & {\cellcolor[HTML]{DAE8FC} (MaxPool = 2) 128 de 2x2 }\\ \hline
+				{\cellcolor[HTML]{ffb3b3}}& 128 de 4 x 4  & Conv(DropOut : 0.6) & 128 de 7 x 7 neuronas & Activo & 128 de 4 x 4  & --\\ 			
+				{\cellcolor[HTML]{ffb3b3}\multirow{-2}{*}{4}} &  128 de 4 x 4  &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 2 x 2  & {\cellcolor[HTML]{DAE8FC} (MaxPool = 1) 128 de 2x2 }\\ \hline
+				5 &  {\cellcolor[HTML]{DAE8FC}1408 neuronas} &  F.C.(DropOut : 0.5) &  702 neuronas &  -- & 43  & --\\ \hline
 				\end{tabular}
+				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
 				\end{center}
 				\end{table}
 
-			\vspace{-1.5em}
+			\vspace{-2em}
 			
 			\item \underline{Dataset del Perú}
 
 				\begin{table}[H]
 				\begin{center}
-				\caption{\small{Diseño E (279623 neuronas) - Dataset de Imágenes de Perú}}
+				\caption{\small{Diseño E (6'088 304 neuronas) - Dataset de Imágenes de Perú}}
 				\begin{tabular}{|>{\scriptsize}c|>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c>{\scriptsize}c|>{\scriptsize}c|}
 				\hline
 				{\color[HTML]{000000} \textbf{Capa}} & {\color[HTML]{000000} \textbf{Entrada}} & {\color[HTML]{000000} \textbf{Tipo}} & {\color[HTML]{000000} \textbf{\begin{tabular}[c]{@{}c@{}}Número de\\ (kernels/filtros)\end{tabular}}} & {\color[HTML]{000000} \textbf{Padding}} & {\textbf{Salida}} & {\textbf{Func.Esc.Múltiple}}\\ \hline
 
-				 & 1 de 60 x 60 neuronas & Conv(DropOut : 0.8) & 32 de 3 x 3 & Activo & 32 de 60 x 60 neuronas & --\\ 
-				\multirow{-2}{*}{1} &  32 de 60 x 60 neuronas &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 30 x 30 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 8) 32 de 3x3}\\ \hline
-				 & 32 de 30 x 30 neuronas & Conv(DropOut : 0.7) & 64 de 5 x 5 & Activo & 64 de 30 x 30 neuronas & --\\ 
-				\multirow{-2}{*}{2} &  64 de 30 x 30 neuronas &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15 neuronas & {\cellcolor[HTML]{DAE8FC}(Kernel = 4) 64 de 3x3}\\ \hline			
-				 & 64 de 15 x 15 neuronas & Conv(DropOut : 0.6) & 128 de 5 x 5 & Activo & 128 de 15 x 15 neuronas & --\\ 			
-				\multirow{-2}{*}{3} &  128 de 15 x 15 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 2) 128 de 3x3 }\\ \hline
-				{\cellcolor[HTML]{ffb3b3}}& 128 de 7 x 7 neuronas & Conv(DropOut : 0.6) & 128 de 7 x 7 & Activo & 128 de 7 x 7 neuronas & --\\ 			
-				{\cellcolor[HTML]{ffb3b3}\multirow{-2}{*}{4}} &  128 de 7 x 7 neuronas &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 3 x 3 neuronas & {\cellcolor[HTML]{DAE8FC} (Kernel = 1) 128 de 3x3 }\\ \hline
-				5 &  {\cellcolor[HTML]{DAE8FC}3168 neuronas} &  F.C.(DropOut : 0.5) &  1584 neuronas &  -- & 7 neuronas & --\\ \hline
+				 & 1 de 60 x 60  & Conv(DropOut : 0.8) & 32 de 3 x 3 neuronas& Activo & 32 de 60 x 60  & --\\ 
+				\multirow{-2}{*}{1} &  32 de 60 x 60  &  Max Pool &  32 de 2 x 2 &  Inactivo & 32 de 30 x 30  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 8) 32 de 3x3}\\ \hline
+				 & 32 de 30 x 30  & Conv(DropOut : 0.7) & 64 de 5 x 5 neuronas& Activo & 64 de 30 x 30  & --\\ 
+				\multirow{-2}{*}{2} &  64 de 30 x 30  &  Max Pool &  64 de 2 x 2 &  Inactivo & 64 de 15 x 15  & {\cellcolor[HTML]{DAE8FC}(MaxPool = 4) 64 de 3x3}\\ \hline			
+				 & 64 de 15 x 15  & Conv(DropOut : 0.6) & 128 de 5 x 5 neuronas& Activo & 128 de 15 x 15  & --\\ 			
+				\multirow{-2}{*}{3} &  128 de 15 x 15  &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 7 x 7  & {\cellcolor[HTML]{DAE8FC} (MaxPool = 2) 128 de 3x3 }\\ \hline
+				{\cellcolor[HTML]{ffb3b3}}& 128 de 7 x 7  & Conv(DropOut : 0.6) & 128 de 7 x 7 neuronas & Activo & 128 de 7 x 7  & --\\ 			
+				{\cellcolor[HTML]{ffb3b3}\multirow{-2}{*}{4}} &  128 de 7 x 7  &  Max Pool &  128 de 2 x 2 &  Inactivo & 128 de 3 x 3  & {\cellcolor[HTML]{DAE8FC} (MaxPool = 1) 128 de 3x3 }\\ \hline
+				5 &  {\cellcolor[HTML]{DAE8FC}3168 neuronas} &  F.C.(DropOut : 0.5) &  1584 neuronas&  -- & 7  & --\\ \hline
 				\end{tabular}
+				\end{center}
+				\begin{center}
+				\vskip 0.2cm
+				{\small{Fuente: Elaboración propia.}}
 				\end{center}
 				\end{table}
 
 			\end{itemize}
 
-			En el apéndice A se muestran bloques de pseudocódigo que fueron implementados para la construcción de los diseños de Red.
+			En el apéndice A se muestran bloques de pseudocódigo que fueron usando para la construcción de todos los diseños de red mostrados anteriormente.
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
 %\newpage
 \section{Entrenamiento y Validación }
@@ -928,7 +990,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Luego de 20 épocas iteradas (aproximadamente  7000 iteraciones), se observa que rápidamente el modelo se sobreajusta al dataset de entrenamiento. Es decir, rápidamente el valor de pérdida es muy cercano a cero, lo que a su vez hace que se separe de manera abrupta de los resultados de validación y lo mismo sucede con la tasa de acierto, en la cual la de validación luego de estas 20 épocas es mucho menor al de entrenamiento. Iteraciones posteriores no permitirán mejores resultados.
+			Luego de 20 épocas iteradas (aproximadamente  7000 iteraciones), se observa que rápidamente el modelo se sobre-ajusta al dataset de entrenamiento. Es decir, rápidamente el valor de pérdida es muy cercano a cero, lo que a su vez hace que se separe de manera abrupta de los resultados de validación y lo mismo sucede con la tasa de acierto, en la cual la de validación luego de estas 20 épocas es mucho menor al de entrenamiento. Iteraciones posteriores no permitirán mejores resultados.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -991,7 +1053,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Al igual que el modelo anterior, luego de 100 épocas iteradas (38700 iteraciones), se obtiene las mejores tasa de acierto y pérdida en la validación logrando resultados muy similares entre el entrenamiento y la validación, se podría seguir entrenando en iteraciones posteriores, es muy probable que el modelo obtenga mejoras en los resultados pero a su vez, haría que se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
+			Al igual que el modelo anterior, luego de 100 épocas iteradas (38700 iteraciones), se obtiene las mejores tasas de acierto y pérdida en la validación logrando resultados muy similares entre el entrenamiento y la validación, se podría seguir entrenando en iteraciones posteriores, es muy probable que el modelo obtenga mejoras en los resultados pero a su vez, haría que se sobreajuste al conjunto de entrenamiento y no permita evaluar correctamente imágenes previamente no analizadas.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------			
@@ -1053,7 +1115,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------
 		
 		\newpage
-		En resumen, los 5 modelos lograron similares resultados de acierto y error durante el entrenamiento, siendo el modelo A el que obtuvo los mayores resultados observados en la tasa de acierto y error y el modelo E el peor de estos. Sin embargo, esto no indicaría que el modelo A sea el seleccionado como mejor modelo ya que por lo antes mencionado se observa que el modelo A se sobreajusta rápidamente al conjunto de entrenamiento siendo la razón principal de la obtención de estos resultados.
+		En resumen, los 5 modelos lograron similares resultados de acierto y error durante el entrenamiento, siendo el modelo A el que obtuvo los mayores resultados observados en la tasa de acierto y error y el modelo E el peor de estos. Sin embargo, esto no indicaría que el modelo A sea el seleccionado como mejor modelo ya que por lo antes mencionado se observa que el modelo A se sobre-ajusta rápidamente al conjunto de entrenamiento siendo la razón principal de la obtención de estos resultados.
 
 			\begin{figure}[H]
 				%\begin{center}
@@ -1144,7 +1206,7 @@ En la siguiente imagen se detallan los procesos de implementación computacional
 				\vspace{-1.5em}
 			\end{figure}
 
-			Luego de 3850 iteraciones (50 épocas), el modelo se sobreajusta al dataset de entrenamiento, rápidamente el valor de pérdida es muy cercano a cero, y hace que se separe de manera abrupta de los resultados en la validación. De esta manera, el modelo rápidamente memoriza las señales con las cuales se está entrenando lo que no permitirá evaluar con exactitud señales nunca antes vistas.
+			Luego de 3850 iteraciones (50 épocas), el modelo se sobre-ajusta al dataset de entrenamiento, rápidamente el valor de pérdida es muy cercano a cero, y hace que se separe de manera abrupta de los resultados en la validación. De esta manera, el modelo rápidamente memoriza las señales con las cuales se está entrenando lo que no permitirá evaluar con exactitud señales nunca antes vistas.
 
 
 		%------------------------------------------------------------------------------------------------------------------------------------------------------------

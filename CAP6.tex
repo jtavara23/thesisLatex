@@ -1,19 +1,30 @@
 %!TEX root = origin.TEX
 \chapter{Consideraciones finales}
 \pagenumbering{arabic}
-\setcounter{page}{128}
+\setcounter{page}{129}
 \renewcommand{\baselinestretch}{2} %doble espacio paratodo el texto
 \textheight 21cm
 
 \section{Conclusiones}
 
-	Al finalizar la investigación podemos confirmar que se cumplieron los objetivos específicos planteados. Por lo cual, el objetivo general que trata sobre implementar un modelo basado en el aprendizaje profundo de redes neuronales convolucionales para reconocer automáticamente señales de tránsito vehicular fue conseguido a través del Modelo E.
+	Al finalizar la investigación podemos confirmar que se cumplieron los objetivos específicos planteados.
 
+	Se obtuvo dos datasets de imágenes de señales de tránsito, uno de Alemania distribuidas en 43 categorías y otro de Perú distribuidas en 7 categorías, compuestos inicialmente por 51839 imágenes y 614 imágenes respectivamente.
+\vskip 0.2cm
+	Se analizaron los datasets y al dividirlos en 3 grupos (entrenamiento, validación y evaluación), se determinó la necesidad de aumentar ambos y esto fue realizado con la ayuda de técnicas de procesamiento de imágenes, resultando en dos datasets robustos de imágenes, el dataset de Alemania compuesto por 283530 imágenes de las cuales 203175 fueron para entrenamiento, 67725 para validación y 12630 para evaluación y el dataset de Perú compuesto por 36012 imágenes de las cuales 23485 fueron para entrenamiento, 3131 para validación y 4698 para evaluación. Ambos datasets ofrecidos para futuras investigaciones.
+\vskip 0.2cm
+	Fueron diseñados cinco modelos de red para cada dataset, los cuales fueron entrenados, validados y evaluados individualmente.
+\vskip 0.2cm
+	Luego de experimentar el uso de diversas funciones de activación, funciones de costo, ajuste de parámetros y métodos de optimización, se logró determinar un conjunto de hiperparámetros (Sección 3.2) de los cuales solo la Tasa de Aprendizaje varía para cada dataset de imágenes. 
 	\vskip 0.2cm
-	Al finalizar el análisis de los 5 modelos, se puede observar que cuanto más profunda sea la red neuronal, se obtienen mejores resultados. De este modo, el modelo final obtenido compuesto principalmente de 4 capas convolucionales, 2 capas totalmente conectadas, funciones de escala múltiple y un total de 90185 neuronas (Sección 3.2.1.5 - Diseño E), contribuye en el reconocimiento de señales de Tránsito de Alemania con una tasa de acierto del {\bf 98.62\%}, mucho mejor que el resultado obtenido por \citep{Ayuque2016} - 95.29\% y mucho más próximo al mejor resultado obtenido en las investigaciones hechas en base al dataset GTSRB (99.46\% - \citep{Ciresan}).
+	Al finalizar el análisis de los 10 modelos (cinco por cada dataset), se puede observar que cuanto más profunda sea la red neuronal, se obtienen mejores resultados. 
+\vskip 0.2cm
+	De este modo, el modelo final obtenido compuesto principalmente de 4 capas convolucionales, 2 capas totalmente conectadas y un total de aproximadamente 2 millones de neuronas (Sección 3.2.1.5 - Diseño E - Alemania), contribuye en el reconocimiento de señales de Tránsito de Alemania con una tasa de acierto del {\bf 98.62\%}, mucho mejor que el resultado de 95.29\% obtenido por \cite{Ayuque2016} y mucho más próximo al mejor resultado de 99.46\% obtenido en las investigaciones hechas por \cite{Ciresan} en base al dataset GTSRB.
 	\vskip 0.2cm
-	Por otra parte, un dataset de señales de Tránsito del Perú compuesto por 31314 imágenes distribuidas en 7 categorías (Sección 3.1.4.2), es ofrecido para futuras investigaciones. Para dicho dataset, el modelo con las mismas configuraciones (modelo E) también permite obtener un {\bf alto grado de acierto (99.02\%)} tras analizar 4698 imágenes. 
-	 
+	
+	Para el dataset de señales de tránsito vehicular del Perú, el modelo E con el mismo diseño neuronal y similares configuraciones compuesto por aproximadamente 6 millones de neuronas (Sección 3.2.1.5 - Diseño E - Perú) permite también obtener un {\bf alto grado de acierto (99.02\%)} tras analizar 4698 imágenes. 
+\vskip 0.2cm
+	En conclusión, el objetivo general que trata sobre implementar un modelo basado en el aprendizaje profundo de redes neuronales convolucionales para reconocer automáticamente señales de tránsito vehicular fue conseguido a través del Modelo E.	 
 
 
 \section{Trabajos futuros y recomendaciones}
