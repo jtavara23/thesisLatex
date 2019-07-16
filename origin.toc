@@ -1,10 +1,10 @@
 \babel@toc {spanish}{}
-\contentsline {chapter}{Dedicatoria}{\es@scroman {iv}}
-\contentsline {chapter}{Agradecimientos}{\es@scroman {v}}
-\contentsline {chapter}{Resumen}{\es@scroman {vi}}
-\contentsline {chapter}{Abstract}{\es@scroman {vii}}
-\contentsline {chapter}{\IeC {\'I}ndice de Figuras}{\es@scroman {xiv}}
-\contentsline {chapter}{\IeC {\'I}ndice de Tablas}{\es@scroman {xvi}}
+\contentsline {chapter}{Dedicatoria}{\es@scroman {ii}}
+\contentsline {chapter}{Agradecimientos}{\es@scroman {iii}}
+\contentsline {chapter}{Resumen}{\es@scroman {v}}
+\contentsline {chapter}{Abstract}{\es@scroman {vi}}
+\contentsline {chapter}{\IeC {\'I}ndice de Figuras}{\es@scroman {xiii}}
+\contentsline {chapter}{\IeC {\'I}ndice de Tablas}{\es@scroman {xv}}
 \contentsline {chapter}{\numberline {1}Introducci\IeC {\'o}n}{1}
 \contentsline {section}{\numberline {1.1}Justificaci\IeC {\'o}n de la investigaci\IeC {\'o}n}{5}
 \contentsline {subsection}{\numberline {1.1.1}Justificaci\IeC {\'o}n Acad\IeC {\'e}mica}{5}
@@ -108,5 +108,5 @@
 \contentsline {chapter}{\numberline {5}Consideraciones finales}{129}
 \contentsline {section}{\numberline {5.1}Conclusiones}{129}
 \contentsline {section}{\numberline {5.2}Trabajos futuros y recomendaciones}{131}
-\contentsline {chapter}{Bibliografia}{132}
+\contentsline {chapter}{Referencias bibliogr\IeC {\'a}f\IeC {\'\i }cas}{132}
 \contentsline {chapter}{\numberline {A}Pseudoc\IeC {\'o}digo del Dise\IeC {\~n}o de Red}{138}
